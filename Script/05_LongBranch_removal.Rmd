@@ -131,7 +131,6 @@ tip_ids <- desired_order
 reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
 write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/05_LongBranch_removal/3di_nj/aa_famsa3dialigned_reordered.fasta") ## out file  - renamed, reordered fasta
 ```
-
 ```{r}
 tr_renamed <- ape::read.tree("Data/05_LongBranch_removal/aa_nj/outTree_unrooted.nwk") ## renamed tree file
 plotTree(tr_renamed)
