@@ -1,0 +1,791 @@
+IQ-TREE multicore version 2.3.6 for MacOS ARM 64-bit built Jul 30 2024
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    Sasidharans-MacBook-Pro.local (SSE4.2, 24 GB RAM)
+Command: iqtree2 -s seqs.fasta -madd 3DI -mdef 3DI.nexus -nt 4 --ufboot 1000 -alrt 1000 -bnni --redo
+Seed:    783281 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Nov 13 09:07:48 2025
+Kernel:  SSE2 - 4 threads (12 CPU cores detected)
+
+Reading alignment file seqs.fasta ... Fasta format detected
+Reading fasta file: done in 0.00116611 secs using 77.61% CPU
+Alignment most likely contains protein sequences
+Alignment has 321 sequences with 350 columns, 346 distinct patterns
+318 parsimony-informative, 17 singleton sites, 15 constant sites
+                                            Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 9.89437e-05 secs using 222.3% CPU
+   1  AAC68314.1_Chlamydia_FliF                    50.29%    passed     25.82%
+   2  ACL65896.1_Anaeromyxobacter_FliF              4.00%    passed     71.22%
+   3  AGH96362.1_Pseudobdellovibrio_FliF            0.86%    passed     97.68%
+   4  AHZ83763.1_Bdellovibrio_FliF                  1.14%    passed     99.33%
+   5  AGC50281.1_Lawsonia_FliF                      2.29%    passed     99.78%
+   6  AAS94796.1_Desulfovibrio_FliF                 2.29%    passed     99.86%
+   7  WP_011366492.1_Oleidesulfovibrio_FliF         2.29%    passed     99.63%
+   8  BAH77996.1_Solidesulfovibrio_FliF             0.29%    passed     77.97%
+   9  ABS63798.1_Parvibaculum_FliF                  0.86%    passed     99.62%
+  10  AEP09101.1_Micavibrio_FliF                    0.57%    passed     45.90%
+  11  AEO47029.1_Rhodospirillum_FliF                1.14%    passed     99.99%
+  12  CDL00846.1_Magnetospirillum_FliF              0.86%    passed     99.99%
+  13  AHK70359.1_Gluconobacter_FliF                12.57%    passed     63.80%
+  14  ACL94415.1_Caulobacter_FliF                   1.14%    passed     96.53%
+  15  ADL02120.1_Brevundimonas_FliF                 1.43%    passed     99.98%
+  16  ATX78584.1_Mariprofundus_FliF                 1.14%    passed     97.23%
+  17  ATX82919.1_Mariprofundus_FliF                 1.43%    passed     94.43%
+  18  ABC45369.1_Salinibacter_FliF                  9.14%    passed     99.95%
+  19  ABI78744.1_Hyphomonas_FliF                    4.86%    passed     89.45%
+  20  AIQ89829.1_Methylobacterium_FliF              7.43%    passed     36.80%
+  21  BAL07813.1_Bradyrhizobium_FliF                2.86%    passed     80.58%
+  22  ABQ62358.1_Brucella_FliF                      2.86%    passed     86.54%
+  23  ABK42796.1_Magnetococcus_FliF                 1.71%    passed     99.49%
+  24  CAG37385.1_Desulfotalea_FliF                  2.29%    passed     99.86%
+  25  ACV67866.1_Desulfohalobium_FliF               6.86%    passed     92.87%
+  26  ABA88441.1_Syntrophotalea_FliF                2.57%    passed     99.98%
+  27  ALA58335.1_Nitrospira_FliF                    0.86%    passed     99.88%
+  28  BCB96474.1_Dissulfurispira_FliF               2.57%    passed     99.95%
+  29  ACI21849.1_Thermodesulfovibrio_FliF           2.57%    passed     93.45%
+  30  ABC76851.1_Syntrophus_FliF                    6.86%    passed     99.79%
+  31  ACN16787.1_Desulforapulum_FliF                2.00%    passed     98.86%
+  32  BAM05992.1_Leptospirillum_FliF                1.14%    passed     99.10%
+  33  AFL88119.1_Terriglobus_FliF                   2.00%    passed     99.49%
+  34  AEI88715.1_Candidatus_FliF                    2.00%    passed     99.88%
+  35  SHK75940.1_Desulfatibacillum_FliF             2.29%    passed     91.20%
+  36  RJP61224.1_Candidatus_FliF                    3.43%    passed     99.26%
+  37  ACT13606.1_Pectobacterium_FliF                1.43%    passed     99.34%
+  38  CFQ36607.1_Yersinia_FliF                      1.43%    passed     99.97%
+  39  AJJ56339.1_Yersinia_FliF                      1.43%    passed     99.72%
+  40  KLP57552.1_Enterobacter_FliF                  1.71%    passed     96.28%
+  41  KLR25735.1_Enterobacter_FliF                  1.71%    passed     99.44%
+  42  AAO68586.1_Salmonella_FliF                    1.71%    passed     99.73%
+  43  POT59441.1_Citrobacter_FliF                   1.71%    passed     99.97%
+  44  AAL20881.1_Salmonella_FliF                    1.71%    passed     99.90%
+  45  QKY95803.1_Shigella_FliF                      2.57%    passed     99.86%
+  46  RPH21571.1_Buttiauxella_FliF                  2.00%    passed     99.95%
+  47  CCJ72125.1_Cronobacter_FliF                   1.43%    passed     99.59%
+  48  KGT96016.1_Erwinia_FliF                       1.43%    passed     99.88%
+  49  CBJ46171.1_Erwinia_FliF                       1.43%    passed     99.36%
+  50  AGG30848.1_Morganella_FliF                    0.57%    passed     99.92%
+  51  RPH26529.1_Buttiauxella_FliF                  1.43%    passed     99.56%
+  52  CBJ47254.1_Erwinia_FliF                       1.43%    passed    100.00%
+  53  POT54770.1_Citrobacter_FliF                   1.43%    passed     77.43%
+  54  CFQ36177.1_Yersinia_FliF                      1.43%    passed     94.70%
+  55  ORN02599.1_Pantoea_FliF                       0.57%    passed     63.32%
+  56  KGT93339.1_Erwinia_FliF                       0.57%    passed     63.32%
+  57  TCV95562.1_Biostraticola_FliF                 2.86%    passed     98.91%
+  58  AHF75271.1_Sodalis_FliF                       1.43%    passed     87.61%
+  59  ARU98306.1_Tatumella_FliF                     1.43%    passed     99.97%
+  60  CAJ49324.1_Bordetella_FliF                    1.43%    passed     97.76%
+  61  WP_015871707.1_Edwardsiella_FliF              1.43%    passed     99.32%
+  62  QXB11719.1_Klebsiella_FliF                    1.71%    passed     99.35%
+  63  KFD13219.1_Serratia_FliF                      1.14%    passed     99.70%
+  64  AOM39532.1_Xenorhabdus_FliF                   0.86%    passed     91.59%
+  65  AFA40924.1_Wigglesworthia_FliF                1.71%    passed     99.03%
+  66  EHM41863.1_Hafnia_FliF                        1.43%    passed     99.50%
+  67  CAQ72721.1_Cupriavidus_FliF                   0.57%    passed     95.32%
+  68  AHF75751.1_Sodalis_FliF                       1.14%    passed     99.88%
+  69  AAZ97553.1_Thiobacillus_FliF                  0.29%    passed     99.99%
+  70  ABE50245.1_Methylobacillus_FliF               0.29%    passed     83.95%
+  71  ACT47836.1_Methylotenera_FliF                 0.29%    passed     95.58%
+  72  CAH34218.1_Burkholderia_FliF                  0.29%    passed     99.69%
+  73  ABC37528.1_Burkholderia_FliF                  0.29%    passed     99.78%
+  74  AAU48881.1_Burkholderia_FliF                  0.29%    passed     99.79%
+  75  ADE10838.1_Sideroxydans_FliF                  0.86%    passed    100.00%
+  76  ATU66744.1_Rhizobacter_FliF                   0.29%    passed     96.87%
+  77  UBQ04382.1_Tepidimonas_FliF                   0.57%    passed     99.59%
+  78  APW41625.1_Rhodoferax_FliF                    0.57%    passed     99.96%
+  79  EGI75820.1_Hylemonella_FliF                   0.57%    passed     99.66%
+  80  BAB12793.1_Buchnera_FliF                      2.86%    passed     99.46%
+  81  AAM67637.1_Buchnera_FliF                      1.71%    passed     98.90%
+  82  AAQ60803.1_Chromobacterium_FliF               0.57%    passed    100.00%
+  83  AAW86347.1_Aliivibrio_FliF                    0.86%    passed     98.14%
+  84  EAS77894.1_Vibrio_FliF                        0.86%    passed     99.97%
+  85  GAA03515.1_Photobacterium_FliF                0.86%    passed     99.97%
+  86  CAG19334.1_Photobacterium_FliF                0.86%    passed     99.93%
+  87  QEO40727.1_Vibrio_FliF                        0.86%    passed     99.30%
+  88  AAF95278.1_Vibrio_FliF                        0.86%    passed     99.30%
+  89  EEW06433.1_Vibrio_FliF                        0.86%    passed     95.62%
+  90  BAC95245.1_Vibrio_FliF                        0.86%    passed     98.58%
+  91  EPE37900.1_Candidatus_FliF                    0.86%    passed     96.38%
+  92  AVQ87012.1_Plesiomonas_FliF                   0.86%    passed     99.31%
+  93  WP_084977171.1_Plesiomonas_FliF               0.86%    passed     99.31%
+  94  AAZ28086.1_Colwellia_FliF                     1.14%    passed     96.80%
+  95  EAR29538.1_Pseudoalteromonas_FliF             1.14%    passed     99.31%
+  96  GAC24878.1_Paraglaciecola_FliF                1.14%    passed     94.99%
+  97  AEP30462.1_Glaciecola_FliF                    1.14%    passed     99.88%
+  98  UXK10552.1_Shewanella_FliF                    1.71%    passed     97.31%
+  99  ABV37670.1_Shewanella_FliF                    1.43%    passed     87.29%
+ 100  AAN56227.2_Shewanella_FliF                    1.14%    passed     98.67%
+ 101  BAJ01403.1_Shewanella_FliF                    1.43%    passed     96.41%
+ 102  EHR42289.1_Alishewanella_FliF                 1.14%    passed     99.42%
+ 103  ABK38602.1_Aeromonas_FliF                     1.43%    passed     94.69%
+ 104  ATP10457.1_Aeromonas_FliF                     1.43%    passed     96.94%
+ 105  EKB19994.1_Aeromonas_FliF                     1.43%    passed     67.35%
+ 106  QCG47664.1_Aeromonas_FliF                     1.43%    passed     98.24%
+ 107  ABD81448.1_Saccharophagus_FliF                0.00%    passed     99.46%
+ 108  QEI19385.1_Cellvibrio_FliF                    0.00%    passed     97.49%
+ 109  EGW20512.1_Methylobacter_FliF                 0.00%    passed     94.16%
+ 110  QBZ83471.1_Hydrogenovibrio_FliF               0.86%    passed     99.67%
+ 111  AAY38489.1_Pseudomonas_FliF                   0.00%    passed     99.22%
+ 112  AAG04490.1_Pseudomonas_FliF                   0.00%    passed     99.90%
+ 113  ABY99820.1_Pseudomonas_FliF                   0.00%    passed     96.30%
+ 114  EHJ04466.1_Marinobacter_FliF                  0.00%    passed     99.93%
+ 115  CCG94784.1_Marinobacter_FliF                  0.00%    passed     99.79%
+ 116  ADZ92454.1_Marinomonas_FliF                   0.00%    passed     98.93%
+ 117  EAS78287.1_Vibrio_FliF                        2.86%    passed     99.98%
+ 118  EEW07867.1_Vibrio_FliF                        2.86%    passed     98.56%
+ 119  BAC62879.1_Vibrio_FliF                        3.14%    passed     98.84%
+ 120  ABV34690.1_Shewanella_FliF                    3.71%    passed     85.37%
+ 121  WP_084977082.1_Plesiomonas_FliF               4.00%    passed     99.98%
+ 122  CAG18477.1_Photobacterium_FliF                4.86%    passed     99.91%
+ 123  EHM37691.1_Hafnia_FliF                        3.71%    passed     85.30%
+ 124  CFQ44276.1_Yersinia_FliF                      5.43%    passed     99.33%
+ 125  RPH29466.1_Buttiauxella_FliF                  2.86%    passed     99.48%
+ 126  AJJ55407.1_Yersinia_FliF                      5.43%    passed     99.90%
+ 127  KLP54135.1_Enterobacter_FliF                  2.57%    passed     97.80%
+ 128  CBG33087.1_Escherichia_FliF                   3.71%    passed     99.76%
+ 129  POT58671.1_Citrobacter_FliF                   3.43%    passed     83.99%
+ 130  ATU65965.1_Rhizobacter_FliF                   3.71%    passed     98.09%
+ 131  AAQ60668.1_Chromobacterium_FliF               4.29%    passed     96.45%
+ 132  AGI74751.1_Octadecabacter_FliF                0.29%    passed     75.76%
+ 133  ADE39075.1_Candidatus_FliF                    0.29%    passed     91.06%
+ 134  AOU49298.1_Legionella_FliF                    0.00%    passed     98.25%
+ 135  ACV75177.1_Zymomonas_FliF                     2.86%    passed     91.05%
+ 136  QNQ09320.1_Sphingomonas_FliF                  2.86%    passed     92.05%
+ 137  ABA58817.1_Nitrosococcus_FliF                 0.00%    passed     99.84%
+ 138  ACL73050.1_Thioalkalivibrio_FliF              0.00%    passed     98.94%
+ 139  AAR33742.1_Geobacter_FliF                     2.00%    passed     99.67%
+ 140  ACH40830.1_Citrifermentans_FliF               1.71%    passed     99.03%
+ 141  OSS41621.1_Desulfurella_FliF                  1.71%    passed     98.59%
+ 142  ALF48087.1_Campylobacter_FliF                 1.71%    passed     98.09%
+ 143  AOO64056.1_Sulfurospirillum_FliF              1.43%    passed    100.00%
+ 144  ACM93021.1_Nautilia_FliF                      2.00%    passed     97.79%
+ 145  CAE11001.1_Wolinella_FliF                     1.43%    passed     99.96%
+ 146  ADN09694.1_Sulfurimonas_FliF                  1.43%    passed     99.55%
+ 147  QAR34056.1_Geovibrio_FliF                     2.29%    passed     99.86%
+ 148  ADD69076.1_Denitrovibrio_FliF                 2.29%    passed     97.32%
+ 149  USF24605.1_Mucispirillum_FliF                 2.29%    passed     97.34%
+ 150  QOY89262.1_Paludibaculum_FliF                 2.29%    passed     99.99%
+ 151  QOY88876.1_Paludibaculum_FliF                 2.00%    passed     95.09%
+ 152  ACO32668.1_Acidobacterium_FliF                3.14%    passed     81.86%
+ 153  BAH37373.1_Gemmatimonas_FliF                  8.29%    passed     64.41%
+ 154  QJR36449.1_Gemmatimonas_FliF                  8.29%    passed     99.60%
+ 155  ATU63999.1_Rhizobacter_FliF                  11.14%    passed     99.70%
+ 156  ADG94151.1_Arcobacter_FliF                    3.43%    passed     98.62%
+ 157  QDU26973.1_Anatilimnocola_FliF                4.57%    passed     95.67%
+ 158  QDU93976.1_Lignipirellula_FliF                3.43%    passed     96.23%
+ 159  CAD75367.1_Rhodopirellula_FliF                3.71%    passed     68.02%
+ 160  BAD41986.1_Symbiobacterium_FliF               4.29%    passed     69.40%
+ 161  SHJ59096.1_Anaerobranca_FliF                  7.14%    passed     95.47%
+ 162  QNO16415.1_Alkalicella_FliF                   7.14%    passed     99.49%
+ 163  AAS40694.1_Bacillus_FliF                      5.14%    passed     99.11%
+ 164  AAC07196.1_Aquifex_FliF                       6.00%    passed     80.46%
+ 165  ADC89287.1_Thermocrinis_FliF                  5.71%    passed     97.48%
+ 166  BAS27497.1_Limnochorda_FliF                   5.71%    passed     99.93%
+ 167  ACB73714.1_Opitutus_FliF                      0.86%    passed     99.83%
+ 168  ATC63675.1_Nibricoccus_FliF                   1.43%    passed     91.60%
+ 169  AAO36212.1_Clostridium_FliF                   6.29%    passed     99.99%
+ 170  WP_010965461.1_Clostridium_FliF               6.00%    passed     98.77%
+ 171  ACL70438.1_Halothermothrix_FliF               5.71%    passed     99.91%
+ 172  EGO63145.1_Acetonema_FliF                     5.14%    passed    100.00%
+ 173  ACZ19568.1_Thermanaerovibrio_FliF             4.86%    passed     99.96%
+ 174  EEG76529.1_Dethiobacter_FliF                  4.86%    passed     98.23%
+ 175  ACL22158.1_Desulfitobacterium_FliF            4.86%    passed     99.96%
+ 176  CCW35059.1_Chthonomonas_FliF                  2.86%    passed     92.02%
+ 177  ADL43221.1_Caldicellulosiruptor_FliF          3.14%    passed     99.52%
+ 178  ABY94911.1_Thermoanaerobacter_FliF            6.57%    passed     98.08%
+ 179  QAT61603.1_Tissierella_FliF                   6.29%    passed     99.89%
+ 180  WP_014824491.1_Solibacillus_FliF              2.57%    passed     89.12%
+ 181  WP_096550656.1_Ureibacillus_FliF              3.14%    passed     60.94%
+ 182  WP_066170015.1_Metasolibacillus_FliF          2.57%    passed     95.74%
+ 183  WP_053417471.1_Viridibacillus_FliF            2.86%    passed     38.53%
+ 184  WP_041074053.1_Bacillus_FliF                  3.71%    passed     98.13%
+ 185  WP_105928922.1_Lysinibacillus_FliF            2.86%    passed     97.52%
+ 186  WP_036123974.1_Lysinibacillus_FliF            2.86%    passed     83.39%
+ 187  WP_151699469.1_Psychrobacillus_FliF           2.57%    passed     89.75%
+ 188  KGA98254.1_Alkalihalobacillus_FliF            3.43%    passed     88.42%
+ 189  BAD64804.1_Alkalihalobacillus_FliF            3.71%    passed     78.49%
+ 190  BAC13511.1_Oceanobacillus_FliF                2.29%    passed     95.90%
+ 191  AAU40736.1_Bacillus_FliF                      2.86%    passed     69.51%
+ 192  BAB06177.1_Halalkalibacterium_FliF            3.43%    passed     86.02%
+ 193  ADC48108.1_Alkalihalophilus_FliF              3.43%    passed     98.02%
+ 194  OWZ84225.1_Natranaerobius_FliF                4.57%    passed     50.26%
+ 195  UMZ73356.1_Natranaerofaba_FliF                4.57%    passed     94.44%
+ 196  ACB84974.1_Natranaerobius_FliF                4.57%    passed     94.44%
+ 197  ACM22640.1_Thermotoga_FliF                    3.71%    passed     98.47%
+ 198  ACK75069.1_Borreliella_FliF                   1.43%    passed     84.57%
+ 199  AAS11733.1_Treponema_FliF                     1.71%    passed     94.83%
+ 200  AAC65387.1_Treponema_FliF                     2.00%    passed     99.80%
+ 201  AEM21723.1_Brachyspira_FliF                   2.00%    passed     98.94%
+ 202  EKT86534.2_Leptospira_FliF                    1.71%    passed     67.46%
+ 203  ABZ96871.1_Leptospira_FliF                    1.71%    passed     64.15%
+ 204  AVM87899.1_Chlamydia_T3SS                    71.71%    passed     72.75%
+ 205  QEO41070.1_Vibrio_T3SS                       58.86%    failed      1.10%
+ 206  BAE49307.1_Magnetospirillum_T3SS             54.00%    passed     15.48%
+ 207  AAZ97041.1_Thiobacillus_T3SS                 54.57%    passed     41.89%
+ 208  ADY60058.1_Rubinisphaera_T3SS_YscJ           55.71%    passed      6.99%
+ 209  ADB18987.1_Pirellula_T3SS                    55.71%    passed     47.29%
+ 210  CCB86648.1_Parachlamydia_T3SS                54.00%    passed     33.66%
+ 211  EDR30632.1_Yersinia_T3SS                     54.29%    passed     21.87%
+ 212  AJJ53162.1_Yersinia_T3SS_YscJ_HrcJ           54.29%    passed     21.87%
+ 213  AAG05112.1_Pseudomonas_T3SS                  54.29%    passed     74.76%
+ 214  CBJ47559.1_Erwinia_T3SS                      54.29%    passed     33.06%
+ 215  KGT90338.1_Erwinia_T3SS                      54.29%    passed     24.30%
+ 216  AAY36249.1_Pseudomonas_T3SS_YscJ_HrcJ        54.29%    passed     52.92%
+ 217  ADZ90362.1_Marinomonas_T3SS_YscJ_HrcJ        54.57%    passed     29.40%
+ 218  ACL64098.1_Anaeromyxobacter_T3SS_YscJ        54.00%    passed     37.74%
+ 219  WP_015870333.1_Edwardsiella_T3SS_SctJ        54.57%    passed     47.49%
+ 220  ABF88125.1_Myxococcus_T3SS_YscJ_HrcJ         54.29%    failed      2.76%
+ 221  ADO70830.1_Stigmatella_T3SS_YscJ_HrcJ        54.29%    passed     32.67%
+ 222  BAJ02212.1_Shewanella_T3SS                   54.29%    passed     51.67%
+ 223  CFQ38428.1_Yersinia_T3SS                     54.57%    passed     78.07%
+ 224  EDR34178.1_Yersinia_T3SS_YscJ_HrcJ           54.57%    passed     94.17%
+ 225  AJJ56869.1_Yersinia_T3SS_YscJ_HrcJ           54.57%    passed     83.32%
+ 226  BAC59953.1_Vibrio_T3SS                       54.29%    passed     33.58%
+ 227  AAQ60258.1_Chromobacterium_T3SS              54.57%    passed     66.83%
+ 228  AHF76786.1_Sodalis_T3SS                      54.57%    passed     42.63%
+ 229  CAH39099.1_Burkholderia_T3SS                 54.29%    passed     89.56%
+ 230  CAH38872.1_Burkholderia_T3SS                 54.29%    passed     24.91%
+ 231  ATU65453.1_Rhizobacter_T3SS_YscJ_HrcJ        54.29%    passed     84.31%
+ 232  CAH39023.1_Burkholderia_T3SS                 54.29%    passed     93.84%
+ 233  ABC34345.1_Burkholderia_T3SS                 54.29%    passed     87.27%
+ 234  CBJ47346.1_Erwinia_T3SS                      54.29%    passed     92.56%
+ 235  CBJ46227.1_Erwinia_T3SS                      54.29%    passed     96.50%
+ 236  AHF78198.1_Sodalis_T3SS                      54.29%    passed     94.30%
+ 237  AHF75698.1_Sodalis_T3SS                      54.29%    passed     55.44%
+ 238  CBG35883.1_Escherichia_T3SS                  54.29%    passed     79.18%
+ 239  TCV96683.1_Biostraticola_T3SS                54.29%    passed     76.21%
+ 240  AGG29087.1_Morganella_T3SS_HrcJ              54.29%    passed     55.79%
+ 241  POT59516.1_Citrobacter_T3SS_YscJ_HrcJ        54.29%    passed     84.79%
+ 242  CAQ71857.1_Cupriavidus_T3SS_SctJ             54.29%    passed     37.37%
+ 243  AGC49958.1_Lawsonia_T3SS                     54.29%    failed      1.13%
+ 244  AAS94345.1_Desulfovibrio_T3SS                54.29%    failed      1.91%
+ 245  AGC50595.1_Lawsonia_T3SS_YscJ_HrcJ           54.29%    passed     10.55%
+ 246  AAC68161.1_Chlamydia_T3SS_YscJ               55.14%    passed     70.63%
+ 247  AVM88570.1_Chlamydia_T3SS_YscJ_HrcJ          55.43%    passed     67.42%
+ 248  CCB85093.1_Parachlamydia_T3SS                54.00%    passed     46.70%
+ 249  AFE09625.1_Corallococcus_T3SS                54.00%    passed     62.68%
+ 250  ABF88690.1_Myxococcus_T3SS                   54.00%    passed     87.78%
+ 251  ADO74089.1_Stigmatella_T3SS                  54.00%    passed     88.07%
+ 252  QTD51128.1_Sulfidibacter_T3SS_SctJ           54.57%    passed     35.53%
+ 253  BAD40842.1_Symbiobacterium_SpoIIIAF          75.14%    passed     53.14%
+ 254  APC08740.1_Moorella_SpoIIIAF                 75.14%    passed     79.56%
+ 255  AUO18622.1_Monoglobus_SpoIIIAF               78.29%    failed      1.53%
+ 256  WP_061948747.1_Alkalihalobacillus_SpoIIIAF   76.00%    passed     73.55%
+ 257  BAC13845.1_Oceanobacillus_SpoIIIAF           75.43%    passed     22.85%
+ 258  AJH79882.1_Weizmannia_SpoIIIAF               76.00%    passed     11.43%
+ 259  ATO50947.1_Brevibacillus_SpoIIIAF            75.43%    passed     27.24%
+ 260  ACL69379.1_Halothermothrix_SpoIIIAF          76.57%    passed     18.30%
+ 261  EGO63622.1_Acetonema_SpoIIIAF                75.43%    passed     70.92%
+ 262  ALU37542.1_Clostridium_SpoIIIAF              75.14%    passed      5.32%
+ 263  OWZ84026.1_Natranaerobius_SpoIIIAF           75.14%    passed     10.24%
+ 264  ACB85282.1_Natranaerobius_SpoIIIAF           75.14%    passed     24.75%
+ 265  QAT61770.1_Tissierella_SpoIIIAF              76.29%    passed     46.78%
+ 266  SHJ67143.1_Anaerobranca_SpoIIIAF             75.14%    passed     39.47%
+ 267  QNO16149.1_Alkalicella_SpoIIIAF              75.14%    passed     47.56%
+ 268  WP_006059104.1_Holdemania_SpoIIIAH           79.43%    failed      0.27%
+ 269  WP_002609025.1_Bacillota_SpoIIIAH            80.00%    failed      0.03%
+ 270  WP_008688524.1_Longicatena_SpoIIIAH          80.00%    failed      0.00%
+ 271  WP_004609799.1_Thomasclavelia_SpoIIIAH       79.43%    passed      7.63%
+ 272  WP_003538299.1_Thomasclavelia_SpoIIIAH       79.43%    failed      2.21%
+ 273  WP_008789692.1_Coprobacillus_SpoIIIAH        79.43%    passed      6.72%
+ 274  WP_061948745.1_Alkalihalobacillus_SpoIIIAH   80.00%    passed     21.43%
+ 275  AAS43160.1_Bacillus_SpoIIIAH                 80.29%    passed     19.41%
+ 276  WP_066163660.1_Metasolibacillus_SpoIIIAH     79.43%    failed      0.55%
+ 277  AJH78695.1_Weizmannia_SpoIIIAH               79.43%    failed      0.44%
+ 278  BAD76686.1_Geobacillus_SpoIIIAH              79.43%    passed     10.99%
+ 279  BAC13843.1_Oceanobacillus_SpoIIIAH           79.43%    passed     12.77%
+ 280  WP_008179871.1_Bacteria_SpoIIIAH             79.43%    failed      4.55%
+ 281  WP_024361187.1_Lysinibacillus_SpoIIIAH       79.43%    failed      1.09%
+ 282  WP_008404261.1_Solibacillus_SpoIIIAH         79.43%    failed      0.59%
+ 283  WP_096550966.1_Ureibacillus_SpoIIIAH         79.43%    passed     15.30%
+ 284  WP_134209598.1_Paenisporosarcina_SpoIIIAH    79.43%    failed      2.55%
+ 285  WP_066786653.1_Rummeliibacillus_SpoIIIAH     79.71%    passed     16.39%
+ 286  WP_102691387.1_Rummeliibacillus_SpoIIIAH     79.71%    passed     16.39%
+ 287  WP_053416284.1_Viridibacillus_SpoIIIAH       79.43%    failed      1.48%
+ 288  BAD65006.1_Alkalihalobacillus_SpoIIIAH       79.43%    passed     25.75%
+ 289  WP_092051140.1_Bhargavaea_SpoIIIAH           79.43%    failed      2.59%
+ 290  WP_076757704.1_Edaphobacillus_SpoIIIAH       79.43%    failed      1.84%
+ 291  WP_151700324.1_Psychrobacillus_SpoIIIAH      79.43%    passed      8.52%
+ 292  AAU41481.1_Bacillus_SpoIIIAH                 80.29%    failed      1.19%
+ 293  WP_041075074.1_Bacillus_SpoIIIAH             79.43%    passed     11.58%
+ 294  AUO18620.1_Monoglobus_SpoIIIAH               79.71%    failed      2.20%
+ 295  WP_010965386.1_Clostridium_SpoIIIAH          79.71%    passed     46.59%
+ 296  BAD40840.1_Symbiobacterium_SpoIIIAH          79.14%    passed     45.86%
+ 297  SHJ67084.1_Anaerobranca_SpoIIIAH             79.14%    passed     10.86%
+ 298  QNO16151.1_Alkalicella_SpoIIIAH              79.14%    passed      5.80%
+ 299  APC08738.1_Moorella_SpoIIIAH                 79.71%    passed     47.83%
+ 300  UMZ73956.1_Natranaerofaba_SpoIIIAH           79.71%    passed     48.23%
+ 301  BAC13844.1_Oceanobacillus_SpoIIIAG           62.00%    passed     85.41%
+ 302  BAD76687.1_Geobacillus_SpoIIIAG              61.71%    passed     64.35%
+ 303  BAD40841.1_Symbiobacterium_SpoIIIAG          62.00%    passed     61.57%
+ 304  AAS43161.1_Bacillus_SpoIIIAG                 61.71%    passed     73.72%
+ 305  BAD65007.1_Alkalihalobacillus_SpoIIIAG       61.43%    passed     67.98%
+ 306  WP_061948746.1_Alkalihalobacillus_SpoIIIAG   61.43%    passed     26.31%
+ 307  ACB85281.1_Natranaerobius_SpoIIIAG           61.71%    passed     61.08%
+ 308  AJH78041.1_Weizmannia_SpoIIIAG               61.43%    passed     53.51%
+ 309  WP_010965387.1_Clostridium_SpoIIIAG          62.00%    passed     29.70%
+ 310  KGA97906.1_Alkalihalobacillus_SpoIIIAG       61.43%    passed     59.32%
+ 311  AAU41482.1_Bacillus_SpoIIIAG                 61.43%    passed     47.57%
+ 312  AAO36130.1_Clostridium_SpoIIIAG              62.57%    passed     24.99%
+ 313  EEG78331.1_Dethiobacter_SpoIIIAG             64.29%    passed     37.46%
+ 314  ACL69380.1_Halothermothrix_SpoIIIAG          64.86%    passed     11.13%
+ 315  ACL21528.1_Desulfitobacterium_SpoIIIAG       62.00%    passed     88.71%
+ 316  SHJ67115.1_Anaerobranca_SpoIIIAG             62.29%    passed     72.61%
+ 317  QNO16150.1_Alkalicella_SpoIIIAG              61.43%    passed     52.29%
+ 318  BAS28431.1_Limnochorda_SpoIIIAG              63.14%    passed     93.02%
+ 319  WP_008404262.1_Solibacillus_SpoIIIAG         69.43%    passed     14.90%
+ 320  QAT61769.1_Tissierella_SpoIIIAG              63.14%    passed     98.28%
+ 321  AUO18621.1_Monoglobus_SpoIIIAG               64.86%    passed     63.96%
+WARNING: 119 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                        25.86%  20 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: KGT93339.1_Erwinia_FliF is identical to ORN02599.1_Pantoea_FliF but kept for subsequent analysis
+NOTE: AAF95278.1_Vibrio_FliF is identical to QEO40727.1_Vibrio_FliF but kept for subsequent analysis
+NOTE: WP_084977171.1_Plesiomonas_FliF is identical to AVQ87012.1_Plesiomonas_FliF but kept for subsequent analysis
+NOTE: ACB84974.1_Natranaerobius_FliF is identical to UMZ73356.1_Natranaerofaba_FliF but kept for subsequent analysis
+NOTE: AJJ53162.1_Yersinia_T3SS_YscJ_HrcJ is identical to EDR30632.1_Yersinia_T3SS but kept for subsequent analysis
+NOTE: WP_102691387.1_Rummeliibacillus_SpoIIIAH is identical to WP_066786653.1_Rummeliibacillus_SpoIIIAH but kept for subsequent analysis
+
+Reading model definition file 3DI.nexus ... 87 models and 214 frequency vectors loaded
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.062 seconds
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -61663.875
+Optimal log-likelihood: -61663.798
+Proportion of invariable sites: 0.036
+Gamma shape alpha: 0.821
+Parameters optimization took 1 rounds (0.451 sec)
+Time for fast ML tree search: 4.301 seconds
+
+NOTE: ModelFinder requires 182 MB RAM!
+ModelFinder will test up to 1233 protein models (sample size: 350 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            65630.239    639 132538.478   950458.478   135003.697
+  2  LG+I          65269.675    640 131819.349   952299.349   134288.426
+  3  LG+G4         61679.872    640 124639.745   945119.745   127108.822
+  4  LG+I+G4       61663.797    641 124609.594   947653.594   127082.529
+  5  LG+R2         62543.702    641 126369.404   949413.404   128842.339
+  6  LG+R3         61850.380    643 124986.759   953170.759   127467.410
+  7  LG+R4         61668.601    645 124627.202   957967.202   127115.569
+  8  LG+R5         61585.012    647 124464.023   962976.023   126960.106
+  9  LG+R6         61562.241    649 124422.482   968122.482   126926.280
+ 10  LG+R7         61544.880    651 124391.760   973295.760   126903.275
+ 11  LG+R8         61544.103    653 124394.206   978518.206   126913.436
+ 14  LG+I+R2       62464.807    642 126213.615   951825.615   128690.408
+ 15  LG+I+R3       61808.674    644 124905.348   955665.348   127389.857
+ 16  LG+I+R4       61656.756    646 124605.513   960529.513   127097.737
+ 17  LG+I+R5       61573.844    648 124443.688   965547.688   126943.628
+ 18  LG+I+R6       61552.079    650 124404.157   970704.157   126911.814
+ 19  LG+I+R7       61545.569    652 124395.138   975907.138   126910.510
+ 20  LG+I+R8       61544.783    654 124397.565   981137.565   126920.654
+ 32  LG+F+R7       56318.478    670 113976.957   1013116.957  116561.772
+ 40  LG+F+I+R6     56336.694    669 114011.389   1010471.389  116592.346
+ 41  LG+F+I+R7     56313.933    671 113969.866   1015793.866  116558.539
+ 54  WAG+R7        59526.528    651 120355.056   969259.056   122866.571
+ 62  WAG+I+R6      59539.185    650 120378.370   966678.370   122886.027
+ 63  WAG+I+R7      59522.521    652 120349.042   971861.042   122864.415
+ 76  WAG+F+R7      55109.920    670 111559.841   1010699.841  114144.656
+ 84  WAG+F+I+R6    55125.075    669 111588.150   1008048.150  114169.107
+ 85  WAG+F+I+R7    55102.184    671 111546.369   1013370.369  114135.042
+ 98  JTT+R7        61613.029    651 124528.058   973432.058   127039.572
+106  JTT+I+R6      61619.669    650 124539.338   970839.338   127046.994
+107  JTT+I+R7      61609.891    652 124523.783   976035.783   127039.155
+120  JTT+F+R7      56789.846    670 114919.691   1014059.691  117504.507
+128  JTT+F+I+R6    56807.992    669 114953.984   1011413.984  117534.941
+129  JTT+F+I+R7    56783.316    671 114908.631   1016732.631  117497.304
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+142  Q.pfam+R7     60654.780    651 122611.561   971515.561   125123.075
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+150  Q.pfam+I+R6   60668.079    650 122636.158   968936.158   125143.814
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+151  Q.pfam+I+R7   60655.014    652 122614.027   974126.027   125129.400
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+164  Q.pfam+F+R7   55784.259    670 112908.517   1012048.517  115493.332
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+172  Q.pfam+F+I+R6 55796.509    669 112931.018   1009391.018  115511.975
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+173  Q.pfam+F+I+R7 55783.712    671 112909.424   1014733.424  115498.097
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+186  Q.bird+R7     64739.881    651 130781.762   979685.762   133293.277
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+194  Q.bird+I+R6   64750.865    650 130801.731   977101.731   133309.387
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+195  Q.bird+I+R7   64744.232    652 130792.464   982304.464   133307.837
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+208  Q.bird+F+R7   59683.101    670 120706.202   1019846.202  123291.017
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+216  Q.bird+F+I+R6 59692.904    669 120723.808   1017183.808  123304.766
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+217  Q.bird+F+I+R7 59667.927    671 120677.853   1022501.853  123266.526
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+230  Q.mammal+R7   62718.642    651 126739.284   975643.284   129250.799
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+238  Q.mammal+I+R6 62754.445    650 126808.889   973108.889   129316.546
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+239  Q.mammal+I+R7 62716.995    652 126737.990   978249.990   129253.363
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+252  Q.mammal+F+R7 57958.513    670 117257.025   1016397.025  119841.841
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+260  Q.mammal+F+I+R6 57965.771    669 117269.543   1013729.543  119850.500
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+261  Q.mammal+F+I+R7 57950.000    671 117242.000   1019066.000  119830.673
+274  Q.insect+R7   61665.951    651 124633.901   973537.901   127145.416
+282  Q.insect+I+R6 61680.048    650 124660.096   970960.096   127167.752
+283  Q.insect+I+R7 61664.246    652 124632.492   976144.492   127147.864
+296  Q.insect+F+R7 55552.667    670 112445.335   1011585.335  115030.150
+304  Q.insect+F+I+R6 55559.953    669 112457.907   1008917.907  115038.864
+305  Q.insect+F+I+R7 55546.833    671 112435.666   1014259.666  115024.339
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+318  Q.plant+R7    65190.752    651 131683.504   980587.504   134195.019
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+326  Q.plant+I+R6  65204.686    650 131709.372   978009.372   134217.029
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+327  Q.plant+I+R7  65182.671    652 131669.342   983181.342   134184.714
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+340  Q.plant+F+R7  59108.778    670 119557.556   1018697.556  122142.371
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+348  Q.plant+F+I+R6 59130.721    669 119599.442   1016059.442  122180.399
+WARNING: Normalizing state frequencies so that sum of them equals to 1
++I+R7 reinitialized from +I+R6 with factor 0.500
+349  Q.plant+F+I+R7 59103.025    671 119548.051   1021372.051  122136.724
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+362  Q.yeast+R7    62202.557    651 125707.114   974611.114   128218.628
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+370  Q.yeast+I+R6  62239.619    650 125779.238   972079.238   128286.895
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+371  Q.yeast+I+R7  62200.933    652 125705.866   977217.866   128221.238
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+384  Q.yeast+F+R7  56182.000    670 113704.000   1012844.000  116288.815
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+392  Q.yeast+F+I+R6 56204.465    669 113746.929   1010206.929  116327.887
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+393  Q.yeast+F+I+R7 56178.291    671 113698.583   1015522.583  116287.256
+406  JTTDCMut+R7   61837.644    651 124977.288   973881.288   127488.802
+414  JTTDCMut+I+R6 61856.497    650 125012.995   971312.995   127520.651
+415  JTTDCMut+I+R7 61827.149    652 124958.298   976470.298   127473.670
+428  JTTDCMut+F+R7 56995.308    670 115330.616   1014470.616  117915.431
+436  JTTDCMut+F+I+R6 57006.574    669 115351.148   1011811.148  117932.105
+437  JTTDCMut+F+I+R7 56987.350    671 115316.700   1017140.700  117905.373
+450  DCMut+R7      62667.313    651 126636.625   975540.625   129148.139
+458  DCMut+I+R6    62686.254    650 126672.508   972972.508   129180.164
+459  DCMut+I+R7    62660.428    652 126624.857   978136.857   129140.229
+472  DCMut+F+R7    58015.894    670 117371.788   1016511.788  119956.603
+480  DCMut+F+I+R6  58024.353    669 117386.707   1013846.707  119967.664
+481  DCMut+F+I+R7  58005.634    671 117353.269   1019177.269  119941.942
+494  VT+R7         58698.011    651 118698.023   967602.023   121209.537
+502  VT+I+R6       58705.253    650 118710.505   965010.505   121218.162
+503  VT+I+R7       58695.082    652 118694.163   970206.163   121209.536
+516  VT+F+R7       54398.676    670 110137.352   1009277.352  112722.167
+524  VT+F+I+R6     54393.723    669 110125.446   1006585.446  112706.403
+525  VT+F+I+R7     54391.869    671 110125.738   1011949.738  112714.411
+538  PMB+R7        57613.200    651 116528.399   965432.399   119039.914
+546  PMB+I+R6      57611.782    650 116523.563   962823.563   119031.220
+547  PMB+I+R7      57594.717    652 116493.433   968005.433   119008.806
+560  PMB+F+R7      53911.860    670 109163.721   1008303.721  111748.536
+568  PMB+F+I+R6    53905.440    669 109148.879   1005608.879  111729.836
+569  PMB+F+I+R7    53904.323    671 109150.647   1010974.647  111739.320
+582  Blosum62+R7   58294.033    651 117890.067   966794.067   120401.581
+590  Blosum62+I+R6 58287.710    650 117875.420   964175.420   120383.077
+591  Blosum62+I+R7 58287.180    652 117878.360   969390.360   120393.732
+604  Blosum62+F+R7 54301.880    670 109943.760   1009083.760  112528.575
+612  Blosum62+F+I+R6 54299.118    669 109936.237   1006396.237  112517.194
+613  Blosum62+F+I+R7 54295.406    671 109932.813   1011756.813  112521.486
+626  Dayhoff+R7    62740.717    651 126783.434   975687.434   129294.949
+634  Dayhoff+I+R6  62757.748    650 126815.496   973115.496   129323.153
+635  Dayhoff+I+R7  62724.431    652 126752.862   978264.862   129268.234
+648  Dayhoff+F+R7  58058.730    670 117457.459   1016597.459  120042.275
+656  Dayhoff+F+I+R6 58073.727    669 117485.454   1013945.454  120066.411
+657  Dayhoff+F+I+R7 58056.429    671 117454.858   1019278.858  120043.531
+670  mtREV+R7      66494.482    651 134290.963   983194.963   136802.478
+678  mtREV+I+R6    66505.558    650 134311.116   980611.116   136818.773
+679  mtREV+I+R7    66478.641    652 134261.282   985773.282   136776.654
+692  mtREV+F+R7    59185.788    670 119711.575   1018851.575  122296.391
+700  mtREV+F+I+R6  59203.297    669 119744.595   1016204.595  122325.552
+701  mtREV+F+I+R7  59185.331    671 119712.661   1021536.661  122301.335
+714  mtART+R7      71699.620    651 144701.241   993605.241   147212.755
+722  mtART+I+R6    71729.565    650 144759.129   991059.129   147266.786
+723  mtART+I+R7    71690.247    652 144684.494   996196.494   147199.866
+736  mtART+F+R7    63523.707    670 128387.415   1027527.415  130972.230
+744  mtART+F+I+R6  63589.764    669 128517.528   1024977.528  131098.485
+745  mtART+F+I+R7  63528.825    671 128399.650   1030223.650  130988.323
+758  mtZOA+R7      68096.225    651 137494.450   986398.450   140005.964
+766  mtZOA+I+R6    68110.265    650 137520.531   983820.531   140028.187
+767  mtZOA+I+R7    68085.696    652 137475.391   988987.391   139990.763
+780  mtZOA+F+R7    60670.622    670 122681.245   1021821.245  125266.060
+788  mtZOA+F+I+R6  60697.910    669 122733.820   1019193.820  125314.777
+789  mtZOA+F+I+R7  60669.474    671 122680.948   1024504.948  125269.621
+802  mtMet+R7      68146.748    651 137595.497   986499.497   140107.011
+810  mtMet+I+R6    68158.320    650 137616.641   983916.641   140124.297
+811  mtMet+I+R7    68135.054    652 137574.107   989086.107   140089.480
+824  mtMet+F+R7    59917.393    670 121174.786   1020314.786  123759.601
+832  mtMet+F+I+R6  59923.350    669 121184.699   1017644.699  123765.657
+833  mtMet+F+I+R7  59912.212    671 121166.423   1022990.423  123755.096
+846  mtVer+R7      70732.155    651 142766.310   991670.310   145277.824
+854  mtVer+I+R6    70758.955    650 142817.910   989117.910   145325.566
+855  mtVer+I+R7    70721.158    652 142746.316   994258.316   145261.688
+868  mtVer+F+R7    62432.454    670 126204.907   1025344.907  128789.723
+876  mtVer+F+I+R6  62442.768    669 126223.536   1022683.536  128804.494
+877  mtVer+F+I+R7  62427.294    671 126196.588   1028020.588  128785.261
+890  mtInv+R7      66573.363    651 134448.726   983352.726   136960.241
+898  mtInv+I+R6    66585.438    650 134470.876   980770.876   136978.532
+899  mtInv+I+R7    66565.398    652 134434.796   985946.796   136950.168
+912  mtInv+F+R7    58095.395    670 117530.789   1016670.789  120115.604
+920  mtInv+F+I+R6  58135.061    669 117608.122   1014068.122  120189.080
+921  mtInv+F+I+R7  58123.602    671 117589.203   1019413.203  120177.876
+934  mtMAM+R7      73771.114    651 148844.227   997748.227   151355.742
+942  mtMAM+I+R6    73769.265    650 148838.530   995138.530   151346.187
+943  mtMAM+I+R7    73747.704    652 148799.407   1000311.407  151314.780
+956  mtMAM+F+R7    65183.720    670 131707.440   1030847.440  134292.256
+964  mtMAM+F+I+R6  65266.147    669 131870.294   1028330.294  134451.252
+965  mtMAM+F+I+R7  65239.609    671 131821.218   1033645.218  134409.891
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+978  FLAVI+R7      71032.955    651 143367.909   992271.909   145879.424
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+986  FLAVI+I+R6    71063.184    650 143426.368   989726.368   145934.024
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+987  FLAVI+I+R7    71018.979    652 143341.957   994853.957   145857.329
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+1000  FLAVI+F+R7    63855.009    670 129050.018   1028190.018  131634.834
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+1008  FLAVI+F+I+R6  63884.226    669 129106.453   1025566.453  131687.410
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+1009  FLAVI+F+I+R7  63866.876    671 129075.751   1030899.751  131664.424
+1022  HIVb+R7       68555.061    651 138412.122   987316.122   140923.637
+1030  HIVb+I+R6     68563.385    650 138426.770   984726.770   140934.427
+1031  HIVb+I+R7     68547.293    652 138398.585   989910.585   140913.958
+1044  HIVb+F+R7     62557.406    670 126454.811   1025594.811  129039.626
+1052  HIVb+F+I+R6   62572.269    669 126482.537   1022942.537  129063.495
+1053  HIVb+F+I+R7   62548.648    671 126439.296   1028263.296  129027.969
+1066  HIVw+R7       72431.745    651 146165.491   995069.491   148677.005
+1074  HIVw+I+R6     72449.435    650 146198.869   992498.869   148706.526
+1075  HIVw+I+R7     72418.851    652 146141.703   997653.703   148657.075
+1088  HIVw+F+R7     65490.850    670 132321.700   1031461.700  134906.515
+1096  HIVw+F+I+R6   65515.673    669 132369.345   1028829.345  134950.303
+1097  HIVw+F+I+R7   65487.420    671 132316.841   1034140.841  134905.514
+1110  FLU+R7        65291.632    651 131885.264   980789.264   134396.778
+1118  FLU+I+R6      65343.730    650 131987.459   978287.459   134495.116
+1119  FLU+I+R7      65290.033    652 131884.067   983396.067   134399.439
+1132  FLU+F+R7      59196.015    670 119732.031   1018872.031  122316.846
+1140  FLU+F+I+R6    59218.680    669 119775.361   1016235.361  122356.318
+1141  FLU+F+I+R7    59193.491    671 119728.983   1021552.983  122317.656
+1154  rtREV+R7      60686.047    651 122674.093   971578.093   125185.608
+1162  rtREV+I+R6    60696.064    650 122692.128   968992.128   125199.785
+1163  rtREV+I+R7    60684.036    652 122672.073   974184.073   125187.445
+1176  rtREV+F+R7    56490.326    670 114320.652   1013460.652  116905.468
+1184  rtREV+F+I+R6  56500.532    669 114339.065   1010799.065  116920.022
+1185  rtREV+F+I+R7  56479.320    671 114300.640   1016124.640  116889.313
+1198  cpREV+R7      62633.110    651 126568.220   975472.220   129079.735
+1206  cpREV+I+R6    62660.865    650 126621.731   972921.731   129129.387
+1207  cpREV+I+R7    62631.817    652 126567.635   978079.635   129083.007
+1220  cpREV+F+R7    57349.591    670 116039.182   1015179.182  118623.998
+1228  cpREV+F+I+R6  57368.398    669 116074.796   1012534.796  118655.754
+1229  cpREV+F+I+R7  57340.428    671 116022.857   1017846.857  118611.530
+Akaike Information Criterion:           PMB+F+I+R6
+Corrected Akaike Information Criterion: LG+G4
+Bayesian Information Criterion:         PMB+F+I+R6
+Best-fit model: PMB+F+I+R6 chosen according to BIC
+
+All model information printed to seqs.fasta.model.gz
+CPU time for ModelFinder: 17164.640 seconds (4h:46m:4s)
+Wall-clock time for ModelFinder: 17604.024 seconds (4h:53m:24s)
+Reading model definition file 3DI.nexus ... 87 models and 214 frequency vectors loaded
+Generating 1000 samples for ultrafast bootstrap (seed: 783281)...
+
+NOTE: 110 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -53995.258
+2. Current log-likelihood: -53925.224
+3. Current log-likelihood: -53923.774
+4. Current log-likelihood: -53923.611
+Optimal log-likelihood: -53923.561
+Proportion of invariable sites: 0.024
+Site proportion and rates:  (0.193,0.080) (0.237,0.373) (0.243,0.927) (0.214,1.836) (0.073,2.973) (0.016,3.887)
+Parameters optimization took 4 rounds (9.138 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 3.80375 secs using 397.6% CPU
+Computing ML distances took 3.803955 sec (of wall-clock time) 15.122781 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000427008 secs using 381.3% CPU
+Computing RapidNJ tree took 0.016524 sec (of wall-clock time) 0.022316 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -54778.236
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 6.403 second
+Computing log-likelihood of 98 initial trees ... 22.319 seconds
+Current best score: -53923.561
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -53774.420
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 4: -53770.568
+Iteration 10 / LogL: -53851.960 / Time: 4h:55m:11s
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 11: -53730.609
+Iteration 20 / LogL: -53784.602 / Time: 4h:56m:15s
+Finish initializing candidate tree set (20)
+Current best tree score: -53730.609 / CPU time: 154.408
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 22: -53717.496
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 23: -53695.067
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 27: -53689.522
+Iteration 30 / LogL: -53737.716 / Time: 4h:57m:27s (0h:13m:33s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 35: -53686.537
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 38: -53673.307
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 39: -53661.143
+Iteration 40 / LogL: -53698.582 / Time: 4h:58m:32s (0h:13m:1s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 43: -53657.805
+Iteration 50 / LogL: -53700.206 / Time: 4h:59m:29s (0h:11m:33s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 54: -53618.668
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 58: -53618.167
+Iteration 60 / LogL: -53667.986 / Time: 5h:0m:36s (0h:11m:57s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 63: -53614.047
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 68: -53603.894
+Iteration 70 / LogL: -53637.992 / Time: 5h:1m:43s (0h:11m:48s left)
+Iteration 80 / LogL: -53659.289 / Time: 5h:2m:40s (0h:10m:19s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 86: -53597.235
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 89: -53584.415
+Iteration 90 / LogL: -53637.807 / Time: 5h:3m:41s (0h:11m:26s left)
+Iteration 100 / LogL: -53609.808 / Time: 5h:4m:33s (0h:10m:2s left)
+Iteration 110 / LogL: -53613.127 / Time: 5h:5m:30s (0h:8m:46s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 113: -53579.432
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 115: -53574.667
+Iteration 120 / LogL: -53672.774 / Time: 5h:6m:32s (0h:10m:29s left)
+Iteration 130 / LogL: -53622.329 / Time: 5h:7m:29s (0h:9m:16s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 134: -53563.617
+Iteration 140 / LogL: -53654.290 / Time: 5h:8m:28s (0h:10m:11s left)
+Iteration 150 / LogL: -53618.922 / Time: 5h:9m:24s (0h:9m:1s left)
+Iteration 160 / LogL: -53628.701 / Time: 5h:10m:21s (0h:7m:53s left)
+Iteration 170 / LogL: -53589.319 / Time: 5h:11m:16s (0h:6m:46s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 180: -53545.973
+Iteration 180 / LogL: -53545.973 / Time: 5h:12m:16s (0h:10m:32s left)
+Iteration 190 / LogL: -53622.325 / Time: 5h:13m:14s (0h:9m:26s left)
+Iteration 200 / LogL: -53570.025 / Time: 5h:14m:8s (0h:8m:20s left)
+Iteration 210 / LogL: -53579.610 / Time: 5h:15m:3s (0h:7m:15s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 211: -53518.661
+Iteration 220 / LogL: -53594.068 / Time: 5h:16m:2s (0h:9m:24s left)
+Iteration 230 / LogL: -53547.864 / Time: 5h:16m:56s (0h:8m:19s left)
+Iteration 240 / LogL: -53590.265 / Time: 5h:17m:48s (0h:7m:15s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 247: -53515.279
+Iteration 250 / LogL: -53529.572 / Time: 5h:18m:44s (0h:9m:52s left)
+Iteration 260 / LogL: -53608.017 / Time: 5h:19m:37s (0h:8m:48s left)
+Iteration 270 / LogL: -53521.345 / Time: 5h:20m:32s (0h:7m:46s left)
+Iteration 280 / LogL: -53624.100 / Time: 5h:21m:24s (0h:6m:43s left)
+Iteration 290 / LogL: -53524.438 / Time: 5h:22m:21s (0h:5m:42s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 299: -53514.943
+Iteration 300 / LogL: -53559.086 / Time: 5h:23m:15s (0h:9m:53s left)
+Iteration 310 / LogL: -53566.110 / Time: 5h:24m:9s (0h:8m:51s left)
+Iteration 320 / LogL: -53518.481 / Time: 5h:25m:1s (0h:7m:49s left)
+Iteration 330 / LogL: -53539.953 / Time: 5h:25m:55s (0h:6m:49s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 338: -53512.903
+Iteration 340 / LogL: -53561.652 / Time: 5h:26m:52s (0h:9m:40s left)
+Iteration 350 / LogL: -53559.394 / Time: 5h:27m:48s (0h:8m:40s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 358: -53511.115
+Iteration 360 / LogL: -53552.895 / Time: 5h:28m:46s (0h:9m:39s left)
+Iteration 370 / LogL: -53594.736 / Time: 5h:29m:41s (0h:8m:39s left)
+Iteration 380 / LogL: -53548.171 / Time: 5h:30m:36s (0h:7m:39s left)
+Iteration 390 / LogL: -53533.769 / Time: 5h:31m:30s (0h:6m:39s left)
+Iteration 400 / LogL: -53545.356 / Time: 5h:32m:25s (0h:5m:40s left)
+Iteration 410 / LogL: -53566.513 / Time: 5h:33m:19s (0h:4m:41s left)
+Iteration 420 / LogL: -53526.900 / Time: 5h:34m:13s (0h:3m:42s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 425: -53509.012
+Iteration 430 / LogL: -53608.271 / Time: 5h:35m:10s (0h:9m:15s left)
+Iteration 440 / LogL: -53524.374 / Time: 5h:36m:4s (0h:8m:15s left)
+Iteration 450 / LogL: -53536.326 / Time: 5h:36m:57s (0h:7m:16s left)
+Iteration 460 / LogL: -53544.518 / Time: 5h:37m:51s (0h:6m:17s left)
+Iteration 470 / LogL: -53553.389 / Time: 5h:38m:46s (0h:5m:19s left)
+Iteration 480 / LogL: -53528.942 / Time: 5h:39m:39s (0h:4m:20s left)
+Iteration 490 / LogL: -53533.899 / Time: 5h:40m:34s (0h:3m:22s left)
+Iteration 500 / LogL: -53546.882 / Time: 5h:41m:27s (0h:2m:24s left)
+Iteration 510 / LogL: -53518.411 / Time: 5h:42m:19s (0h:1m:26s left)
+Iteration 520 / LogL: -53549.125 / Time: 5h:43m:13s (0h:0m:28s left)
+Refining ufboot trees with NNI 1 branch...
+Reading model definition file 3DI.nexus ... 87 models and 214 frequency vectors loaded
+100 samples done
+200 samples done
+300 samples done
+400 samples done
+500 samples done
+600 samples done
+700 samples done
+800 samples done
+900 samples done
+1000 samples done
+Total 1000 ufboot trees refined
+TREE SEARCH COMPLETED AFTER 526 ITERATIONS / Time: 6h:28m:19s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -53509.012
+Optimal log-likelihood: -53509.009
+Proportion of invariable sites: 0.023
+Site proportion and rates:  (0.187,0.075) (0.190,0.321) (0.154,0.668) (0.178,1.144) (0.193,1.946) (0.075,3.232)
+Parameters optimization took 1 rounds (1.906 sec)
+BEST SCORE FOUND : -53509.009
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+Alternative NNI shows better log-likelihood -53508.613 > -53509.009
+Alternative NNI shows better log-likelihood -53508.397 > -53509.009
+1.178 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file seqs.fasta.splits.nex
+Total tree length: 57.391
+
+Total number of iterations: 526
+CPU time used for tree search: 12762.173 sec (3h:32m:42s)
+Wall-clock time used for tree search: 5678.976 sec (1h:34m:38s)
+Total CPU time used: 29991.391 sec (8h:19m:51s)
+Total wall-clock time used: 23303.413 sec (6h:28m:23s)
+UFBoot trees printed to seqs.fasta.ufboot
+
+Computing bootstrap consensus tree...
+Reading input file seqs.fasta.splits.nex...
+321 taxa and 6775 splits.
+Consensus tree written to seqs.fasta.contree
+Reading input trees file seqs.fasta.contree
+Log-likelihood of consensus tree: -53505.276
+
+Analysis results written to: 
+  IQ-TREE report:                seqs.fasta.iqtree
+  Maximum-likelihood tree:       seqs.fasta.treefile
+  Likelihood distances:          seqs.fasta.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          seqs.fasta.splits.nex
+  Consensus tree:                seqs.fasta.contree
+  UFBoot trees:                  seqs.fasta.ufboot
+  Screen log file:               seqs.fasta.log
+
+Date and Time: Thu Nov 13 15:36:14 2025

@@ -1,0 +1,54 @@
+---
+title: "10_Distant_Homolog_RBM1"
+output: html_document
+---
+
+```{bash}
+mafft --maxiterate 1000 --localpair ./Data/09_DistantHomolog_RBM1/aa_T3SS_RBM1.fasta | esl-reformat stockholm -> ./Data/09_DistantHomolog_RBM1/aa_T3SS_RBM1.sto
+```
+
+```{bash}
+mafft --maxiterate 1000 --localpair ./Data/09_DistantHomolog_RBM1/aa_FliF_RBM1.fasta | esl-reformat stockholm -> ./Data/09_DistantHomolog_RBM1/aa_FliF_RBM1.sto
+```
+
+```{bash}
+hmmbuild ./Data/09_DistantHomolog_RBM1/T3SS_RBM1.hmm ./Data/09_DistantHomolog_RBM1/aa_T3SS_RBM1.sto
+```
+
+```{bash}
+  
+hmmsearch --cpu 4 -E 0.01 \
+      -o ./Data/09_DistantHomolog_RBM1/T3SS_RBM1.txt \
+      --tblout ./Data/09_DistantHomolog_RBM1/T3SS_RBM1_hits_table.txt \
+      --domtblout ./Data/09_DistantHomolog_RBM1/T3SS_RBM1_domains_table.txt \
+      ./Data/09_DistantHomolog_RBM1/T3SS_RBM1.hmm /Users/Yoga/Library/CloudStorage/OneDrive-Personal/PG\ Materials/Semester3/Structural_Phylogeny/Data/Genome/protein_20250805.fasta
+      
+```
+
+```{bash}
+grep -v '^#' ./Data/09_DistantHomolog_RBM1/T3SS_RBM1_hits_table.txt | awk '{print $1}' | sort -u > ./Data/09_DistantHomolog_RBM1/T3SS_RBM1_hit_ids.txt
+
+seqkit grep -f ./Data/09_DistantHomolog_RBM1/T3SS_RBM1_hit_ids.txt /Users/Yoga/Library/CloudStorage/OneDrive-Personal/PG\ Materials/Semester3/Structural_Phylogeny/Data/Genome/protein_20250805.fasta > ./Data/09_DistantHomolog_RBM1/T3SS_RBM1_matched_hits.fasta
+
+```
+
+```{bash}
+hmmbuild ./Data/09_DistantHomolog_RBM1/FliF_RBM1.hmm ./Data/09_DistantHomolog_RBM1/aa_FliF_RBM1.sto
+```
+
+```{bash}
+  
+hmmsearch --cpu 4 -E 0.01 \
+      -o ./Data/09_DistantHomolog_RBM1/FliF_RBM1.txt \
+      --tblout ./Data/09_DistantHomolog_RBM1/FliF_RBM1_hits_table.txt \
+      --domtblout ./Data/09_DistantHomolog_RBM1/FliF_RBM1_domains_table.txt \
+      ./Data/09_DistantHomolog_RBM1/FliF_RBM1.hmm /Users/Yoga/Library/CloudStorage/OneDrive-Personal/PG\ Materials/Semester3/Structural_Phylogeny/Data/Genome/protein_20250805.fasta
+      
+```
+
+```{bash}
+grep -v '^#' ./Data/09_DistantHomolog_RBM1/FliF_RBM1_hits_table.txt | awk '{print $1}' | sort -u > ./Data/09_DistantHomolog_RBM1/FliF_RBM1_hit_ids.txt
+
+seqkit grep -f ./Data/09_DistantHomolog_RBM1/FliF_RBM1_hit_ids.txt /Users/Yoga/Library/CloudStorage/OneDrive-Personal/PG\ Materials/Semester3/Structural_Phylogeny/Data/Genome/protein_20250805.fasta > ./Data/09_DistantHomolog_RBM1/FliF_RBM1_matched_hits.fasta
+
+```

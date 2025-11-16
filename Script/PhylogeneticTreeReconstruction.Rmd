@@ -1,0 +1,36 @@
+---
+title: "PhylogeneticTreeReconstruction"
+output: html_document
+---
+
+### Amino acids  -selected Model
+```{bash}
+iqtree2 -s seqs.fasta -mset 3DI,Blosum62,Dayhoff,DCMut,JTT,JTTDCMut,LG,Poisson,Poisson+FQ,Poisson,PMB,WAG,EX2,EX3,EHO,EX_EHO -mfreq FU,F -mrate E,G,R -nt 4 --ufboot 1000 -alrt 1000 -bnni| tee seqs_so1.txt 
+```
+
+## Amino acids all model
+```{bash}
+iqtree2 -s seqs.fasta -madd 3DI -mdef 3DI.nexus  -nt 4 --ufboot 1000 -alrt 1000 -bnni | tee seqs_so1.txt 
+```
+
+## 3di selected model
+```{bash}
+iqtree2 -s seqs.fasta -mset 3DI,Blosum62,Dayhoff,DCMut,JTT,JTTDCMut,LG,Poisson,Poisson+FQ,Poisson,PMB,WAG,EX2,EX3,EHO,EX_EHO -mfreq FU,F -mrate E,G,R -nt 4 --ufboot 1000 -alrt 1000 -bnni | tee seqs_so1.txt
+```
+
+## 3di all models
+```{bash}
+iqtree2 -s seqs.fasta -madd 3DI -mdef 3DI.nexus -nt AUTO --ufboot 1000 -alrt 1000 -bnni --redo | tee seqs_so1.txt 
+
+```
+
+## both selected models
+```{bash}
+iqtree2 -s seqs.fasta -spp BOTHp.raxml -m MFP+MERGE -madd 3DI -mdef 3DI.nexus -mset 3DI,Blosum62,Dayhoff,DCMut,JTT,JTTDCMut,LG,Poisson,Poisson+FQ,Poisson,PMB,WAG,EX2,EX3,EHO,EX_EHO -mfreq FU,F -mrate E,G,R -nt 4 --ufboot 1000 -alrt 1000 -bnni| tee seqs_so1.txt
+```
+
+## both all models
+```{bash}
+iqtree2 -s seqs.fasta -spp BOTHp.raxml -m MFP+MERGE -madd 3DI -mdef 3DI.nexus -mfreq FU,F -mrate E,G,R -nt 4 --ufboot 1000 -alrt 1000 -bnni| tee seqs_so1.txt
+```
+

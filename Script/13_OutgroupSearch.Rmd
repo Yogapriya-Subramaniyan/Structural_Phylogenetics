@@ -1,0 +1,53 @@
+---
+title: "13_OutgroupSearch"
+output: html_document
+---
+### Structure of YEBC, which ame up when looked up for UPH47978.1
+## 125-194 homologous structurally
+```{bash}
+usalign ./Data/12_OutgroupSearch/1KON_YEBC.pdb ./Data/Structures/Alphafold/Alphafold_FliF.pdb -chimerax ./Data/12_OutgroupSearch//Usalign_FliF_1KON_YEBC
+```
+
+```{bash}
+usalign ./Data/12_OutgroupSearch/1KON_YEBC.pdb ./Data/Structures/Alphafold/Alphafold_T3SS.pdb -chimerax ./Data/12_OutgroupSearch//Usalign_T3SS_1KON_YEBC
+```
+
+
+```{bash}
+
+usalign ./Data/Structures/Alphafold/Experimental_FliF_Sring.pdb ./Data/12_OutgroupSearch/1KON_YEBC.pdb -chimerax ./Data/12_OutgroupSearch//Usalign_YEBC_Sring
+
+```
+
+```{bash}
+usalign ./Data/Structures/Alphafold/Experimental_FliF_Mring.pdb ./Data/12_OutgroupSearch/1KON_YEBC.pdb -chimerax ./Data/12_OutgroupSearch//Usalign_YEBC_Mring
+```
+
+```{bash}
+usalign ./Data/Structures/Alphafold/Alphafold_SpoIIIAG.pdb ./Data/12_OutgroupSearch/1KON_YEBC.pdb -chimerax ./Data/12_OutgroupSearch//Usalign_YEBC_SpoIIIAG
+```
+
+```{bash}
+usalign ./Data/Structures/Alphafold/Alphafold_SpoIIIAH.pdb ./Data/12_OutgroupSearch/1KON_YEBC.pdb -chimerax ./Data/12_OutgroupSearch//Usalign_YEBC_SpoIIIAH
+```
+
+```{bash}
+usalign ./Data/Structures/Alphafold/Alphafold_SpoIIIAF.pdb ./Data/12_OutgroupSearch/1KON_YEBC.pdb -chimerax ./Data/12_OutgroupSearch//Usalign_YEBC_SpoIIIAF
+```
+
+```{bash}
+usalign ./Data/Structures/Alphafold/Alphafold_T3SS.pdb ./Data/12_OutgroupSearch/1KON_YEBC.pdb -chimerax ./Data/12_OutgroupSearch//Usalign_YEBC_T3SS
+```
+
+```{bash}
+usalign ./Data/Structures/Alphafold/Alphafold_SpoIIIAG.pdb ./Data/Structures/Alphafold/Alphafold_T3SS.pdb -chimerax ./Data/Structures/Alphafold/Alphafold_T3SS_SpoIIIAG
+```
+
+```{bash}
+usalign ./Data/Structures/Alphafold/Alphafold_SpoIIIAH.pdb ./Data/Structures/Alphafold/Alphafold_T3SS.pdb -chimerax ./Data/Structures/Alphafold/Alphafold_T3SS_SpoIIIAH
+```
+
+```{bash}
+usalign ./Data/Structures/Alphafold/Alphafold_SpoIIIAF.pdb ./Data/Structures/Alphafold/Alphafold_T3SS.pdb -chimerax ./Data/Structures/Alphafold/Alphafold_T3SS_SpoIIIAF
+```
+

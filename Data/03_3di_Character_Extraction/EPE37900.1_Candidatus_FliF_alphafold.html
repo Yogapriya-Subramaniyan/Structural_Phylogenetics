@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<title> ChimeraX Log </title>
+<script type="text/javascript">
+window.onload = function() {
+  cxlinks_base="https://www.rbvi.ucsf.edu/chimerax/docs/"
+  if(!window.navigator.userAgent.includes("ChimeraX")){
+    window.onclick = function(e){
+      if(e.target.tagName.toLowerCase()!="a")
+	return true;
+      var url=e.target.getAttribute("href").toLowerCase();
+      if(url.startsWith("help:")){
+	window.location.href = cxlinks_base + url.substring(5);
+	return false;
+      }
+      if(url.startsWith("cxcmd:")){
+	alert("This link only works in a ChimeraX browser and would execute a command.");
+	return false;
+      }
+      return true;
+    }
+    var ls=document.links;
+    for(var i=0;i<ls.length;i++){
+      var link=ls[i];
+      var url=link.getAttribute("href").toLowerCase();
+      if(url.startsWith("cxcmd:"))
+	link.style.color="darkred";
+    }
+  }
+};
+</script>
+<style>
+
+.cxcmd_as_doc {
+    display: none;
+}
+.cxcmd_as_cmd {
+    display: inline;
+}
+</style>
+</head>
+<body>
+<h1> ChimeraX Log </h1>
+Fetching compressed S3DJL8 UniProt info from https://www.uniprot.org/uniprot/S3DJL8.xml<br>
+<div class="cxcmd"><div class="cxcmd_as_doc"><a href="help:user/commands/alphafold.html#match">alphafold match</a> S3DJL8</div><div class="cxcmd_as_cmd"><a href="cxcmd:alphafold match S3DJL8">alphafold match S3DJL8</a></div></div>Fetching compressed AlphaFold S3DJL8 from https://alphafold.ebi.ac.uk/files/AF-S3DJL8-F1-model_v6.cif<br>
+1 AlphaFold model found using UniProt identifier: S3DJL8 (UniProt S3DJL8)<br>
+<table border=1 cellpadding=4 cellspacing=0>
+  <thead>
+    <tr><th colspan=4>Sequence Similarity
+    <tr><th>AlphaFold Model<th>Query Sequence<th>Identity %<th>Coverage %
+  </thead>
+  <tbody>
+    <td style="text-align:center">S3DJL8
+    <td style="text-align:center">S3DJL8
+    <td style="text-align:center">100.0
+    <td style="text-align:center">100.0
+  </tbody>
+</table><br/>Opened 1 AlphaFold model<br>
+<div class="cxcmd"><div class="cxcmd_as_doc"><a href="help:user/commands/log.html#save">log save</a> EPE37900.1_Candidatus_FliF_alphafold.html executableLinks true</div><div class="cxcmd_as_cmd"><a href="cxcmd:log save EPE37900.1_Candidatus_FliF_alphafold.html executableLinks true">log save EPE37900.1_Candidatus_FliF_alphafold.html executableLinks true</a></div></div></body>
+</html>

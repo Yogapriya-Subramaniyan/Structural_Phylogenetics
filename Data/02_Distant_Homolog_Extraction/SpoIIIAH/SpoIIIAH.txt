@@ -1,0 +1,1443 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  SpoIIIAH_aligned.hmm
+# target sequence database:        /Users/Yoga/Library/CloudStorage/OneDrive-Personal/PG Materials/Semester3/Structural_Phylogeny/Data/Genome/protein_20250805.fasta
+# output directed to file:         SpoIIIAH.txt
+# per-seq hits tabular output:     SpoIIIAH_hits_table.txt
+# per-dom hits tabular output:     SpoIIIAH_domains_table.txt
+# sequence reporting threshold:    E-value <= 0.01
+# number of worker threads:        4
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       SpoIIIAH_aligned  [M=214]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+   3.4e-115  389.6  22.4   3.8e-115  389.4  22.4    1.0  1  AAU41481.1      stage III sporulation protein SpoIIIAH [Bacil
+   7.9e-113  381.8  22.9   8.9e-113  381.7  22.9    1.0  1  BAI85955.1      stage III sporulation protein AH [Bacillus su
+   7.9e-113  381.8  22.9   8.9e-113  381.7  22.9    1.0  1  CAB14367.2      stage III sporulation ratchet engulfment prot
+   7.9e-113  381.8  22.9   8.9e-113  381.7  22.9    1.0  1  UUH64716.1      stage III sporulation ratchet engulfment prot
+    3.2e-50  177.2  21.0    3.7e-50  177.0  21.0    1.0  1  AAS43160.1      stage III sporulation protein AH [Bacillus ce
+      8e-45  159.6  18.8    1.9e-32  119.1   9.3    2.0  2  BAD76686.1      stage III sporulation protein AH [Geobacillus
+      5e-43  153.7  20.9    5.2e-31  114.4  12.9    2.0  2  AJH78695.1      stage III sporulation protein AH [Weizmannia 
+    4.3e-39  140.9   7.5    2.2e-23   89.5   4.7    2.0  2  BAC13843.1      stage III sporulation protein AH (mutants blo
+    2.1e-38  138.6   9.6    2.7e-38  138.3   9.6    1.0  1  BAB06509.1      mutants block sporulation after engulfment [H
+    3.8e-35  128.0  12.6      8e-29  107.3   5.8    2.0  2  WP_008179871.1  MULTISPECIES: SpoIIIAH-like family protein [B
+    1.1e-34  126.5   6.1    1.1e-26  100.2   2.9    2.0  2  WP_008404261.1  MULTISPECIES: SpoIIIAH-like family protein [S
+    6.7e-34  123.9  12.1    1.6e-33  122.7  12.1    1.5  1  ADC48379.1      mutants block sporulation after engulfment [A
+    8.8e-34  123.5  11.6    2.3e-27  102.5   5.1    2.0  2  WP_024361187.1  MULTISPECIES: SpoIIIAH-like family protein [L
+    1.5e-33  122.7  11.6    7.7e-26   97.5   6.1    2.0  2  WP_096550966.1  MULTISPECIES: SpoIIIAH-like family protein [U
+    3.5e-31  115.0  13.6    6.2e-24   91.3   7.7    2.0  2  WP_053416284.1  SpoIIIAH-like family protein [Viridibacillus 
+    1.6e-30  112.8  14.3    5.3e-25   94.8   7.1    2.0  2  WP_102691387.1  SpoIIIAH-like family protein [Rummeliibacillu
+    2.9e-30  112.0  11.4    5.8e-23   88.1   3.4    2.0  2  WP_134209598.1  SpoIIIAH-like family protein [Paenisporosarci
+    1.3e-28  106.6  10.0    3.2e-23   89.0   5.7    2.0  2  WP_066163660.1  MULTISPECIES: SpoIIIAH-like family protein [M
+    1.6e-28  106.3   9.1    2.1e-28  105.9   9.1    1.1  1  KGA97905.1      hypothetical protein BALCAV_0207690 [Alkaliha
+      8e-28  104.0  15.9      3e-22   85.8   8.6    2.0  2  WP_066786653.1  MULTISPECIES: SpoIIIAH-like family protein [R
+    3.2e-26   98.8  10.7      5e-26   98.1  10.7    1.3  1  WP_061948745.1  SpoIIIAH-like family protein [Alkalihalobacil
+    3.6e-26   98.6   8.4    3.1e-21   82.5   3.1    2.0  2  WP_076757704.1  SpoIIIAH-like family protein [Edaphobacillus 
+    9.3e-26   97.3   7.3    1.2e-25   96.9   7.3    1.1  1  ATO50949.1      stage III sporulation protein AH [Brevibacill
+    2.4e-25   95.9  15.5    1.9e-17   70.1   6.3    2.0  2  BAD65006.1      stage III sporulation protein AH [Alkalihalob
+    4.6e-25   95.0  11.1    7.7e-20   77.9   5.0    2.0  2  WP_092051140.1  SpoIIIAH-like family protein [Bhargavaea gins
+    1.2e-24   93.7  12.0    7.5e-21   81.2   4.9    2.0  2  WP_151700324.1  SpoIIIAH-like family protein [Psychrobacillus
+    5.1e-24   91.6  14.4    2.7e-19   76.1   6.4    2.0  2  WP_144536010.1  MULTISPECIES: SpoIIIAH-like family protein [P
+    4.1e-23   88.6  14.7    6.2e-18   71.7   6.4    2.0  2  WP_041075074.1  SpoIIIAH-like family protein [Bacillus sp. Ox
+    5.6e-21   81.7  10.0      1e-14   61.2   3.2    2.0  2  WP_067209902.1  MULTISPECIES: SpoIIIAH-like family protein [S
+    2.4e-19   76.3  10.5    2.3e-14   60.1   1.8    2.1  2  ARF12755.1      hypothetical protein SporoS204_00360 [Sporosa
+    2.4e-19   76.3  10.5    2.3e-14   60.1   1.8    2.1  2  WP_029054557.1  SpoIIIAH-like family protein [Sporosarcina ur
+    2.3e-16   66.6   6.0      3e-16   66.2   6.0    1.2  1  ABY94750.1      hypothetical protein Teth39_1095 [Thermoanaer
+    1.2e-14   60.9   3.2    1.5e-14   60.7   3.2    1.0  1  OWZ84024.1      hypothetical protein CDO51_05555 [Natranaerob
+    4.5e-14   59.1   0.0    6.2e-14   58.6   0.0    1.1  1  APC08738.1      stage III sporulation protein AH [Moorella th
+    4.4e-13   55.8  10.7    4.4e-13   55.8  10.7    1.3  1  QJS20168.1      hypothetical protein HLK68_13220 [Turicibacte
+    9.7e-12   51.5   5.9    1.2e-11   51.1   5.9    1.1  1  UMZ73956.1      Stage III sporulation protein AH [Natranaerof
+      3e-11   49.9  13.6    3.9e-11   49.5  13.6    1.1  1  QAT61768.1      SpoIIIAH-like family protein [Tissierella sp.
+    7.5e-11   48.6   5.2    7.5e-11   48.6   5.2    2.0  2  ACL69381.1      hypothetical protein Hore_06240 [Halothermoth
+    8.9e-11   48.3  18.2    2.6e-09   43.5  18.2    2.0  1  GAK39907.1      hypothetical protein TCA2_2396 [Paenibacillus
+      1e-10   48.1   6.2    1.4e-10   47.7   6.2    1.1  1  ACB85280.1      hypothetical protein Nther_1706 [Natranaerobi
+    1.1e-10   48.0  10.7      7e-05   29.0   7.1    2.0  2  WP_041139296.1  SpoIIIAH-like family protein [Beduini massili
+    2.8e-10   46.7   0.9    4.2e-10   46.1   0.2    1.5  2  BAD40840.1      stage III sporulation protein AH [Symbiobacte
+    3.1e-10   46.5  14.8     0.0006   26.0   0.5    2.0  2  MVX29601.1      hypothetical protein GQF29_16660 [Coprobacill
+    3.1e-10   46.5  14.8     0.0006   26.0   0.5    2.0  2  WP_008789692.1  SpoIIIAH-like family protein [Coprobacillus c
+    3.3e-10   46.4  14.2    0.00098   25.3   0.3    2.0  2  WP_004609799.1  SpoIIIAH-like family protein [Thomasclavelia 
+    8.5e-10   45.1   2.2    9.8e-10   44.9   2.2    1.1  1  EGO63624.1      hypothetical protein ALO_11934 [Acetonema lon
+    1.5e-09   44.3  14.7     0.0038   23.4  11.4    2.0  2  WP_003538299.1  MULTISPECIES: SpoIIIAH-like family protein [T
+    2.5e-09   43.6  15.7    2.5e-09   43.6  15.7    2.0  2  WP_010965386.1  MULTISPECIES: SpoIIIAH-like family protein [C
+    3.2e-09   43.2   2.4      5e-09   42.6   2.4    1.3  1  UNC92550.1      SpoIIIAH-like family protein [Candidatus Cont
+    3.4e-09   43.1   0.1    4.8e-09   42.7   0.1    1.2  1  EEG78330.1      hypothetical protein DealDRAFT_0745 [Dethioba
+    2.4e-08   40.4  20.6    7.8e-06   32.2  20.6    2.0  1  WP_002609025.1  MULTISPECIES: SpoIIIAH-like family protein [B
+    1.2e-07   38.1  10.7    1.7e-07   37.6  10.7    1.2  1  AUO18620.1      stage III sporulation protein AH [Monoglobus 
+    1.1e-06   34.9   0.2    1.5e-06   34.5   0.2    1.2  1  SHJ67084.1      stage III sporulation protein AH [Anaerobranc
+    1.2e-06   34.8  12.2     0.0011   25.1   6.5    2.0  2  WP_158546477.1  SpoIIIAH-like family protein [Faecalibacillus
+    1.3e-06   34.7  19.3    7.6e-06   32.2  13.6    2.0  2  ALU37544.1      Stage III sporulation protein AH-like protein
+    2.4e-06   33.9   1.1    3.1e-06   33.5   1.1    1.1  1  QNO16151.1      SpoIIIAH-like family protein [Alkalicella cal
+    7.5e-06   32.2   5.4     0.0017   24.5   0.7    2.0  2  WP_006059104.1  SpoIIIAH-like family protein [Holdemania fili
+    1.1e-05   31.7   0.0    1.1e-05   31.7   0.0    1.4  1  ACL21527.1      hypothetical protein Dhaf_3509 [Desulfitobact
+    0.00011   28.4  12.8    0.00021   27.5  12.8    1.5  1  WP_004799392.1  hypothetical protein [Amedibacillus dolichus]
+    0.00013   28.2  12.7    0.00016   27.9  12.7    1.1  1  MCQ4635887.1    SpoIIIAH-like family protein [Anaerovorax odo
+    0.00033   26.9   7.9    0.00074   25.7   7.9    1.5  1  WP_010166290.1  SpoIIIAH-like family protein [Epulopiscium sp
+     0.0024   24.0  19.7     0.0045   23.1  19.7    1.5  1  WP_008688524.1  MULTISPECIES: SpoIIIAH-like family protein [L
+
+
+Domain annotation for each sequence (and alignments):
+>> AAU41481.1  stage III sporulation protein SpoIIIAH [Bacillus licheniformis DSM 13 = ATCC 14580]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  389.4  22.4  1.7e-119  3.8e-115       1     214 []       2     212 .]       2     212 .] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 389.4 bits;  conditional E-value: 1.7e-119
+  SpoIIIAH_aligned   1 mlkkqtvwlltmlslvvvlsvyyimspesenvvqvddkeevaaekekpakeetkkkkktesekekedgtkgkssedketsaseasekdgevvt 93 
+                       mlkkqtvwlltmlslvvvlsvyyimspe+envv+vddke+vaaekekp+kee++k+ k++++  k d tkgk+++dketsa   se++gevvt
+        AAU41481.1   2 MLKKQTVWLLTMLSLVVVLSVYYIMSPEGENVVTVDDKEQVAAEKEKPMKEEPAKDGKDDTAPAK-DKTKGKDTKDKETSA---SEQNGEVVT 90 
+                       9************************************************************8888.89*************...5669***** PP
+
+  SpoIIIAH_aligned  94 eetad.ddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehs 185
+                       ee+++ +dlfttyr+e++d+rs+ereel+eiv+sdkatakekseaydkmtelseaeGtektletliktkGykdalvna+Gdkvnitvk+kehs
+        AAU41481.1  91 EESSGdEDLFTTYRMEMDDQRSREREELTEIVRSDKATAKEKSEAYDKMTELSEAEGTEKTLETLIKTKGYKDALVNADGDKVNITVKAKEHS 183
+                       **98659************************************************************************************** PP
+
+  SpoIIIAH_aligned 186 kakatdiidlvakevknlkdvavtfepsk 214
+                       ka+atdiid+vakevknl+dvavtfep++
+        AAU41481.1 184 KAAATDIIDIVAKEVKNLNDVAVTFEPAD 212
+                       ***************************96 PP
+
+>> BAI85955.1  stage III sporulation protein AH [Bacillus subtilis subsp. natto BEST195]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  381.7  22.9    4e-117  8.9e-113       1     214 []       1     218 []       1     218 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 381.7 bits;  conditional E-value: 4e-117
+  SpoIIIAH_aligned   1 mlkkqtvwlltmlslvvvlsvyyimspesenvvqvd......dkeevaaekekpakeetkkkkktesekekedgtkgk..ssedketsaseas 85 
+                       mlkkqtvwlltmlslvvvlsvyyimspes+n+vq++      d++eva+ek +pak++tk+k++te+ek+kedgtkg+  ss+dketsa eas
+        BAI85955.1   1 MLKKQTVWLLTMLSLVVVLSVYYIMSPESKNAVQMQseksasDSGEVATEK-APAKQDTKEKSGTETEKGKEDGTKGTkdSSADKETSA-EAS 91 
+                       9**************************************************.*************************988899******.999 PP
+
+  SpoIIIAH_aligned  86 ekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnit 178
+                       ek g+vvt etadddlfttyrl+ledarskereeln+ivssd+atakekseaydkmt+lse+eGtek+letlikt+Gy+dalvnaeGdk+nit
+        BAI85955.1  92 EK-GTVVT-ETADDDLFTTYRLDLEDARSKEREELNAIVSSDDATAKEKSEAYDKMTALSEVEGTEKQLETLIKTQGYEDALVNAEGDKINIT 182
+                       99.*****.************************************************************************************ PP
+
+  SpoIIIAH_aligned 179 vkskehskakatdiidlvakevknlkdvavtfepsk 214
+                       vks++hsk+kat+iidlvake+k++kdvavtfepsk
+        BAI85955.1 183 VKSDKHSKSKATAIIDLVAKEIKTMKDVAVTFEPSK 218
+                       **********************************97 PP
+
+>> CAB14367.2  stage III sporulation ratchet engulfment protein [Bacillus subtilis subsp. subtilis str. 168]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  381.7  22.9    4e-117  8.9e-113       1     214 []       1     218 []       1     218 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 381.7 bits;  conditional E-value: 4e-117
+  SpoIIIAH_aligned   1 mlkkqtvwlltmlslvvvlsvyyimspesenvvqvd......dkeevaaekekpakeetkkkkktesekekedgtkgk..ssedketsaseas 85 
+                       mlkkqtvwlltmlslvvvlsvyyimspes+n+vq++      d++eva+ek +pak++tk+k++te+ek+kedgtkg+  ss+dketsa eas
+        CAB14367.2   1 MLKKQTVWLLTMLSLVVVLSVYYIMSPESKNAVQMQseksasDSGEVATEK-APAKQDTKEKSGTETEKGKEDGTKGTkdSSADKETSA-EAS 91 
+                       9**************************************************.*************************988899******.999 PP
+
+  SpoIIIAH_aligned  86 ekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnit 178
+                       ek g+vvt etadddlfttyrl+ledarskereeln+ivssd+atakekseaydkmt+lse+eGtek+letlikt+Gy+dalvnaeGdk+nit
+        CAB14367.2  92 EK-GTVVT-ETADDDLFTTYRLDLEDARSKEREELNAIVSSDDATAKEKSEAYDKMTALSEVEGTEKQLETLIKTQGYEDALVNAEGDKINIT 182
+                       99.*****.************************************************************************************ PP
+
+  SpoIIIAH_aligned 179 vkskehskakatdiidlvakevknlkdvavtfepsk 214
+                       vks++hsk+kat+iidlvake+k++kdvavtfepsk
+        CAB14367.2 183 VKSDKHSKSKATAIIDLVAKEIKTMKDVAVTFEPSK 218
+                       **********************************97 PP
+
+>> UUH64716.1  stage III sporulation ratchet engulfment protein SpoIIIAH [Bacillus subtilis subsp. natto]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  381.7  22.9    4e-117  8.9e-113       1     214 []       1     218 []       1     218 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 381.7 bits;  conditional E-value: 4e-117
+  SpoIIIAH_aligned   1 mlkkqtvwlltmlslvvvlsvyyimspesenvvqvd......dkeevaaekekpakeetkkkkktesekekedgtkgk..ssedketsaseas 85 
+                       mlkkqtvwlltmlslvvvlsvyyimspes+n+vq++      d++eva+ek +pak++tk+k++te+ek+kedgtkg+  ss+dketsa eas
+        UUH64716.1   1 MLKKQTVWLLTMLSLVVVLSVYYIMSPESKNAVQMQseksasDSGEVATEK-APAKQDTKEKSGTETEKGKEDGTKGTkdSSADKETSA-EAS 91 
+                       9**************************************************.*************************988899******.999 PP
+
+  SpoIIIAH_aligned  86 ekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnit 178
+                       ek g+vvt etadddlfttyrl+ledarskereeln+ivssd+atakekseaydkmt+lse+eGtek+letlikt+Gy+dalvnaeGdk+nit
+        UUH64716.1  92 EK-GTVVT-ETADDDLFTTYRLDLEDARSKEREELNAIVSSDDATAKEKSEAYDKMTALSEVEGTEKQLETLIKTQGYEDALVNAEGDKINIT 182
+                       99.*****.************************************************************************************ PP
+
+  SpoIIIAH_aligned 179 vkskehskakatdiidlvakevknlkdvavtfepsk 214
+                       vks++hsk+kat+iidlvake+k++kdvavtfepsk
+        UUH64716.1 183 VKSDKHSKSKATAIIDLVAKEIKTMKDVAVTFEPSK 218
+                       **********************************97 PP
+
+>> AAS43160.1  stage III sporulation protein AH [Bacillus cereus ATCC 10987]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  177.0  21.0   1.7e-54   3.7e-50       1     212 [.       1     215 [.       1     217 [. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 177.0 bits;  conditional E-value: 1.7e-54
+  SpoIIIAH_aligned   1 mlkkqtvwlltmlslvvvlsvyyimspesenvvqvddkeevaaek...ekpak.eetkkkkk.tesekekedgtkgkssedketsaseasekd 88 
+                       mlkkqtvwlltmlslvvvlsvyy+ +pe  n+ +    e++ +ek   +k +  e +k+  k ++++ke  +   +k+++ ke++++e+s+k+
+        AAS43160.1   1 MLKKQTVWLLTMLSLVVVLSVYYVTTPEKMNTASPTTGEKIGQEKqgtDKAVTnEAPKETPKkENTSKETSNKETNKETDKKESATKETSKKE 93 
+                       9***********************************999999999555333330333333220223333333334445666677777888887 PP
+
+  SpoIIIAH_aligned  89 gevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktk.GykdalvnaeGdkvnitvk 180
+                       ++v   +++ d+ ft+ r+++ed+rs ++ +l+e++ss ka+a ek +a + + +++ +e  +  let+ik++ Gykdalv a+G  + +tvk
+        AAS43160.1  94 ANVTV-QSS-DENFTALRMQMEDQRSEQKAKLQEVMSSTKASATEKNKAKENFDAITTMETKQELLETVIKSQgGYKDALVRADGTDIKVTVK 184
+                       77665.555.567***********************************************************945****************** PP
+
+  SpoIIIAH_aligned 181 skehskakatdiidlvakevknlkdvavtfep 212
+                       + +hs+ +a +ii+lv+ e    kdv v f+p
+        AAS43160.1 185 AAKHSQKEANKIIQLVRSEG-GSKDVGVKFDP 215
+                       *****************996.569******99 PP
+
+>> BAD76686.1  stage III sporulation protein AH [Geobacillus kaustophilus HTA426]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.1   5.1   1.9e-14   4.1e-10       1      46 [.       1      49 [.       1      63 [. 0.68
+   2 !  119.1   9.3   8.6e-37   1.9e-32      69     213 ..      40     182 ..      28     183 .] 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 46.1 bits;  conditional E-value: 1.9e-14
+  SpoIIIAH_aligned  1 mlkkqtvwlltmlslvvvlsvyyimspesen...vvqvddkeevaaeke 46
+                      mlkkqtvwlltmlslvvvlsvyy+ +p++ n   + + ++k e ++++ 
+        BAD76686.1  1 MLKKQTVWLLTMLSLVVVLSVYYVTAPKNMNdspAFTANKKTEKTTDQP 49
+                      9**************************9877322334444444444433 PP
+
+  == domain 2  score: 119.1 bits;  conditional E-value: 8.6e-37
+  SpoIIIAH_aligned  69 tkgkssedketsaseasekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktk 161
+                        k ++++d+ + a e+++k  +      ++ddlft+ r+++ed+rs+ r+eln+iv s +ata eksea dk+ +l      e tletlik+k
+        BAD76686.1  40 KKTEKTTDQPSVAVEEAKKP-SAS--GETGDDLFTALRMKIEDERSRLRDELNAIVASANATAEEKSEALDKIEKLQALSEKEATLETLIKSK 129
+                       23345677777777776653.322..34679*************************************************************9 PP
+
+  SpoIIIAH_aligned 162 .GykdalvnaeGdkvnitvkskehskakatdiidlvakevknlkdvavtfeps 213
+                        Gy+d lv a+ ++v +t+k+k+ s   a ++i +v+ke+ + + v+v f+p+
+        BAD76686.1 130 gGYEDVLVRADDNQVRVTIKAKQSSAKSANEVIHMVKKEIPDAEYVTVEFQPA 182
+                       45*************************************************97 PP
+
+>> AJH78695.1  stage III sporulation protein AH [Weizmannia coagulans DSM 1 = ATCC 7050]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.3   3.9   1.9e-15   4.3e-11       1      49 [.       2      52 ..       2      60 .. 0.80
+   2 !  114.4  12.9   2.4e-35   5.2e-31      72     211 ..      37     178 ..      30     180 .] 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 49.3 bits;  conditional E-value: 1.9e-15
+  SpoIIIAH_aligned  1 mlkkqtvwlltmlslvvvlsvyyims.pesenvvqvddke.evaaekekpa 49
+                      +lkkqtvwlltmlslvvvlsvyy+ + p++ n v+ ++ke e aa kek  
+        AJH78695.1  2 LLKKQTVWLLTMLSLVVVLSVYYVTAePKTTNQVTRQEKEkESAATKEKDS 52
+                      69*********************9754999**9999866515666776654 PP
+
+  == domain 2  score: 114.4 bits;  conditional E-value: 2.4e-35
+  SpoIIIAH_aligned  72 kssedketsasea..sekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkG 162
+                       +++++ke++a+++  s  +   +t ++a d++f t rle +d+ sk++eel++ + s + t  eks+a d m +l+e+   e+ le+lik+kG
+        AJH78695.1  37 RQEKEKESAATKEkdSGSQKIKLTTKSASDEVFETLRLERQDEMSKKQEELTNKLASTDLTPDEKSKAMDEMKKLTETANKEQVLESLIKAKG 129
+                       35566776665431133333446779999**************************************************************** PP
+
+  SpoIIIAH_aligned 163 ykdalvnaeGdkvnitvkskehskakatdiidlvakevknlkdvavtfe 211
+                       y+dalv+a+Gd v +tvksk+h ka+a +i+ lv++e+ n   +av f+
+        AJH78695.1 130 YEDALVQADGDEVVVTVKSKKHDKAAANEIVKLVNQELGNTPKLAVEFQ 178
+                       **********************************************996 PP
+
+>> BAC13843.1  stage III sporulation protein AH (mutants block sporulation after engulfment) [Oceanobacillus iheyensis H
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.1   0.0   4.2e-18   9.2e-14       1      57 [.       1      57 [.       1      64 [. 0.88
+   2 !   89.5   4.7     1e-27   2.2e-23      75     212 ..      41     180 ..      37     182 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 58.1 bits;  conditional E-value: 4.2e-18
+  SpoIIIAH_aligned  1 mlkkqtvwlltmlslvvvlsvyyimspesenvvqvddkeevaaekekpakeetkkkk 57
+                      mlkkqtvwlltmlsl+vvlsv+yi+sp +++   +dd ++ + e  +pa+ e+  + 
+        BAC13843.1  1 MLKKQTVWLLTMLSLMVVLSVFYIFSPSGDDLAFIDDGQDSSEETTAPADGEEGADI 57
+                      9***********************************999999999999987765554 PP
+
+  == domain 2  score: 89.5 bits;  conditional E-value: 1e-27
+  SpoIIIAH_aligned  75 edketsaseasekdgev.vteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektl.etliktkGykd 165
+                       +  et+a  + e+ +++  t +   d++ftt r+e++d+rsk++  l+++v s  a+a ek ea   + +l e    ek l e ++ + Gy+d
+        BAC13843.1  41 SSEETTAPADGEEGADIeSTTNVGSDEVFTTIRMEVQDERSKQKSRLTDVVASGSASAEEKDEALKEIDQLEELSSKEKILqEQILGATGYED 133
+                       345777755555555542355677799****************************************************9956677899**** PP
+
+  SpoIIIAH_aligned 166 alvnaeGdkvnitvkskehskakatdiidlvakevknlkdvavtfep 212
+                        lv ++Gdkv + vk +e s+ +a++i+++v+ e  +     v f+p
+        BAC13843.1 134 VLVRTDGDKVHVHVKVDELSDEEAVNIMQMVRDEFGRDITTEVNFQP 180
+                       *********************************99876667777777 PP
+
+>> BAB06509.1  mutants block sporulation after engulfment [Halalkalibacterium halodurans C-125]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  138.3   9.6   1.2e-42   2.7e-38       1     202 [.       2     198 ..       2     208 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 138.3 bits;  conditional E-value: 1.2e-42
+  SpoIIIAH_aligned   1 mlkkqtvwlltmlslvvvlsvyyimspesenvvqvddkeevaaekekpakeetkkkkktesekekedgtkgkssedketsaseasekdgevvt 93 
+                       +lkkqtvwlltmlsl+vvls yy+msp +e+v  v d+e +   +e+   e + ++ +++ + e  +g + + +ed e  a+ +++ d   ++
+        BAB06509.1   2 VLKKQTVWLLTMLSLIVVLSAYYMMSPGGEDVAFVSDEE-LNDMQEEM--ERQLEEMDIDLDAEG-EGEEVTVEEDEEMGAEAETDSDVGSIS 90 
+                       59******************************9999665.44444332..333444555554444.567777889999999666666666666 PP
+
+  SpoIIIAH_aligned  94 eetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehsk 186
+                        + a +++f+t r ++  +r  + e+ ++i+ s +ata  ksea+ k  el      e tletlik++Gy+d lv ae ++v i v+++e + 
+        BAB06509.1  91 -NVASNEVFATIRNQMIASREEMAENYTNIMGSPDATAEMKSEAFTKSQELQRLSQQEATLETLIKAQGYDDVLVLAEEEQVRIIVQAEELTA 182
+                       .88999*************************************************************************************** PP
+
+  SpoIIIAH_aligned 187 akatdiidlvakevkn 202
+                        +a +i+ + +k++ +
+        BAB06509.1 183 EQANEIMVMASKQLGS 198
+                       *******999998765 PP
+
+>> WP_008179871.1  MULTISPECIES: SpoIIIAH-like family protein [Bacteria]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.2   0.7   4.8e-08    0.0011       3      29 ..       4      30 ..       2      44 .. 0.87
+   2 !  107.3   5.8   3.6e-33     8e-29      85     211 ..      53     180 ..      36     183 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 25.2 bits;  conditional E-value: 4.8e-08
+  SpoIIIAH_aligned  3 kkqtvwlltmlslvvvlsvyyimspes 29
+                      +++tvw++t+lslv v+svyy++ p  
+    WP_008179871.1  4 RRRTVWFMTLLSLVAVISVYYLVDPAK 30
+                      789********************9975 PP
+
+  == domain 2  score: 107.3 bits;  conditional E-value: 3.6e-33
+  SpoIIIAH_aligned  85 sekdgevvteetad.ddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvn 176
+                        +k ++ vt+e +    lf   r+++ d+rs+ re+l++ + s++++a ek ea++ m  l + e +e  le lik+ Gy da+v aeG+kv 
+    WP_008179871.1  53 DQKATNDVTQEVSSpSHLFEEMRMQVSDERSQLREQLTQKIASEESSADEKNEAFNEMDGLIKRESAEAMLEMLIKSLGYSDAFVRAEGEKVS 145
+                       23445668877665599**************************************************************************** PP
+
+  SpoIIIAH_aligned 177 itvkskehskakatdiidlvakevknlkdvavtfe 211
+                       +tv ++e sk++a +ii lv+ e++  +dv v f 
+    WP_008179871.1 146 VTVMAEELSKSQANEIIYLVRTEMEGANDVQVKFS 180
+                       ********************************996 PP
+
+>> WP_008404261.1  MULTISPECIES: SpoIIIAH-like family protein [Solibacillus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.5   0.1   9.1e-09    0.0002       2      41 ..       3      42 ..       2      52 .. 0.89
+   2 !  100.2   2.9   5.2e-31   1.1e-26      96     212 ..      59     175 ..      48     177 .] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 27.5 bits;  conditional E-value: 9.1e-09
+  SpoIIIAH_aligned  2 lkkqtvwlltmlslvvvlsvyyimspesenvvqvddkeev 41
+                      +kk+tvw+lt++sl  v+sv+yi+  ++ n++++ ++e +
+    WP_008404261.1  3 VKKRTVWFLTVVSLAAVISVFYIFEDNTPNILTIFSDETI 42
+                      69*****************************999866655 PP
+
+  == domain 2  score: 100.2 bits;  conditional E-value: 5.2e-31
+  SpoIIIAH_aligned  96 tadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehskak 188
+                        ++ dlf   rlel ++rs+++e+l++ + +d+ ta ek ea++ m el + e +e  le lik+ Gy dalv  eGdkv + v s+e s+  
+    WP_008404261.1  59 NSESDLFQEVRLELANKRSQQKEQLTQKIAADEFTAEEKNEAFNEMDELIKLESSEAMLEMLIKSIGYSDALVRIEGDKVAVRVMSDEVSEKL 151
+                       6899***************************************************************************************** PP
+
+  SpoIIIAH_aligned 189 atdiidlvakevknlkdvavtfep 212
+                       a +i+ +v+ e k+  +v+v fep
+    WP_008404261.1 152 ADEILYVVRSEFKDYVNVSVEFEP 175
+                       ***********************9 PP
+
+>> ADC48379.1  mutants block sporulation after engulfment [Alkalihalophilus pseudofirmus OF4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  122.7  12.1     7e-38   1.6e-33       1     211 [.       2     198 .]       2     198 .] 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 122.7 bits;  conditional E-value: 7e-38
+  SpoIIIAH_aligned   1 mlkkqtvwlltmlslvvvlsvyyimsp..esenvvqvddkeevaaekekpakeetkkkkktesekekedgtkgkssedketsaseasekdgev 91 
+                       +lkkqtvwlltmlsl+vvls yy+m+p   se++  vd++e  aae+   +++   ++   +         ++ ++ d et   e +  ++ev
+        ADC48379.1   2 VLKKQTVWLLTMLSLIVVLSAYYLMTPgpASEDIAFVDNQEMEAAEE--GMEDS--EDMVVNV-------EEEFEAVDAETGE-EVA--NTEV 80 
+                       59***********************8622688888898888777777..23222..2222222.......2333556777776.442..3455 PP
+
+  SpoIIIAH_aligned  92 vteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskeh 184
+                        +   ++ +lf+t r+el+++r ++ ee ++i  + + +a +  ea++k  el      e  letliktkG++d lv +eG+ v + v+++e 
+        ADC48379.1  81 NA--MSGSELFATMRVELQESRDRMAEEYTKIQAAGDVAAEKVVEAHEKSMELLALSQQESMLETLIKTKGFNDVLVMTEGQEVKVIVQAEEL 171
+                       54..8899************************************************************************************* PP
+
+  SpoIIIAH_aligned 185 skakatdiidlvakevknlkdvavtfe 211
+                       + a++++i+d+va ++ n k v v+ e
+        ADC48379.1 172 TGAQTVEIMDMVADQLGNGKSVVVSHE 198
+                       ******************999999865 PP
+
+>> WP_024361187.1  MULTISPECIES: SpoIIIAH-like family protein [Lysinibacillus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.3   0.7   4.4e-08   0.00097       3      30 ..       4      31 ..       2      47 .. 0.86
+   2 !  102.5   5.1   1.1e-31   2.3e-27      76     211 ..      46     182 ..      36     185 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 25.3 bits;  conditional E-value: 4.4e-08
+  SpoIIIAH_aligned  3 kkqtvwlltmlslvvvlsvyyimspese 30
+                      +++tvw++t+lslv v+svyy++ p  +
+    WP_024361187.1  4 RRRTVWFMTLLSLVAVISVYYLVDPAKQ 31
+                      789********************99754 PP
+
+  == domain 2  score: 102.5 bits;  conditional E-value: 1.1e-31
+  SpoIIIAH_aligned  76 dketsaseasekdgevvteet.adddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdal 167
+                          t  +++ + + +  t+e  +   lf   r++++d+rs+ re+l++ + s++ ta ek ea++ +  l + e +e  le lik+ Gy+da+
+    WP_024361187.1  46 TAITGVTDQEATNKQDATQEVlSPSHLFEEMRMQVNDERSQLREQLTQKIASEEYTAEEKNEAFNEIDGLIKQESAEAMLEMLIKSLGYNDAF 138
+                       44455556666666666766525699******************************************************************* PP
+
+  SpoIIIAH_aligned 168 vnaeGdkvnitvkskehskakatdiidlvakevknlkdvavtfe 211
+                       v aeG+kv +tv ++e sk++a +ii lv+ e +  +dv v f 
+    WP_024361187.1 139 VRAEGEKVSVTVMAEELSKSQANEIIYLVKTEWEGANDVQVKFS 182
+                       *****************************************996 PP
+
+>> WP_096550966.1  MULTISPECIES: SpoIIIAH-like family protein [Ureibacillus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.5   0.6   4.5e-09    0.0001       2      29 ..       3      30 ..       2      47 .. 0.86
+   2 !   97.5   6.1   3.5e-30   7.7e-26      78     210 ..      45     174 ..      35     177 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 28.5 bits;  conditional E-value: 4.5e-09
+  SpoIIIAH_aligned  2 lkkqtvwlltmlslvvvlsvyyimspes 29
+                      +k++tvwllt+lsl  v+svyy++ p+ 
+    WP_096550966.1  3 VKRRTVWLLTLLSLAAVISVYYVFEPNR 30
+                      699*********************9975 PP
+
+  == domain 2  score: 97.5 bits;  conditional E-value: 3.5e-30
+  SpoIIIAH_aligned  78 etsaseasekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvna 170
+                       et+ ++a   d ++ t   ++  lf   r+e+ ++rs+ re+l++ + s + +a ek eay++m el + e +e  le li   Gy dalv  
+    WP_096550966.1  45 ETTLTNA---DEKLTTPTVSESHLFEDLRMEIANERSQLREQLEQKIASSEYSAEEKNEAYNQMNELIKRESAEAMLEMLIENLGYSDALVHV 134
+                       5555444...44577777999************************************************************************ PP
+
+  SpoIIIAH_aligned 171 eGdkvnitvkskehskakatdiidlvakevknlkdvavtf 210
+                       +  kv++tv s+e ska+a++ii +v++++++++dv+v+ 
+    WP_096550966.1 135 KDGKVQVTVLSDEISKAQASEIIYVVRQQINDIQDVTVSV 174
+                       ************************************9976 PP
+
+>> WP_053416284.1  SpoIIIAH-like family protein [Viridibacillus arvi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.7   0.4   8.3e-09   0.00018       2      28 ..       3      29 ..       2      42 .. 0.91
+   2 !   91.3   7.7   2.8e-28   6.2e-24      77     211 ..      44     178 ..      33     181 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 27.7 bits;  conditional E-value: 8.3e-09
+  SpoIIIAH_aligned  2 lkkqtvwlltmlslvvvlsvyyimspe 28
+                      +kk++vw+lt+lsl  v+svyy+m p 
+    WP_053416284.1  3 VKKRAVWFLTLLSLAAVISVYYLMNPA 29
+                      69***********************96 PP
+
+  == domain 2  score: 91.3 bits;  conditional E-value: 2.8e-28
+  SpoIIIAH_aligned  77 ketsaseasekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvn 169
+                       k t+ ++ ++  g+  t  ta+ dlf   r+el ++rs+ +  l++ + s+k ta ek ea++ m  + + e  e  le likt Gy da+v 
+    WP_053416284.1  44 KGTAVDDIAKLTGNDKTPVTAQSDLFEEMRMELLNERSQLKATLTQKIASEKYTAEEKNEAFNDMDVIVKKESNEAMLELLIKTLGYSDAFVR 136
+                       66777777777888888899************************************************************************* PP
+
+  SpoIIIAH_aligned 170 aeGdkvnitvkskehskakatdiidlvakevknlkdvavtfe 211
+                       ae d++ +tv+s e sk+ka +i+  v+kev +   + v f+
+    WP_053416284.1 137 AENDQIRVTVQSAELSKSKADEIVYTVKKEVPTAGKIVVDFK 178
+                       ********************************9999999886 PP
+
+>> WP_102691387.1  SpoIIIAH-like family protein [Rummeliibacillus pycnus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.0   0.6   2.3e-07     0.005       2      27 ..       3      28 ..       2      37 .. 0.92
+   2 !   94.8   7.1   2.4e-29   5.3e-25      75     211 ..      42     177 ..      33     180 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 23.0 bits;  conditional E-value: 2.3e-07
+  SpoIIIAH_aligned  2 lkkqtvwlltmlslvvvlsvyyimsp 27
+                      +kk++vw+lt+lsl  v+svyy+  p
+    WP_102691387.1  3 VKKKAVWFLTLLSLAAVISVYYLSNP 28
+                      69********************9888 PP
+
+  == domain 2  score: 94.8 bits;  conditional E-value: 2.4e-29
+  SpoIIIAH_aligned  75 edketsaseasekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdal 167
+                       + k+t  s+ ++k g+  t  t++  lf   r+el+++rs+ ++ l++ + s + ta ek ea+d++ ++++ e  e  le likt Gy da+
+    WP_102691387.1  42 ALKDTKISDIASKTGKT-TPVTTESHLFEEMRMELQNERSQLKDTLTKKIASSQYTAEEKNEAFDQIDSITKNESNEAMLEMLIKTLGYPDAF 133
+                       55778888887776765.4478999******************************************************************** PP
+
+  SpoIIIAH_aligned 168 vnaeGdkvnitvkskehskakatdiidlvakevknlkdvavtfe 211
+                       v  e d++ +tv+++e skaka +i+ +v+ke++n  ++ v f+
+    WP_102691387.1 134 VRVENDRIRVTVQANELSKAKANEIVYMVKKELDNSGQIVVDFQ 177
+                       ***********************************999999986 PP
+
+>> WP_134209598.1  SpoIIIAH-like family protein [Paenisporosarcina antarctica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.0   1.1   3.2e-09   7.1e-05       2      28 ..       3      29 ..       2      33 .. 0.93
+   2 !   88.1   3.4   2.6e-27   5.8e-23      90     213 ..      56     179 ..      40     180 .] 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 29.0 bits;  conditional E-value: 3.2e-09
+  SpoIIIAH_aligned  2 lkkqtvwlltmlslvvvlsvyyimspe 28
+                      +kk+tvw+lt+lslv v+svyy+  p+
+    WP_134209598.1  3 VKKRTVWMLTLLSLVAVISVYYVKEPN 29
+                      69*********************9885 PP
+
+  == domain 2  score: 88.1 bits;  conditional E-value: 2.6e-27
+  SpoIIIAH_aligned  90 evvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvksk 182
+                       + +t   a+  lf   r+e +++rs+ re+l+  +++d+ +a e  e y+ m++l+  + te  le li++ Gy dalv+++  kv++ v s+
+    WP_134209598.1  56 DAITPVYAQSALFEEMRMESQNKRSQLREQLTTRITTDEMSADEINELYNEMSDLTVRDSTEAMLEMLIRSLGYADALVQTDKGKVDVRVISE 148
+                       45666779999********************************************************************************** PP
+
+  SpoIIIAH_aligned 183 ehskakatdiidlvakevknlkdvavtfeps 213
+                       e  k  a +ii +v+k+ ++ k v vtf+p+
+    WP_134209598.1 149 EQGKELANEIIHIVKKQWEDAKSVKVTFQPA 179
+                       ******************************8 PP
+
+>> WP_066163660.1  MULTISPECIES: SpoIIIAH-like family protein [Metasolibacillus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.3   0.2   1.5e-06     0.033       2      28 ..       3      29 ..       2      57 .. 0.81
+   2 !   89.0   5.7   1.5e-27   3.2e-23      92     202 ..      58     165 ..      38     175 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 20.3 bits;  conditional E-value: 1.5e-06
+  SpoIIIAH_aligned  2 lkkqtvwlltmlslvvvlsvyyimspe 28
+                      +k++tvw+lt++sl  v++vyy++  +
+    WP_066163660.1  3 VKRRTVWFLTLFSLAAVIAVYYVFEND 29
+                      699*******************98765 PP
+
+  == domain 2  score: 89.0 bits;  conditional E-value: 1.5e-27
+  SpoIIIAH_aligned  92 vteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskeh 184
+                       v    ++  lf   r+e++ +rs+ re+ ++ + sd+ ta ek eay+ m +l + e +e  le lik+ Gy da+v  e +kv +tv s+e 
+    WP_066163660.1  58 V---QSESYLFEQMRMEVDHERSQLREQYTQKIASDQYTAEEKNEAYNEMNALIKQESAEAMLEMLIKSLGYSDAFVRVEDEKVAVTVMSDEI 147
+                       3...37889************************************************************************************ PP
+
+  SpoIIIAH_aligned 185 skakatdiidlvakevkn 202
+                       sk +a +ii +v  e  +
+    WP_066163660.1 148 SKEEANEIIYIVMSEQGE 165
+                       ************998655 PP
+
+>> KGA97905.1  hypothetical protein BALCAV_0207690 [Alkalihalobacillus alcalophilus ATCC 27647 = CGMCC 1.3604]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  105.9   9.1   9.7e-33   2.1e-28       1     210 [.       2     224 ..       2     226 .] 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 105.9 bits;  conditional E-value: 9.7e-33
+  SpoIIIAH_aligned   1 mlkkqtvwlltmlslvvvlsvyyims.pesenvvqvd.....dkeevaaekekpakeetkkkkktesekekedgtkgk.........ssedke 78 
+                       +lkkqtvwlltmlsl+vvlsvyyi+   ++ +   vd     +      e++     e+ k++++e++ +k dg +++         +++d  
+        KGA97905.1   2 VLKKQTVWLLTMLSLIVVLSVYYILPgANGGDLAAVDtgemdS-----MENDDREAGESDKEEGDEADGDKADGDQEEapsdgandaDQQDSV 89 
+                       59**********************9624566666776333331.....333333333333333344444443332222222223222666655 PP
+
+  SpoIIIAH_aligned  79 tsas....easekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktk.Gykda 166
+                          s    ea e +g+v   e+   d+f+  ++ l+++r +  ee n++vss +++  e s a dk  el +    e +le  i+   Gy++ 
+        KGA97905.1  90 VNVSevfeEAEEMEGTVANPEA--ADVFAMQKMSLQESRHRAEEENNNVVSSPESSPSEVSLALDKTKELQQLAQLEEELERAIQIDgGYENV 180
+                       4444111144555677766554..589*********************************************************98737**** PP
+
+  SpoIIIAH_aligned 167 lvnaeGdkvnitvkskehskakatdiidlvakevknlkdvavtf 210
+                       lv      v+i v+++e ++  +++i+d+   +v +  +vav +
+        KGA97905.1 181 LVLMSDGAVEIHVQAEELTREDSVKIMDIAGEKVGRNVEVAVNY 224
+                       ***9999***************************9999999976 PP
+
+>> WP_066786653.1  MULTISPECIES: SpoIIIAH-like family protein [Rummeliibacillus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.9   0.6   2.4e-07    0.0052       2      27 ..       3      28 ..       2      35 .. 0.92
+   2 !   85.8   8.6   1.3e-26     3e-22      76     207 ..      43     172 ..      34     178 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 22.9 bits;  conditional E-value: 2.4e-07
+  SpoIIIAH_aligned  2 lkkqtvwlltmlslvvvlsvyyimsp 27
+                      +kk++vw+lt+lsl  v+svyy+  p
+    WP_066786653.1  3 VKKKAVWFLTLLSLAAVISVYYLSNP 28
+                      69********************9888 PP
+
+  == domain 2  score: 85.8 bits;  conditional E-value: 1.3e-26
+  SpoIIIAH_aligned  76 dketsaseasekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalv 168
+                        k+t  se ++k ++  t  t++  lf   r+el+++rs+ +e l++ v s + +a ek + +d + ++++ e  e  le li+t Gy da+v
+    WP_066786653.1  43 LKDTKISELASK-TSKTTPVTTESHLFEEMRMELQNERSQLKETLTQKVASSQYSADEKNKYFDEIDAITKNESNEAMLEMLIRTLGYSDAFV 134
+                       467777777666.44456678999********************************************************************* PP
+
+  SpoIIIAH_aligned 169 naeGdkvnitvkskehskakatdiidlvakevknlkdva 207
+                        ae d++ +tv+++e sk ka +i+ +v+ke ++ k v 
+    WP_066786653.1 135 RAEDDQIRVTVQANELSKEKANEIVYMVKKEFNEGK-VV 172
+                       *******************************98755.44 PP
+
+>> WP_061948745.1  SpoIIIAH-like family protein [Alkalihalobacillus trypoxylicola]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.1  10.7   2.3e-30     5e-26       1     210 [.       2     229 ..       2     230 .] 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 98.1 bits;  conditional E-value: 2.3e-30
+  SpoIIIAH_aligned   1 mlkkqtvwlltmlslvvvlsvyyimspesenvvqvd...dkeevaaek.....ekpakeetkkkkktesekekedgtkgk........ssedk 77 
+                       +lkkqtvwlltmlsl+vvls y+ +  ++ + +      + ++ a e+     ++ a+ee+++ +++ s ke+ +g+++         +++d 
+    WP_061948745.1   2 ILKKQTVWLLTMLSLIVVLSAYFFLPQNGTEQLAFLdndETNNQAVEEgedegKEGAEEEPEEGSEEGS-KEE-EGSEEApldgeesnDQQDM 92 
+                       59***********************99987776654244223334333322222223333333222222.211.2222223333333366777 PP
+
+  SpoIIIAH_aligned  78 etsaseasek...dgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktk.Gykda 166
+                           +e+ e+    g+v     +  ++f++ r++ +++r ++ ee n +  s +++  +  ea dk  e+ e+   e +le +i ++ Gy+d 
+    WP_061948745.1  93 VVNIKEELEEleeVGQVEEIGQSTSEVFASIRMNEQENRDRQEEENNTVAASPESSPTQVVEALDKNKEIREMAQQETELEKFIMAEgGYEDV 185
+                       67777665551104555555567899********************************************************9998737**** PP
+
+  SpoIIIAH_aligned 167 lvnaeGdkvnitvkskehskakatdiidlvakevknlkdvavtf 210
+                       lv +  + v i v ++e s+ ++++ii+l + ++ + k+vav f
+    WP_061948745.1 186 LVMSVDNEVRIYVNAEELSREQTVEIIQLATEKLGTEKQVAVGF 229
+                       ******************************************99 PP
+
+>> WP_076757704.1  SpoIIIAH-like family protein [Edaphobacillus lindanitolerans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   19.9   0.3     2e-06     0.045       3      26 ..       4      27 ..       2      58 .. 0.84
+   2 !   82.5   3.1   1.4e-25   3.1e-21      89     212 ..      53     176 ..      34     178 .] 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 19.9 bits;  conditional E-value: 2e-06
+  SpoIIIAH_aligned  3 kkqtvwlltmlslvvvlsvyyims 26
+                      +k+ vwllt+lsl  v+ vyy++ 
+    WP_076757704.1  4 RKRGVWLLTLLSLTAVIGVYYLLE 27
+                      799******************985 PP
+
+  == domain 2  score: 82.5 bits;  conditional E-value: 1.4e-25
+  SpoIIIAH_aligned  89 gevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvks 181
+                       g+  t   a+  lf   r+e+ ++rs+ re+l++ ++sd+ ta e+  a+d m +l++ e +e  le lik  Gy+da+v ae   v ++v +
+    WP_076757704.1  53 GKDTTPVFAESYLFEEMRMEVRNERSQLREQLTQKITSDDMTAEERNAAFDEMQSLTKRETAEAMLEMLIKDLGYEDAVVRAEDGGVKVSVIA 145
+                       444444558899********************************************************************************* PP
+
+  SpoIIIAH_aligned 182 kehskakatdiidlvakevknlkdvavtfep 212
+                        e s a+a +i+  v+ e ++ + v v f+ 
+    WP_076757704.1 146 AEMSPAQADQIVYTVKSEWEDARTVQVDFKS 176
+                       **************************99975 PP
+
+>> ATO50949.1  stage III sporulation protein AH [Brevibacillus laterosporus DSM 25]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   96.9   7.3   5.4e-30   1.2e-25       1     212 [.       2     230 .]       2     230 .] 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 96.9 bits;  conditional E-value: 5.4e-30
+  SpoIIIAH_aligned   1 mlkkqtvwlltmlslvvvlsvyyimspesenvvqvddkeevaaek.............ekpakeetkkkkktesekekedgtkgkssedkets 80 
+                       +l+kqtvwlltml+++vvls yy++   +++v    d++e  +e+             ++p+     + k  es+ e +++t + +++d e s
+        ATO50949.1   2 ILRKQTVWLLTMLAVMVVLSGYYMVKGPNDQVPATTDHKEAQKENqsitgievdtkqlDQPMP----DAKPVESKGEVDKDTTQATAKDAEKS 90 
+                       599********************9987667766666555555555455555443222223332....33345555555556666667777777 PP
+
+  SpoIIIAH_aligned  81 aseasekd.gev....vteeta.d.ddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykda 166
+                        ++a++k+ g+     vt   a +  d+f  y+l+ e     +++e ++i++   +t +  +ea  ++ els  e     le liktkGykd 
+        ATO50949.1  91 DQKATNKNpGAAttpdVTALPApEaADVFQGYKLKREAMTQLQKDEQTAIMTNSGSTPQAIAEANARLEELSTLEQQTLALEELIKTKGYKDC 183
+                       777777662222011133322323479****************************************************************** PP
+
+  SpoIIIAH_aligned 167 lvnaeGdkvnitvkskehskakatdiidlvakevkn.lkdvavtfep 212
+                       +vn++ + + i v+ ++  + +a+++i l ++ ++   k+++v+f+p
+        ATO50949.1 184 VVNTQKESISIIVQKDKVDSKEAIKLIALAKQHLNVpGKNITVSFQP 230
+                       *****************************999987524788888877 PP
+
+>> BAD65006.1  stage III sporulation protein AH [Alkalihalobacillus clausii KSM-K16]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.6   1.8   2.7e-10   5.9e-06       1      33 [.       2      33 ..       2      50 .. 0.78
+   2 !   70.1   6.3   8.6e-22   1.9e-17      72     210 ..      42     179 ..      28     182 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 32.6 bits;  conditional E-value: 2.7e-10
+  SpoIIIAH_aligned  1 mlkkqtvwlltmlslvvvlsvyyimspesenvv 33
+                      +lkkqtvwlltmlsl++vl vyy   p ++n+ 
+        BAD65006.1  2 VLKKQTVWLLTMLSLMLVLGVYYAY-PGNQNAG 33
+                      59*********************75.6666664 PP
+
+  == domain 2  score: 70.1 bits;  conditional E-value: 8.6e-22
+  SpoIIIAH_aligned  72 kssedketsaseasekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGyk 164
+                       ++++  e   +e+   dg++++   +++d +t  rl+l++ar ke e+ +   s++ ++a e   a dk  e+  +   e+ le+l++++Gy+
+        BAD65006.1  42 SEEAGVEVEVNEDGTVDGDMIA-SLSGNDNYTEARLKLNEARHKEAEQYTREASAEGSSAEEAVAANDKSIEILAVGDNEQMLESLLRAEGYN 133
+                       3555667778888888899998.8899****************************************************************** PP
+
+  SpoIIIAH_aligned 165 dalvnaeGdkvnitvkskehskakatdiidlvakevknlkdvavtf 210
+                       dalv +e d v+i v+++  ska+a +i++l +  +++  d++v +
+        BAD65006.1 134 DALVMSEADSVQIMVQAESLSKAEANSIMQLAKEHLQTTADISVHL 179
+                       ******************************************9975 PP
+
+>> WP_092051140.1  SpoIIIAH-like family protein [Bhargavaea ginsengi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.1   0.4   8.3e-07     0.018       2      25 ..       3      26 ..       2      34 .. 0.92
+   2 !   77.9   5.0   3.5e-24   7.7e-20      87     213 ..      51     177 ..      34     178 .] 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 21.1 bits;  conditional E-value: 8.3e-07
+  SpoIIIAH_aligned  2 lkkqtvwlltmlslvvvlsvyyim 25
+                      +kk+ vw+lt+lslv v+ vyy++
+    WP_092051140.1  3 VKKKGVWFLTLLSLVAVIGVYYLF 26
+                      69********************86 PP
+
+  == domain 2  score: 77.9 bits;  conditional E-value: 3.5e-24
+  SpoIIIAH_aligned  87 kdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitv 179
+                       + g+  t   a+  lf   r+e+ ++rs++re l++ ++sd+ ta e+ +a++ m +l++ e +e  le lik  Gy+d +v +e   v ++v
+    WP_092051140.1  51 EAGSDATPVFAESYLFEEMRMEMRNERSQQRELLTQKITSDDLTAEERDQAFNEMQSLTKRETAEAMLEMLIKDIGYEDVVVRTEDGAVKVSV 143
+                       44555555668999******************************************************************************* PP
+
+  SpoIIIAH_aligned 180 kskehskakatdiidlvakevknlkdvavtfeps 213
+                        ++e s a+a +i+  v+ e ++  +v+v f+ +
+    WP_092051140.1 144 IADELSAAQADQIVYTVKSEWEDSSQVSVDFKSA 177
+                       *****************************99876 PP
+
+>> WP_151700324.1  SpoIIIAH-like family protein [Psychrobacillus glaciei]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.0   0.7   1.5e-05      0.33       2      25 ..       3      26 ..       2      33 .. 0.91
+   2 !   81.2   4.9   3.4e-25   7.5e-21      96     211 ..      60     175 ..      39     177 .] 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 17.0 bits;  conditional E-value: 1.5e-05
+  SpoIIIAH_aligned  2 lkkqtvwlltmlslvvvlsvyyim 25
+                      +kk+++w+lt++slv v++v+y+ 
+    WP_151700324.1  3 VKKRSIWFLTLISLVAVITVFYVT 26
+                      69********************96 PP
+
+  == domain 2  score: 81.2 bits;  conditional E-value: 3.4e-25
+  SpoIIIAH_aligned  96 tadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehskak 188
+                       +++ + f   r+e++d+rsk  ++l+  v s++ ta ek  ay+++ el +++G+e  le +ik+ Gy+dalv  e + v i v s e s+ k
+    WP_151700324.1  60 ASKSNAFEEMRMEVQDKRSKLNDQLTTKVGSNDFTAEEKDAAYNQIEELVKIDGAEGMLELIIKSLGYDDALVRIEDNSVLIDVVSSEQSSKK 152
+                       467899*************************************************************************************** PP
+
+  SpoIIIAH_aligned 189 atdiidlvakevknlkdvavtfe 211
+                       a+dii  v++e  +   v v f+
+    WP_151700324.1 153 ASDIIYAVKREWPKAYKVEVNFD 175
+                       ***********999999999986 PP
+
+>> WP_144536010.1  MULTISPECIES: SpoIIIAH-like family protein [Psychrobacillus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.1   1.1   1.7e-06     0.038       2      24 ..       3      25 ..       2      31 .. 0.91
+   2 !   76.1   6.4   1.2e-23   2.7e-19      97     211 ..      61     175 ..      37     176 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 20.1 bits;  conditional E-value: 1.7e-06
+  SpoIIIAH_aligned  2 lkkqtvwlltmlslvvvlsvyyi 24
+                      +kk++vw+lt+lslv v++vyy 
+    WP_144536010.1  3 IKKRSVWFLTLLSLVAVVTVYYA 25
+                      69********************6 PP
+
+  == domain 2  score: 76.1 bits;  conditional E-value: 1.2e-23
+  SpoIIIAH_aligned  97 adddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehskaka 189
+                       ++ + +   r+e++++rs+  e+l++ v s + ta +k eay ++ +l +++ te  le +ik+ Gy+dalv  e +kv i v s+e s+ ka
+    WP_144536010.1  61 SHSNAYEELRMEVQEKRSQLHEQLESKVASTEFTAEQKNEAYSQIEQLVKIDSTEAMLELIIKSLGYDDALVRIEDNKVLIDVVSNEQSSKKA 153
+                       455667778************************************************************************************ PP
+
+  SpoIIIAH_aligned 190 tdiidlvakevknlkdvavtfe 211
+                       +di+  v++e  +  +v v f+
+    WP_144536010.1 154 SDIVYAVKREYPQAYQVEVKFD 175
+                       **********999999999886 PP
+
+>> WP_041075074.1  SpoIIIAH-like family protein [Bacillus sp. OxB-1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.0   4.1   1.9e-06     0.041       3      25 ..       4      26 ..       2      60 .. 0.77
+   2 !   71.7   6.4   2.8e-22   6.2e-18      89     210 ..      51     177 ..      33     180 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 20.0 bits;  conditional E-value: 1.9e-06
+  SpoIIIAH_aligned  3 kkqtvwlltmlslvvvlsvyyim 25
+                       k+tvw+lt+lslv v+s+yy+ 
+    WP_041075074.1  4 NKRTVWFLTLLSLVAVISIYYVK 26
+                      599******************95 PP
+
+  == domain 2  score: 71.7 bits;  conditional E-value: 2.8e-22
+  SpoIIIAH_aligned  89 gevvteet....adddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvni 177
+                        e v++et    a+  lf   r+e+ ++rsk  e+l+  ++s + ta +k  ay+ m++ls+   te  le  ik+ Gy da+v +e  kv +
+    WP_041075074.1  51 EETVADETkpvfAELVLFEEMRMEVRNERSKLHEQLETKMTSSDFTAEQKNSAYEEMAALSKLSTTEALLEMEIKALGYTDAFVRSEDGKVKV 143
+                       23333333222256779**************************************************************************** PP
+
+  SpoIIIAH_aligned 178 tvkske.hskakatdiidlvakevknlkdvavtf 210
+                       tv s e hsk  a +ii  v+   ++  +v v f
+    WP_041075074.1 144 TVLSTEgHSKQMADQIIHHVKTSWDDAGEVQVDF 177
+                       **88654*************99998888888877 PP
+
+>> WP_067209902.1  MULTISPECIES: SpoIIIAH-like family protein [Sporosarcina]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.9   1.4   5.8e-08    0.0013       3      33 ..       4      36 ..       2      61 .. 0.70
+   2 !   61.2   3.2   4.7e-19     1e-14      95     211 ..      61     177 ..      37     179 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 24.9 bits;  conditional E-value: 5.8e-08
+  SpoIIIAH_aligned  3 kkqtvwlltmlslvvvlsvyyim..spesenvv 33
+                       k+tvw+lt+lslv v+s+yyi   sp   + +
+    WP_067209902.1  4 NKRTVWFLTLLSLVAVISIYYIKekSPMPFDGI 36
+                      699*******************53355444444 PP
+
+  == domain 2  score: 61.2 bits;  conditional E-value: 4.7e-19
+  SpoIIIAH_aligned  95 etadddlfttyrleledarskereel.neivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkske.hs 185
+                         a+  +f   r+++ d+rsk  e+l ++i++sd  ta ek + y+ m +l++ e +e  +e  ik+ Gy +a+v  e   v itv s+e hs
+    WP_067209902.1  61 VFAEAVVFEEMRMQIRDERSKIGEQLlSKILTSD--TAEEKNKVYEEMGQLTKRESAEALMELQIKAMGYPEAFVYNEDGAVKITVLSNEgHS 151
+                       34677899****************9637899999..6789999***********************************99******9976599 PP
+
+  SpoIIIAH_aligned 186 kakatdiidlvakevknlkdvavtfe 211
+                       +  a +i   v    k+ k v +tf 
+    WP_067209902.1 152 SKMAEEITHYVMTSWKDAKAVNITFT 177
+                       999*********************95 PP
+
+>> ARF12755.1  hypothetical protein SporoS204_00360 [Sporosarcina ureae]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.9   1.4     5e-07     0.011       3      25 ..       4      26 ..       2      33 .. 0.91
+   2 !   60.1   1.8     1e-18   2.3e-14      81     210 ..      49     178 ..      27     182 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 21.9 bits;  conditional E-value: 5e-07
+  SpoIIIAH_aligned  3 kkqtvwlltmlslvvvlsvyyim 25
+                       k+tvw+lt+lslv v+s+yy+ 
+        ARF12755.1  4 NKRTVWFLTLLSLVAVISIYYVK 26
+                      599******************85 PP
+
+  == domain 2  score: 60.1 bits;  conditional E-value: 1e-18
+  SpoIIIAH_aligned  81 aseasekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGd 173
+                         e+  k +e v    a+  +f   r+e+ ++rs   ++l+e ++s + +a ek e ++ +++l ++  te  +e  i + Gy + +v  +Gd
+        ARF12755.1  49 LLEKEGK-SEEVKPVFAESYIFQDMRMEVRNERSETVQQLTEKMTSSDFSAEEKNEIFNEIADLRKVSSTEALMEMQIAALGYPEVFVRGDGD 140
+                       3344333.445555789999************************************************************************* PP
+
+  SpoIIIAH_aligned 174 kvnitvkske.hskakatdiidlvakevknlkdvavtf 210
+                       +vn+tv s+e hs   a +i + v    +  + v v f
+        ARF12755.1 141 RVNVTVLSNEsHSPKMADEITQYVMSSWEGAQTVKVDF 178
+                       ******98754999999999999988777777777766 PP
+
+>> WP_029054557.1  SpoIIIAH-like family protein [Sporosarcina ureae]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.9   1.4     5e-07     0.011       3      25 ..       4      26 ..       2      33 .. 0.91
+   2 !   60.1   1.8     1e-18   2.3e-14      81     210 ..      49     178 ..      27     182 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 21.9 bits;  conditional E-value: 5e-07
+  SpoIIIAH_aligned  3 kkqtvwlltmlslvvvlsvyyim 25
+                       k+tvw+lt+lslv v+s+yy+ 
+    WP_029054557.1  4 NKRTVWFLTLLSLVAVISIYYVK 26
+                      599******************85 PP
+
+  == domain 2  score: 60.1 bits;  conditional E-value: 1e-18
+  SpoIIIAH_aligned  81 aseasekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGd 173
+                         e+  k +e v    a+  +f   r+e+ ++rs   ++l+e ++s + +a ek e ++ +++l ++  te  +e  i + Gy + +v  +Gd
+    WP_029054557.1  49 LLEKEGK-SEEVKPVFAESYIFQDMRMEVRNERSETVQQLTEKMTSSDFSAEEKNEIFNEIADLRKVSSTEALMEMQIAALGYPEVFVRGDGD 140
+                       3344333.445555789999************************************************************************* PP
+
+  SpoIIIAH_aligned 174 kvnitvkske.hskakatdiidlvakevknlkdvavtf 210
+                       +vn+tv s+e hs   a +i + v    +  + v v f
+    WP_029054557.1 141 RVNVTVLSNEsHSPKMADEITQYVMSSWEGAQTVKVDF 178
+                       ******98754999999999999988777777777766 PP
+
+>> ABY94750.1  hypothetical protein Teth39_1095 [Thermoanaerobacter pseudethanolicus ATCC 33223]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   66.2   6.0   1.4e-20     3e-16      60     199 ..      34     166 ..       8     177 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 66.2 bits;  conditional E-value: 1.4e-20
+  SpoIIIAH_aligned  60 esekekedgtkgkssedketsaseasekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtek 152
+                       e++k+   + + +  +   +sa+e+s ++ +v t       +fttyr e e +rs+  + l+eiv+  +++   + ea  ++ +l+e+   e 
+        ABY94750.1  34 EAAKNG-YSQNSQVIQTSTSSAKETSTEKDKVFT------GIFTTYREEREINRSRSIDALKEIVENKNTSEATRDEAQRQIIKLTEITNQEM 119
+                       222221.112222233444456666666677777......89*************************************************** PP
+
+  SpoIIIAH_aligned 153 tletliktkGykdalvnaeGdkvnitvkskehskakatdiidlvake 199
+                        +e lik+kG++da+v  +   vn+ v++++ s+ + ++i+d+v+++
+        ABY94750.1 120 IIENLIKAKGFQDAVVMIDNGIVNVIVQTDKLSEEEVAQIVDIVSRQ 166
+                       ********************************************986 PP
+
+>> OWZ84024.1  hypothetical protein CDO51_05555 [Natranaerobius trueperi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   60.7   3.2   6.6e-19   1.5e-14      30     199 ..      32     202 ..       6     213 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 60.7 bits;  conditional E-value: 6.6e-19
+  SpoIIIAH_aligned  30 envvqvddkeevaa.ekekpakeetkkkkktesekekedgtkgk....ssedketsaseasekdgevvt.eetadddlfttyrleledarske 116
+                        + v++ + e v   e+e  a+ + ++ + ++    ked+t+      ++e+  tsa+    +  ev   e   d+d f +yrle +  rske
+        OWZ84024.1  32 VEQVEILQGESVDViEQEGDAEIDIEEGS-NN--ILKEDDTESDiienETEEDVTSADLIPPD--EVEEwEMEEDKDFFVAYRLERDRVRSKE 119
+                       33444444444432134333333333332.22..23334444433333788888999554444..444303556799**************** PP
+
+  SpoIIIAH_aligned 117 reelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehskakatdiidlvake 199
+                        e ln+ +   +++   ksea   + +l ++   e tle li+++G++da+        n+ vk ++ s+++  +i ++v+ +
+        OWZ84024.1 120 IERLNQFIDNPNTSDEAKSEAESELLDLVKIREKELTLENLIRANGFEDAIFFFRNGSANVIVKVENLSETEIRQIAEIVSEN 202
+                       *****************************************************9999**********************9865 PP
+
+>> APC08738.1  stage III sporulation protein AH [Moorella thermoacetica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.6   0.0   2.8e-18   6.2e-14      59     198 ..      69     204 ..      39     212 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 58.6 bits;  conditional E-value: 2.8e-18
+  SpoIIIAH_aligned  59 tesekekedgtkgk.ssedketsaseasekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGt 150
+                       t s     ++tk +    d+  s  +a +      ++ + +   f  yrle + +rs++   l++i+   ++    k ea  ++ el++    
+        APC08738.1  69 TTS-----EATKVTaPDGDQAVSGPKAEDILQGASAKASGGAAFFIEYRLERDRQRSQQIALLKQIIDNPNSGGEGKQEAQKRLVELTQQMDL 156
+                       222.....233333223455555544444434445557778999************************************************* PP
+
+  SpoIIIAH_aligned 151 ektletliktkGykdalvnaeGdkvnitvkskehskakatdiidlvak 198
+                       e +le li +kGykda v  + + vn+ v +++  +  a +i dlv++
+        APC08738.1 157 EMQLEKLIVAKGYKDAAVFIQPNAVNVIVMADKFGDEDANKIGDLVSR 204
+                       **********************************************87 PP
+
+>> QJS20168.1  hypothetical protein HLK68_13220 [Turicibacter sanguinis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.8  10.7     2e-17   4.4e-13      73     212 ..      49     193 ..      23     195 .] 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 55.8 bits;  conditional E-value: 2e-17
+  SpoIIIAH_aligned  73 ssedketsaseasekdg.evvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGyk 164
+                       s++d +t ++ ase  + e vt  +++ + +   r+ele ++s++  el+e++ s +  a  ksea d + +l      +  let+ik+kGy+
+        QJS20168.1  49 SETDAQTGSELASETTTeENVTTVATESNSIQVLRVELEKQQSQKVSELKEVIASKDYDATAKSEAKDDLDKLNRDREHQSALETMIKSKGYN 141
+                       444555555444443321456657889999*********************************************999*************** PP
+
+  SpoIIIAH_aligned 165 dalvnaeGdkvnitvkskehskakat....diidlvakevknlkdvavtfep 212
+                       d lv  + + v++ v+  + s    +    ++  + + e  n  dv++ f+p
+        QJS20168.1 142 DVLVRVNEETVQVIVQVADESAFPGVeevnELYMMAKTEFTNNPDVTIQFQP 193
+                       ****************9998875444100044456677999999*****999 PP
+
+>> UMZ73956.1  Stage III sporulation protein AH [Natranaerofaba carboxydovora]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.1   5.9   5.6e-16   1.2e-11      25     208 ..      32     212 ..       9     215 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 51.1 bits;  conditional E-value: 5.6e-16
+  SpoIIIAH_aligned  25 mspesenvvqvddkeevaaekekpak.eetkkkkktesekekedgtkgkssedketsaseasekdgevvteetadddlfttyrleledarske 116
+                       +s   +  +  +++++ +   e   k +e++++k +e+ek + d+ +g ++e  e   +e+ e+  ++      +++ f  yrl+ +  rs e
+        UMZ73956.1  32 ISNSDDYSLIKEESGQNSEGSEIIEKsNENEHEKAEEAEKIEFDEIEGLDQEVMEIFPREDYED-WDI----EHEEEFFVEYRLQRDRIRSEE 119
+                       4444444444445555555444443313444455566777777888999999999888777655.333....45899**************** PP
+
+  SpoIIIAH_aligned 117 reelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehskakatdiidlvakevk.nlkdvav 208
+                        e+ln+++   + +   k  a +k+ e+ ++   e  +e lik+ G++da++    d   ++vk+++ s+++  +i++lv+ ++  nl++v v
+        UMZ73956.1 120 IEKLNQLMDNPEISQEAKERAENKLLEILNVMEKEMLIENLIKSYGFEDAILFYRQDSATVAVKAENLSETEVRQIVELVSDKIGlNLDEVKV 212
+                       **************9999999***********************************************************9988536777765 PP
+
+>> QAT61768.1  SpoIIIAH-like family protein [Tissierella sp. JN-28]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.5  13.6   1.8e-15   3.9e-11      10     201 ..      10     198 ..       3     207 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 49.5 bits;  conditional E-value: 1.8e-15
+  SpoIIIAH_aligned  10 ltmlslvvvlsvyyimspesenvvqvddkeevaaekekpakeetkkkkktesekekedgtkgkssedketsaseasekdgevvteetad..dd 100
+                       +t+l +++vl+ y       + +++  ++ +   e+ek a+e++k+   +  ++ek +  + ++ +d    ++++     e +tee +    +
+        QAT61768.1  10 ITILVVLLVLAGYLNHYLTQKSAIKSSNEYQKY-EEEKLAEENEKNSL-QTISEEKVQVVESENPADLIEDTNKNI---EESLTEEVSAqkSN 97 
+                       678888888888877777777777766444433.33355544444444.444466666666666666544333332...34566665442378 PP
+
+  SpoIIIAH_aligned 101 lfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehskakatdii 193
+                        f  yrl  +  r+   ++ln+iv+ +k+ a  + ea   +  +      e  +e lik+kG++dalv  + d   + v +ke ++   ++i+
+        QAT61768.1  98 YFVEYRLSRDKMRAGLIDKLNDIVNNEKTKAETRDEAQKEIMRIGALSENELYIEGLIKAKGFDDALVFLKEDSAKVVVSAKELTEQDVVKIL 190
+                       9***************************************9999999999******************************************* PP
+
+  SpoIIIAH_aligned 194 dlvakevk 201
+                       ++++ e +
+        QAT61768.1 191 EIIKSETN 198
+                       ***99975 PP
+
+>> ACL69381.1  hypothetical protein Hore_06240 [Halothermothrix orenii H 168]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.2   1.5      0.26   5.7e+03       1      58 [.       1      59 [.       1      69 [. 0.46
+   2 !   48.6   5.2   3.4e-15   7.5e-11      93     208 ..      65     181 ..      52     185 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 3.2 bits;  conditional E-value: 0.26
+  SpoIIIAH_aligned  1 mlkkqtvwlltmlslvvvlsvyyimspesenvvqvd....dkeevaaekekpakeetkkkkk 58
+                      ml ++ vwl+ ++  v v  v  i+  ++++ v+++    +k ++   +e  +++ + ++ +
+        ACL69381.1  1 MLGRKFVWLMILM--VWVGMVTSIIIYQGNEYVNLQettsNKVNIIPSDEMVVEDTP-EDIN 59
+                      7889999997654..445555566666777777777332222233333333222222.2222 PP
+
+  == domain 2  score: 48.6 bits;  conditional E-value: 3.4e-15
+  SpoIIIAH_aligned  93 teetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehs 185
+                        ee +d++ ft yrle + ars +     e+v+  ++    k +a +km +l+e    e ++e+li+++Gykda+   +   v++ +++   s
+        ACL69381.1  65 DEEDSDENFFTEYRLERDKARSEQISIYREMVNNPNTDEAIKKDAQQKMMDLTEKMEKEMEIESLIRARGYKDAIAYIHDGAVDVIIQTGGLS 157
+                       5799*****************************99999999**************************************************** PP
+
+  SpoIIIAH_aligned 186 kakatdiidlvakevk.nlkdvav 208
+                       +   ++i d++ k    ++kdv++
+        ACL69381.1 158 RDDVAKIGDIIVKTTGfDFKDVTI 181
+                       *********999876437888876 PP
+
+>> GAK39907.1  hypothetical protein TCA2_2396 [Paenibacillus sp. TCA20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.5  18.2   1.2e-13   2.6e-09       3     205 ..       4     239 ..       2     246 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 43.5 bits;  conditional E-value: 1.2e-13
+  SpoIIIAH_aligned   3 kkqtvwlltmlslvvvlsvyyimspesenvvqvddkeevaaek..................ekpakeetkkkkktesekekedgtkgk..... 72 
+                       k+qt+wl++mlsl+vvls yy+++ +s    q  +++++++ +                  e+pa  e+++++++  ++ +e ++ g+     
+        GAK39907.1   4 KRQTIWLVSMLSLMVVLSAYYLFTDDSGSSNQTAESGQMSNAEeasaqntleglvlnevvtEEPATGEQTDETGAPVNTSEEPAATGEqtdaa 96 
+                       89*********************9999888888866666543335666678888887777777888777777776555555544444334555 PP
+
+  SpoIIIAH_aligned  73 ....ssedkets.aseasekdgevvteetaddd......lfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektl 154
+                           + +  et  a+e+++ d +v+ +  a+dd      +f  y+ e   + sk  ++l +  s    t  e ++a +++  l e +     +
+        GAK39907.1  97 apstEGTGTETEaATEEAKTDEDVLNQLEAQDDpnsaitVFENYQWERSSENSKLSNDLMAAASDATKTPEENAKALEQLRILEEKNEKILGI 189
+                       66444445566414566777888888766666544444468889999999999999999999888888999**********999876444444 PP
+
+  SpoIIIAH_aligned 155 etliktkGykdalvnaeGdkvnitvkskehskakatdiidlvakevknlkd 205
+                       e  + ++ y +a+v+ e +   + v s++     a++i+dlv  e++  +d
+        GAK39907.1 190 EEQL-SQQYANAIVQEEENEYKVVVISEKLEAIDAVNIVDLVISELDVTQD 239
+                       5444.688*************************************987776 PP
+
+>> ACB85280.1  hypothetical protein Nther_1706 [Natranaerobius thermophilus JW/NM-WN-LF]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.7   6.2   6.3e-15   1.4e-10       8     200 ..      10     199 ..       4     210 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 47.7 bits;  conditional E-value: 6.3e-15
+  SpoIIIAH_aligned   8 wlltmlslvvvlsvyyimspesenvvqvddkeevaaekekpa..keetkkkkktesekekedgtkgkssedketsaseasekdgevvteetad 98 
+                       wll +l+l +  + + i      + v++ ++e v +++++    kee+++   ++ e + e  +k+++ +d         ek +e   e   d
+        ACB85280.1  10 WLLLVLALFIATAFWIINVERQVEEVEILKDEAVKKDDQEVFsfKEESND-MIQKDEFDSEFISKDEELDDVSDIL--PPEK-AED-WELEDD 97 
+                       99999998877665555444455666666666666555322200222222.2222233333333444333332222..2223.222.234568 PP
+
+  SpoIIIAH_aligned  99 ddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehskakatd 191
+                       +d f  yrl+ +  rske e lne +   +++   k e  + + el   +  e  +e li+++G++da++       n+ v++++ s+++ ++
+        ACB85280.1  98 KDFFVEYRLQRDRVRSKEIERLNEFLDNPNTSQDAKQEVEQELLELVTKKEKELIIENLIRANGFEDAILFYRDSFANVVVRAENLSETEVMQ 190
+                       99******************************************************************************************* PP
+
+  SpoIIIAH_aligned 192 iidlvakev 200
+                       i ++v+ + 
+        ACB85280.1 191 IAEIVSENA 199
+                       *****8764 PP
+
+>> WP_041139296.1  SpoIIIAH-like family protein [Beduini massiliensis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.6   0.4   7.3e-08    0.0016       3      59 ..       2      56 ..       1      65 [. 0.73
+   2 !   29.0   7.1   3.2e-09     7e-05      98     202 ..      47     151 ..      42     160 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 24.6 bits;  conditional E-value: 7.3e-08
+  SpoIIIAH_aligned  3 kkqtvwlltmlslvvvlsvyyimspesenvvqvddkeevaaekekpakeetkkkkkt 59
+                       kq++ +l+++sl+++lsvyyi+ p  en++ v   e v +e+e   ke   +  k+
+    WP_041139296.1  2 NKQALTFLSLFSLILMLSVYYILLPPIENTLPVS--EPVEQEQEPENKEADFDSMKS 56
+                      699***************************9998..677777744444433333333 PP
+
+  == domain 2  score: 29.0 bits;  conditional E-value: 3.2e-09
+  SpoIIIAH_aligned  98 dddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehskakat 190
+                       ++ +f + + +l+++   e    n+i+ s ++   + sea + +  +   +  ektl   +k  Gy+da+v+     + +t+k ++    + +
+    WP_041139296.1  47 KEADFDSMKSDLDERHNSEVAGYNAIIASTDSNIDQVSEALENIDMVNVNKELEKTLSKQVKDMGYNDAFVEISNKVIKVTIKKEKGEAGEVA 139
+                       56789999************************************9999999***********************************9999999 PP
+
+  SpoIIIAH_aligned 191 diidlvakevkn 202
+                       +ii+ +    +n
+    WP_041139296.1 140 KIINAIYASTNN 151
+                       999988766665 PP
+
+>> BAD40840.1  stage III sporulation protein AH [Symbiobacterium thermophilum IAM 14863]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.2   0.0       5.7   1.3e+05      12      30 ..      15      33 ..       6      68 .. 0.69
+   2 !   46.1   0.2   1.9e-14   4.2e-10      88     199 ..      69     180 ..      55     192 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: -1.2 bits;  conditional E-value: 5.7
+  SpoIIIAH_aligned 12 mlslvvvlsvyyimspese 30
+                      +  lvv   v+y++s  +e
+        BAD40840.1 15 LYVLVVASLVWYVVSRFGE 33
+                      4567777779999998776 PP
+
+  == domain 2  score: 46.1 bits;  conditional E-value: 1.9e-14
+  SpoIIIAH_aligned  88 dgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvk 180
+                       d ev++e + + d f+ yr+e e +r    + l e++ ++ a+a  + ea  +  el      e + e+l++++G+ d +v       ++ vk
+        BAD40840.1  69 DEEVLAEGAEGTDYFAEYRIERERTRGALGDRLREVMVAEGASAEVRQEAAAQYLELGRRAALESQAEALVRARGFTDVIVHLTDGSAQVVVK 161
+                       567888777779**********************************************************************999999***** PP
+
+  SpoIIIAH_aligned 181 skehskakatdiidlvake 199
+                       +   s+ + ++iid v++ 
+        BAD40840.1 162 ARSLSQQQVAQIIDTVSRT 180
+                       ***************9875 PP
+
+>> MVX29601.1  hypothetical protein GQF29_16660 [Coprobacillus cateniformis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.0   0.5   2.7e-08    0.0006       3      42 ..       2      40 ..       1      54 [. 0.74
+   2 !   24.2  11.5   9.8e-08    0.0022     102     210 ..      41     149 ..      29     151 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 26.0 bits;  conditional E-value: 2.7e-08
+  SpoIIIAH_aligned  3 kkqtvwlltmlslvvvlsvyyimspesenvvqvddkeeva 42
+                       kq+  +lt++sl++vls+yyim p s n   v +  + +
+        MVX29601.1  2 NKQAFTFLTLFSLILVLSIYYIMLPPSSNQEVVTNT-QTT 40
+                      69999********************99997666533.333 PP
+
+  == domain 2  score: 24.2 bits;  conditional E-value: 9.8e-08
+  SpoIIIAH_aligned 102 fttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehskakatdiid 194
+                       +   + +l+ +r     + nei+  + +t+    ea + ++e  +    ek++ + ik  Gy+d  v+ + + + +tv  k+ +++ a+++i 
+        MVX29601.1  41 IEQLQQQLNKKRDDIIAKNNEIIAKESSTSDSINEALETISETKNLGEKEKSIVAKIKELGYQDVYVEIDNQTIKVTVLKKDATQSDASKVIK 133
+                       33344556666666667779************************************************************************* PP
+
+  SpoIIIAH_aligned 195 lvakevknlkdvavtf 210
+                        v k v +  +v v f
+        MVX29601.1 134 EVLKLVGDNYQVEVKF 149
+                       9999998888887776 PP
+
+>> WP_008789692.1  SpoIIIAH-like family protein [Coprobacillus cateniformis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.0   0.5   2.7e-08    0.0006       3      42 ..       2      40 ..       1      54 [. 0.74
+   2 !   24.2  11.5   9.8e-08    0.0022     102     210 ..      41     149 ..      29     151 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 26.0 bits;  conditional E-value: 2.7e-08
+  SpoIIIAH_aligned  3 kkqtvwlltmlslvvvlsvyyimspesenvvqvddkeeva 42
+                       kq+  +lt++sl++vls+yyim p s n   v +  + +
+    WP_008789692.1  2 NKQAFTFLTLFSLILVLSIYYIMLPPSSNQEVVTNT-QTT 40
+                      69999********************99997666533.333 PP
+
+  == domain 2  score: 24.2 bits;  conditional E-value: 9.8e-08
+  SpoIIIAH_aligned 102 fttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehskakatdiid 194
+                       +   + +l+ +r     + nei+  + +t+    ea + ++e  +    ek++ + ik  Gy+d  v+ + + + +tv  k+ +++ a+++i 
+    WP_008789692.1  41 IEQLQQQLNKKRDDIIAKNNEIIAKESSTSDSINEALETISETKNLGEKEKSIVAKIKELGYQDVYVEIDNQTIKVTVLKKDATQSDASKVIK 133
+                       33344556666666667779************************************************************************* PP
+
+  SpoIIIAH_aligned 195 lvakevknlkdvavtf 210
+                        v k v +  +v v f
+    WP_008789692.1 134 EVLKLVGDNYQVEVKF 149
+                       9999998888887776 PP
+
+>> WP_004609799.1  SpoIIIAH-like family protein [Thomasclavelia spiroformis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.3   0.3   4.4e-08   0.00098       3      44 ..       2      45 ..       1      57 [. 0.66
+   2 !   24.0  11.1   1.1e-07    0.0025     110     210 ..      48     152 ..      42     155 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 25.3 bits;  conditional E-value: 4.4e-08
+  SpoIIIAH_aligned  3 kkqtvwlltmlslvvvlsvyyimspese..nvvqvddkeevaae 44
+                       +q++ +lt++sl++vls+yyi+ p  +  n v+++d+e    e
+    WP_004609799.1  2 NRQAITFLTLFSLILVLSIYYILLPPENtaNQVSLNDQEVSQIE 45
+                      68999*****************9875541266777665433333 PP
+
+  == domain 2  score: 24.0 bits;  conditional E-value: 1.1e-07
+  SpoIIIAH_aligned 110 edarskereel....neivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehskakatdiidlvak 198
+                       + +  kere+l    n+i+ s k+ + e + a   ++e  e+   ek++  +i   G+k+a+v+ e   + + v  k+  ++ a +ii  v  
+    WP_004609799.1  48 QKNLDKEREDLisknNAIIASGKSNSDEIASALASISEAKETAALEKKITDIINNAGFKNAFVEVENKTIKVVVDKKNGKETDANNIIKAVME 140
+                       44556777776555589**************************************************************************99 PP
+
+  SpoIIIAH_aligned 199 evknlkdvavtf 210
+                       + +n  +v v f
+    WP_004609799.1 141 KTNNEYQVEVKF 152
+                       999998888887 PP
+
+>> EGO63624.1  hypothetical protein ALO_11934 [Acetonema longum DSM 6540]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   44.9   2.2   4.4e-14   9.8e-10      83     199 ..      47     161 ..      32     175 .] 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 44.9 bits;  conditional E-value: 4.4e-14
+  SpoIIIAH_aligned  83 easekdgevvteetad..ddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGd 173
+                       e       +vte++     d ft yrle +  rs + + l++++++ +     k +a d + +l   +  e ++e +ik++G++dalv  + +
+        EGO63624.1  47 EV---TKPIVTEQAVIaiPDFFTEYRLERDKIRSERFDLLKDMMKTAQN-EDAKQKAQDAIMKLVLEKQREYEMENMIKARGFQDALVLVQDN 135
+                       33...44688977643348***************999999999886554.3445668899999*99999************************ PP
+
+  SpoIIIAH_aligned 174 kvnitvkskehskakatdiidlvake 199
+                        vn  +k+   s+    ++ d++++ 
+        EGO63624.1 136 SVNAVIKTASFSREDVLQVADVIRRV 161
+                       *********************99763 PP
+
+>> WP_003538299.1  MULTISPECIES: SpoIIIAH-like family protein [Thomasclavelia]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.5   0.1   3.3e-07    0.0072       3      39 ..       2      40 ..       1      50 [. 0.75
+   2 !   23.4  11.4   1.7e-07    0.0038     108     210 ..      50     152 ..      43     155 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 22.5 bits;  conditional E-value: 3.3e-07
+  SpoIIIAH_aligned  3 kkqtvwlltmlslvvvlsvyyims.pesenv.vqvddke 39
+                       +q++ +lt++sl++vls+yyi+  pe+e   v+v+++e
+    WP_003538299.1  2 NRQAITFLTLFSLILVLSIYYILLpPEGEASeVSVNNEE 40
+                      68999****************986167775336666443 PP
+
+  == domain 2  score: 23.4 bits;  conditional E-value: 1.7e-07
+  SpoIIIAH_aligned 108 eledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehskakatdiidlvakev 200
+                       +le +r+    e n+i+ s ++ + + + a   ++e  e+   e ++  +i   G+k+a+v+ e   + + +  ke s++ a +ii  v  + 
+    WP_003538299.1  50 NLEKERADLISENNAIIASSDSDSNKIAAALANISEAKETAALEAKITKIINDAGFKNAFVEVENKTIKVVIDKKEASSSDANSIIKTVMEKT 142
+                       7889999999999********999999****************************************************************** PP
+
+  SpoIIIAH_aligned 201 knlkdvavtf 210
+                       kn  +v v f
+    WP_003538299.1 143 KNEYQVEVKF 152
+                       *999999987 PP
+
+>> WP_010965386.1  MULTISPECIES: SpoIIIAH-like family protein [Clostridium]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.8   0.4      0.35   7.7e+03       1      21 [.       1      21 [.       1      30 [. 0.87
+   2 !   43.6  15.7   1.1e-13   2.5e-09      76     204 ..      40     168 ..      31     175 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 2.8 bits;  conditional E-value: 0.35
+  SpoIIIAH_aligned  1 mlkkqtvwlltmlslvvvlsv 21
+                      m kkq+v ++t++ l+v   v
+    WP_010965386.1  1 MNKKQAVIIVTLMVLIVCAGV 21
+                      78**************98766 PP
+
+  == domain 2  score: 43.6 bits;  conditional E-value: 1.1e-13
+  SpoIIIAH_aligned  76 dketsaseasekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalv 168
+                       d +t  s  s +d +     +++ d+f+  rle e++  +e + l++i+   + +   ks a +km  l++ +    ++et++k+kG+kdal 
+    WP_010965386.1  40 DTNTNKSTVSTNDNSK-KSSSTKTDVFAQGRLEREQKDQREIQTLKNIIDDKNVSNDTKSSAQQKMMTLTDEDSKCNKVETMLKSKGFKDALC 131
+                       3333333333333222.2356678********************************************************************* PP
+
+  SpoIIIAH_aligned 169 naeGdkvnitvksk..ehskakatdiidlvakevknlk 204
+                            kv +tvk++  + ++ +  di ++v+ +v +++
+    WP_010965386.1 132 SITDSKVTVTVKCDsdKLTDNQLRDIKEVVT-DVTKIR 168
+                       ************7611556666777777765.455555 PP
+
+>> UNC92550.1  SpoIIIAH-like family protein [Candidatus Contubernalis alkalaceticus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.6   2.4   2.3e-13     5e-09      97     199 ..      56     158 ..      42     170 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 42.6 bits;  conditional E-value: 2.3e-13
+  SpoIIIAH_aligned  97 adddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehskaka 189
+                        +   f  yr++ +  r +e e l++iv+   +++  k ea +k+ +l      e  le +ik+kG++d +   +    n+ vk++e ++a+ 
+        UNC92550.1  56 DGSTYFVEYRMQRDRVRGQEIELLKDIVNNTSSSSEAKQEAENKLISLVSKMEQELMLENMIKAKGFEDVVFFFKDGAANVVVKAEEITDAEF 148
+                       456789******************************************999999*****************9999999*************99 PP
+
+  SpoIIIAH_aligned 190 tdiidlvake 199
+                        +i +  ak 
+        UNC92550.1 149 FQIAETTAKI 158
+                       9999888774 PP
+
+>> EEG78330.1  hypothetical protein DealDRAFT_0745 [Dethiobacter alkaliphilus AHT 1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.7   0.1   2.2e-13   4.8e-09     100     197 ..      65     162 ..      45     175 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 42.7 bits;  conditional E-value: 2.2e-13
+  SpoIIIAH_aligned 100 dlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehskakatdi 192
+                         f  yrl+ +  r ke+e ln+++   + +   k +a ++m +l ++   e  +e ++k++G+kda+     d vn+ +++++ s+ +  +i
+        EEG78330.1  65 AFFVEYRLQRDRVRGKEQEMLNQMIDNPNVSEEAKKQAEEQMLKLIDMMEKELLVENMLKAHGFKDAIFFYRDDMVNVVIQAENLSEEEFLQI 157
+                       57999***********************************************************************************99999 PP
+
+  SpoIIIAH_aligned 193 idlva 197
+                        ++v+
+        EEG78330.1 158 AEMVS 162
+                       99986 PP
+
+>> WP_002609025.1  MULTISPECIES: SpoIIIAH-like family protein [Bacillota]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.2  20.6   3.5e-10   7.8e-06       3     200 ..       2     174 ..       1     185 [] 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 32.2 bits;  conditional E-value: 3.5e-10
+  SpoIIIAH_aligned   3 kkqtvwlltmlslvvvlsvyyimspesenvvqvddkeevaaekekpakeetkkkkktesekekedg.tkgkssedketsaseasekdgevvte 94 
+                        kq++ +ltm+sl+++lsvyy+  p     v          e+ +p+ +++++k++t +++e+ +g t++ +++ k+ts              
+    WP_002609025.1   2 NKQALAFLTMFSLILMLSVYYVTLPADSTSV--------MEEQ-APQSDKKADKENTAAKTEDAQGkTEEAQEQKKDTSE------------- 72 
+                       79*********************99765544........3344.555544444443333222211113333344444443............. PP
+
+  SpoIIIAH_aligned  95 etadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehska 187
+                        +ad    t  +  +++++  e +  +++v   k+    k ea   + el + +  +k++  l+k  Gy+ a v+ +Gd   i+v  ++  k 
+    WP_002609025.1  73 -SADG--STKLQDSINQKKEEEINRNSSVVADTKSDDSAKKEALAAIDELKDEKSMQKSVADLLKKDGYQTA-VEINGDTCIISVFEQKDDKN 161
+                       .3332..233333444444444444455666666666677888888899********************988.899***************** PP
+
+  SpoIIIAH_aligned 188 katdiidlvakev 200
+                        a  i++  +   
+    WP_002609025.1 162 VAKTIMQKAQEAT 174
+                       **99987655444 PP
+
+>> AUO18620.1  stage III sporulation protein AH [Monoglobus pectinilyticus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.6  10.7   7.5e-12   1.7e-07      57     199 ..      50     193 ..      11     200 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 37.6 bits;  conditional E-value: 7.5e-12
+  SpoIIIAH_aligned  57 kktes..ekekedgtkgkssedketsaseasekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelsea 147
+                       +++e+  +++k+d+ k+++ e ++ s  ++ +++ +   +++   +++t  r + +  r    ++ +ei s  +at   k ea   + +l++ 
+        AUO18620.1  50 DDAETfwSNNKNDENKDNNDEKQNNSD-NNEQQNQDNQNNQSQSANVITQSRQDRDKLRGDTMDKWKEISSNKDATESAKKEAESNIVKLTKY 141
+                       334442234444444444333333332.333344444555677788999999999999*********************************** PP
+
+  SpoIIIAH_aligned 148 eGtektletliktkGykdalvnaeGdkvnitvkskehskakatdiidlvake 199
+                          e  +et +k+kG++d + +     v + vk  +  +a  ++i d++  e
+        AUO18620.1 142 SENENAIETGVKSKGFEDCFAQVSDSGVSVVVKGGNLDSASVAQIKDIIIAE 193
+                       ************************************9999999999998766 PP
+
+>> SHJ67084.1  stage III sporulation protein AH [Anaerobranca californiensis DSM 14826]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.5   0.2   6.7e-11   1.5e-06      97     200 ..      67     170 ..      39     180 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 34.5 bits;  conditional E-value: 6.7e-11
+  SpoIIIAH_aligned  97 adddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehskaka 189
+                        +++ f  yrle e  rs+e + l+ +++  ++t   k ea +k+ ++ ++   e  +e  + + Gyk a++  +    ni v ++  ++ + 
+        SHJ67084.1  67 RGEEFFVEYRLERERIRSREIDILQGLINNPNSTPESKREAEQKLMQIQKIMEQELAVENSLVAMGYKYAILFYQNGNANIVVNAQALTREEK 159
+                       46899*******************************************************************999999*************** PP
+
+  SpoIIIAH_aligned 190 tdiidlvakev 200
+                       + i ++v+k +
+        SHJ67084.1 160 ARIAEIVSKII 170
+                       *******9976 PP
+
+>> WP_158546477.1  SpoIIIAH-like family protein [Faecalibacillus intestinalis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.6   0.3   0.00016       3.6       3      30 ..       2      29 ..       1      45 [. 0.82
+   2 !   25.1   6.5   5.1e-08    0.0011     108     198 ..      48     138 ..      29     148 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 13.6 bits;  conditional E-value: 0.00016
+  SpoIIIAH_aligned  3 kkqtvwlltmlslvvvlsvyyimspese 30
+                       kq++ +l++++l++vls+yy++ p  +
+    WP_158546477.1  2 NKQAITFLSLFTLILVLSIYYLLVPPID 29
+                      79********************999644 PP
+
+  == domain 2  score: 25.1 bits;  conditional E-value: 5.1e-08
+  SpoIIIAH_aligned 108 eledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehskakatdiidlvak 198
+                       el+ +  ++ ++ n ++ s ka+ ke s a     +   +   ek +  l+  kGyk+ + + +G  + + vk k+ ++  a +ii l++ 
+    WP_158546477.1  48 ELNKNHENKINDNNTVIASSKASEKEISTALTSNEKTKAIIKNEKDICQLLTDKGYKECFCEIDGGHMKVVVKLKDATSKDANKIIKLIHN 138
+                       666667777788999****************9999999999**********************************************9976 PP
+
+>> ALU37544.1  Stage III sporulation protein AH-like protein [Clostridium autoethanogenum DSM 10061]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.4   0.4     0.027   5.9e+02       1      22 [.       1      22 [.       1      42 [. 0.86
+   2 !   32.2  13.6   3.4e-10   7.6e-06      73     208 ..      48     181 ..      22     185 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 6.4 bits;  conditional E-value: 0.027
+  SpoIIIAH_aligned  1 mlkkqtvwlltmlslvvvlsvy 22
+                      m kkq+v ++t+l+l+v + v 
+        ALU37544.1  1 MNKKQAVIIVTLLALIVCVGVV 22
+                      78***************98875 PP
+
+  == domain 2  score: 32.2 bits;  conditional E-value: 3.4e-10
+  SpoIIIAH_aligned  73 ssedketsaseasekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykd 165
+                       +s+d ++s  ++s + ++    ++ + + f   rl  +++ +   + l++++   + +  ++s+a  k t+l+     e ++e  +k+kGy+d
+        ALU37544.1  48 NSSDNNSSQ-DKSTQ-AKSTQSKSEQSQFFEETRLTRDQKNAETLQTLKSLIDDKNVSDPNRSDAEKKYTALAMNTNYELKIENTLKSKGYED 138
+                       334444333.44444.3333335666789999******9999*************************************************** PP
+
+  SpoIIIAH_aligned 166 alvnaeGdkvnitvkskehskakatdiidlvakevknlkdvav 208
+                       a+   e +k  + vk k++ + k t  i  v   + n+++v +
+        ALU37544.1 139 AICSIEDNKARVIVKGKNKLEDKDTRQIKDVVMSISNIQEVEI 181
+                       ******************9999988777667778999999877 PP
+
+>> QNO16151.1  SpoIIIAH-like family protein [Alkalicella caledoniensis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.5   1.1   1.4e-10   3.1e-06      97     199 ..      72     174 ..      44     186 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 33.5 bits;  conditional E-value: 1.4e-10
+  SpoIIIAH_aligned  97 adddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvkskehskaka 189
+                         ++ f  yrle e  rske + l+++++  ++++  k ea  k+ +l e    e ++e+ + + Gy+ a++  +    n+ v ++  ++ + 
+        QNO16151.1  72 RSEEFFVEYRLERERVRSKELDLLQQMINNPNTSSDSKREAELKVMQLKELMELELNVESSLVALGYNHAILFFQNGNANVVVNAEALTREEK 164
+                       35789********************************************************************9999**************** PP
+
+  SpoIIIAH_aligned 190 tdiidlvake 199
+                       + i ++v+k 
+        QNO16151.1 165 AHIAEIVSKA 174
+                       *******996 PP
+
+>> WP_006059104.1  SpoIIIAH-like family protein [Holdemania filiformis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   11.1   0.2     0.001        22       3      29 ..       2      28 ..       1      36 [. 0.88
+   2 !   24.5   0.7   7.7e-08    0.0017      90     210 ..      36     156 ..      27     157 .] 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 11.1 bits;  conditional E-value: 0.001
+  SpoIIIAH_aligned  3 kkqtvwlltmlslvvvlsvyyimspes 29
+                       kq+  +lt+++l+++ls+yy+  p  
+    WP_006059104.1  2 NKQAFAFLTLFTLILMLSIYYVTLPAD 28
+                      69999*****************98865 PP
+
+  == domain 2  score: 24.5 bits;  conditional E-value: 7.7e-08
+  SpoIIIAH_aligned  90 evvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvksk 182
+                       +++t +  d+d ++t + +l+d+   + ++ ++iv s  a++ ek +a ++  ++ + + te t+ + +   G +  + + e + v i     
+    WP_006059104.1  36 QLLTGQNEDQDSLATMQQQLQDKHNAQAQNSQSIVASPSASTEEKQDALQQAGQVEQNKKTEETIVAALSQAGMEGCVAELEDEVVRIGCPKT 128
+                       57888999********************************************************************************99988 PP
+
+  SpoIIIAH_aligned 183 ehskakatdiidlvakevknlkdvavtf 210
+                            +a++i+ + a ++++ +   vtf
+    WP_006059104.1 129 LAGAENASKIMKIAADQLQDERVPEVTF 156
+                       8889999999999998887766666666 PP
+
+>> ACL21527.1  hypothetical protein Dhaf_3509 [Desulfitobacterium hafniense DCB-2]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.7   0.0   4.9e-10   1.1e-05      89     204 ..      67     180 ..      58     188 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 31.7 bits;  conditional E-value: 4.9e-10
+  SpoIIIAH_aligned  89 gevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGdkvnitvks 181
+                       +evv     + d f  yrl+ e +r   +  l+ ++ s+    k + ea +k  +ls+    e ++e l+k  G kda+ +   + v + v +
+        ACL21527.1  67 AEVVKPLPQGGDYFVNYRLQREASRQEAKTMLAPLLDSN--VVKTREEAQEKWLQLSHKIQKEEEIENLLKISGIKDAIADLGNNEVAVIVYA 157
+                       56777777889**********************999776..678888********************************************** PP
+
+  SpoIIIAH_aligned 182 kehskakatdiidlvakevknlk 204
+                        +   ++   i d+v +  ++ k
+        ACL21527.1 158 PNLEGTEIKVIQDIVFRVTNTAK 180
+                       **999999999999988776655 PP
+
+>> WP_004799392.1  hypothetical protein [Amedibacillus dolichus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.5  12.8   9.3e-09   0.00021       3     160 ..       2     151 ..       1     164 [. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 27.5 bits;  conditional E-value: 9.3e-09
+  SpoIIIAH_aligned   3 kkqtvwlltmlslvvvlsvyyimspesenvvqvddkeevaaekekpakeetkkkkktesekekedgtkgkssedketsaseasekdgevvtee 95 
+                        kq++ +ltm+s+v++lsvyy+  p+ + + ++++    ++eke  + ++t++++k+e   +k ++t +   +  e   +++se     v++e
+    WP_004799392.1   2 NKQALAFLTMFSFVLMLSVYYVTLPDDQVTASIQN----TSEKEVAKTKDTSENQKQEDPVGKLQETIN---QKLEVEYNKQSES----VADE 83 
+                       79************************999888883....445555555566666655555666333332...3334444334333....5555 PP
+
+  SpoIIIAH_aligned  96 tadddlfttyrleled..arskereeln.eivssdkatakekseaydkmtelseaeGtektletlikt 160
+                        a +++       ++d  +r +++ee+  ++ +s   +a e  ++   +  +   e  e   + likt
+    WP_004799392.1  84 NASEEVKKQAIAAMDDveKRKQMQEEIVkKLEESGYKCAVEIKDTTCIVNVFEPKESKEVAKDILIKT 151
+                       55555544444444441145555555430233344444444444444444444455555555666666 PP
+
+>> MCQ4635887.1  SpoIIIAH-like family protein [Anaerovorax odorimutans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.9  12.7   7.2e-09   0.00016      61     200 ..      60     199 ..      39     208 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 27.9 bits;  conditional E-value: 7.2e-09
+  SpoIIIAH_aligned  61 sekekedgtkgkssedketsaseasekdgevvt.eetadddlfttyrleledarskereelneivssdkatakekse...aydkmtelseaeG 149
+                       s + k+++    +++ ket as++    +e+vt ++ +d +   ty  e+  +   +r+++ ++++  ++ta + se   a ++  +l +   
+      MCQ4635887.1  60 SINVKNETETSAKESKKETKASKE----SELVTsDDVSDLENTDTYFEEMRATINMDRNQVISMLTDAETTAENSSEkesATQQKLKLLKYME 148
+                       333332222222455677777444....44555167888899999*99**9999999999999999999999765553335555556666667 PP
+
+  SpoIIIAH_aligned 150 tektletliktkGykdalvnaeGdkvnitvkskehskakatdiidlvakev 200
+                        e++ e  iktk   + lv      vn+tv  ++  ++  ++i d++ +e 
+      MCQ4635887.1 149 QEQNAENAIKTKNLPECLVLITDSGVNVTVNKQDLNQSDVAKICDVIMRET 199
+                       899********************************************9985 PP
+
+>> WP_010166290.1  SpoIIIAH-like family protein [Epulopiscium sp. 'N.t. morphotype B']
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.7   7.9   3.3e-08   0.00074      81     198 ..      94     210 ..       9     214 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 25.7 bits;  conditional E-value: 3.3e-08
+  SpoIIIAH_aligned  81 aseasekdgevvteetadddlfttyrleledarskereelneivssdkatakekseaydkmtelseaeGtektletliktkGykdalvnaeGd 173
+                          +++   +v + + a    f+  ++  e++rs + eelne +         ks+a + + +l +    e   e+l+++kG+ d  v  +  
+    WP_010166290.1  94 I-TKADGSQNVSSTNVAAVSYFAEEKMIREQQRSTQIEELNEYIANSAIDENSKSKAAQSLLNLQDKIEKENGSESLLRAKGFSDVYVRMDET 185
+                       3.233445667777899999**************************999******************************************** PP
+
+  SpoIIIAH_aligned 174 kvnitvkskehskakatdiidlvak 198
+                        v++ v   + ++a+ ++i ++v++
+    WP_010166290.1 186 AVDVIVNRPQLTDAEIAQIEEIVSR 210
+                       **************99999999976 PP
+
+>> WP_008688524.1  MULTISPECIES: SpoIIIAH-like family protein [Longicatena]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.1  19.7     2e-07    0.0045       3     126 ..       2     140 ..       1     181 [] 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 23.1 bits;  conditional E-value: 2e-07
+  SpoIIIAH_aligned   3 kkqtvwlltmlslvvvlsvyyimspesenvvqvd.....dkeevaaekekpakeetkkkkktes.ekeke.dgtkgkssedketsaseasekd 88 
+                        kq++ +ltm+sl+++lsvyy+  p    +v  +     +    ++ k+k  ++etk  k++es ++ k  +++k +++ dk+  +  + +k+
+    WP_008688524.1   2 NKQALAFLTMFSLILMLSVYYVTLPSDTTAVMKEntpqeE-TGDSNSKDKIENKETKTGKQEESkDTSKVnEAAKLQEEIDKKKDS--EINKN 91 
+                       79***********************999999877565431.122233334444444444444431222220223333444554444..23556 PP
+
+  SpoIIIAH_aligned  89 gevvte....etadddlfttyrleled........arskereelneivss 126
+                       ++v+++    eta+++ +tt   el+d        a++  +e+ln  v+ 
+    WP_008688524.1  92 SSVLSKgdadETAKKQALTTME-ELKDdkemqqkvAQALSKEKLNVAVEI 140
+                       6666542222777777788765.333301100011223345555555554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (214 nodes)
+Target sequences:                    1369222  (442445337 residues searched)
+Passed MSV filter:                     52446  (0.0383035); expected 27384.4 (0.02)
+Passed bias filter:                    29723  (0.0217079); expected 27384.4 (0.02)
+Passed Vit filter:                      2780  (0.00203035); expected 1369.2 (0.001)
+Passed Fwd filter:                       118  (8.61803e-05); expected 13.7 (1e-05)
+Initial search space (Z):            1369222  [actual number of targets]
+Domain search space  (domZ):              62  [number of targets reported over threshold]
+# CPU time: 3.17u 0.12s 00:00:03.29 Elapsed: 00:00:01.27
+# Mc/sec: 74117.34
+//
+[ok]

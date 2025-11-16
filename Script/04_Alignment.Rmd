@@ -1,0 +1,115 @@
+---
+title: "Alignment"
+output: html_document
+---
+## Libraries
+```{r}
+library(seqinr) # read.fasta
+library(phytools) # for midpoint.root
+```
+
+# Align the 3di sequences, using famsa3di
+```{bash}
+
+famsa3di ./Data/04_Alignment/3di_unaligned.fasta ./Data/04_Alignment/3di_famsa3dialigned.fasta
+
+```
+
+# Align the AAs to the famsa3di alignment
+```{r}
+source("~/GitHub/str2phy/Rsrc/str2phy_v1.R")
+
+aligned_fn = "Data/04_Alignment/3di_famsa3diAligned.fasta"
+unaligned_fn = "Data/04_Alignment/aa_unaligned.fasta"
+outfn = "Data/04_Alignment/aa_famsa3diAligned.fasta"
+aligned_AAs = align_3dis_to_AAs(aligned_fn, unaligned_fn, outfn)
+moref(outfn)
+```
+
+# Trim the alignments to just columns with >35% complete data
+```{bash}
+
+trimal -in ./Data/04_Alignment/aa_famsa3diAligned.fasta -out ./Data/04_Alignment/aa_famsa3diAligned_trim35.fasta -gt 0.35 -colnumbering | tee ./Data/04_Alignment/aa_famsa3diAligned_trim35_cols.txt
+
+trimal -in ./Data/04_Alignment/3di_famsa3diAligned.fasta -out ./Data/04_Alignment/3di_famsa3diAligned_trim35.fasta -gt 0.35 -colnumbering | tee ./Data/04_Alignment/3di_famsa3diAligned_trim35_cols.txt
+
+```
+
+# Horizontally concatenate 2 alignment files
+```{r}
+
+fn1 = "Data/04_Alignment/aa_famsa3diAligned_trim35.fasta"
+fn2 = "Data/04_Alignment/aa_famsa3diAligned_trim35.fasta"
+fn3 = "Data/04_Alignment/aa_3di_famsa3diAligned_trim35.fasta"
+fn3
+merged_df = hcat_align_fns(fn1, fn2, fn3)
+merged_df
+```
+
+## Reordering_ALignment
+```{r}
+tr_renamed <- ape::read.tree("Data/04_Alignment/3di_nj/outTree_unrooted.nwk") ## renamed tree file
+plotTree(tr_renamed)
+desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
+fasta_file <- read.fasta (file = "Data/04_Alignment/3di_nj/input.fa.final_tree.used_alg.fa") ## renamed fasta file
+fasta_ids <-names(fasta_file)
+tip_ids <- desired_order
+reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
+write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/04_Alignment/3di_nj/input.fa.final_tree.used_alg_reordered.fa") ## out file  - renamed, reordered fasta file
+```
+
+```{r}
+tr_renamed <- ape::read.tree("Data/04_Alignment/3di_nj/outTree_unrooted.nwk") ## renamed tree file
+plotTree(tr_renamed)
+desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
+fasta_file <- read.fasta (file = "Data/04_Alignment/3di_nj/3di_famsa3dialigned.fasta") ## renamed fasta file
+fasta_ids <-names(fasta_file)
+tip_ids <- desired_order
+reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
+write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/04_Alignment/3di_nj/3di_famsa3dialigned_reordered.fasta") ## out file  - renamed, reordered fasta
+```
+
+```{r}
+tr_renamed <- ape::read.tree("Data/04_Alignment/aa_nj/outTree_unrooted.nwk") ## renamed tree file
+plotTree(tr_renamed)
+desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
+fasta_file <- read.fasta (file = "Data/04_Alignment/aa_nj/input.fa.final_tree.used_alg.fa") ## renamed fasta file
+fasta_ids <-names(fasta_file)
+tip_ids <- desired_order
+reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
+write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/04_Alignment/aa_nj/input.fa.final_tree.used_alg_reordered.fa") ## out file  - renamed, reordered fasta file
+```
+
+```{r}
+tr_renamed <- ape::read.tree("Data/04_Alignment/aa_nj/outTree_unrooted.nwk") ## renamed tree file
+plotTree(tr_renamed)
+desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
+fasta_file <- read.fasta (file = "Data/04_Alignment/aa_nj/aa_famsa3dialigned.fasta") ## renamed fasta file
+fasta_ids <-names(fasta_file)
+tip_ids <- desired_order
+reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
+write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/04_Alignment/aa_nj/aa_famsa3dialigned_reordered.fasta") ## out file  - renamed, reordered fasta
+```
+
+
+```{r}
+tr_renamed <- ape::read.tree("Data/04_Alignment/3di_aa_nj/outTree_unrooted.nwk") ## renamed tree file
+plotTree(tr_renamed)
+desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
+fasta_file <- read.fasta (file = "Data/04_Alignment/3di_aa_nj/input.fa.final_tree.used_alg.fa") ## renamed fasta file
+fasta_ids <-names(fasta_file)
+tip_ids <- desired_order
+reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
+write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/04_Alignment/3di_aa_nj/input.fa.final_tree.used_alg_reordered.fa") ## out file  - renamed, reordered fasta file
+```
+
+```{r}
+tr_renamed <- ape::read.tree("Data/04_Alignment/3di_aa_nj/outTree_unrooted.nwk") ## renamed tree file
+plotTree(tr_renamed)
+desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
+fasta_file <- read.fasta (file = "Data/04_Alignment/3di_aa_nj/merged.fasta") ## renamed fasta file
+fasta_ids <-names(fasta_file)
+tip_ids <- desired_order
+reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
+write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/04_Alignment/3di_aa_nj/merged_reordered.fasta") ## out file  - renamed, reordered fasta
+```

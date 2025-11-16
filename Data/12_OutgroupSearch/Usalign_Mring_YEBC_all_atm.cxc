@@ -1,0 +1,14 @@
+#!/usr/bin/env chimerax --script
+open "./Data/12_OutgroupSearch//Usalign_Mring_YEBC.pdb" name structure1
+open "./Data/Structures/Alphafold/Experimental_FliF_Mring.pdb" name structure2
+hide all bonds
+hide all atoms
+hide all cartoon
+show #1/A cartoon
+show #1/A & nucleic cartoon,bonds
+show #2/A cartoon
+show #2/A & nucleic cartoon,bonds
+color #1 blue
+color #2 red
+set bgColor white
+

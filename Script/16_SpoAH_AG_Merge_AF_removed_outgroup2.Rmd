@@ -1,0 +1,414 @@
+---
+title: "11_SpoAH_AG_Merge"
+output: html_document
+---
+
+## Trimming Outgroup for RBM1
+```{r}
+# === Load library ===
+library(Biostrings)
+
+# === Input parameters ===
+input_fasta <- "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/YEBC_Outgroup_3di.fasta"          # path to your fasta file
+output_fasta <- "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/YEBC_Outgroup_RBM1.fasta" # name for trimmed output
+seq_name <- "YEBC_TranscriptionalRegulator"         # exact sequence name (must match FASTA header)
+start_pos <- 132                    # start trimming position
+end_pos <- 194                         # end trimming position
+
+# === Read sequences ===
+seqs <- readAAStringSet(input_fasta)
+
+# === Check if sequence exists ===
+if (!(seq_name %in% names(seqs))) {
+  stop(paste("Sequence", seq_name, "not found in FASTA file."))
+}
+
+# === Extract and trim ===
+selected_seq <- seqs[[seq_name]]
+trimmed_seq <- subseq(selected_seq, start = start_pos, end = end_pos)
+
+# === Save trimmed sequence ===
+trimmed_set <- AAStringSet(trimmed_seq)
+names(trimmed_set) <- paste0(seq_name)
+writeXStringSet(trimmed_set, filepath = output_fasta)
+
+cat("Trimmed sequence saved to:", output_fasta, "\n")
+
+```
+
+
+```{r}
+library(Biostrings)
+
+# === Input parameters ===
+input_fasta  <- "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/YEBC_Outgroup_3di.fasta"
+output_fasta <- "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/YEBC_Outgroup_RBM2.fasta"
+output_fasta_2 <- "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/YEBC_Outgroup_RBM3.fasta"
+
+seq_name <- "YEBC_TranscriptionalRegulator"
+
+# Two regions to extract:
+start_pos1 <- 3
+end_pos1   <- 32
+
+start_pos2 <- 86
+end_pos2   <- 128
+
+# === Read sequences ===
+seqs <- readAAStringSet(input_fasta)
+
+# === Check if sequence exists ===
+if (!(seq_name %in% names(seqs))) {
+  stop(paste("Sequence", seq_name, "not found in FASTA file."))
+}
+
+# === Extract sequence ===
+selected_seq <- seqs[[seq_name]]
+
+# === Trim two regions ===
+trim1 <- subseq(selected_seq, start = start_pos1, end = end_pos1)
+trim2 <- subseq(selected_seq, start = start_pos2, end = end_pos2)
+
+# === Concatenate ===
+concat_seq <- c(trim1, trim2)
+concat_seq <- do.call(xscat, as.list(concat_seq))  # Biostrings-safe concatenation
+
+# === Make AAStringSet for output ===
+trimmed_set <- AAStringSet(concat_seq)
+names(trimmed_set) <- paste0(seq_name)
+
+# === Save ===
+writeXStringSet(trimmed_set, filepath = output_fasta)
+writeXStringSet(trimmed_set, filepath = output_fasta_2)
+```
+
+### Concating Domain3 Horizontally
+
+## Split FLiF and create separate files
+```{r}
+library(Biostrings)
+
+# Load aligned FASTA
+fasta_file <- "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_famsa3diAligned_unsplit.fasta"
+seqs <- readAAStringSet(fasta_file)
+
+# Identify sequences ending with "_FliF"
+fliF_idx <- grep("_FliF$", names(seqs))
+
+# Prepare containers
+split_rbm1 <- AAStringSet()
+split_rbm2 <- AAStringSet()
+split_rbm3 <- AAStringSet()
+
+# Loop through each FliF sequence
+for (i in fliF_idx) {
+  seq <- seqs[[i]]
+  name_base <- names(seqs)[i]
+  
+  # Extract RBM1, RBM2, RBM3
+  rbm1 <- subseq(seq, start = 218, end = 404)
+  rbm2 <- subseq(seq, start = 418, end = 778)
+  rbm3 <- subseq(seq, start = 845, end = 1394)
+  
+  # Add each RBM to its respective container (same names)
+  rbm1_entry <- AAStringSet(rbm1)
+  names(rbm1_entry) <- name_base
+  split_rbm1 <- c(split_rbm1, rbm1_entry)
+  
+  rbm2_entry <- AAStringSet(rbm2)
+  names(rbm2_entry) <- name_base
+  split_rbm2 <- c(split_rbm2, rbm2_entry)
+  
+  rbm3_entry <- AAStringSet(rbm3)
+  names(rbm3_entry) <- name_base
+  split_rbm3 <- c(split_rbm3, rbm3_entry)
+}
+
+# Remove gaps from sequences
+split_rbm1 <- AAStringSet(gsub("-", "", as.character(split_rbm1)))
+split_rbm2 <- AAStringSet(gsub("-", "", as.character(split_rbm2)))
+split_rbm3 <- AAStringSet(gsub("-", "", as.character(split_rbm3)))
+
+# Write to separate FASTA files
+writeXStringSet(split_rbm1, "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_FliF_RBM1.fasta")
+writeXStringSet(split_rbm2, "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_FliF_RBM2.fasta")
+writeXStringSet(split_rbm3, "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_FliF_RBM3.fasta")
+
+```
+
+## Saving Separate SPO files
+```{r}
+fasta_file <- "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_famsa3diAligned_unsplit.fasta"
+seqs <- readAAStringSet(fasta_file)
+
+# === Identify sequences by suffix ===
+seqs_H <- seqs[grep("SpoIIIAH$", names(seqs))]
+seqs_G <- seqs[grep("SpoIIIAG$", names(seqs))]
+seqs_F <- seqs[grep("SpoIIIAF$", names(seqs))]
+
+# === Remove gaps (optional but useful) ===
+seqs_H <- AAStringSet(gsub("-", "", as.character(seqs_H)))
+seqs_G <- AAStringSet(gsub("-", "", as.character(seqs_G)))
+seqs_F <- AAStringSet(gsub("-", "", as.character(seqs_F)))
+
+# === Write to separate files ===
+writeXStringSet(seqs_H, "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_SpoIIIAH_RBM2_Unmatched.fasta")
+writeXStringSet(seqs_G, "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_SpoIIIAG_RBM3_Unmatched.fasta")
+writeXStringSet(seqs_F, "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_SpoIIIAF_RBM2.fasta")
+```
+
+## Renaminng Spo AG And AH sequences
+```{r}
+xlsfn = "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/SporulationMatchingGenus_SpoIIIAH.xlsx" ## excel file with accession Number and desirable name
+xls = openxlsx::read.xlsx(xlsxFile=xlsfn, sheet=1, startRow=1, colNames=TRUE)
+fasta_file <- seqinr::read.fasta (file = "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_SpoIIIAH_RBM2_Unmatched.fasta") ## Fasta file to be renamed
+newnames = as.array(xls$protein)
+accession_number = as.array(xls$AccessionNumber)
+print(accession_number)
+names(fasta_file) <- sapply(names(fasta_file), function(name) {
+  fasta_ids <- strsplit(name, split = "\\.")[[1]][1]
+  matched_name <- NULL
+   for (j in 1:length(newnames)){
+    newnames_accession <- strsplit(accession_number[j], split = "\\.")[[1]][1]
+    if (fasta_ids == newnames_accession) {
+      matched_name <- newnames[j]
+      break
+   }
+   }
+  if (!is.null(matched_name)) {
+    return(matched_name)
+  } else {
+    return(name)
+  }
+})
+seqinr::write.fasta(sequences = fasta_file, names=names(fasta_file), file.out = "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_SpoIIIAH_RBM2.fasta") 
+```
+
+```{r}
+xlsfn = "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/SporulationMatchingGenus_SpoIIIAG.xlsx" ## excel file with accession Number and desirable name
+xls = openxlsx::read.xlsx(xlsxFile=xlsfn, sheet=1, startRow=1, colNames=TRUE)
+fasta_file <- seqinr::read.fasta (file = "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_SpoIIIAG_RBM3_Unmatched.fasta") ## Fasta file to be renamed
+newnames = as.array(xls$protein)
+names(fasta_file) <- sapply(names(fasta_file), function(name) {
+  fasta_ids <- strsplit(name, split = "\\.")[[1]][1]
+  matched_name <- NULL
+   for (j in 1:length(newnames)){
+    newnames_accession <- strsplit(newnames[j], split = "\\.")[[1]][1]
+    if (fasta_ids == newnames_accession) {
+      matched_name <- newnames[j]
+      break
+   }
+   }
+  if (!is.null(matched_name)) {
+    return(matched_name)
+  } else {
+    return(name)
+  }
+})
+seqinr::write.fasta(sequences = fasta_file, names=names(fasta_file), file.out = "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_SpoIIIAG_RBM3.fasta") 
+```
+
+
+
+## Split T3SS and create separate files
+```{r}
+library(Biostrings)
+
+# === Load aligned FASTA ===
+fasta_file <- "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_famsa3diAligned_unsplit.fasta"
+seqs <- readAAStringSet(fasta_file)
+
+# === Identify sequences containing "T3SS" ===
+t3ss_idx <- grep("T3SS", names(seqs))
+
+# === Prepare containers for RBM1 and RBM2 ===
+split_rbm1 <- AAStringSet()
+split_rbm2 <- AAStringSet()
+
+# === Loop through each T3SS sequence ===
+for (i in t3ss_idx) {
+  seq <- seqs[[i]]
+  name_base <- names(seqs)[i]
+  
+  # Extract RBM1 and RBM2
+  rbm1 <- subseq(seq, start = 218, end = 404)
+  rbm2 <- subseq(seq, start = 418, end = 778)
+  
+  # Store with same names
+  rbm1_entry <- AAStringSet(rbm1)
+  names(rbm1_entry) <- name_base
+  split_rbm1 <- c(split_rbm1, rbm1_entry)
+  
+  rbm2_entry <- AAStringSet(rbm2)
+  names(rbm2_entry) <- name_base
+  split_rbm2 <- c(split_rbm2, rbm2_entry)
+}
+
+# === Remove gaps ===
+split_rbm1 <- AAStringSet(gsub("-", "", as.character(split_rbm1)))
+split_rbm2 <- AAStringSet(gsub("-", "", as.character(split_rbm2)))
+
+# === Write only RBM1 and RBM2 sequences to files ===
+writeXStringSet(split_rbm1, "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_T3SS_RBM1.fasta")
+writeXStringSet(split_rbm2, "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_T3SS_RBM2.fasta")
+```
+
+## Concat RBM1, RBM2, RBM3
+```{r}
+library(Biostrings)
+
+# === Directory containing your FASTA files ===
+input_dir <- "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2"
+
+# === Find all FASTA files by suffix ===
+rbm1_files <- list.files(input_dir, pattern = "RBM1\\.fasta$", full.names = TRUE)
+rbm2_files <- list.files(input_dir, pattern = "RBM2\\.fasta$", full.names = TRUE)
+rbm3_files <- list.files(input_dir, pattern = "RBM3\\.fasta$", full.names = TRUE)
+
+# === Helper function to read and combine FASTAs ===
+combine_fastas <- function(file_list) {
+  all_seqs <- AAStringSet()
+  for (f in file_list) {
+    seqs <- readAAStringSet(f)
+    all_seqs <- c(all_seqs, seqs)
+  }
+  return(all_seqs)
+}
+
+# === Combine and save ===
+if (length(rbm1_files) > 0) {
+  combined_rbm1 <- combine_fastas(rbm1_files)
+  writeXStringSet(combined_rbm1, file.path(input_dir, "3di_RBM1.fasta"))
+}
+
+if (length(rbm2_files) > 0) {
+  combined_rbm2 <- combine_fastas(rbm2_files)
+  writeXStringSet(combined_rbm2, file.path(input_dir, "3di_RBM2.fasta"))
+}
+
+if (length(rbm3_files) > 0) {
+  combined_rbm3 <- combine_fastas(rbm3_files)
+  writeXStringSet(combined_rbm3, file.path(input_dir, "3di_RBM3.fasta"))
+}
+
+```
+
+# Align the 3di sequences, using famsa3di
+```{bash}
+
+famsa3di ./Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_RBM1.fasta ./Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_RBM1_famsa3dialigned.fasta
+famsa3di ./Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_RBM2.fasta ./Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_RBM2_famsa3dialigned.fasta
+famsa3di ./Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_RBM3.fasta ./Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_RBM3_famsa3dialigned.fasta
+
+```
+
+```{r}
+library(Biostrings)
+
+# === Input files (edit paths) ===
+file1 <- "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_RBM1_famsa3dialigned.fasta"
+file2 <- "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_RBM2_famsa3dialigned.fasta"
+
+# === Read sequences ===
+seqs1 <- readAAStringSet(file1)
+seqs2 <- readAAStringSet(file2)
+
+# === Convert to named character vectors ===
+seqs1_vec <- setNames(as.character(seqs1), names(seqs1))
+seqs2_vec <- setNames(as.character(seqs2), names(seqs2))
+
+# === Combine all sequence names ===
+all_names <- unique(c(names(seqs1_vec), names(seqs2_vec)))
+
+# === Determine max lengths for padding ===
+maxlen1 <- max(nchar(seqs1_vec))
+maxlen2 <- max(nchar(seqs2_vec))
+
+# === Initialize result ===
+combined_vec <- character(length(all_names))
+names(combined_vec) <- all_names
+
+# === Merge horizontally (with gap-fill if missing) ===
+for (n in all_names) {
+  seq1 <- if (n %in% names(seqs1_vec)) seqs1_vec[[n]] else paste0(rep("-", maxlen1), collapse = "")
+  seq2 <- if (n %in% names(seqs2_vec)) seqs2_vec[[n]] else paste0(rep("-", maxlen2), collapse = "")
+  
+  combined_vec[[n]] <- paste0(seq1, seq2)
+}
+
+# === Convert back to AAStringSet ===
+combined_set <- AAStringSet(combined_vec)
+
+# === Write output ===
+output_file <- "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_RBM1_2_famsa3dialigned.fasta"
+writeXStringSet(combined_set, output_file)
+
+
+
+```
+
+```{r}
+library(Biostrings)
+
+# === Input files (edit paths) ===
+file1 <- "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_RBM1_2_famsa3dialigned.fasta"
+file2 <- "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_RBM3_famsa3dialigned.fasta"
+
+# === Read sequences ===
+seqs1 <- readAAStringSet(file1)
+seqs2 <- readAAStringSet(file2)
+
+# === Convert to named character vectors ===
+seqs1_vec <- setNames(as.character(seqs1), names(seqs1))
+seqs2_vec <- setNames(as.character(seqs2), names(seqs2))
+
+# === Combine all sequence names ===
+all_names <- unique(c(names(seqs1_vec), names(seqs2_vec)))
+
+# === Determine max lengths for padding ===
+maxlen1 <- max(nchar(seqs1_vec))
+maxlen2 <- max(nchar(seqs2_vec))
+
+# === Initialize result ===
+combined_vec <- character(length(all_names))
+names(combined_vec) <- all_names
+
+# === Merge horizontally (with gap-fill if missing) ===
+for (n in all_names) {
+  seq1 <- if (n %in% names(seqs1_vec)) seqs1_vec[[n]] else paste0(rep("-", maxlen1), collapse = "")
+  seq2 <- if (n %in% names(seqs2_vec)) seqs2_vec[[n]] else paste0(rep("-", maxlen2), collapse = "")
+  
+  combined_vec[[n]] <- paste0(seq1, seq2)
+}
+
+# === Convert back to AAStringSet ===
+combined_set <- AAStringSet(combined_vec)
+
+# === Write output ===
+output_file <- "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_RBM1_2_3_famsa3dialigned.fasta"
+writeXStringSet(combined_set, output_file)
+```
+## Removing AH, AG and AF files from the final file trying a separate analysis
+```{r}
+library(Biostrings)
+
+# === Input and output files ===
+input_file <- "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_RBM1_2_3_famsa3dialigned.fasta"    # replace with your fasta file path
+output_file <- "Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_RBM1_2_3_famsa3dialigned_Spo_removed.fasta"
+
+# === Read sequences ===
+seqs <- readAAStringSet(input_file)
+
+# === Filter sequences ===
+# Keep sequences whose names do NOT end with the given patterns
+keep_seqs <- seqs[!grepl("(SpoIIIAG|SpoIIIAF|SpoIIIAH)$", names(seqs))]
+
+# === Save filtered sequences ===
+writeXStringSet(keep_seqs, output_file)
+```
+
+```{bash}
+trimal -in ./Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_RBM1_2_3_famsa3dialigned_Spo_removed.fasta -out ./Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_RBM1_2_3_famsa3dialigned_Spo_removed_trim35.fasta -gt 0.35 -colnumbering | tee ./Data/15_FinalAnlaysis_SpoRemoved_WithOutgroup_D1_D2_D2/3di_RBM1_2_3_famsa3dialigned_Spo_removed_trim35_cols.txt
+```
+
+

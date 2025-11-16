@@ -1,0 +1,14 @@
+#!/usr/bin/env chimerax --script
+open "./Data/12_OutgroupSearch//Usalign_YEBC_Mring.pdb" name structure1
+open "./Data/12_OutgroupSearch/1KON_YEBC.pdb" name structure2
+hide all cartoon
+hide all atoms
+hide all bonds
+show #1/A:132,133,134,135,136,137,138,139,140,141,142,143,144,147,150,152,153,154,155,156,173,174,175,176,177,178,180,185,186,190,191,192,193,194,195,196,197,198,199,200,201,202,203,205,207,209,210,211,212,213,214,215,216,217,218 cartoon
+show #2/A:145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,231 cartoon
+cartoon style protein modeh default arrows f xsect oval width 1 thick 1
+cartoon style nucleic xsect oval width 1 thick 1
+color #1 blue
+color #2 red
+set bgColor white
+

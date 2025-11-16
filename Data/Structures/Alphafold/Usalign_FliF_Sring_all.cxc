@@ -1,0 +1,14 @@
+#!/usr/bin/env chimerax --script
+open "./Data/Structures/Alphafold/Usalign_FliF_Sring.pdb" name structure1
+open "./Data/Structures/Alphafold/Alphafold_FliF.pdb" name structure2
+hide all atoms
+hide all bonds
+cartoon style protein modeh default arrows f xsect oval width 1 thick 1
+cartoon style nucleic xsect oval width 1 thick 1
+hide all cartoon
+show #1/1 cartoon
+show #2/A cartoon
+color #1 blue
+color #2 red
+set bgColor white
+

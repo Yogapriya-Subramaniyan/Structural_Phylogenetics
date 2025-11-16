@@ -1,0 +1,8 @@
+#!/usr/bin/env chimerax --script
+open "./Data/Structures/Alphafold/Usalign_FlhB_SpoIIIAF.pdb" name structure1
+open "./Data/Structures/Alphafold/Alphafold_FlhB.pdb" name structure2
+show solvent atoms,bonds
+color #1 blue
+color #2 red
+set bgColor white
+

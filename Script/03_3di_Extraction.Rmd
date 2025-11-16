@@ -1,0 +1,199 @@
+---
+title: "03_3di_Extraction"
+output: html_document
+---
+# Libraries
+```{r}
+library(ape)
+library(msa)
+library(seqinr) # read.fasta
+library(BioGeoBEARS) # sourceall
+library(rvest) # for html_table()
+library(phytools) # for midpoint.root
+library(openxlsx) # for read.xlsx
+```
+
+# Sourcing
+```{r}
+sourceall("~/GitHub/str2phy/Rsrc/")
+source("~/GitHub/str2phy/Rsrc/protein_bioinf_v1.R")
+source("~/GitHub/str2phy/Rsrc/str2phy_v1.R")
+sourceall("~/GitHub/str2phy/Rsrc/")
+source("Script/Source.R")
+```
+
+```{bash}
+cp ./Data/02_Distant_Homolog_Extraction/homologs_downloaded_renamed.fasta ./Data/03_3di_Character_Extraction/homologs_downloaded_renamed.fasta
+```
+
+
+
+# Running Chimera to get 3D structure of all amino acids from alphafold using Chimera
+
+Alphafold returns cif file for each proteins Returns 3 files - \_alphafold.cif, \_alphafold.html, \_alphafold_table.html and txt file (defined in 'outdfs_fn')
+```{r}
+setwd("Data/03_3di_Character_Extraction")
+fasta_fn = "homologs_downloaded_renamed.fasta" ## using the manual Jackhmmer hits  (along with the long branches)
+tmpseqs = ape::read.FASTA(fasta_fn, type="AA")
+numseqs = length(tmpseqs)
+lines_list <- as.list(readLines("completed_ids.txt"))
+lines_list <- lines_list[lines_list != ""]
+outdfs = NULL; i=1
+exclude_is = lines_list
+for (i in 1:numseqs)
+	{
+	txt = paste0("Getting alphafold structure for sequence #", i, "/", numseqs)
+	cat("\n")
+	cat(txt)
+	cat("\n")
+	
+	if ((i %in% exclude_is) == TRUE)
+		{
+		seqs = ape::read.FASTA(fasta_fn, type="AA")
+		header = names(seqs)[[i]]
+		gid = firstword(header)
+		
+		txt = paste0("Sequence #", i, "/", numseqs, ", aka '", gid, "', skipped as it is known to cause a problem.")
+		cat("\n")
+		cat(txt)
+		cat("\n")
+		outdf = rep(NA, times=13)
+		names(outdf) = c("seqnum", "AlphaFold Model", "Query Sequence", "Identity %", "Coverage %", "cif_fn", "html_fn", "table_fn", "dump_fn", "chain_names_fn", "di3_fn", "aa_fn", "both_fn")
+		outdfs = rbind(outdfs, outdf)
+		next()
+		} # END if (i %in% exclude_is)
+	
+	# Just get the CIF files
+	print("same script")
+	outdf = fasta_to_alphafold_cifs_modified(fasta_fn=fasta_fn, seqnum=i)
+	print(outdf[1:5])
+	outdfs = rbind(outdfs, outdf)
+	
+	outdfs_fn = "alphafolds.txt"
+	write.table(x=outdfs, file=outdfs_fn, quote=FALSE, sep="\t", row.names=FALSE, col.names=TRUE)
+	completed_id = names(tmpseqs[i])
+	write(completed_id, file = "completed_ids.txt", append = TRUE, sep = "\n")
+	
+	} # END for (i in 1:numseqs)
+
+## Returned Alphafold structure for only 377 sequences
+```
+
+# Extracting the html info - Alphafolds.txt was modified manually to exclude the lines without .cif file
+
+```{r}
+setwd("Data/03_3di_Character_Extraction")
+source("~/GitHub/str2phy/Rsrc/str2phy_v1.R")
+outdfs2_fn = "alphafolds.txt"
+outdfs = read.table(outdfs2_fn, quote="", sep="\t", header=TRUE, na.strings = c("NA", ""))
+outdfs
+names_outdfs = c("seqnum", "AlphaFold Model", "Query Sequence", "Identity %", "Coverage %", "cif_fn", "html_fn", "table_fn", "dump_fn", "chain_names_fn", "di3_fn", "aa_fn", "both_fn")
+names(outdfs) = names_outdfs
+outdfs
+alphafold_dfs = NULL
+
+for (i in 1:376)
+	{
+	txt = paste0("Reading ChimeraX --alphafold table returned for sequence #", i, "/", numseqs)
+	cat("\n")
+	cat(txt)
+	
+	html_fn = outdfs$html_fn[i]
+	print(html_fn)
+	table_fn = outdfs$table_fn[i]
+	print(table_fn)
+	
+	alphafold_df = alphafold_html_to_df(html_fn, table_fn)
+	alphafold_df
+	
+	alphafold_dfs = rbind(alphafold_dfs, alphafold_df)
+	}
+cat("\n...done\n")
+alphafold_dfs
+dim(outdfs)
+
+# Write over, if needed
+outdfs2 = outdfs
+outdfs2[,"AlphaFold Model"] = alphafold_dfs[,"AlphaFold Model"]
+outdfs2[,"Query Sequence"] = alphafold_dfs[,"Query Sequence"]
+outdfs2[,"Identity %"] = alphafold_dfs[,"Identity %"]
+outdfs2[,"Coverage %"] = alphafold_dfs[,"Coverage %"]
+
+outdfs2_fn = "alphafolds.txt"
+write.table(x=outdfs2, file=outdfs2_fn, quote=FALSE, sep="\t", row.names=FALSE, col.names=TRUE)
+
+# Look at the output table
+View(outdfs2)
+```
+
+# Concatenate all _3di.fasta files into a big one
+```{bash}
+
+cat ./Data/03_3di_Character_Extraction/*_alphafold_3di.fasta > ./Data/03_3di_Character_Extraction/3di_unaligned.fasta
+```
+
+# Concatenate all aa.fasta files into a big one
+```{bash}
+
+cat ./Data/03_3di_Character_Extraction/*_alphafold_aa.fasta > ./Data/03_3di_Character_Extraction/aa_unaligned.fasta
+```
+
+# Renaming to remove .cif from the sequence names
+```{bash}
+sed -i -e 's/_alphafold.cif//g' ./Data/03_3di_Character_Extraction/3di_unaligned.fasta
+sed -i -e 's/_alphafold.cif//g' ./Data/03_3di_Character_Extraction/aa_unaligned.fasta
+```
+
+## Extracting only the sequennce required from previous analysis file
+```{r}
+xlsfn = "Data/RenamingSequences.xlsx"
+xls = openxlsx::read.xlsx(xlsxFile=xlsfn, sheet=1, startRow=1, colNames=TRUE)
+
+seqids = as.character(xls$AccessionNumber)
+new_names <- as.character(xls$protein)
+
+lookup <- setNames(new_names, seqids)
+
+tmpfn_aa = "Data/03_3di_Character_Extraction/aa_unaligned.fasta"
+tmpfn_3di <- "Data/03_3di_Character_Extraction/3di_unaligned.fasta"
+aa_fasta <- read.fasta (file = "Data/03_3di_Character_Extraction/aa_unaligned_PreviousAnalysis.fasta")
+di3_fasta <- read.fasta (file = "Data/03_3di_Character_Extraction/3di_unaligned_PreviousAnalysis.fasta")
+filtered_seqs <- list()
+filtered_names <- c()
+
+for (i in seq_along(aa_fasta)) {
+  # Get the sequence name
+  seq_name <- attr(aa_fasta[[i]], "name")
+  
+  # Extract the part before the first hyphen
+  acc <- strsplit(seq_name, "_")[[1]][1]
+  # Check if it is in seqids
+  if (acc %in% seqids) {
+    new_name <- lookup[[acc]]
+    filtered_seqs[[seq_name]] <- aa_fasta[[i]]
+    filtered_names <- c(filtered_names, new_name)
+  }
+}
+length(filtered_seqs)
+write.fasta(sequences = filtered_seqs, names = filtered_names, file.out = tmpfn_aa)
+
+filtered_seqs_3di <- list()
+filtered_names_3di <- c()
+for (i in seq_along(di3_fasta)) {
+  # Get the sequence name
+  seq_name <- attr(di3_fasta[[i]], "name")
+  
+  # Extract the part before the first hyphen
+  acc <- strsplit(seq_name, "_")[[1]][1]
+  
+  # Check if it is in seqids
+  if (acc %in% seqids) {
+    new_name <- lookup[[acc]]
+    filtered_seqs_3di[[seq_name]] <- di3_fasta[[i]]
+    filtered_names_3di <- c(filtered_names, new_name)
+  }
+}
+length(filtered_seqs_3di)
+write.fasta(sequences = filtered_seqs_3di, names = filtered_names_3di, file.out = tmpfn_3di)
+```
+

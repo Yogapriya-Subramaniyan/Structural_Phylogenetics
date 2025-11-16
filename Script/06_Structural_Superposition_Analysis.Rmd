@@ -1,0 +1,47 @@
+---
+title: "StructuralExtraction"
+output: html_document
+---
+
+```{r}
+bio3d::pdbsplit(pdb.files="Data/Structures/6SD2_FliF_Multimer_Mring.pdb", ids=NULL, path=".", overwrite=TRUE)
+bio3d::pdbsplit(pdb.files="Data/Structures/8Z4D_FliF_Multimer_Sring.pdb", ids=NULL, path=".", overwrite=TRUE)
+bio3d::pdbsplit(pdb.files="Data/Structures/3UZ0_SpoIIIAH_SpoIIIQ.pdb", ids=NULL, path=".", overwrite=TRUE)
+```
+
+```{r}
+bio3d::pdbsplit(pdb.files="Data/Structures/3B1S_FlhB.pdb", ids=NULL, path="Data/Structures/3B1S_FlhB", overwrite=TRUE)
+
+bio3d::pdbsplit(pdb.files="Data/Structures/6z0w_FlhB.pdb", ids=NULL, path="Data/Structures/6z0w_FlhB", overwrite=TRUE)
+```
+
+```{r}
+bio3d::pdbsplit(pdb.files="Data/Structures/1YJ7_EscJ.pdb", ids=NULL, path="Data/Structures/1YJ7_EscJ", overwrite=TRUE)
+```
+
+
+```{bash}
+usalign ./Data/Structures/Alphafold/Alphafold_SpoIIIAH.pdb ./Data/Structures/Alphafold/Alphafold_FliF.pdb -chimerax ./Data/Structures/Alphafold/Usalign_FliF_SpoIIIAH
+
+usalign ./Data/Structures/Alphafold/Alphafold_SpoIIIAG.pdb ./Data/Structures/Alphafold/Alphafold_FliF.pdb -chimerax ./Data/Structures/Alphafold/Usalign_FliF_SpoIIIAG
+```
+
+
+```{bash}
+usalign ./Data/Structures/Alphafold/Alphafold_SpoIIIAF.pdb ./Data/Structures/Alphafold/Alphafold_FliF.pdb -chimerax ./Data/Structures/Alphafold/Usalign_FliF_SpoIIIAF
+```
+
+```{bash}
+usalign ./Data/Structures/Alphafold/Alphafold_T3SS.pdb ./Data/Structures/Alphafold/Alphafold_FliF.pdb -chimerax ./Data/Structures/Alphafold/Usalign_FliF_T3SS
+```
+
+```{bash}
+usalign ./Data/Structures/Alphafold/Experimental_FliF_Mring.pdb ./Data/Structures/Alphafold/Alphafold_FliF.pdb -chimerax ./Data/Structures/Alphafold/Usalign_FliF_Mring
+
+usalign ./Data/Structures/Alphafold/Experimental_FliF_Sring.pdb ./Data/Structures/Alphafold/Alphafold_FliF.pdb -chimerax ./Data/Structures/Alphafold/Usalign_FliF_Sring
+
+usalign ./Data/Structures/Alphafold/Experimental_FliF_Mring.pdb ./Data/Structures/Alphafold/Experimental_FliF_Sring.pdb -chimerax ./Data/Structures/Alphafold/Usalign_FliF_Mring_on_Sring
+```
+
+`
+

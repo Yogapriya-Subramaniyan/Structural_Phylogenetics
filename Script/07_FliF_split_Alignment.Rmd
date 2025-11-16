@@ -1,0 +1,221 @@
+---
+title: "05_FliF_split_Alignment"
+output: html_document
+---
+
+## Cutting the FliF into RBM1, 2 and RBM3
+```{r}
+library(Biostrings)
+
+# Load aligned FASTA
+fasta_file <- "Data/06_FliF_split/3di_famsa3diAligned_unsplit.fasta"
+seqs <- readAAStringSet(fasta_file)
+
+# Identify sequences ending with "_FliF"
+fliF_idx <- grep("_FliF$", names(seqs))
+
+# Prepare containers
+split_parts <- AAStringSet()
+split_parts_2 <- AAStringSet()
+
+# Loop through each FliF sequence
+for (i in fliF_idx) {
+  seq <- seqs[[i]]
+  seq_len <- length(seq)  # FIX: use 'length()' instead of 'width()' for DNAString
+  
+    # Split sequence
+    seq_first <- subseq(seq, start = 218, end = 404)
+    seq_second <- subseq(seq, start = 418  , end = 778)
+    seq_third <- subseq(seq, start = 845 , end = 1394)
+    
+    # Replace original sequence with first half
+    seqs[[i]] <- seq_first
+    
+    # Add second part to new set with renamed header
+    new_name <- paste0(names(seqs)[i], "_1")
+    new_entry <- AAStringSet(seq_second)
+    names(new_entry) <- new_name
+    split_parts <- c(split_parts, new_entry)
+    
+    # Add second part to new set with renamed header
+    new_name_2 <- paste0(names(seqs)[i], "_2")
+    new_entry_2 <- AAStringSet(seq_third)
+    names(new_entry_2) <- new_name_2
+    split_parts_2 <- c(split_parts_2, new_entry_2)
+}
+
+# Combine original + new split sequences
+final_seqs <- c(seqs, split_parts, split_parts_2)
+unaligned_sequence <- AAStringSet(gsub("-", "", as.character(final_seqs)))
+# Write output FASTA
+
+writeXStringSet(unaligned_sequence, "Data/06_FliF_split/3di_unaligned.fasta")
+
+```
+
+## Cutting the FliF into RBM1, 2 and RBM3
+```{r}
+library(Biostrings)
+
+# Load aligned FASTA
+fasta_file <- "Data/06_FliF_split/aa_famsa3diAligned_unsplit.fasta"
+seqs <- readAAStringSet(fasta_file)
+
+# Identify sequences ending with "_FliF"
+fliF_idx <- grep("_FliF$", names(seqs))
+
+# Prepare containers
+split_parts <- AAStringSet()
+split_parts_2 <- AAStringSet()
+
+# Loop through each FliF sequence
+for (i in fliF_idx) {
+  seq <- seqs[[i]]
+  seq_len <- length(seq)  # FIX: use 'length()' instead of 'width()' for DNAString
+  
+    # Split sequence
+    seq_first <- subseq(seq, start = 218, end = 404)
+    seq_second <- subseq(seq, start = 418  , end = 778)
+    seq_third <- subseq(seq, start = 845 , end = 1394)
+    
+    # Replace original sequence with first half
+    seqs[[i]] <- seq_first
+    
+    # Add second part to new set with renamed header
+    new_name <- paste0(names(seqs)[i], "_1")
+    new_entry <- AAStringSet(seq_second)
+    names(new_entry) <- new_name
+    split_parts <- c(split_parts, new_entry)
+    
+    # Add second part to new set with renamed header
+    new_name_2 <- paste0(names(seqs)[i], "_2")
+    new_entry_2 <- AAStringSet(seq_third)
+    names(new_entry_2) <- new_name_2
+    split_parts_2 <- c(split_parts_2, new_entry_2)
+}
+
+# Combine original + new split sequences
+final_seqs <- c(seqs, split_parts, split_parts_2)
+unaligned_sequence <- AAStringSet(gsub("-", "", as.character(final_seqs)))
+# Write output FASTA
+
+writeXStringSet(unaligned_sequence, "Data/06_FliF_split/aa_unaligned.fasta")
+
+```
+## Alignment and other steps
+# Align the 3di sequences, using famsa3di
+```{bash}
+
+famsa3di ./Data/06_FliF_split/3di_unaligned.fasta ./Data/06_FliF_split/3di_famsa3dialigned.fasta
+
+```
+
+# Align the AAs to the famsa3di alignment
+```{r}
+source("~/GitHub/str2phy/Rsrc/str2phy_v1.R")
+
+aligned_fn = "Data/06_FliF_split/3di_famsa3diAligned.fasta"
+unaligned_fn = "Data/06_FliF_split/aa_unaligned.fasta"
+outfn = "Data/06_FliF_split/aa_famsa3diAligned.fasta"
+aligned_AAs = align_3dis_to_AAs(aligned_fn, unaligned_fn, outfn)
+moref(outfn)
+```
+
+# Trim the alignments to just columns with >35% complete data
+```{bash}
+
+trimal -in ./Data/06_FliF_split/aa_famsa3diAligned.fasta -out ./Data/06_FliF_split/aa_famsa3diAligned_trim35.fasta -gt 0.35 -colnumbering | tee ./Data/06_FliF_split/aa_famsa3diAligned_trim35_cols.txt
+
+trimal -in ./Data/06_FliF_split/3di_famsa3diAligned.fasta -out ./Data/06_FliF_split/3di_famsa3diAligned_trim35.fasta -gt 0.35 -colnumbering | tee ./Data/06_FliF_split/3di_famsa3diAligned_trim35_cols.txt
+
+```
+
+# Horizontally concatenate 2 alignment files
+```{r}
+
+fn1 = "Data/06_FliF_split/aa_famsa3diAligned_trim35.fasta"
+fn2 = "Data/06_FliF_split/aa_famsa3diAligned_trim35.fasta"
+fn3 = "Data/06_FliF_split/aa_3di_famsa3diAligned_trim35.fasta"
+fn3
+merged_df = hcat_align_fns(fn1, fn2, fn3)
+merged_df
+```
+
+## Reordering_ALignment
+```{r}
+tr_renamed <- ape::read.tree("Data/06_FliF_split/3di_nj/outTree_unrooted.nwk") ## renamed tree file
+plotTree(tr_renamed)
+desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
+fasta_file <- read.fasta (file = "Data/06_FliF_split/3di_nj/input.fa.final_tree.used_alg.fa") ## renamed fasta file
+fasta_ids <-names(fasta_file)
+tip_ids <- desired_order
+reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
+write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/06_FliF_split/3di_nj/input.fa.final_tree.used_alg_reordered.fa") ## out file  - renamed, reordered fasta file
+```
+
+```{r}
+tr_renamed <- ape::read.tree("Data/06_FliF_split/3di_nj/outTree_unrooted.nwk") ## renamed tree file
+plotTree(tr_renamed)
+desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
+fasta_file <- read.fasta (file = "Data/06_FliF_split/3di_nj/3di_famsa3dialigned.fasta") ## renamed fasta file
+fasta_ids <-names(fasta_file)
+tip_ids <- desired_order
+reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
+write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/06_FliF_split/3di_nj/3di_famsa3dialigned_reordered.fasta") ## out file  - renamed, reordered fasta
+```
+
+```{r}
+tr_renamed <- ape::read.tree("Data/06_FliF_split/3di_nj/outTree_unrooted.nwk") ## renamed tree file
+plotTree(tr_renamed)
+desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
+fasta_file <- read.fasta (file = "Data/06_FliF_split/3di_nj/aa_famsa3dialigned.fasta") ## renamed fasta file
+fasta_ids <-names(fasta_file)
+tip_ids <- desired_order
+reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
+write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/06_FliF_split/3di_nj/aa_famsa3dialigned_reordered.fasta") ## out file  - renamed, reordered fasta
+```
+
+```{r}
+tr_renamed <- ape::read.tree("Data/06_FliF_split/aa_nj/outTree_unrooted.nwk") ## renamed tree file
+plotTree(tr_renamed)
+desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
+fasta_file <- read.fasta (file = "Data/06_FliF_split/aa_nj/input.fa.final_tree.used_alg.fa") ## renamed fasta file
+fasta_ids <-names(fasta_file)
+tip_ids <- desired_order
+reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
+write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/06_FliF_split/aa_nj/input.fa.final_tree.used_alg_reordered.fa") ## out file  - renamed, reordered fasta file
+```
+
+```{r}
+tr_renamed <- ape::read.tree("Data/06_FliF_split/aa_nj/outTree_unrooted.nwk") ## renamed tree file
+plotTree(tr_renamed)
+desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
+fasta_file <- read.fasta (file = "Data/06_FliF_split/aa_nj/aa_famsa3dialigned.fasta") ## renamed fasta file
+fasta_ids <-names(fasta_file)
+tip_ids <- desired_order
+reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
+write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/06_FliF_split/aa_nj/aa_famsa3dialigned_reordered.fasta") ## out file  - renamed, reordered fasta
+```
+
+
+```{r}
+tr_renamed <- ape::read.tree("Data/06_FliF_split/3di_aa_nj/outTree_unrooted.nwk") ## renamed tree file
+plotTree(tr_renamed)
+desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
+fasta_file <- read.fasta (file = "Data/06_FliF_split/3di_aa_nj/input.fa.final_tree.used_alg.fa") ## renamed fasta file
+fasta_ids <-names(fasta_file)
+tip_ids <- desired_order
+reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
+write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/06_FliF_split/3di_aa_nj/input.fa.final_tree.used_alg_reordered.fa") ## out file  - renamed, reordered fasta file
+```
+
+```{r}
+tr_renamed <- ape::read.tree("Data/06_FliF_split/3di_aa_nj/outTree_unrooted.nwk") ## renamed tree file
+plotTree(tr_renamed)
+desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
+fasta_file <- read.fasta (file = "Data/06_FliF_split/3di_aa_nj/merged.fasta") ## renamed fasta file
+fasta_ids <-names(fasta_file)
+tip_ids <- desired_order
+reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
+write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/06_FliF_split/3di_aa_nj/merged_reordered.fasta") ## out file  - renamed, reordered fasta
+```

@@ -1,0 +1,262 @@
+---
+title: "08_Split_Align_merge"
+output: html_document
+---
+
+### Concating Domain3 Horizontally
+
+## Split FLiF and create separate files
+```{r}
+library(Biostrings)
+
+# Load aligned FASTA
+fasta_file <- "Data/08_Split_Align_Merge_Vertical_Concatination/3di_famsa3diAligned_unsplit.fasta"
+seqs <- readAAStringSet(fasta_file)
+
+# Identify sequences ending with "_FliF"
+fliF_idx <- grep("_FliF$", names(seqs))
+
+# Prepare containers
+split_rbm1 <- AAStringSet()
+split_rbm2 <- AAStringSet()
+split_rbm3 <- AAStringSet()
+
+# Loop through each FliF sequence
+for (i in fliF_idx) {
+  seq <- seqs[[i]]
+  name_base <- names(seqs)[i]
+  
+  # Extract RBM1, RBM2, RBM3
+  rbm1 <- subseq(seq, start = 218, end = 404)
+  rbm2 <- subseq(seq, start = 418, end = 778)
+  rbm3 <- subseq(seq, start = 845, end = 1394)
+  
+  # Add each RBM to its respective container (same names)
+  rbm1_entry <- AAStringSet(rbm1)
+  names(rbm1_entry) <- name_base
+  split_rbm1 <- c(split_rbm1, rbm1_entry)
+  
+  rbm2_entry <- AAStringSet(rbm2)
+  names(rbm2_entry) <- name_base
+  split_rbm2 <- c(split_rbm2, rbm2_entry)
+  
+  rbm3_entry <- AAStringSet(rbm3)
+  names(rbm3_entry) <- name_base
+  split_rbm3 <- c(split_rbm3, rbm3_entry)
+}
+
+# Remove gaps from sequences
+split_rbm1 <- AAStringSet(gsub("-", "", as.character(split_rbm1)))
+split_rbm2 <- AAStringSet(gsub("-", "", as.character(split_rbm2)))
+split_rbm3 <- AAStringSet(gsub("-", "", as.character(split_rbm3)))
+
+# Write to separate FASTA files
+writeXStringSet(split_rbm1, "Data/08_Split_Align_Merge_Vertical_Concatination/3di_FliF_RBM1.fasta")
+writeXStringSet(split_rbm2, "Data/08_Split_Align_Merge_Vertical_Concatination/3di_FliF_RBM2.fasta")
+writeXStringSet(split_rbm3, "Data/08_Split_Align_Merge_Vertical_Concatination/3di_FliF_RBM3.fasta")
+
+```
+
+## Saving Separate SPO files
+```{r}
+fasta_file <- "Data/08_Split_Align_Merge_Vertical_Concatination/3di_famsa3diAligned_unsplit.fasta"
+seqs <- readAAStringSet(fasta_file)
+
+# === Identify sequences by suffix ===
+seqs_H <- seqs[grep("SpoIIIAH$", names(seqs))]
+seqs_G <- seqs[grep("SpoIIIAG$", names(seqs))]
+seqs_F <- seqs[grep("SpoIIIAF$", names(seqs))]
+
+# === Remove gaps (optional but useful) ===
+seqs_H <- AAStringSet(gsub("-", "", as.character(seqs_H)))
+seqs_G <- AAStringSet(gsub("-", "", as.character(seqs_G)))
+seqs_F <- AAStringSet(gsub("-", "", as.character(seqs_F)))
+
+# === Write to separate files ===
+writeXStringSet(seqs_H, "Data/08_Split_Align_Merge_Vertical_Concatination/3di_SpoIIIAH_RBM2.fasta")
+writeXStringSet(seqs_G, "Data/08_Split_Align_Merge_Vertical_Concatination/3di_SpoIIIAG_RBM3.fasta")
+writeXStringSet(seqs_F, "Data/08_Split_Align_Merge_Vertical_Concatination/3di_SpoIIIAF_RBM2.fasta")
+```
+
+## Split T3SS and create separate files
+```{r}
+library(Biostrings)
+
+# === Load aligned FASTA ===
+fasta_file <- "Data/08_Split_Align_Merge_Vertical_Concatination/3di_famsa3diAligned_unsplit.fasta"
+seqs <- readAAStringSet(fasta_file)
+
+# === Identify sequences containing "T3SS" ===
+t3ss_idx <- grep("T3SS", names(seqs))
+
+# === Prepare containers for RBM1 and RBM2 ===
+split_rbm1 <- AAStringSet()
+split_rbm2 <- AAStringSet()
+
+# === Loop through each T3SS sequence ===
+for (i in t3ss_idx) {
+  seq <- seqs[[i]]
+  name_base <- names(seqs)[i]
+  
+  # Extract RBM1 and RBM2
+  rbm1 <- subseq(seq, start = 218, end = 404)
+  rbm2 <- subseq(seq, start = 418, end = 778)
+  
+  # Store with same names
+  rbm1_entry <- AAStringSet(rbm1)
+  names(rbm1_entry) <- name_base
+  split_rbm1 <- c(split_rbm1, rbm1_entry)
+  
+  rbm2_entry <- AAStringSet(rbm2)
+  names(rbm2_entry) <- name_base
+  split_rbm2 <- c(split_rbm2, rbm2_entry)
+}
+
+# === Remove gaps ===
+split_rbm1 <- AAStringSet(gsub("-", "", as.character(split_rbm1)))
+split_rbm2 <- AAStringSet(gsub("-", "", as.character(split_rbm2)))
+
+# === Write only RBM1 and RBM2 sequences to files ===
+writeXStringSet(split_rbm1, "Data/08_Split_Align_Merge_Vertical_Concatination/3di_T3SS_RBM1.fasta")
+writeXStringSet(split_rbm2, "Data/08_Split_Align_Merge_Vertical_Concatination/3di_T3SS_RBM2.fasta")
+```
+
+## Concat RBM1, RBM2, RBM3
+```{r}
+library(Biostrings)
+
+# === Directory containing your FASTA files ===
+input_dir <- "Data/08_Split_Align_Merge_Vertical_Concatination"
+
+# === Find all FASTA files by suffix ===
+rbm1_files <- list.files(input_dir, pattern = "RBM1.*\\.fasta$", full.names = TRUE)
+rbm2_files <- list.files(input_dir, pattern = "RBM2.*\\.fasta$", full.names = TRUE)
+rbm3_files <- list.files(input_dir, pattern = "RBM3.*\\.fasta$", full.names = TRUE)
+
+# === Helper function to read and combine FASTAs ===
+combine_fastas <- function(file_list) {
+  all_seqs <- AAStringSet()
+  for (f in file_list) {
+    seqs <- readAAStringSet(f)
+    all_seqs <- c(all_seqs, seqs)
+  }
+  return(all_seqs)
+}
+
+# === Combine and save ===
+if (length(rbm1_files) > 0) {
+  combined_rbm1 <- combine_fastas(rbm1_files)
+  writeXStringSet(combined_rbm1, file.path(input_dir, "3di_RBM1.fasta"))
+}
+
+if (length(rbm2_files) > 0) {
+  combined_rbm2 <- combine_fastas(rbm2_files)
+  writeXStringSet(combined_rbm2, file.path(input_dir, "3di_RBM2.fasta"))
+}
+
+if (length(rbm3_files) > 0) {
+  combined_rbm3 <- combine_fastas(rbm3_files)
+  writeXStringSet(combined_rbm3, file.path(input_dir, "3di_RBM3.fasta"))
+}
+
+```
+
+##
+
+```{r}
+file1 <- "Data/08_Split_Align_Merge_Vertical_Concatination/3di_RBM2.fasta"
+file2 <- "Data/08_Split_Align_Merge_Vertical_Concatination/3di_RBM3.fasta"
+
+seqs1 <- readAAStringSet(file1)
+seqs2 <- readAAStringSet(file2)
+
+duplicate_names <- intersect(names(seqs1), names(seqs2))
+if (length(duplicate_names) > 0) {
+  # Append "_1" to duplicates in the second file
+  names(seqs2)[names(seqs2) %in% duplicate_names] <- paste0(names(seqs2)[names(seqs2) %in% duplicate_names], "_1")
+}
+
+combined <- c(seqs1, seqs2)
+output_file <- "Data/08_Split_Align_Merge_Vertical_Concatination/3di_RBM2_3.fasta"
+
+# === Write combined FASTA ===
+writeXStringSet(combined, output_file)
+```
+
+# Align the 3di sequences, using famsa3di
+```{bash}
+
+famsa3di ./Data/08_Split_Align_Merge_Vertical_Concatination/3di_RBM1.fasta ./Data/08_Split_Align_Merge_Vertical_Concatination/3di_RBM1_famsa3dialigned.fasta
+famsa3di ./Data/08_Split_Align_Merge_Vertical_Concatination/3di_RBM2_3.fasta ./Data/08_Split_Align_Merge_Vertical_Concatination/3di_RBM2_3_famsa3dialigned.fasta
+
+```
+
+```{r}
+library(Biostrings)
+
+# === Input files (edit paths) ===
+file1 <- "Data/08_Split_Align_Merge_Vertical_Concatination/3di_RBM1_famsa3dialigned.fasta"
+file2 <- "Data/08_Split_Align_Merge_Vertical_Concatination/3di_RBM2_3_famsa3dialigned.fasta"
+
+# === Read sequences ===
+seqs1 <- readAAStringSet(file1)
+seqs2 <- readAAStringSet(file2)
+
+# === Convert to named character vectors ===
+seqs1_vec <- setNames(as.character(seqs1), names(seqs1))
+seqs2_vec <- setNames(as.character(seqs2), names(seqs2))
+
+# === Combine all sequence names ===
+all_names <- unique(c(names(seqs1_vec), names(seqs2_vec)))
+
+# === Determine max lengths for padding ===
+maxlen1 <- max(nchar(seqs1_vec))
+maxlen2 <- max(nchar(seqs2_vec))
+
+# === Initialize result ===
+combined_vec <- character(length(all_names))
+names(combined_vec) <- all_names
+
+# === Merge horizontally (with gap-fill if missing) ===
+for (n in all_names) {
+  seq1 <- if (n %in% names(seqs1_vec)) seqs1_vec[[n]] else paste0(rep("-", maxlen1), collapse = "")
+  seq2 <- if (n %in% names(seqs2_vec)) seqs2_vec[[n]] else paste0(rep("-", maxlen2), collapse = "")
+  
+  combined_vec[[n]] <- paste0(seq1, seq2)
+}
+
+# === Convert back to AAStringSet ===
+combined_set <- AAStringSet(combined_vec)
+
+# === Write output ===
+output_file <- "Data/08_Split_Align_Merge_Vertical_Concatination/3di_RBM1_2_3_famsa3dialigned.fasta"
+writeXStringSet(combined_set, output_file)
+
+```
+
+```{bash}
+trimal -in ./Data/08_Split_Align_Merge_Vertical_Concatination/3di_RBM1_2_3_famsa3dialigned.fasta -out ./Data/08_Split_Align_Merge_Vertical_Concatination/3di_RBM1_2_3_famsa3dialigned_trim35.fasta -gt 0.35 -colnumbering | tee ./Data/08_Split_Align_Merge_Vertical_Concatination/3di_RBM1_2_3_famsa3dialigned_trim35_cols.txt
+```
+
+## Reordering_ALignment
+```{r}
+tr_renamed <- ape::read.tree("Data/08_Split_Align_Merge_Vertical_Concatination/3di_nj/outTree_unrooted.nwk") ## renamed tree file
+plotTree(tr_renamed)
+desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
+fasta_file <- seqinr::read.fasta (file = "Data/08_Split_Align_Merge_Vertical_Concatination/3di_nj/input.fa.final_tree.used_alg.fa") ## renamed fasta file
+fasta_ids <-names(fasta_file)
+tip_ids <- desired_order
+reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
+seqinr::write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/08_Split_Align_Merge_Vertical_Concatination/3di_nj/input.fa.final_tree.used_alg_reordered.fa") ## out file  - renamed, reordered fasta file
+```
+
+```{r}
+tr_renamed <- ape::read.tree("Data/08_Split_Align_Merge_Vertical_Concatination/3di_nj/outTree_unrooted.nwk") ## renamed tree file
+plotTree(tr_renamed)
+desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
+fasta_file <- seqinr::read.fasta (file = "Data/08_Split_Align_Merge_Vertical_Concatination/3di_nj/3di_RBM1_2_3_famsa3dialigned.fasta") ## renamed fasta file
+fasta_ids <-names(fasta_file)
+tip_ids <- desired_order
+reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
+seqinr::write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/08_Split_Align_Merge_Vertical_Concatination/3di_nj/3di_RBM1_2_3_famsa3dialigned_reordered.fasta") ## out file  - renamed, reordered fasta
+```

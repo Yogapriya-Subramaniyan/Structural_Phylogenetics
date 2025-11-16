@@ -1,0 +1,55 @@
+---
+title: "01_Distant_Homolog_Extraction"
+output: html_document
+---
+
+```{bash}
+chmod +x ./Script/Bash_Script/fasta.sh
+./Script/Bash_Script/fasta.sh
+```
+
+
+```{bash}
+# Building sto (using esl-reformat) from aligned fasta (using Mafft)
+chmod +x ./Script/Bash_Script/fasta2sto.sh
+./Script/Bash_Script/fasta2sto.sh
+```
+
+
+```{bash}
+## Conversion of sto to hmm prolfile
+chmod +x ./Script/Bash_Script/sto2hmm.sh
+./Script/Bash_Script/sto2hmm.sh 
+## (hmmbuild aligned.hmm aligned.sto)
+```
+
+
+```{bash}
+## hmmsearch using the profiles
+chmod +x ./Script/Bash_Script/hmm2fasta.sh 
+./Script/Bash_Script/hmm2fasta.sh 
+# hmmsearch from /Users/Yoga/Library/CloudStorage/Dropbox/flag/Full_genomes/Spo_Genomes/protein_20250805.fasta)
+```
+
+
+```{bash}
+## Extract fasta file based on HMM hits
+chmod +x ./Script/Bash_Script/hmm2homologs.sh
+./Script/Bash_Script/hmm2homologs.sh
+
+```
+
+
+```{bash}
+## Concating fasta files
+chmod +x ./Script/Bash_Script/concat_homologs.sh
+./Script/Bash_Script/concat_homologs.sh
+
+## duplicate removal using seqkit 
+
+```
+
+
+
+
+

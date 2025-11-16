@@ -1,0 +1,539 @@
+IQ-TREE multicore version 2.3.6 for MacOS ARM 64-bit built Jul 30 2024
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    Sasidharans-MacBook-Pro.local (SSE4.2, 24 GB RAM)
+Command: iqtree2 -s seqs.fasta -madd 3DI -mdef 3DI.nexus -nt 4 --ufboot 1000 -alrt 1000 -bnni --redo
+Seed:    213438 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Nov 14 10:11:02 2025
+Kernel:  SSE2 - 4 threads (12 CPU cores detected)
+
+Reading alignment file seqs.fasta ... Fasta format detected
+Reading fasta file: done in 0.000509977 secs using 63.34% CPU
+Alignment most likely contains protein sequences
+Alignment has 115 sequences with 356 columns, 337 distinct patterns
+283 parsimony-informative, 33 singleton sites, 40 constant sites
+                                                              Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 2.40803e-05 secs using 153.7% CPU
+   1  AAC68314.1_Chlamydia_FliF                                      50.56%    passed     35.63%
+   2  ACL65896.1_Anaeromyxobacter_FliF                                5.62%    passed     92.38%
+   3  AGH96362.1_Pseudobdellovibrio_FliF                              2.53%    passed     87.13%
+   4  AHZ83763.1_Bdellovibrio_FliF                                    2.81%    passed     97.25%
+   5  AGC50281.1_Lawsonia_FliF                                        3.93%    passed     96.95%
+   6  AAS94796.1_Desulfovibrio_FliF                                   3.93%    passed     99.09%
+   7  WP_011366492.1_Oleidesulfovibrio_FliF                           3.93%    passed     98.61%
+   8  BAH77996.1_Solidesulfovibrio_FliF                               0.84%    passed     31.01%
+   9  ABS63798.1_Parvibaculum_FliF                                    2.81%    passed     99.83%
+  10  AEP09101.1_Micavibrio_FliF                                      2.53%    passed     62.33%
+  11  AEO47029.1_Rhodospirillum_FliF                                  2.81%    passed     99.99%
+  12  CDL00846.1_Magnetospirillum_FliF                                2.53%    passed     99.92%
+  13  AHK70359.1_Gluconobacter_FliF                                  14.33%    passed     68.17%
+  14  ACL94415.1_Caulobacter_FliF                                     3.09%    passed     94.69%
+  15  ADL02120.1_Brevundimonas_FliF                                   3.37%    passed     99.77%
+  16  ATX78584.1_Mariprofundus_FliF                                   3.09%    passed     90.37%
+  17  ATX82919.1_Mariprofundus_FliF                                   3.37%    passed     88.57%
+  18  ABC45369.1_Salinibacter_FliF                                   10.96%    passed     99.99%
+  19  ABI78744.1_Hyphomonas_FliF                                      6.18%    passed     97.38%
+  20  AIQ89829.1_Methylobacterium_FliF                                8.71%    passed     57.31%
+  21  BAL07813.1_Bradyrhizobium_FliF                                  4.21%    passed     89.48%
+  22  ABQ62358.1_Brucella_FliF                                        4.21%    passed     94.86%
+  23  ABK42796.1_Magnetococcus_FliF                                   3.37%    passed     97.35%
+  24  CAG37385.1_Desulfotalea_FliF                                    3.93%    passed     99.72%
+  25  ACV67866.1_Desulfohalobium_FliF                                 8.43%    passed     92.25%
+  26  ABA88441.1_Syntrophotalea_FliF                                  4.21%    passed     99.96%
+  27  ALA58335.1_Nitrospira_FliF                                      3.09%    passed     98.82%
+  28  BCB96474.1_Dissulfurispira_FliF                                 4.21%    passed     99.80%
+  29  ACI21849.1_Thermodesulfovibrio_FliF                             4.21%    passed     77.42%
+  30  ABC76851.1_Syntrophus_FliF                                      8.43%    passed     98.94%
+  31  ACN16787.1_Desulforapulum_FliF                                  2.81%    passed     90.26%
+  32  BAM05992.1_Leptospirillum_FliF                                  1.69%    passed     92.54%
+  33  AFL88119.1_Terriglobus_FliF                                     2.53%    passed     81.69%
+  34  AEI88715.1_Candidatus_FliF                                      3.65%    passed     98.90%
+  35  SHK75940.1_Desulfatibacillum_FliF                               3.93%    passed     86.86%
+  36  RJP61224.1_Candidatus_FliF                                      5.62%    passed     98.66%
+  37  ACT13606.1_Pectobacterium_FliF                                  0.84%    passed     87.24%
+  38  CFQ36607.1_Yersinia_FliF                                        1.12%    passed     98.70%
+  39  AJJ56339.1_Yersinia_FliF                                        1.12%    passed     94.88%
+  40  KLP57552.1_Enterobacter_FliF                                    1.40%    passed     65.72%
+  41  KLR25735.1_Enterobacter_FliF                                    1.40%    passed     88.77%
+  42  AAO68586.1_Salmonella_FliF                                      1.40%    passed     91.08%
+  43  POT59441.1_Citrobacter_FliF                                     1.40%    passed     96.84%
+  44  AAL20881.1_Salmonella_FliF                                      1.40%    passed     95.59%
+  45  QKY95803.1_Shigella_FliF                                        2.25%    passed     92.58%
+  46  RPH21571.1_Buttiauxella_FliF                                    1.69%    passed     98.25%
+  47  CCJ72125.1_Cronobacter_FliF                                     1.12%    passed     91.86%
+  48  KGT96016.1_Erwinia_FliF                                         1.12%    passed     96.68%
+  49  CBJ46171.1_Erwinia_FliF                                         1.12%    passed     82.32%
+  50  AGG30848.1_Morganella_FliF                                      1.40%    passed     96.29%
+  51  AVM87899.1_Chlamydia_T3SS                                      72.19%    passed     64.18%
+  52  QEO41070.1_Vibrio_T3SS                                         59.83%    failed      3.57%
+  53  BAE49307.1_Magnetospirillum_T3SS                               55.06%    passed     23.68%
+  54  AAZ97041.1_Thiobacillus_T3SS                                   55.34%    passed     45.59%
+  55  ADY60058.1_Rubinisphaera_T3SS_YscJ                             56.18%    passed     23.14%
+  56  ADB18987.1_Pirellula_T3SS                                      56.46%    passed     71.71%
+  57  CCB86648.1_Parachlamydia_T3SS                                  55.34%    passed     64.31%
+  58  EDR30632.1_Yersinia_T3SS                                       55.34%    passed     60.39%
+  59  AJJ53162.1_Yersinia_T3SS_YscJ_HrcJ                             55.34%    passed     60.39%
+  60  AAG05112.1_Pseudomonas_T3SS                                    55.34%    passed     96.28%
+  61  CBJ47559.1_Erwinia_T3SS                                        55.34%    passed     73.76%
+  62  KGT90338.1_Erwinia_T3SS                                        55.34%    passed     71.17%
+  63  AAY36249.1_Pseudomonas_T3SS_YscJ_HrcJ                          55.34%    passed     89.98%
+  64  ADZ90362.1_Marinomonas_T3SS_YscJ_HrcJ                          55.62%    passed     65.64%
+  65  ACL64098.1_Anaeromyxobacter_T3SS_YscJ                          55.34%    passed     71.75%
+  66  WP_015870333.1_Edwardsiella_T3SS_SctJ                          55.62%    passed     82.37%
+  67  ABF88125.1_Myxococcus_T3SS_YscJ_HrcJ                           55.34%    passed      9.20%
+  68  ADO70830.1_Stigmatella_T3SS_YscJ_HrcJ                          55.34%    passed     54.52%
+  69  BAJ02212.1_Shewanella_T3SS                                     55.34%    passed     82.48%
+  70  CFQ38428.1_Yersinia_T3SS                                       55.62%    passed     95.94%
+  71  EDR34178.1_Yersinia_T3SS_YscJ_HrcJ                             55.62%    passed     99.61%
+  72  AJJ56869.1_Yersinia_T3SS_YscJ_HrcJ                             55.62%    passed     97.64%
+  73  BAC59953.1_Vibrio_T3SS                                         55.34%    passed     74.47%
+  74  AAQ60258.1_Chromobacterium_T3SS                                55.62%    passed     92.33%
+  75  AHF76786.1_Sodalis_T3SS                                        55.62%    passed     80.38%
+  76  CAH39099.1_Burkholderia_T3SS                                   55.34%    passed     98.60%
+  77  CAH38872.1_Burkholderia_T3SS                                   55.34%    passed     63.88%
+  78  ATU65453.1_Rhizobacter_T3SS_YscJ_HrcJ                          55.34%    passed     98.40%
+  79  CAH39023.1_Burkholderia_T3SS                                   55.34%    passed     98.97%
+  80  ABC34345.1_Burkholderia_T3SS                                   55.34%    passed     97.45%
+  81  CBJ47346.1_Erwinia_T3SS                                        55.34%    passed     99.14%
+  82  CBJ46227.1_Erwinia_T3SS                                        55.34%    passed     99.34%
+  83  AHF78198.1_Sodalis_T3SS                                        55.34%    passed     99.05%
+  84  AHF75698.1_Sodalis_T3SS                                        55.34%    passed     84.44%
+  85  CBG35883.1_Escherichia_T3SS                                    55.34%    passed     96.66%
+  86  TCV96683.1_Biostraticola_T3SS                                  55.34%    passed     84.62%
+  87  AGG29087.1_Morganella_T3SS_HrcJ                                55.34%    passed     88.22%
+  88  POT59516.1_Citrobacter_T3SS_YscJ_HrcJ                          55.34%    passed     96.98%
+  89  CAQ71857.1_Cupriavidus_T3SS_SctJ                               55.34%    passed     58.12%
+  90  AGC49958.1_Lawsonia_T3SS                                       55.34%    failed      4.77%
+  91  AAS94345.1_Desulfovibrio_T3SS                                  55.34%    passed      6.16%
+  92  AGC50595.1_Lawsonia_T3SS_YscJ_HrcJ                             55.34%    passed     27.91%
+  93  AAC68161.1_Chlamydia_T3SS_YscJ                                 56.18%    passed     92.73%
+  94  AVM88570.1_Chlamydia_T3SS_YscJ_HrcJ                            56.46%    passed     94.24%
+  95  CCB85093.1_Parachlamydia_T3SS                                  55.34%    passed     86.37%
+  96  AFE09625.1_Corallococcus_T3SS                                  55.34%    passed     84.98%
+  97  ABF88690.1_Myxococcus_T3SS                                     55.34%    passed     99.11%
+  98  ADO74089.1_Stigmatella_T3SS                                    55.34%    passed     95.06%
+  99  QTD51128.1_Sulfidibacter_T3SS_SctJ                             55.62%    passed     61.46%
+ 100  YEBC_TranscriptionalRegulator_125-194                          83.15%    passed     16.41%
+ 101  BAD65007.1_WP_061948745.1_Alkalihalobacillus_Sporulation       41.85%    passed     75.03%
+ 102  AAS43161.1_AAS43160.1_Bacillus_Sporulation                     41.85%    passed     91.86%
+ 103  AJH78041.1_AJH78695.1_Weizmannia_Sporulation                   41.85%    passed     76.41%
+ 104  BAD76687.1_BAD76686.1_Geobacillus_Sporulation                  42.13%    passed     69.39%
+ 105  BAC13844.1_BAC13843.1_Oceanobacillus_Sporulation               42.42%    passed     89.87%
+ 106  WP_008404262.1_WP_008404261.1_Solibacillus_Sporulation         48.88%    failed      0.74%
+ 107  AUO18621.1_AUO18620.1_Monoglobus_Sporulation                   44.38%    passed     50.67%
+ 108  WP_010965387.1_WP_010965386.1_Clostridium_Sporulation          42.70%    passed     76.58%
+ 109  BAD40841.1_BAD40840.1_Symbiobacterium_Sporulation              42.42%    passed     86.75%
+ 110  SHJ67115.1_SHJ67084.1_Anaerobranca_Sporulation                 42.13%    passed     78.86%
+ 111  QNO16150.1_QNO16151.1_Alkalicella_Sporulation                  41.85%    passed     25.19%
+ 112  WP_061948746.1_WP_061948745.1_Alkalihalobacillus_Sporulation   62.08%    passed     13.84%
+ 113  KGA97906.1_WP_061948745.1_Alkalihalobacillus_Sporulation       62.08%    passed     59.27%
+ 114  AAU41482.1_AAS43160.1_Bacillus_Sporulation                     61.80%    passed     76.48%
+ 115  AAO36130.1_WP_010965386.1_Clostridium_Sporulation              63.20%    passed     18.44%
+WARNING: 55 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                          32.77%  3 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: AJJ53162.1_Yersinia_T3SS_YscJ_HrcJ is identical to EDR30632.1_Yersinia_T3SS but kept for subsequent analysis
+
+Reading model definition file 3DI.nexus ... 87 models and 214 frequency vectors loaded
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.017 seconds
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -21925.049
+Optimal log-likelihood: -21924.820
+Proportion of invariable sites: 0.062
+Gamma shape alpha: 0.894
+Parameters optimization took 1 rounds (0.150 sec)
+Time for fast ML tree search: 1.629 seconds
+
+NOTE: ModelFinder requires 64 MB RAM!
+ModelFinder will test up to 1233 protein models (sample size: 356 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            23124.458    227 46702.917    47511.604    47582.526
+  2  LG+I          22853.479    228 46162.958    46985.194    47046.442
+  3  LG+G4         21930.988    228 44317.975    45140.211    45201.459
+  4  LG+I+G4       21924.737    229 44307.475    45143.506    45194.834
+  5  LG+R2         22152.314    229 44762.627    45598.659    45649.986
+  6  LG+R3         21959.943    231 44381.887    45246.274    45276.996
+  7  LG+R4         21919.566    233 44305.132    45198.935    45207.991
+  8  LG+R5         21903.466    235 44276.932    45201.266    45187.541
+  9  LG+R6         21899.678    237 44273.356    45229.390    45191.715
+ 14  LG+I+R2       22092.662    230 44645.323    45495.403    45536.557
+ 15  LG+I+R3       21939.681    232 44343.362    45222.321    45242.346
+ 16  LG+I+R4       21911.789    234 44291.579    45200.504    45198.313
+ 17  LG+I+R5       21906.547    236 44285.094    45225.128    45199.578
+ 26  LG+F+I+G4     19959.474    248 40414.948    41569.191    41375.931
+ 30  LG+F+R5       19930.690    254 40369.379    41651.953    41353.611
+ 31  LG+F+R6       19927.826    256 40367.651    41696.782    41359.633
+ 48  WAG+I+G4      21259.357    229 42976.714    43812.745    43864.073
+ 52  WAG+R5        21245.457    235 42960.915    43885.248    43871.524
+ 53  WAG+R6        21240.755    237 42955.510    43911.543    43873.868
+ 70  WAG+F+I+G4    19584.169    248 39664.338    40818.581    40625.321
+ 74  WAG+F+R5      19557.226    254 39622.453    40905.027    40606.685
+ 75  WAG+F+R6      19557.102    256 39626.204    40955.336    40618.187
+ 92  JTT+I+G4      21989.354    229 44436.709    45272.741    45324.068
+ 96  JTT+R5        21965.803    235 44401.606    45325.939    45312.215
+ 97  JTT+R6        21958.289    237 44390.578    45346.612    45308.937
+114  JTT+F+I+G4    20183.942    248 40863.885    42018.128    41824.868
+118  JTT+F+R5      20147.769    254 40803.539    42086.113    41787.771
+119  JTT+F+R6      20146.382    256 40804.763    42133.894    41796.745
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+136  Q.pfam+I+G4   21642.740    229 43743.480    44579.512    44630.840
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+140  Q.pfam+R5     21616.184    235 43702.368    44626.702    44612.977
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+141  Q.pfam+R6     21612.781    237 43699.562    44655.596    44617.921
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+158  Q.pfam+F+I+G4 19789.021    248 40074.043    41228.286    41035.026
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+162  Q.pfam+F+R5   19760.930    254 40029.860    41312.434    41014.092
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+163  Q.pfam+F+R6   19759.990    256 40031.981    41361.112    41023.963
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+180  Q.bird+I+G4   23047.573    229 46553.145    47389.177    47440.504
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+184  Q.bird+R5     23014.059    235 46498.118    47422.451    47408.727
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+185  Q.bird+R6     23006.247    237 46486.494    47442.528    47404.853
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+202  Q.bird+F+I+G4 21164.612    248 42825.225    43979.468    43786.208
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+206  Q.bird+F+R5   21127.589    254 42763.178    44045.752    43747.410
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+207  Q.bird+F+R6   21111.579    256 42735.157    44064.289    43727.140
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+224  Q.mammal+I+G4 22376.572    229 45211.144    46047.175    46098.503
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+228  Q.mammal+R5   22345.256    235 45160.513    46084.846    46071.122
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+229  Q.mammal+R6   22339.858    237 45153.717    46109.750    46072.075
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+246  Q.mammal+F+I+G4 20590.782    248 41677.564    42831.807    42638.547
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+250  Q.mammal+F+R5 20550.994    254 41609.988    42892.562    42594.221
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+251  Q.mammal+F+R6 20548.391    256 41608.781    42937.913    42600.764
+268  Q.insect+I+G4 21990.342    229 44438.685    45274.717    45326.044
+272  Q.insect+R5   21958.255    235 44386.511    45310.844    45297.119
+273  Q.insect+R6   21951.105    237 44376.210    45332.244    45294.569
+290  Q.insect+F+I+G4 19731.105    248 39958.209    41112.452    40919.192
+294  Q.insect+F+R5 19697.341    254 39902.681    41185.256    40886.914
+295  Q.insect+F+R6 19697.353    256 39906.705    41235.836    40898.687
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+312  Q.plant+I+G4  23166.143    229 46790.285    47626.317    47677.645
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+316  Q.plant+R5    23136.480    235 46742.959    47667.293    47653.568
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+317  Q.plant+R6    23123.500    237 46721.000    47677.034    47639.358
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+334  Q.plant+F+I+G4 20932.570    248 42361.141    43515.384    43322.123
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+338  Q.plant+F+R5  20890.093    254 42288.186    43570.761    43272.419
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+339  Q.plant+F+R6  20880.125    256 42272.249    43601.380    43264.231
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+356  Q.yeast+I+G4  22185.825    229 44829.649    45665.681    45717.008
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+360  Q.yeast+R5    22150.605    235 44771.210    45695.544    45681.819
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+361  Q.yeast+R6    22140.407    237 44754.814    45710.848    45673.173
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+378  Q.yeast+F+I+G4 19940.924    248 40377.848    41532.091    41338.831
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+382  Q.yeast+F+R5  19908.148    254 40324.296    41606.870    41308.529
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+383  Q.yeast+F+R6  19904.438    256 40320.875    41650.007    41312.857
+400  JTTDCMut+I+G4 22057.348    229 44572.696    45408.728    45460.055
+404  JTTDCMut+R5   22034.608    235 44539.216    45463.549    45449.825
+405  JTTDCMut+R6   22026.814    237 44527.628    45483.662    45445.987
+422  JTTDCMut+F+I+G4 20248.696    248 40993.391    42147.634    41954.374
+426  JTTDCMut+F+R5 20213.042    254 40934.083    42216.657    41918.315
+427  JTTDCMut+F+R6 20211.258    256 40934.515    42263.647    41926.498
+444  DCMut+I+G4    22258.463    229 44974.925    45810.957    45862.284
+448  DCMut+R5      22213.075    235 44896.149    45820.483    45806.758
+449  DCMut+R6      22208.428    237 44890.857    45846.890    45809.215
+466  DCMut+F+I+G4  20510.658    248 41517.316    42671.559    42478.299
+470  DCMut+F+R5    20457.720    254 41423.440    42706.014    42407.673
+471  DCMut+F+R6    20449.060    256 41410.119    42739.251    42402.102
+488  VT+I+G4       21001.558    229 42461.116    43297.148    43348.475
+492  VT+R5         20983.866    235 42437.733    43362.066    43348.342
+493  VT+R6         20983.552    237 42441.105    43397.139    43359.463
+510  VT+F+I+G4     19349.465    248 39194.930    40349.173    40155.913
+514  VT+F+R5       19326.425    254 39160.850    40443.424    40145.082
++R6 reinitialized from +R5 with factor 0.500
+515  VT+F+R6       19326.409    256 39164.818    40493.949    40156.800
+532  PMB+I+G4      20615.688    229 41689.376    42525.407    42576.735
+536  PMB+R5        20601.233    235 41672.467    42596.800    42583.076
+537  PMB+R6        20601.237    237 41676.474    42632.508    42594.832
+554  PMB+F+I+G4    19158.646    248 38813.291    39967.534    39774.274
+558  PMB+F+R5      19144.104    254 38796.208    40078.782    39780.440
+559  PMB+F+R6      19144.157    256 38800.313    40129.445    39792.296
+576  Blosum62+I+G4 20847.344    229 42152.689    42988.720    43040.048
+580  Blosum62+R5   20832.565    235 42135.129    43059.463    43045.738
++R6 reinitialized from +R5 with factor 0.500
+581  Blosum62+R6   20832.663    237 42139.327    43095.361    43057.685
+598  Blosum62+F+I+G4 19303.001    248 39102.002    40256.245    40062.985
+602  Blosum62+F+R5 19284.448    254 39076.897    40359.471    40061.129
+603  Blosum62+F+R6 19284.249    256 39080.497    40409.629    40072.480
+620  Dayhoff+I+G4  22280.539    229 45019.077    45855.109    45906.436
+624  Dayhoff+R5    22236.396    235 44942.793    45867.126    45853.401
+625  Dayhoff+R6    22232.695    237 44939.389    45895.423    45857.748
+642  Dayhoff+F+I+G4 20526.920    248 41549.839    42704.082    42510.822
+646  Dayhoff+F+R5  20474.419    254 41456.839    42739.413    42441.071
+647  Dayhoff+F+R6  20471.928    256 41455.855    42784.987    42447.838
+664  mtREV+I+G4    23736.833    229 47931.667    48767.699    48819.026
+668  mtREV+R5      23708.603    235 47887.206    48811.539    48797.815
+669  mtREV+R6      23703.540    237 47881.081    48837.114    48799.439
+686  mtREV+F+I+G4  20965.453    248 42426.905    43581.148    43387.888
+690  mtREV+F+R5    20914.985    254 42337.970    43620.544    43322.202
+691  mtREV+F+R6    20914.024    256 42340.048    43669.179    43332.030
+708  mtART+I+G4    25439.973    229 51337.946    52173.978    52225.305
+712  mtART+R5      25399.402    235 51268.804    52193.137    52179.412
+713  mtART+R6      25387.917    237 51249.834    52205.868    52168.192
+730  mtART+F+I+G4  22371.083    248 45238.165    46392.408    46199.148
+734  mtART+F+R5    22330.966    254 45169.932    46452.507    46154.165
+735  mtART+F+R6    22321.692    256 45155.383    46484.515    46147.366
+752  mtZOA+I+G4    24244.364    229 48946.728    49782.760    49834.087
+756  mtZOA+R5      24209.121    235 48888.242    49812.575    49798.850
+757  mtZOA+R6      24199.439    237 48872.878    49828.911    49791.236
+774  mtZOA+F+I+G4  21446.067    248 43388.134    44542.377    44349.117
+778  mtZOA+F+R5    21406.002    254 43320.004    44602.578    44304.236
+779  mtZOA+F+R6    21393.469    256 43298.938    44628.069    44290.920
+796  mtMet+I+G4    24327.208    229 49112.415    49948.447    49999.774
+800  mtMet+R5      24290.289    235 49050.577    49974.911    49961.186
+801  mtMet+R6      24281.965    237 49037.929    49993.963    49956.288
+818  mtMet+F+I+G4  21196.032    248 42888.063    44042.306    43849.046
+822  mtMet+F+R5    21170.713    254 42849.426    44132.000    43833.658
+823  mtMet+F+R6    21154.950    256 42821.900    44151.031    43813.882
+840  mtVer+I+G4    25195.281    229 50848.563    51684.594    51735.922
+844  mtVer+R5      25159.752    235 50789.504    51713.837    51700.112
+845  mtVer+R6      25139.437    237 50752.875    51708.909    51671.234
+862  mtVer+F+I+G4  22021.219    248 44538.437    45692.680    45499.420
+866  mtVer+F+R5    21984.731    254 44477.461    45760.035    45461.694
+867  mtVer+F+R6    21968.789    256 44449.579    45778.710    45441.561
+884  mtInv+I+G4    23813.521    229 48085.041    48921.073    48972.400
+888  mtInv+R5      23782.279    235 48034.559    48958.892    48945.167
+889  mtInv+R6      23775.459    237 48024.918    48980.952    48943.277
+906  mtInv+F+I+G4  20592.645    248 41681.290    42835.533    42642.273
+910  mtInv+F+R5    20568.019    254 41644.038    42926.612    42628.271
+911  mtInv+F+R6    20559.463    256 41630.926    42960.057    42622.908
+928  mtMAM+I+G4    26200.239    229 52858.477    53694.509    53745.836
+932  mtMAM+R5      26166.555    235 52803.109    53727.443    53713.718
+933  mtMAM+R6      26151.666    237 52777.333    53733.367    53695.692
+950  mtMAM+F+I+G4  22986.831    248 46469.661    47623.904    47430.644
+954  mtMAM+F+R5    22934.261    254 46376.523    47659.097    47360.755
+955  mtMAM+F+R6    22914.571    256 46341.142    47670.273    47333.124
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+972  FLAVI+I+G4    25159.132    229 50776.265    51612.296    51663.624
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+976  FLAVI+R5      25123.945    235 50717.891    51642.224    51628.499
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+977  FLAVI+R6      25112.071    237 50698.141    51654.175    51616.500
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+994  FLAVI+F+I+G4  22508.631    248 45513.262    46667.505    46474.245
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+998  FLAVI+F+R5    22463.245    254 45434.490    46717.064    46418.722
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+999  FLAVI+F+R6    22446.684    256 45405.367    46734.498    46397.349
+1016  HIVb+I+G4     24265.193    229 48988.385    49824.417    49875.744
+1020  HIVb+R5       24240.440    235 48950.881    49875.214    49861.489
+1021  HIVb+R6       24222.898    237 48919.795    49875.829    49838.154
+1038  HIVb+F+I+G4   22094.074    248 44684.149    45838.392    45645.132
+1042  HIVb+F+R5     22042.324    254 44592.648    45875.222    45576.880
+1043  HIVb+F+R6     22023.861    256 44559.723    45888.854    45551.705
+1060  HIVw+I+G4     25725.058    229 51908.116    52744.148    52795.476
+1064  HIVw+R5       25674.541    235 51819.082    52743.415    52729.691
+1065  HIVw+R6       25661.819    237 51797.638    52753.672    52715.996
+1082  HIVw+F+I+G4   23147.993    248 46791.985    47946.228    47752.968
+1086  HIVw+F+R5     23097.895    254 46703.790    47986.364    47688.023
+1087  HIVw+F+R6     23070.928    256 46653.856    47982.987    47645.838
+1104  FLU+I+G4      23256.233    229 46970.466    47806.498    47857.825
+1108  FLU+R5        23227.719    235 46925.439    47849.772    47836.048
+1109  FLU+R6        23222.052    237 46918.104    47874.138    47836.462
+1126  FLU+F+I+G4    20976.691    248 42449.382    43603.625    43410.365
+1130  FLU+F+R5      20937.312    254 42382.625    43665.199    43366.857
+1131  FLU+F+R6      20932.205    256 42376.409    43705.540    43368.391
+1148  rtREV+I+G4    21616.149    229 43690.297    44526.329    44577.656
+1152  rtREV+R5      21593.325    235 43656.650    44580.984    44567.259
+1153  rtREV+R6      21587.765    237 43649.529    44605.563    44567.888
+1170  rtREV+F+I+G4  19998.737    248 40493.475    41647.718    41454.458
+1174  rtREV+F+R5    19974.220    254 40456.440    41739.014    41440.672
+1175  rtREV+F+R6    19971.763    256 40455.525    41784.657    41447.508
+1192  cpREV+I+G4    22380.774    229 45219.548    46055.580    46106.907
+1196  cpREV+R5      22365.033    235 45200.066    46124.400    46110.675
+1197  cpREV+R6      22353.515    237 45181.029    46137.063    46099.388
+1214  cpREV+F+I+G4  20366.518    248 41229.035    42383.278    42190.018
+1218  cpREV+F+R5    20335.809    254 41179.618    42462.192    42163.850
+1219  cpREV+F+R6    20331.045    256 41174.090    42503.221    42166.072
+Akaike Information Criterion:           PMB+F+R5
+Corrected Akaike Information Criterion: PMB+F+I+G4
+Bayesian Information Criterion:         PMB+F+I+G4
+Best-fit model: PMB+F+I+G4 chosen according to BIC
+
+All model information printed to seqs.fasta.model.gz
+CPU time for ModelFinder: 1660.146 seconds (0h:27m:40s)
+Wall-clock time for ModelFinder: 544.410 seconds (0h:9m:4s)
+Reading model definition file 3DI.nexus ... 87 models and 214 frequency vectors loaded
+Generating 1000 samples for ultrafast bootstrap (seed: 213438)...
+
+NOTE: 26 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Thoroughly optimizing +I+G parameters from 10 start values...
+Init pinv, alpha: 0.000, 0.778 / Estimate: 0.000, 0.797 / LogL: -19161.514
+Init pinv, alpha: 0.012, 0.778 / Estimate: 0.034, 0.876 / LogL: -19158.683
+Init pinv, alpha: 0.025, 0.778 / Estimate: 0.040, 0.891 / LogL: -19158.667
+Init pinv, alpha: 0.037, 0.778 / Estimate: 0.042, 0.895 / LogL: -19158.658
+Init pinv, alpha: 0.050, 0.778 / Estimate: 0.044, 0.899 / LogL: -19158.677
+Init pinv, alpha: 0.062, 0.778 / Estimate: 0.045, 0.902 / LogL: -19158.693
+Init pinv, alpha: 0.075, 0.778 / Estimate: 0.043, 0.898 / LogL: -19158.664
+Init pinv, alpha: 0.087, 0.778 / Estimate: 0.044, 0.899 / LogL: -19158.670
+Init pinv, alpha: 0.100, 0.778 / Estimate: 0.044, 0.900 / LogL: -19158.675
+Init pinv, alpha: 0.112, 0.778 / Estimate: 0.044, 0.900 / LogL: -19158.679
+Optimal pinv,alpha: 0.042, 0.895 / LogL: -19158.658
+
+Parameters optimization took 11.418 sec
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.324416 secs using 392.3% CPU
+Computing ML distances took 0.324562 sec (of wall-clock time) 1.272695 sec (of CPU time)
+WARNING: Some pairwise ML distances are too long (saturated)
+Setting up auxiliary I and S matrices: done in 0.000132084 secs using 235.5% CPU
+Computing RapidNJ tree took 0.004164 sec (of wall-clock time) 0.003703 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -19454.446
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 1.378 second
+Computing log-likelihood of 98 initial trees ... 5.380 seconds
+Current best score: -19158.658
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -19136.183
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -19110.221
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 7: -19105.046
+Iteration 10 / LogL: -19131.945 / Time: 0h:9m:32s
+Iteration 20 / LogL: -19148.751 / Time: 0h:9m:41s
+Finish initializing candidate tree set (20)
+Current best tree score: -19105.046 / CPU time: 25.198
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -19113.366 / Time: 0h:9m:53s (0h:2m:10s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 33: -19103.906
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 34: -19100.320
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 36: -19095.952
+Iteration 40 / LogL: -19167.562 / Time: 0h:10m:6s (0h:2m:34s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 45: -19092.692
+Iteration 50 / LogL: -19096.120 / Time: 0h:10m:19s (0h:2m:24s left)
+Iteration 60 / LogL: -19103.067 / Time: 0h:10m:31s (0h:2m:5s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 61: -19089.869
+Iteration 70 / LogL: -19126.025 / Time: 0h:10m:43s (0h:2m:10s left)
+Iteration 80 / LogL: -19100.930 / Time: 0h:10m:55s (0h:1m:53s left)
+Iteration 90 / LogL: -19121.588 / Time: 0h:11m:6s (0h:1m:37s left)
+Iteration 100 / LogL: -19090.947 / Time: 0h:11m:18s (0h:1m:22s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 103: -19089.562
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 104: -19080.823
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 109: -19078.978
+Iteration 110 / LogL: -19099.032 / Time: 0h:11m:31s (0h:2m:13s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 118: -19078.840
+Iteration 120 / LogL: -19095.229 / Time: 0h:11m:43s (0h:2m:10s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 125: -19077.925
+Iteration 130 / LogL: -19098.416 / Time: 0h:11m:55s (0h:2m:5s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 140: -19076.901
+Iteration 140 / LogL: -19076.901 / Time: 0h:12m:7s (0h:2m:11s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 148: -19076.509
+Iteration 150 / LogL: -19123.679 / Time: 0h:12m:19s (0h:2m:8s left)
+Iteration 160 / LogL: -19159.029 / Time: 0h:12m:30s (0h:1m:54s left)
+Iteration 170 / LogL: -19079.875 / Time: 0h:12m:41s (0h:1m:40s left)
+Iteration 180 / LogL: -19093.222 / Time: 0h:12m:53s (0h:1m:27s left)
+Iteration 190 / LogL: -19094.509 / Time: 0h:13m:5s (0h:1m:14s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 200: -19076.212
+Iteration 200 / LogL: -19076.212 / Time: 0h:13m:17s (0h:2m:7s left)
+Iteration 210 / LogL: -19079.466 / Time: 0h:13m:29s (0h:1m:54s left)
+Iteration 220 / LogL: -19116.275 / Time: 0h:13m:40s (0h:1m:41s left)
+Iteration 230 / LogL: -19081.051 / Time: 0h:13m:53s (0h:1m:28s left)
+Iteration 240 / LogL: -19080.199 / Time: 0h:14m:4s (0h:1m:15s left)
+Iteration 250 / LogL: -19077.257 / Time: 0h:14m:17s (0h:1m:2s left)
+Iteration 260 / LogL: -19090.198 / Time: 0h:14m:28s (0h:0m:50s left)
+Iteration 270 / LogL: -19102.721 / Time: 0h:14m:40s (0h:0m:37s left)
+Iteration 280 / LogL: -19080.202 / Time: 0h:14m:51s (0h:0m:24s left)
+Iteration 290 / LogL: -19076.657 / Time: 0h:15m:3s (0h:0m:12s left)
+Iteration 300 / LogL: -19105.537 / Time: 0h:15m:15s (0h:0m:0s left)
+Refining ufboot trees with NNI 1 branch...
+Reading model definition file 3DI.nexus ... 87 models and 214 frequency vectors loaded
+100 samples done
+200 samples done
+300 samples done
+400 samples done
+500 samples done
+600 samples done
+700 samples done
+800 samples done
+900 samples done
+1000 samples done
+Total 1000 ufboot trees refined
+TREE SEARCH COMPLETED AFTER 301 ITERATIONS / Time: 0h:20m:57s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -19076.212
+Optimal log-likelihood: -19076.211
+Proportion of invariable sites: 0.033
+Gamma shape alpha: 0.864
+Parameters optimization took 1 rounds (0.146 sec)
+BEST SCORE FOUND : -19076.211
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+0.317 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file seqs.fasta.splits.nex
+Total tree length: 19.500
+
+Total number of iterations: 301
+CPU time used for tree search: 1734.760 sec (0h:28m:54s)
+Wall-clock time used for tree search: 700.518 sec (0h:11m:40s)
+Total CPU time used: 3432.519 sec (0h:57m:12s)
+Total wall-clock time used: 1257.707 sec (0h:20m:57s)
+UFBoot trees printed to seqs.fasta.ufboot
+
+Computing bootstrap consensus tree...
+Reading input file seqs.fasta.splits.nex...
+115 taxa and 2389 splits.
+Consensus tree written to seqs.fasta.contree
+Reading input trees file seqs.fasta.contree
+Log-likelihood of consensus tree: -19080.295
+
+Analysis results written to: 
+  IQ-TREE report:                seqs.fasta.iqtree
+  Maximum-likelihood tree:       seqs.fasta.treefile
+  Likelihood distances:          seqs.fasta.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          seqs.fasta.splits.nex
+  Consensus tree:                seqs.fasta.contree
+  UFBoot trees:                  seqs.fasta.ufboot
+  Screen log file:               seqs.fasta.log
+
+Date and Time: Fri Nov 14 10:32:00 2025

@@ -1,0 +1,1659 @@
+IQ-TREE 2.3.6 built Jul 30 2024
+
+Input file name: seqs.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 783281
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 321 sequences with 350 amino-acid sites
+Number of constant sites: 15 (= 4.28571% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 15 (= 4.28571% of all sites)
+Number of parsimony informative sites: 318
+Number of distinct site patterns: 346
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: PMB+F+I+R6
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+PMB+F+I+R6       -53905.440  109148.879 +    0.707 1005608.879 -        0  111729.836 +    0.991
+PMB+F+I+R7       -53904.323  109150.647 +    0.292 1010974.647 -        0  111739.320 -  0.00865
+PMB+F+R7         -53911.860  109163.721 - 0.000423 1008303.721 -        0  111748.536 - 8.62e-05
+Blosum62+F+I+R6  -54299.118  109936.237 - 7.54e-172 1006396.237 -        0  112517.194 - 1.06e-171
+Blosum62+F+I+R7  -54295.406  109932.813 - 4.17e-171 1011756.813 -        0  112521.486 - 1.24e-172
+Blosum62+F+R7    -54301.880  109943.760 - 1.75e-173 1009083.760 -        0  112528.575 - 3.57e-174
+VT+F+I+R6        -54393.723  110125.446 - 6.18e-213 1006585.446 -        0  112706.403 - 8.66e-213
+VT+F+I+R7        -54391.869  110125.738 - 5.34e-213 1011949.738 -        0  112714.411 - 1.58e-214
+VT+F+R7          -54398.676  110137.352 - 1.6e-215 1009277.352 -        0  112722.167 - 3.27e-216
+WAG+F+I+R7       -55102.184  111546.369 -        0 1013370.369 -        0  114135.042 -        0
+WAG+F+R7         -55109.920  111559.841 -        0 1010699.841 -        0  114144.656 -        0
+WAG+F+I+R6       -55125.075  111588.150 -        0 1008048.150 -        0  114169.107 -        0
+Q.insect+F+I+R7  -55546.833  112435.666 -        0 1014259.666 -        0  115024.339 -        0
+Q.insect+F+R7    -55552.667  112445.335 -        0 1011585.335 -        0  115030.150 -        0
+Q.insect+F+I+R6  -55559.953  112457.907 -        0 1008917.907 -        0  115038.864 -        0
+Q.pfam+F+R7      -55784.259  112908.517 -        0 1012048.517 -        0  115493.332 -        0
+Q.pfam+F+I+R7    -55783.712  112909.424 -        0 1014733.424 -        0  115498.097 -        0
+Q.pfam+F+I+R6    -55796.509  112931.018 -        0 1009391.018 -        0  115511.975 -        0
+Q.yeast+F+I+R7   -56178.291  113698.583 -        0 1015522.583 -        0  116287.256 -        0
+Q.yeast+F+R7     -56182.000  113704.000 -        0 1012844.000 -        0  116288.815 -        0
+Q.yeast+F+I+R6   -56204.465  113746.929 -        0 1010206.929 -        0  116327.887 -        0
+LG+F+I+R7        -56313.933  113969.865 -        0 1015793.865 -        0  116558.539 -        0
+LG+F+R7          -56318.478  113976.957 -        0 1013116.957 -        0  116561.772 -        0
+LG+F+I+R6        -56336.694  114011.389 -        0 1010471.389 -        0  116592.346 -        0
+rtREV+F+I+R7     -56479.320  114300.640 -        0 1016124.640 -        0  116889.313 -        0
+rtREV+F+R7       -56490.326  114320.652 -        0 1013460.652 -        0  116905.468 -        0
+rtREV+F+I+R6     -56500.533  114339.065 -        0 1010799.065 -        0  116920.022 -        0
+JTT+F+I+R7       -56783.316  114908.631 -        0 1016732.631 -        0  117497.304 -        0
+JTT+F+R7         -56789.846  114919.691 -        0 1014059.691 -        0  117504.506 -        0
+JTT+F+I+R6       -56807.992  114953.984 -        0 1011413.984 -        0  117534.941 -        0
+JTTDCMut+F+I+R7  -56987.350  115316.700 -        0 1017140.700 -        0  117905.373 -        0
+JTTDCMut+F+R7    -56995.308  115330.616 -        0 1014470.616 -        0  117915.431 -        0
+JTTDCMut+F+I+R6  -57006.574  115351.148 -        0 1011811.148 -        0  117932.105 -        0
+cpREV+F+I+R7     -57340.428  116022.857 -        0 1017846.857 -        0  118611.530 -        0
+cpREV+F+R7       -57349.591  116039.182 -        0 1015179.182 -        0  118623.998 -        0
+cpREV+F+I+R6     -57368.398  116074.796 -        0 1012534.796 -        0  118655.754 -        0
+PMB+I+R7         -57594.717  116493.433 -        0  968005.433 -        0  119008.806 -        0
+PMB+I+R6         -57611.782  116523.563 -        0  962823.563 -        0  119031.220 -        0
+PMB+R7           -57613.200  116528.399 -        0  965432.399 -        0  119039.914 -        0
+Q.mammal+F+I+R7  -57950.000  117242.000 -        0 1019066.000 -        0  119830.673 -        0
+Q.mammal+F+R7    -57958.513  117257.025 -        0 1016397.025 -        0  119841.841 -        0
+Q.mammal+F+I+R6  -57965.771  117269.543 -        0 1013729.543 -        0  119850.500 -        0
+DCMut+F+I+R7     -58005.634  117353.269 -        0 1019177.269 -        0  119941.942 -        0
+DCMut+F+R7       -58015.894  117371.788 -        0 1016511.788 -        0  119956.603 -        0
+DCMut+F+I+R6     -58024.353  117386.707 -        0 1013846.707 -        0  119967.664 -        0
+Dayhoff+F+R7     -58058.730  117457.459 -        0 1016597.459 -        0  120042.275 -        0
+Dayhoff+F+I+R7   -58056.429  117454.858 -        0 1019278.858 -        0  120043.531 -        0
+Dayhoff+F+I+R6   -58073.727  117485.454 -        0 1013945.454 -        0  120066.411 -        0
+mtInv+F+R7       -58095.395  117530.789 -        0 1016670.789 -        0  120115.604 -        0
+mtInv+F+I+R7     -58123.602  117589.203 -        0 1019413.203 -        0  120177.876 -        0
+mtInv+F+I+R6     -58135.061  117608.122 -        0 1014068.122 -        0  120189.080 -        0
+Blosum62+I+R6    -58287.710  117875.420 -        0  964175.420 -        0  120383.077 -        0
+Blosum62+I+R7    -58287.180  117878.360 -        0  969390.360 -        0  120393.732 -        0
+Blosum62+R7      -58294.033  117890.067 -        0  966794.067 -        0  120401.581 -        0
+VT+I+R7          -58695.082  118694.163 -        0  970206.163 -        0  121209.536 -        0
+VT+R7            -58698.011  118698.023 -        0  967602.023 -        0  121209.537 -        0
+VT+I+R6          -58705.253  118710.505 -        0  965010.505 -        0  121218.162 -        0
+Q.plant+F+I+R7   -59103.025  119548.051 -        0 1021372.051 -        0  122136.724 -        0
+Q.plant+F+R7     -59108.778  119557.556 -        0 1018697.556 -        0  122142.371 -        0
+Q.plant+F+I+R6   -59130.721  119599.442 -        0 1016059.442 -        0  122180.399 -        0
+mtREV+F+R7       -59185.788  119711.575 -        0 1018851.575 -        0  122296.391 -        0
+mtREV+F+I+R7     -59185.331  119712.661 -        0 1021536.661 -        0  122301.335 -        0
+FLU+F+R7         -59196.015  119732.031 -        0 1018872.031 -        0  122316.846 -        0
+FLU+F+I+R7       -59193.491  119728.983 -        0 1021552.983 -        0  122317.656 -        0
+mtREV+F+I+R6     -59203.297  119744.595 -        0 1016204.595 -        0  122325.552 -        0
+FLU+F+I+R6       -59218.680  119775.361 -        0 1016235.361 -        0  122356.318 -        0
+WAG+I+R7         -59522.521  120349.042 -        0  971861.042 -        0  122864.415 -        0
+WAG+R7           -59526.528  120355.057 -        0  969259.056 -        0  122866.571 -        0
+WAG+I+R6         -59539.185  120378.370 -        0  966678.370 -        0  122886.027 -        0
+Q.bird+F+I+R7    -59667.927  120677.853 -        0 1022501.853 -        0  123266.526 -        0
+Q.bird+F+R7      -59683.101  120706.202 -        0 1019846.202 -        0  123291.017 -        0
+Q.bird+F+I+R6    -59692.904  120723.808 -        0 1017183.808 -        0  123304.766 -        0
+mtMet+F+I+R7     -59912.212  121166.423 -        0 1022990.423 -        0  123755.096 -        0
+mtMet+F+R7       -59917.393  121174.786 -        0 1020314.786 -        0  123759.601 -        0
+mtMet+F+I+R6     -59923.350  121184.699 -        0 1017644.699 -        0  123765.657 -        0
+Q.pfam+R7        -60654.780  122611.561 -        0  971515.561 -        0  125123.075 -        0
+Q.pfam+I+R7      -60655.014  122614.027 -        0  974126.027 -        0  125129.400 -        0
+Q.pfam+I+R6      -60668.079  122636.158 -        0  968936.158 -        0  125143.814 -        0
+rtREV+R7         -60686.047  122674.094 -        0  971578.093 -        0  125185.608 -        0
+rtREV+I+R7       -60684.036  122672.073 -        0  974184.073 -        0  125187.445 -        0
+rtREV+I+R6       -60696.064  122692.128 -        0  968992.128 -        0  125199.785 -        0
+mtZOA+F+R7       -60670.622  122681.245 -        0 1021821.245 -        0  125266.060 -        0
+mtZOA+F+I+R7     -60669.474  122680.948 -        0 1024504.948 -        0  125269.621 -        0
+mtZOA+F+I+R6     -60697.910  122733.820 -        0 1019193.820 -        0  125314.778 -        0
+LG+R7            -61544.880  124391.760 -        0  973295.760 -        0  126903.275 -        0
+LG+I+R7          -61545.569  124395.138 -        0  975907.138 -        0  126910.510 -        0
+LG+I+R6          -61552.079  124404.157 -        0  970704.157 -        0  126911.814 -        0
+LG+R8            -61544.103  124394.206 -        0  978518.206 -        0  126913.436 -        0
+LG+I+R8          -61544.783  124397.565 -        0  981137.565 -        0  126920.654 -        0
+LG+R6            -61562.241  124422.482 -        0  968122.482 -        0  126926.280 -        0
+LG+I+R5          -61573.844  124443.688 -        0  965547.688 -        0  126943.628 -        0
+LG+R5            -61585.012  124464.023 -        0  962976.023 -        0  126960.106 -        0
+JTT+I+R7         -61609.891  124523.783 -        0  976035.783 -        0  127039.155 -        0
+JTT+R7           -61613.029  124528.058 -        0  973432.058 -        0  127039.572 -        0
+JTT+I+R6         -61619.669  124539.338 -        0  970839.338 -        0  127046.994 -        0
+LG+I+G4          -61663.797  124609.594 -        0  947653.594 -        0  127082.529 -        0
+LG+I+R4          -61656.756  124605.513 -        0  960529.513 -        0  127097.737 -        0
+LG+G4            -61679.872  124639.745 -        0  945119.745 +        1  127108.822 -        0
+LG+R4            -61668.601  124627.202 -        0  957967.202 -        0  127115.569 -        0
+Q.insect+R7      -61665.951  124633.901 -        0  973537.901 -        0  127145.416 -        0
+Q.insect+I+R7    -61664.246  124632.492 -        0  976144.492 -        0  127147.864 -        0
+Q.insect+I+R6    -61680.048  124660.096 -        0  970960.096 -        0  127167.752 -        0
+LG+I+R3          -61808.674  124905.348 -        0  955665.348 -        0  127389.857 -        0
+LG+R3            -61850.380  124986.759 -        0  953170.759 -        0  127467.410 -        0
+JTTDCMut+I+R7    -61827.149  124958.298 -        0  976470.298 -        0  127473.670 -        0
+JTTDCMut+R7      -61837.644  124977.288 -        0  973881.288 -        0  127488.802 -        0
+JTTDCMut+I+R6    -61856.497  125012.995 -        0  971312.995 -        0  127520.651 -        0
+Q.yeast+R7       -62202.557  125707.114 -        0  974611.114 -        0  128218.628 -        0
+Q.yeast+I+R7     -62200.933  125705.866 -        0  977217.866 -        0  128221.238 -        0
+Q.yeast+I+R6     -62239.619  125779.238 -        0  972079.238 -        0  128286.895 -        0
+LG+I+R2          -62464.807  126213.615 -        0  951825.615 -        0  128690.408 -        0
+mtVer+F+I+R7     -62427.294  126196.588 -        0 1028020.588 -        0  128785.261 -        0
+mtVer+F+R7       -62432.454  126204.907 -        0 1025344.907 -        0  128789.723 -        0
+mtVer+F+I+R6     -62442.768  126223.536 -        0 1022683.536 -        0  128804.494 -        0
+LG+R2            -62543.702  126369.404 -        0  949413.404 -        0  128842.339 -        0
+HIVb+F+I+R7      -62548.648  126439.296 -        0 1028263.296 -        0  129027.969 -        0
+HIVb+F+R7        -62557.406  126454.811 -        0 1025594.811 -        0  129039.626 -        0
+HIVb+F+I+R6      -62572.269  126482.537 -        0 1022942.537 -        0  129063.495 -        0
+cpREV+R7         -62633.110  126568.220 -        0  975472.221 -        0  129079.735 -        0
+cpREV+I+R7       -62631.817  126567.635 -        0  978079.635 -        0  129083.007 -        0
+cpREV+I+R6       -62660.865  126621.731 -        0  972921.731 -        0  129129.387 -        0
+DCMut+I+R7       -62660.428  126624.857 -        0  978136.857 -        0  129140.229 -        0
+DCMut+R7         -62667.313  126636.625 -        0  975540.625 -        0  129148.140 -        0
+DCMut+I+R6       -62686.254  126672.508 -        0  972972.508 -        0  129180.164 -        0
+Q.mammal+R7      -62718.642  126739.284 -        0  975643.284 -        0  129250.799 -        0
+Q.mammal+I+R7    -62716.995  126737.990 -        0  978249.990 -        0  129253.363 -        0
+Dayhoff+I+R7     -62724.431  126752.862 -        0  978264.862 -        0  129268.234 -        0
+Dayhoff+R7       -62740.717  126783.434 -        0  975687.434 -        0  129294.949 -        0
+Q.mammal+I+R6    -62754.445  126808.889 -        0  973108.889 -        0  129316.546 -        0
+Dayhoff+I+R6     -62757.748  126815.496 -        0  973115.496 -        0  129323.153 -        0
+mtART+F+R7       -63523.707  128387.415 -        0 1027527.415 -        0  130972.230 -        0
+mtART+F+I+R7     -63528.825  128399.650 -        0 1030223.650 -        0  130988.323 -        0
+mtART+F+I+R6     -63589.764  128517.528 -        0 1024977.528 -        0  131098.485 -        0
+FLAVI+F+R7       -63855.009  129050.018 -        0 1028190.018 -        0  131634.834 -        0
+FLAVI+F+I+R7     -63866.876  129075.751 -        0 1030899.751 -        0  131664.424 -        0
+FLAVI+F+I+R6     -63884.226  129106.453 -        0 1025566.453 -        0  131687.410 -        0
+Q.bird+R7        -64739.881  130781.762 -        0  979685.762 -        0  133293.277 -        0
+Q.bird+I+R7      -64744.232  130792.464 -        0  982304.464 -        0  133307.837 -        0
+Q.bird+I+R6      -64750.865  130801.731 -        0  977101.731 -        0  133309.387 -        0
+Q.plant+I+R7     -65182.671  131669.342 -        0  983181.342 -        0  134184.714 -        0
+Q.plant+R7       -65190.752  131683.504 -        0  980587.504 -        0  134195.019 -        0
+Q.plant+I+R6     -65204.686  131709.372 -        0  978009.372 -        0  134217.029 -        0
+LG+I             -65269.675  131819.349 -        0  952299.349 -        0  134288.426 -        0
+mtMAM+F+R7       -65183.720  131707.440 -        0 1030847.440 -        0  134292.256 -        0
+FLU+R7           -65291.632  131885.264 -        0  980789.264 -        0  134396.778 -        0
+FLU+I+R7         -65290.033  131884.067 -        0  983396.067 -        0  134399.439 -        0
+mtMAM+F+I+R7     -65239.609  131821.218 -        0 1033645.218 -        0  134409.891 -        0
+mtMAM+F+I+R6     -65266.147  131870.294 -        0 1028330.294 -        0  134451.252 -        0
+FLU+I+R6         -65343.730  131987.459 -        0  978287.459 -        0  134495.116 -        0
+HIVw+F+I+R7      -65487.420  132316.841 -        0 1034140.841 -        0  134905.514 -        0
+HIVw+F+R7        -65490.850  132321.700 -        0 1031461.700 -        0  134906.515 -        0
+HIVw+F+I+R6      -65515.673  132369.345 -        0 1028829.345 -        0  134950.303 -        0
+LG               -65630.239  132538.478 -        0  950458.478 -        0  135003.697 -        0
+mtREV+I+R7       -66478.641  134261.282 -        0  985773.282 -        0  136776.654 -        0
+mtREV+R7         -66494.482  134290.963 -        0  983194.963 -        0  136802.478 -        0
+mtREV+I+R6       -66505.558  134311.116 -        0  980611.116 -        0  136818.773 -        0
+mtInv+I+R7       -66565.398  134434.796 -        0  985946.796 -        0  136950.168 -        0
+mtInv+R7         -66573.363  134448.726 -        0  983352.726 -        0  136960.241 -        0
+mtInv+I+R6       -66585.438  134470.876 -        0  980770.876 -        0  136978.532 -        0
+mtZOA+I+R7       -68085.696  137475.391 -        0  988987.391 -        0  139990.763 -        0
+mtZOA+R7         -68096.225  137494.450 -        0  986398.450 -        0  140005.964 -        0
+mtZOA+I+R6       -68110.265  137520.531 -        0  983820.531 -        0  140028.187 -        0
+mtMet+I+R7       -68135.054  137574.107 -        0  989086.107 -        0  140089.480 -        0
+mtMet+R7         -68146.748  137595.497 -        0  986499.497 -        0  140107.011 -        0
+mtMet+I+R6       -68158.320  137616.641 -        0  983916.641 -        0  140124.297 -        0
+HIVb+I+R7        -68547.293  138398.585 -        0  989910.585 -        0  140913.957 -        0
+HIVb+R7          -68555.061  138412.122 -        0  987316.122 -        0  140923.637 -        0
+HIVb+I+R6        -68563.385  138426.770 -        0  984726.770 -        0  140934.427 -        0
+mtVer+I+R7       -70721.158  142746.316 -        0  994258.316 -        0  145261.688 -        0
+mtVer+R7         -70732.155  142766.310 -        0  991670.310 -        0  145277.824 -        0
+mtVer+I+R6       -70758.955  142817.910 -        0  989117.910 -        0  145325.566 -        0
+FLAVI+I+R7       -71018.979  143341.957 -        0  994853.957 -        0  145857.329 -        0
+FLAVI+R7         -71032.955  143367.909 -        0  992271.909 -        0  145879.424 -        0
+FLAVI+I+R6       -71063.184  143426.368 -        0  989726.368 -        0  145934.024 -        0
+mtART+I+R7       -71690.247  144684.494 -        0  996196.494 -        0  147199.866 -        0
+mtART+R7         -71699.620  144701.241 -        0  993605.241 -        0  147212.755 -        0
+mtART+I+R6       -71729.565  144759.129 -        0  991059.129 -        0  147266.786 -        0
+HIVw+I+R7        -72418.852  146141.703 -        0  997653.703 -        0  148657.075 -        0
+HIVw+R7          -72431.745  146165.491 -        0  995069.491 -        0  148677.005 -        0
+HIVw+I+R6        -72449.435  146198.869 -        0  992498.869 -        0  148706.526 -        0
+mtMAM+I+R7       -73747.704  148799.407 -        0 1000311.407 -        0  151314.780 -        0
+mtMAM+I+R6       -73769.265  148838.530 -        0  995138.530 -        0  151346.187 -        0
+mtMAM+R7         -73771.114  148844.227 -        0  997748.227 -        0  151355.742 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: PMB+F+I+R6
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.0247
+  pi(R) = 0.0179
+  pi(N) = 0.0129
+  pi(D) = 0.2380
+  pi(C) = 0.0266
+  pi(Q) = 0.0463
+  pi(E) = 0.0217
+  pi(G) = 0.0300
+  pi(H) = 0.0140
+  pi(I) = 0.0290
+  pi(L) = 0.0490
+  pi(K) = 0.0388
+  pi(M) = 0.0181
+  pi(F) = 0.0270
+  pi(P) = 0.0837
+  pi(S) = 0.0421
+  pi(T) = 0.0240
+  pi(W) = 0.0267
+  pi(Y) = 0.0234
+  pi(V) = 0.2060
+
+Model of rate heterogeneity: Invar+FreeRate with 6 categories
+Proportion of invariable sites: 0.0228
+Site proportion and rates:  (0.1867,0.0746) (0.1904,0.3211) (0.1541,0.6680) (0.1778,1.1442) (0.1929,1.9457) (0.0752,3.2319)
+
+ Category  Relative_rate  Proportion
+  0         0              0.0228
+  1         0.0746         0.1867
+  2         0.3211         0.1904
+  3         0.6680         0.1541
+  4         1.1442         0.1778
+  5         1.9457         0.1929
+  6         3.2319         0.0752
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+
+**NOTE**: Consensus tree has higher likelihood than ML tree found! Please use consensus tree below.
+Log-likelihood of the tree: -53509.0094 (s.e. 2054.3969)
+Unconstrained log-likelihood (without tree): -2043.6849
+Number of free parameters (#branches + #model parameters): 669
+Akaike information criterion (AIC) score: 108356.0188
+Corrected Akaike information criterion (AICc) score: 1004816.0188
+Bayesian information criterion (BIC) score: 110936.9761
+
+**************************** WARNING ****************************
+Number of parameters (K, model parameters and branch lengths): 669
+Sample size (n, alignment length): 350
+
+Given that K>=n, the parameter estimates might be inaccurate.
+Thus, phylogenetic estimates should be interpreted with caution.
+
+Ideally, it is desirable that n >> K. When selecting optimal models,
+1. use AIC or BIC if n > 40K;
+2. use AICc or BIC if 40K >= n > K;
+3. be extremely cautious if n <= K
+
+To improve the situation (3), consider the following options:
+  1. Increase the sample size (n)
+  2. Decrease the number of parameters (K) to be estimated. If
+     possible:
+     a. Remove the least important sequences from the alignment
+     b. Specify some of the parameter values for the substitution
+        model (e.g., the nucleotide or amino acid frequencies)
+     c. Specify some of the parameter values for the rates-across-
+        sites model (e.g., the shape parameter for the discrete
+        Gamma distribution, the proportion of invariable sites, or
+        the rates of change for different rate categories under
+        the FreeRate model)
+
+Reference:
+Burnham KR, Anderson DR (2002). Model Selection and Multimodel
+Inference: A Practical Information-Theoretic Approach. Springer,
+New York.
+************************ END OF WARNING ***********************
+
+Total tree length (sum of branch lengths): 57.3910
+Sum of internal branch lengths: 17.7371 (30.9058% of tree length)
+
+WARNING: 4 near-zero internal branches (<0.0029) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'AAC68314.1_Chlamydia_FliF' is drawn at root
+Numbers in parentheses are SH-aLRT support (%) / ultrafast bootstrap support (%)
+
++**AAC68314.1_Chlamydia_FliF
+|
+|                                                                         +--ACL65896.1_Anaeromyxobacter_FliF
+|                                                                      +--| (89.5/72)
+|                                                                      |  +--SHK75940.1_Desulfatibacillum_FliF
+|                                                                   +--| (71.2/58)
+|                                                                   |  +--ACN16787.1_Desulforapulum_FliF
+|                                                                +--| (55.8/47)
+|                                                                |  |     +--AGC50281.1_Lawsonia_FliF
+|                                                                |  |  +--| (25.7/54)
+|                                                                |  |  |  +--BAH77996.1_Solidesulfovibrio_FliF
+|                                                                |  +--| (98.7/96)
+|                                                                |     |  +--AAS94796.1_Desulfovibrio_FliF
+|                                                                |     +--| (93.5/81)
+|                                                                |        +--WP_011366492.1_Oleidesulfovibrio_FliF
+|                                                             +--| (88.9/63)
+|                                                             |  |  +--CAG37385.1_Desulfotalea_FliF
+|                                                             |  +--| (92.8/82)
+|                                                             |     +--ALA58335.1_Nitrospira_FliF
+|                                                          +--| (95.8/79)
+|                                                          |  |  +--BCB96474.1_Dissulfurispira_FliF
+|                                                          |  +--| (99.1/98)
+|                                                          |     +--ACI21849.1_Thermodesulfovibrio_FliF
+|                                                       +--| (24.4/26)
+|                                                       |  |  +--AGH96362.1_Pseudobdellovibrio_FliF
+|                                                       |  +--| (100/100)
+|                                                       |     +--AHZ83763.1_Bdellovibrio_FliF
+|                                                    +--| (92.7/61)
+|                                                    |  |     +--ATX78584.1_Mariprofundus_FliF
+|                                                    |  |  +--| (99.8/100)
+|                                                    |  |  |  +--ATX82919.1_Mariprofundus_FliF
+|                                                    |  +--| (96.9/88)
+|                                                    |     +--ABI78744.1_Hyphomonas_FliF
+|                                                 +--| (84.4/56)
+|                                                 |  |           +--ABS63798.1_Parvibaculum_FliF
+|                                                 |  |        +--| (97.8/87)
+|                                                 |  |        |  +--AEP09101.1_Micavibrio_FliF
+|                                                 |  |     +--| (79.3/63)
+|                                                 |  |     |  |  +--CDL00846.1_Magnetospirillum_FliF
+|                                                 |  |     |  +--| (70.5/62)
+|                                                 |  |     |     +--AEI88715.1_Candidatus_FliF
+|                                                 |  |  +--| (98.3/97)
+|                                                 |  |  |  |     +--AEO47029.1_Rhodospirillum_FliF
+|                                                 |  |  |  |  +--| (85.5/85)
+|                                                 |  |  |  |  |  +--ABC45369.1_Salinibacter_FliF
+|                                                 |  |  |  +--| (69/47)
+|                                                 |  |  |     |  +--ABK42796.1_Magnetococcus_FliF
+|                                                 |  |  |     +--| (85.3/81)
+|                                                 |  |  |        |  +--BAM05992.1_Leptospirillum_FliF
+|                                                 |  |  |        +--| (94.5/93)
+|                                                 |  |  |           +---CCW35059.1_Chthonomonas_FliF
+|                                                 |  +--| (94.3/77)
+|                                                 |     |     +--AHK70359.1_Gluconobacter_FliF
+|                                                 |     |  +--| (83.2/73)
+|                                                 |     |  |  +--BAE49307.1_Magnetospirillum_T3SS
+|                                                 |     +--| (93.3/80)
+|                                                 |        |  +--ACL94415.1_Caulobacter_FliF
+|                                                 |        +--| (99/99)
+|                                                 |           +--ADL02120.1_Brevundimonas_FliF
+|                                              +--| (95.9/86)
+|                                              |  |  +--ACB73714.1_Opitutus_FliF
+|                                              |  +--| (99.9/99)
+|                                              |     +--ATC63675.1_Nibricoccus_FliF
+|                                           +--| (87.7/50)
+|                                           |  |           +--ACV67866.1_Desulfohalobium_FliF
+|                                           |  |        +--| (97.8/100)
+|                                           |  |        |  +--ABA88441.1_Syntrophotalea_FliF
+|                                           |  |     +--| (81.2/70)
+|                                           |  |     |  +--EEG76529.1_Dethiobacter_FliF
+|                                           |  |  +--| (97.3/87)
+|                                           |  |  |  +--RJP61224.1_Candidatus_FliF
+|                                           |  +--| (91/62)
+|                                           |     |     +--ACL70438.1_Halothermothrix_FliF
+|                                           |     |  +--| (83.6/75)
+|                                           |     |  |  +--ACL22158.1_Desulfitobacterium_FliF
+|                                           |     +--| (80.4/51)
+|                                           |        |  +--EGO63145.1_Acetonema_FliF
+|                                           |        +--| (83/81)
+|                                           |           +--ACZ19568.1_Thermanaerovibrio_FliF
+|                                        +--| (90.8/66)
+|                                        |  |        +--ABC76851.1_Syntrophus_FliF
+|                                        |  |     +--| (89.9/77)
+|                                        |  |     |  |  +--OSS41621.1_Desulfurella_FliF
+|                                        |  |     |  +--| (96.1/95)
+|                                        |  |     |     |        +--ALF48087.1_Campylobacter_FliF
+|                                        |  |     |     |     +--| (25.9/57)
+|                                        |  |     |     |     |  |  +--AOO64056.1_Sulfurospirillum_FliF
+|                                        |  |     |     |     |  +--| (53.2/69)
+|                                        |  |     |     |     |     +--ACM93021.1_Nautilia_FliF
+|                                        |  |     |     |  +--| (77/81)
+|                                        |  |     |     |  |  +--CAE11001.1_Wolinella_FliF
+|                                        |  |     |     +--| (49.6/66)
+|                                        |  |     |        +--ADN09694.1_Sulfurimonas_FliF
+|                                        |  |  +--| (85.4/74)
+|                                        |  |  |  |     +--AAR33742.1_Geobacter_FliF
+|                                        |  |  |  |  +--| (98.5/100)
+|                                        |  |  |  |  |  +--ACH40830.1_Citrifermentans_FliF
+|                                        |  |  |  +--| (92.3/74)
+|                                        |  |  |     |  +--BAH37373.1_Gemmatimonas_FliF
+|                                        |  |  |     +--| (99.9/100)
+|                                        |  |  |        +--QJR36449.1_Gemmatimonas_FliF
+|                                        |  +--| (71.5/52)
+|                                        |     |  +--ATU63999.1_Rhizobacter_FliF
+|                                        |     +--| (96.3/89)
+|                                        |        +--ADC89287.1_Thermocrinis_FliF
+|                                     +--| (0.3/49)
+|                                     |  |                       +--AIQ89829.1_Methylobacterium_FliF
+|                                     |  |                    +--| (88.7/89)
+|                                     |  |                    |  +--BAL07813.1_Bradyrhizobium_FliF
+|                                     |  |                 +--| (100/100)
+|                                     |  |                 |  +--ABQ62358.1_Brucella_FliF
+|                                     |  |              +--| (92.9/91)
+|                                     |  |              |  +--AFL88119.1_Terriglobus_FliF
+|                                     |  |           +--| (93.2/90)
+|                                     |  |           |  +---BAD41986.1_Symbiobacterium_FliF
+|                                     |  |        +--| (92.2/86)
+|                                     |  |        |  +--ACO32668.1_Acidobacterium_FliF
+|                                     |  |     +--| (24.9/48)
+|                                     |  |     |  |  +--QOY89262.1_Paludibaculum_FliF
+|                                     |  |     |  +--| (99/99)
+|                                     |  |     |     +--QOY88876.1_Paludibaculum_FliF
+|                                     |  |  +--| (96.9/88)
+|                                     |  |  |  +--USF24605.1_Mucispirillum_FliF
+|                                     |  +--| (92.3/79)
+|                                     |     |  +--QAR34056.1_Geovibrio_FliF
+|                                     |     +--| (94/89)
+|                                     |        +--ADD69076.1_Denitrovibrio_FliF
+|                                  +--| (76.6/45)
+|                                  |  |  +---ADG94151.1_Arcobacter_FliF
+|                                  |  +--| (74.8/69)
+|                                  |     |  +--AAO36212.1_Clostridium_FliF
+|                                  |     +--| (92.9/89)
+|                                  |        +--WP_010965461.1_Clostridium_FliF
+|                               +--| (79.8/76)
+|                               |  |                             +--ACT13606.1_Pectobacterium_FliF
+|                               |  |                          +--| (59.8/62)
+|                               |  |                          |  |  +--CFQ36607.1_Yersinia_FliF
+|                               |  |                          |  +--| (55/72)
+|                               |  |                          |     +--AJJ56339.1_Yersinia_FliF
+|                               |  |                       +--| (31.8/32)
+|                               |  |                       |  |        +--RPH26529.1_Buttiauxella_FliF
+|                               |  |                       |  |     +--| (84.7/82)
+|                               |  |                       |  |     |  +--CBJ47254.1_Erwinia_FliF
+|                               |  |                       |  |  +--| (96.3/95)
+|                               |  |                       |  |  |  |        +--POT54770.1_Citrobacter_FliF
+|                               |  |                       |  |  |  |     +--| (2.1/54)
+|                               |  |                       |  |  |  |     |  +--CFQ36177.1_Yersinia_FliF
+|                               |  |                       |  |  |  |  +--| (76.9/79)
+|                               |  |                       |  |  |  |  |  |  +**ORN02599.1_Pantoea_FliF
+|                               |  |                       |  |  |  |  |  +--| (99.8/100)
+|                               |  |                       |  |  |  |  |     +**KGT93339.1_Erwinia_FliF
+|                               |  |                       |  |  |  +--| (94.1/88)
+|                               |  |                       |  |  |     |  +--TCV95562.1_Biostraticola_FliF
+|                               |  |                       |  |  |     +--| (87.1/79)
+|                               |  |                       |  |  |        |  +--AHF75271.1_Sodalis_FliF
+|                               |  |                       |  |  |        +--| (71.4/76)
+|                               |  |                       |  |  |           +--AFA40924.1_Wigglesworthia_FliF
+|                               |  |                       |  +--| (93.2/73)
+|                               |  |                       |     |  +--QXB11719.1_Klebsiella_FliF
+|                               |  |                       |     +--| (89.5/83)
+|                               |  |                       |        +--KFD13219.1_Serratia_FliF
+|                               |  |                    +--| (86.3/77)
+|                               |  |                    |  +--AHF75751.1_Sodalis_FliF
+|                               |  |                 +--| (54.9/36)
+|                               |  |                 |  +--ARU98306.1_Tatumella_FliF
+|                               |  |              +--| (91.4/56)
+|                               |  |              |  +--WP_015871707.1_Edwardsiella_FliF
+|                               |  |           +--| (94/75)
+|                               |  |           |  |                       +--KLP57552.1_Enterobacter_FliF
+|                               |  |           |  |                    +--| (99.4/97)
+|                               |  |           |  |                    |  +--KLR25735.1_Enterobacter_FliF
+|                               |  |           |  |                 +--| (71.9/68)
+|                               |  |           |  |                 |  |     +--AAO68586.1_Salmonella_FliF
+|                               |  |           |  |                 |  |  +--| (35.2/57)
+|                               |  |           |  |                 |  |  |  +--AAL20881.1_Salmonella_FliF
+|                               |  |           |  |                 |  +--| (73.3/83)
+|                               |  |           |  |                 |     +--POT59441.1_Citrobacter_FliF
+|                               |  |           |  |              +--| (96.9/89)
+|                               |  |           |  |              |  +--QKY95803.1_Shigella_FliF
+|                               |  |           |  |           +--| (46.2/34)
+|                               |  |           |  |           |  +--RPH21571.1_Buttiauxella_FliF
+|                               |  |           |  |        +--| (73.9/73)
+|                               |  |           |  |        |  +--CCJ72125.1_Cronobacter_FliF
+|                               |  |           |  |     +--| (64.1/80)
+|                               |  |           |  |     |  |  +--KGT96016.1_Erwinia_FliF
+|                               |  |           |  |     |  +--| (91.1/78)
+|                               |  |           |  |     |     +--CBJ46171.1_Erwinia_FliF
+|                               |  |           |  |  +--| (20.7/33)
+|                               |  |           |  |  |  |  +--AOM39532.1_Xenorhabdus_FliF
+|                               |  |           |  |  |  +--| (94.6/81)
+|                               |  |           |  |  |     +--EHM41863.1_Hafnia_FliF
+|                               |  |           |  +--| (92.1/65)
+|                               |  |           |     |  +--BAB12793.1_Buchnera_FliF
+|                               |  |           |     +--| (97.6/99)
+|                               |  |           |        +--AAM67637.1_Buchnera_FliF
+|                               |  |        +--| (90.4/65)
+|                               |  |        |  |     +--CAJ49324.1_Bordetella_FliF
+|                               |  |        |  |  +--| (91.5/86)
+|                               |  |        |  |  |  +--AAZ97553.1_Thiobacillus_FliF
+|                               |  |        |  +--| (89.8/80)
+|                               |  |        |     |     +--CAH34218.1_Burkholderia_FliF
+|                               |  |        |     |  +--| (98.4/99)
+|                               |  |        |     |  |  +--ABC37528.1_Burkholderia_FliF
+|                               |  |        |     +--| (99.1/99)
+|                               |  |        |        +--AAU48881.1_Burkholderia_FliF
+|                               |  |     +--| (96.5/79)
+|                               |  |     |  |     +--AGG30848.1_Morganella_FliF
+|                               |  |     |  |  +--| (64.4/45)
+|                               |  |     |  |  |  |  +--ADE10838.1_Sideroxydans_FliF
+|                               |  |     |  |  |  +--| (96.4/89)
+|                               |  |     |  |  |     +--AAQ60803.1_Chromobacterium_FliF
+|                               |  |     |  +--| (94.6/50)
+|                               |  |     |     |     +--CAQ72721.1_Cupriavidus_FliF
+|                               |  |     |     |  +--| (38.8/58)
+|                               |  |     |     |  |  +--ABE50245.1_Methylobacillus_FliF
+|                               |  |     |     +--| (85.9/72)
+|                               |  |     |        +--ACT47836.1_Methylotenera_FliF
+|                               |  |  +--| (90.3/67)
+|                               |  |  |  |                                         +--AAW86347.1_Aliivibrio_FliF
+|                               |  |  |  |                                      +--| (93/73)
+|                               |  |  |  |                                      |  +--EAS77894.1_Vibrio_FliF
+|                               |  |  |  |                                   +--| (47.9/48)
+|                               |  |  |  |                                   |  |  +**QEO40727.1_Vibrio_FliF
+|                               |  |  |  |                                   |  +--| (96.7/100)
+|                               |  |  |  |                                   |     +**AAF95278.1_Vibrio_FliF
+|                               |  |  |  |                                +--| (90.3/79)
+|                               |  |  |  |                                |  |  +--EEW06433.1_Vibrio_FliF
+|                               |  |  |  |                                |  +--| (93.4/78)
+|                               |  |  |  |                                |     +--BAC95245.1_Vibrio_FliF
+|                               |  |  |  |                             +--| (90.8/78)
+|                               |  |  |  |                             |  |  +--GAA03515.1_Photobacterium_FliF
+|                               |  |  |  |                             |  +--| (98.1/96)
+|                               |  |  |  |                             |     +--CAG19334.1_Photobacterium_FliF
+|                               |  |  |  |                          +--| (95.3/92)
+|                               |  |  |  |                          |  |  +--EPE37900.1_Candidatus_FliF
+|                               |  |  |  |                          |  +--| (22/53)
+|                               |  |  |  |                          |     |  +**AVQ87012.1_Plesiomonas_FliF
+|                               |  |  |  |                          |     +--| (99.9/100)
+|                               |  |  |  |                          |        +**WP_084977171.1_Plesiomonas_FliF
+|                               |  |  |  |                       +--| (86.1/87)
+|                               |  |  |  |                       |  +--EAR29538.1_Pseudoalteromonas_FliF
+|                               |  |  |  |                    +--| (88.9/55)
+|                               |  |  |  |                    |  |     +--AAZ28086.1_Colwellia_FliF
+|                               |  |  |  |                    |  |  +--| (45.2/56)
+|                               |  |  |  |                    |  |  |  +--GAC24878.1_Paraglaciecola_FliF
+|                               |  |  |  |                    |  +--| (85.3/68)
+|                               |  |  |  |                    |     +--AEP30462.1_Glaciecola_FliF
+|                               |  |  |  |                 +--| (73.1/55)
+|                               |  |  |  |                 |  |     +--ABK38602.1_Aeromonas_FliF
+|                               |  |  |  |                 |  |  +--| (29/50)
+|                               |  |  |  |                 |  |  |  |  +--ATP10457.1_Aeromonas_FliF
+|                               |  |  |  |                 |  |  |  +--| (97.8/98)
+|                               |  |  |  |                 |  |  |     +--EKB19994.1_Aeromonas_FliF
+|                               |  |  |  |                 |  +--| (96.1/95)
+|                               |  |  |  |                 |     +--QCG47664.1_Aeromonas_FliF
+|                               |  |  |  |              +--| (92/91)
+|                               |  |  |  |              |  |           +--UXK10552.1_Shewanella_FliF
+|                               |  |  |  |              |  |        +--| (92.9/66)
+|                               |  |  |  |              |  |        |  +--AAN56227.2_Shewanella_FliF
+|                               |  |  |  |              |  |     +--| (72.5/57)
+|                               |  |  |  |              |  |     |  +--ABV37670.1_Shewanella_FliF
+|                               |  |  |  |              |  |  +--| (93.9/94)
+|                               |  |  |  |              |  |  |  +--BAJ01403.1_Shewanella_FliF
+|                               |  |  |  |              |  +--| (80.7/59)
+|                               |  |  |  |              |     |  +--EHR42289.1_Alishewanella_FliF
+|                               |  |  |  |              |     +--| (36.7/45)
+|                               |  |  |  |              |        |            +--QDU26973.1_Anatilimnocola_FliF
+|                               |  |  |  |              |        |         +--| (90.9/82)
+|                               |  |  |  |              |        |         |  +--ADB18987.1_Pirellula_T3SS
+|                               |  |  |  |              |        |      +--| (87.7/80)
+|                               |  |  |  |              |        |      |  +--QDU93976.1_Lignipirellula_FliF
+|                               |  |  |  |              |        |   +--| (56/72)
+|                               |  |  |  |              |        |   |  +--ADY60058.1_Rubinisphaera_T3SS_YscJ
+|                               |  |  |  |              |        +---| (100/100)
+|                               |  |  |  |              |            +--CAD75367.1_Rhodopirellula_FliF
+|                               |  |  |  |           +--| (79.7/26)
+|                               |  |  |  |           |  |  +--EGW20512.1_Methylobacter_FliF
+|                               |  |  |  |           |  +--| (91.3/62)
+|                               |  |  |  |           |     |  +---AAS40694.1_Bacillus_FliF
+|                               |  |  |  |           |     +--| (80.3/63)
+|                               |  |  |  |           |        |                          +------QEO41070.1_Vibrio_T3SS
+|                               |  |  |  |           |        |                       +**| (0/59)
+|                               |  |  |  |           |        |                       |  |     +**WP_066786653.1_Rummeliibacillus_SpoIIIAH
+|                               |  |  |  |           |        |                       |  |  +--| (94.5/100)
+|                               |  |  |  |           |        |                       |  |  |  +**WP_102691387.1_Rummeliibacillus_SpoIIIAH
+|                               |  |  |  |           |        |                       |  +--| (52.6/68)
+|                               |  |  |  |           |        |                       |     +--WP_053416284.1_Viridibacillus_SpoIIIAH
+|                               |  |  |  |           |        |                    +--| (79.3/50)
+|                               |  |  |  |           |        |                    |  +**WP_024361187.1_Lysinibacillus_SpoIIIAH
+|                               |  |  |  |           |        |                 +--| (78.9/37)
+|                               |  |  |  |           |        |                 |  |                          +-------WP_006059104.1_Holdemania_SpoIIIAH
+|                               |  |  |  |           |        |                 |  |                       +--| (60.3/31)
+|                               |  |  |  |           |        |                 |  |                       |  |  +--WP_002609025.1_Bacillota_SpoIIIAH
+|                               |  |  |  |           |        |                 |  |                       |  +--| (88.8/95)
+|                               |  |  |  |           |        |                 |  |                       |     +--WP_008688524.1_Longicatena_SpoIIIAH
+|                               |  |  |  |           |        |                 |  |                    +--| (78.3/29)
+|                               |  |  |  |           |        |                 |  |                    |  +--WP_008789692.1_Coprobacillus_SpoIIIAH
+|                               |  |  |  |           |        |                 |  |                 +--| (89.6/81)
+|                               |  |  |  |           |        |                 |  |                 |  |  +--WP_004609799.1_Thomasclavelia_SpoIIIAH
+|                               |  |  |  |           |        |                 |  |                 |  +--| (90.4/61)
+|                               |  |  |  |           |        |                 |  |                 |     +--WP_003538299.1_Thomasclavelia_SpoIIIAH
+|                               |  |  |  |           |        |                 |  |              +--| (70.7/38)
+|                               |  |  |  |           |        |                 |  |              |  +---APC08738.1_Moorella_SpoIIIAH
+|                               |  |  |  |           |        |                 |  |           +--| (82.2/38)
+|                               |  |  |  |           |        |                 |  |           |  +--AJH78695.1_Weizmannia_SpoIIIAH
+|                               |  |  |  |           |        |                 |  |        +--| (90.7/59)
+|                               |  |  |  |           |        |                 |  |        |  +--BAC13843.1_Oceanobacillus_SpoIIIAH
+|                               |  |  |  |           |        |                 |  |     +**| (0/18)
+|                               |  |  |  |           |        |                 |  |     |  +--WP_134209598.1_Paenisporosarcina_SpoIIIAH
+|                               |  |  |  |           |        |                 |  |  +--| (78.8/30)
+|                               |  |  |  |           |        |                 |  |  |  +--WP_092051140.1_Bhargavaea_SpoIIIAH
+|                               |  |  |  |           |        |                 |  +--| (87.2/48)
+|                               |  |  |  |           |        |                 |     |        +--WP_008404261.1_Solibacillus_SpoIIIAH
+|                               |  |  |  |           |        |                 |     |     +--| (81.6/61)
+|                               |  |  |  |           |        |                 |     |     |  +--WP_096550966.1_Ureibacillus_SpoIIIAH
+|                               |  |  |  |           |        |                 |     |  +--| (48.4/29)
+|                               |  |  |  |           |        |                 |     |  |  +---BAD65006.1_Alkalihalobacillus_SpoIIIAH
+|                               |  |  |  |           |        |                 |     +--| (86.4/53)
+|                               |  |  |  |           |        |                 |        |  +--WP_076757704.1_Edaphobacillus_SpoIIIAH
+|                               |  |  |  |           |        |                 |        +--| (90.9/83)
+|                               |  |  |  |           |        |                 |           +--WP_041075074.1_Bacillus_SpoIIIAH
+|                               |  |  |  |           |        |              +--| (64.7/14)
+|                               |  |  |  |           |        |              |  |     +--WP_061948745.1_Alkalihalobacillus_SpoIIIAH
+|                               |  |  |  |           |        |              |  |  +--| (92.1/96)
+|                               |  |  |  |           |        |              |  |  |  +--AAS43160.1_Bacillus_SpoIIIAH
+|                               |  |  |  |           |        |              |  +--| (90.6/70)
+|                               |  |  |  |           |        |              |     +--BAD76686.1_Geobacillus_SpoIIIAH
+|                               |  |  |  |           |        |           +--| (45/49)
+|                               |  |  |  |           |        |           |  |     +**WP_066163660.1_Metasolibacillus_SpoIIIAH
+|                               |  |  |  |           |        |           |  |  +--| (60.4/66)
+|                               |  |  |  |           |        |           |  |  |  +-----AAU41481.1_Bacillus_SpoIIIAH
+|                               |  |  |  |           |        |           |  +**| (0/34)
+|                               |  |  |  |           |        |           |     +--WP_008179871.1_Bacteria_SpoIIIAH
+|                               |  |  |  |           |        |        +--| (98.6/85)
+|                               |  |  |  |           |        |        |  +--WP_151700324.1_Psychrobacillus_SpoIIIAH
+|                               |  |  |  |           |        |     +--| (87.4/78)
+|                               |  |  |  |           |        |     |  |           +---------AUO18622.1_Monoglobus_SpoIIIAF
+|                               |  |  |  |           |        |     |  |        +--| (76.3/56)
+|                               |  |  |  |           |        |     |  |        |  +---AUO18620.1_Monoglobus_SpoIIIAH
+|                               |  |  |  |           |        |     |  |     +--| (92.6/86)
+|                               |  |  |  |           |        |     |  |     |  |  +--WP_010965386.1_Clostridium_SpoIIIAH
+|                               |  |  |  |           |        |     |  |     |  +--| (75.9/48)
+|                               |  |  |  |           |        |     |  |     |     |  +--SHJ67084.1_Anaerobranca_SpoIIIAH
+|                               |  |  |  |           |        |     |  |     |     +--| (93.7/92)
+|                               |  |  |  |           |        |     |  |     |        +--QNO16151.1_Alkalicella_SpoIIIAH
+|                               |  |  |  |           |        |     |  |  +--| (71.5/50)
+|                               |  |  |  |           |        |     |  |  |  +--BAD40840.1_Symbiobacterium_SpoIIIAH
+|                               |  |  |  |           |        |     |  +--| (75.3/52)
+|                               |  |  |  |           |        |     |     +----UMZ73956.1_Natranaerofaba_SpoIIIAH
+|                               |  |  |  |           |        |  +--| (98.3/100)
+|                               |  |  |  |           |        |  |  |     +-------BAD40842.1_Symbiobacterium_SpoIIIAF
+|                               |  |  |  |           |        |  |  |  +--| (36.6/55)
+|                               |  |  |  |           |        |  |  |  |  |  +---APC08740.1_Moorella_SpoIIIAF
+|                               |  |  |  |           |        |  |  |  |  +--| (82/60)
+|                               |  |  |  |           |        |  |  |  |     |              +-----WP_061948747.1_Alkalihalobacillus_SpoIIIAF
+|                               |  |  |  |           |        |  |  |  |     |        +-----| (94.7/96)
+|                               |  |  |  |           |        |  |  |  |     |        |     +-----AJH79882.1_Weizmannia_SpoIIIAF
+|                               |  |  |  |           |        |  |  |  |     |     +--| (22.4/42)
+|                               |  |  |  |           |        |  |  |  |     |     |  |         +-------------BAC13845.1_Oceanobacillus_SpoIIIAF
+|                               |  |  |  |           |        |  |  |  |     |     |  |     +---| (65.3/72)
+|                               |  |  |  |           |        |  |  |  |     |     |  |     |   +-----------ATO50947.1_Brevibacillus_SpoIIIAF
+|                               |  |  |  |           |        |  |  |  |     |     |  |  +--| (56.1/55)
+|                               |  |  |  |           |        |  |  |  |     |     |  |  |  |  +--ACB85282.1_Natranaerobius_SpoIIIAF
+|                               |  |  |  |           |        |  |  |  |     |     |  |  |  +--| (44.2/68)
+|                               |  |  |  |           |        |  |  |  |     |     |  |  |     +------QAT61770.1_Tissierella_SpoIIIAF
+|                               |  |  |  |           |        |  |  |  |     |     |  +--| (94.1/86)
+|                               |  |  |  |           |        |  |  |  |     |     |     +---OWZ84026.1_Natranaerobius_SpoIIIAF
+|                               |  |  |  |           |        |  |  |  |     |  +--| (76.3/55)
+|                               |  |  |  |           |        |  |  |  |     |  |  +---ALU37542.1_Clostridium_SpoIIIAF
+|                               |  |  |  |           |        |  |  |  |     +--| (59.7/50)
+|                               |  |  |  |           |        |  |  |  |        |  +---------ACL69379.1_Halothermothrix_SpoIIIAF
+|                               |  |  |  |           |        |  |  |  |        +--| (83.4/76)
+|                               |  |  |  |           |        |  |  |  |           |  +---SHJ67143.1_Anaerobranca_SpoIIIAF
+|                               |  |  |  |           |        |  |  |  |           +--| (85.8/90)
+|                               |  |  |  |           |        |  |  |  |              +--QNO16149.1_Alkalicella_SpoIIIAF
+|                               |  |  |  |           |        |  |  +--| (94.9/90)
+|                               |  |  |  |           |        |  |     +----EGO63622.1_Acetonema_SpoIIIAF
+|                               |  |  |  |           |        +--| (95.1/98)
+|                               |  |  |  |           |           |              +--CCB86648.1_Parachlamydia_T3SS
+|                               |  |  |  |           |           |           +--| (96.2/98)
+|                               |  |  |  |           |           |           |  +--CCB85093.1_Parachlamydia_T3SS
+|                               |  |  |  |           |           |        +--| (98.5/99)
+|                               |  |  |  |           |           |        |  |  +--AAC68161.1_Chlamydia_T3SS_YscJ
+|                               |  |  |  |           |           |        |  +--| (98.1/100)
+|                               |  |  |  |           |           |        |     +--AVM88570.1_Chlamydia_T3SS_YscJ_HrcJ
+|                               |  |  |  |           |           |     +--| (91.6/77)
+|                               |  |  |  |           |           |     |  |              +**EDR30632.1_Yersinia_T3SS
+|                               |  |  |  |           |           |     |  |           +--| (98.6/100)
+|                               |  |  |  |           |           |     |  |           |  +**AJJ53162.1_Yersinia_T3SS_YscJ_HrcJ
+|                               |  |  |  |           |           |     |  |        +--| (97.6/98)
+|                               |  |  |  |           |           |     |  |        |  +--AAG05112.1_Pseudomonas_T3SS
+|                               |  |  |  |           |           |     |  |     +--| (76.1/60)
+|                               |  |  |  |           |           |     |  |     |  |              +--CBJ47559.1_Erwinia_T3SS
+|                               |  |  |  |           |           |     |  |     |  |           +--| (77/77)
+|                               |  |  |  |           |           |     |  |     |  |           |  +--KGT90338.1_Erwinia_T3SS
+|                               |  |  |  |           |           |     |  |     |  |        +--| (91.3/95)
+|                               |  |  |  |           |           |     |  |     |  |        |  +--AAY36249.1_Pseudomonas_T3SS_YscJ_HrcJ
+|                               |  |  |  |           |           |     |  |     |  |     +--| (95.6/99)
+|                               |  |  |  |           |           |     |  |     |  |     |  +--ADZ90362.1_Marinomonas_T3SS_YscJ_HrcJ
+|                               |  |  |  |           |           |     |  |     |  |  +--| (84.6/78)
+|                               |  |  |  |           |           |     |  |     |  |  |  |  +--WP_015870333.1_Edwardsiella_T3SS_SctJ
+|                               |  |  |  |           |           |     |  |     |  |  |  +--| (85.7/83)
+|                               |  |  |  |           |           |     |  |     |  |  |     +--AAQ60258.1_Chromobacterium_T3SS
+|                               |  |  |  |           |           |     |  |     |  +--| (73.7/63)
+|                               |  |  |  |           |           |     |  |     |     +--AHF76786.1_Sodalis_T3SS
+|                               |  |  |  |           |           |     |  |  +--| (68.5/22)
+|                               |  |  |  |           |           |     |  |  |  |              +--ABF88125.1_Myxococcus_T3SS_YscJ_HrcJ
+|                               |  |  |  |           |           |     |  |  |  |           +--| (100/100)
+|                               |  |  |  |           |           |     |  |  |  |           |  +--ADO70830.1_Stigmatella_T3SS_YscJ_HrcJ
+|                               |  |  |  |           |           |     |  |  |  |        +--| (86.9/79)
+|                               |  |  |  |           |           |     |  |  |  |        |  +--CAQ71857.1_Cupriavidus_T3SS_SctJ
+|                               |  |  |  |           |           |     |  |  |  |     +--| (96.8/94)
+|                               |  |  |  |           |           |     |  |  |  |     |  |     +--AGC49958.1_Lawsonia_T3SS
+|                               |  |  |  |           |           |     |  |  |  |     |  |  +--| (76.7/77)
+|                               |  |  |  |           |           |     |  |  |  |     |  |  |  +--AAS94345.1_Desulfovibrio_T3SS
+|                               |  |  |  |           |           |     |  |  |  |     |  +--| (97.7/100)
+|                               |  |  |  |           |           |     |  |  |  |     |     +--AGC50595.1_Lawsonia_T3SS_YscJ_HrcJ
+|                               |  |  |  |           |           |     |  |  |  |  +--| (93.2/69)
+|                               |  |  |  |           |           |     |  |  |  |  |  +--BAJ02212.1_Shewanella_T3SS
+|                               |  |  |  |           |           |     |  |  |  +--| (96.3/75)
+|                               |  |  |  |           |           |     |  |  |     |        +--CFQ38428.1_Yersinia_T3SS
+|                               |  |  |  |           |           |     |  |  |     |     +--| (36/44)
+|                               |  |  |  |           |           |     |  |  |     |     |  +--EDR34178.1_Yersinia_T3SS_YscJ_HrcJ
+|                               |  |  |  |           |           |     |  |  |     |  +--| (97.6/90)
+|                               |  |  |  |           |           |     |  |  |     |  |  +--AJJ56869.1_Yersinia_T3SS_YscJ_HrcJ
+|                               |  |  |  |           |           |     |  |  |     +--| (93.8/88)
+|                               |  |  |  |           |           |     |  |  |        +--BAC59953.1_Vibrio_T3SS
+|                               |  |  |  |           |           |     |  +--| (89.8/80)
+|                               |  |  |  |           |           |     |     |     +--ACL64098.1_Anaeromyxobacter_T3SS_YscJ
+|                               |  |  |  |           |           |     |     |  +--| (88.3/87)
+|                               |  |  |  |           |           |     |     |  |  +--QTD51128.1_Sulfidibacter_T3SS_SctJ
+|                               |  |  |  |           |           |     |     +--| (91.4/77)
+|                               |  |  |  |           |           |     |        |  +--CAH39099.1_Burkholderia_T3SS
+|                               |  |  |  |           |           |     |        +--| (88.9/79)
+|                               |  |  |  |           |           |     |           |  +--CAH38872.1_Burkholderia_T3SS
+|                               |  |  |  |           |           |     |           +--| (58.6/64)
+|                               |  |  |  |           |           |     |              +--ATU65453.1_Rhizobacter_T3SS_YscJ_HrcJ
+|                               |  |  |  |           |           |  +--| (67.6/30)
+|                               |  |  |  |           |           |  |  |        +--CAH39023.1_Burkholderia_T3SS
+|                               |  |  |  |           |           |  |  |     +--| (93.7/100)
+|                               |  |  |  |           |           |  |  |     |  +--ABC34345.1_Burkholderia_T3SS
+|                               |  |  |  |           |           |  |  |  +--| (92.2/21)
+|                               |  |  |  |           |           |  |  |  |  |     +--CBJ47346.1_Erwinia_T3SS
+|                               |  |  |  |           |           |  |  |  |  |  +--| (86.2/35)
+|                               |  |  |  |           |           |  |  |  |  |  |  +--CBJ46227.1_Erwinia_T3SS
+|                               |  |  |  |           |           |  |  |  |  +--| (98.6/96)
+|                               |  |  |  |           |           |  |  |  |     +--AHF78198.1_Sodalis_T3SS
+|                               |  |  |  |           |           |  |  +--| (98/99)
+|                               |  |  |  |           |           |  |     |        +--AHF75698.1_Sodalis_T3SS
+|                               |  |  |  |           |           |  |     |     +--| (96.1/91)
+|                               |  |  |  |           |           |  |     |     |  +--TCV96683.1_Biostraticola_T3SS
+|                               |  |  |  |           |           |  |     |  +--| (92.2/49)
+|                               |  |  |  |           |           |  |     |  |  +--CBG35883.1_Escherichia_T3SS
+|                               |  |  |  |           |           |  |     +--| (74.8/16)
+|                               |  |  |  |           |           |  |        |  +--AGG29087.1_Morganella_T3SS_HrcJ
+|                               |  |  |  |           |           |  |        +--| (92.2/84)
+|                               |  |  |  |           |           |  |           +--POT59516.1_Citrobacter_T3SS_YscJ_HrcJ
+|                               |  |  |  |           |           +--| (82.5/75)
+|                               |  |  |  |           |              |     +--AFE09625.1_Corallococcus_T3SS
+|                               |  |  |  |           |              |  +--| (92.3/97)
+|                               |  |  |  |           |              |  |  +--ABF88690.1_Myxococcus_T3SS
+|                               |  |  |  |           |              +--| (98/99)
+|                               |  |  |  |           |                 +--ADO74089.1_Stigmatella_T3SS
+|                               |  |  |  |        +--| (67.5/17)
+|                               |  |  |  |        |  +--AAZ97041.1_Thiobacillus_T3SS
+|                               |  |  |  |     +--| (93.4/71)
+|                               |  |  |  |     |  |        +--AGI74751.1_Octadecabacter_FliF
+|                               |  |  |  |     |  |     +--| (25.8/60)
+|                               |  |  |  |     |  |     |  +--QNQ09320.1_Sphingomonas_FliF
+|                               |  |  |  |     |  |  +--| (52.3/77)
+|                               |  |  |  |     |  |  |  +--ACV75177.1_Zymomonas_FliF
+|                               |  |  |  |     |  +--| (58.7/18)
+|                               |  |  |  |     |     |  +--ADE39075.1_Candidatus_FliF
+|                               |  |  |  |     |     +--| (97/92)
+|                               |  |  |  |     |        +--AOU49298.1_Legionella_FliF
+|                               |  |  |  |  +--| (0/47)
+|                               |  |  |  |  |  |           +--ABD81448.1_Saccharophagus_FliF
+|                               |  |  |  |  |  |        +--| (38/58)
+|                               |  |  |  |  |  |        |  |     +--EHJ04466.1_Marinobacter_FliF
+|                               |  |  |  |  |  |        |  |  +--| (97.2/97)
+|                               |  |  |  |  |  |        |  |  |  +--CCG94784.1_Marinobacter_FliF
+|                               |  |  |  |  |  |        |  +--| (95.8/87)
+|                               |  |  |  |  |  |        |     +--ADZ92454.1_Marinomonas_FliF
+|                               |  |  |  |  |  |     +--| (97.9/96)
+|                               |  |  |  |  |  |     |  |     +--AAY38489.1_Pseudomonas_FliF
+|                               |  |  |  |  |  |     |  |  +--| (39.4/50)
+|                               |  |  |  |  |  |     |  |  |  +--ABY99820.1_Pseudomonas_FliF
+|                               |  |  |  |  |  |     |  +--| (98.5/96)
+|                               |  |  |  |  |  |     |     +--AAG04490.1_Pseudomonas_FliF
+|                               |  |  |  |  |  |  +--| (75.4/73)
+|                               |  |  |  |  |  |  |  +--QEI19385.1_Cellvibrio_FliF
+|                               |  |  |  |  |  +--| (93.1/91)
+|                               |  |  |  |  |     |        +--EAS78287.1_Vibrio_FliF
+|                               |  |  |  |  |     |     +--| (97/97)
+|                               |  |  |  |  |     |     |  |  +--EEW07867.1_Vibrio_FliF
+|                               |  |  |  |  |     |     |  +--| (99.8/100)
+|                               |  |  |  |  |     |     |     +--BAC62879.1_Vibrio_FliF
+|                               |  |  |  |  |     |  +--| (96.7/82)
+|                               |  |  |  |  |     |  |  |  +--ABV34690.1_Shewanella_FliF
+|                               |  |  |  |  |     |  |  +--| (29.5/53)
+|                               |  |  |  |  |     |  |     +--CAG18477.1_Photobacterium_FliF
+|                               |  |  |  |  |     +--| (99.8/100)
+|                               |  |  |  |  |        |  +--WP_084977082.1_Plesiomonas_FliF
+|                               |  |  |  |  |        +--| (86.6/62)
+|                               |  |  |  |  |           |                 +--EHM37691.1_Hafnia_FliF
+|                               |  |  |  |  |           |              +--| (78.7/73)
+|                               |  |  |  |  |           |              |  |  +--CBG33087.1_Escherichia_FliF
+|                               |  |  |  |  |           |              |  +--| (98.8/99)
+|                               |  |  |  |  |           |              |     +--POT58671.1_Citrobacter_FliF
+|                               |  |  |  |  |           |           +--| (98.2/81)
+|                               |  |  |  |  |           |           |  +--KLP54135.1_Enterobacter_FliF
+|                               |  |  |  |  |           |        +--| (81.5/67)
+|                               |  |  |  |  |           |        |  +--CFQ44276.1_Yersinia_FliF
+|                               |  |  |  |  |           |     +--| (83.4/63)
+|                               |  |  |  |  |           |     |  +--AJJ55407.1_Yersinia_FliF
+|                               |  |  |  |  |           |  +--| (98.2/98)
+|                               |  |  |  |  |           |  |  +--RPH29466.1_Buttiauxella_FliF
+|                               |  |  |  |  |           +--| (66/74)
+|                               |  |  |  |  |              |  +--ATU65965.1_Rhizobacter_FliF
+|                               |  |  |  |  |              +--| (99.8/100)
+|                               |  |  |  |  |                 +--AAQ60668.1_Chromobacterium_FliF
+|                               |  |  |  +--| (95.1/83)
+|                               |  |  |     |  +--QBZ83471.1_Hydrogenovibrio_FliF
+|                               |  |  |     +--| (77.9/75)
+|                               |  |  |        |  +--ABA58817.1_Nitrosococcus_FliF
+|                               |  |  |        +--| (42.1/72)
+|                               |  |  |           +--ACL73050.1_Thioalkalivibrio_FliF
+|                               |  +--| (96.4/95)
+|                               |     |     +--ATU66744.1_Rhizobacter_FliF
+|                               |     |  +--| (89.2/88)
+|                               |     |  |  |  +--APW41625.1_Rhodoferax_FliF
+|                               |     |  |  +--| (76.5/70)
+|                               |     |  |     +--EGI75820.1_Hylemonella_FliF
+|                               |     +--| (66.7/62)
+|                               |        +--UBQ04382.1_Tepidimonas_FliF
+|                            +--| (80.9/63)
+|                            |  +--BAS27497.1_Limnochorda_FliF
+|                         +--| (78.8/29)
+|                         |  |        +--SHJ59096.1_Anaerobranca_FliF
+|                         |  |     +--| (99.9/100)
+|                         |  |     |  +--QNO16415.1_Alkalicella_FliF
+|                         |  |  +--| (90.2/77)
+|                         |  |  |  |  +--OWZ84225.1_Natranaerobius_FliF
+|                         |  |  |  +--| (98.3/99)
+|                         |  |  |     |  +**UMZ73356.1_Natranaerofaba_FliF
+|                         |  |  |     +--| (100/100)
+|                         |  |  |        +**ACB84974.1_Natranaerobius_FliF
+|                         |  +--| (59/23)
+|                         |     |        +--ADL43221.1_Caldicellulosiruptor_FliF
+|                         |     |     +--| (92.5/79)
+|                         |     |     |  +--ABY94911.1_Thermoanaerobacter_FliF
+|                         |     |  +--| (82.8/76)
+|                         |     |  |  +--QAT61603.1_Tissierella_FliF
+|                         |     +--| (83.1/18)
+|                         |        +---ACM22640.1_Thermotoga_FliF
+|                      +--| (95.5/78)
+|                      |  +--AAC07196.1_Aquifex_FliF
+|                   +--| (93/95)
+|                   |  |        +--ACK75069.1_Borreliella_FliF
+|                   |  |     +--| (97.8/95)
+|                   |  |     |  |  +--AAS11733.1_Treponema_FliF
+|                   |  |     |  +--| (39.1/68)
+|                   |  |     |     +--AAC65387.1_Treponema_FliF
+|                   |  |  +--| (99.2/99)
+|                   |  |  |  +--AEM21723.1_Brachyspira_FliF
+|                   |  +--| (92.8/95)
+|                   |     |  +--EKT86534.2_Leptospira_FliF
+|                   |     +--| (99.8/100)
+|                   |        +--ABZ96871.1_Leptospira_FliF
+|                +--| (91.9/58)
+|                |  |            +--BAC13844.1_Oceanobacillus_SpoIIIAG
+|                |  |         +--| (93.5/77)
+|                |  |         |  |           +--BAD40841.1_Symbiobacterium_SpoIIIAG
+|                |  |         |  |        +--| (85.5/76)
+|                |  |         |  |        |  |  +--ACB85281.1_Natranaerobius_SpoIIIAG
+|                |  |         |  |        |  +--| (83.7/81)
+|                |  |         |  |        |     |     +--BAS28431.1_Limnochorda_SpoIIIAG
+|                |  |         |  |        |     |  +--| (0/39)
+|                |  |         |  |        |     |  |  +--QAT61769.1_Tissierella_SpoIIIAG
+|                |  |         |  |        |     +--| (17.3/62)
+|                |  |         |  |        |        +-----AUO18621.1_Monoglobus_SpoIIIAG
+|                |  |         |  |     +--| (75.6/50)
+|                |  |         |  |     |  |     +--AAS43161.1_Bacillus_SpoIIIAG
+|                |  |         |  |     |  |  +--| (87.8/73)
+|                |  |         |  |     |  |  |  |        +--BAD65007.1_Alkalihalobacillus_SpoIIIAG
+|                |  |         |  |     |  |  |  |     +--| (45/50)
+|                |  |         |  |     |  |  |  |     |  |  +--WP_061948746.1_Alkalihalobacillus_SpoIIIAG
+|                |  |         |  |     |  |  |  |     |  +--| (86.2/78)
+|                |  |         |  |     |  |  |  |     |     +--EEG78331.1_Dethiobacter_SpoIIIAG
+|                |  |         |  |     |  |  |  |  +--| (49.2/53)
+|                |  |         |  |     |  |  |  |  |  +--AAU41482.1_Bacillus_SpoIIIAG
+|                |  |         |  |     |  |  |  +--| (97.2/89)
+|                |  |         |  |     |  |  |     +--KGA97906.1_Alkalihalobacillus_SpoIIIAG
+|                |  |         |  |     |  +--| (94.3/88)
+|                |  |         |  |     |     |  +--AJH78041.1_Weizmannia_SpoIIIAG
+|                |  |         |  |     |     +--| (54.8/60)
+|                |  |         |  |     |        +--WP_010965387.1_Clostridium_SpoIIIAG
+|                |  |         |  |  +--| (83.2/56)
+|                |  |         |  |  |  +--ACL21528.1_Desulfitobacterium_SpoIIIAG
+|                |  |         |  +--| (75.4/52)
+|                |  |         |     |     +--SHJ67115.1_Anaerobranca_SpoIIIAG
+|                |  |         |     |  +--| (88.9/92)
+|                |  |         |     |  |  +--QNO16150.1_Alkalicella_SpoIIIAG
+|                |  |         |     +**| (0/24)
+|                |  |         |        +-----------WP_008404262.1_Solibacillus_SpoIIIAG
+|                |  |      +--| (60.2/75)
+|                |  |      |  +--BAD76687.1_Geobacillus_SpoIIIAG
+|                |  +------| (99.9/100)
+|                |         |  +--AAO36130.1_Clostridium_SpoIIIAG
+|                |         +--| (64.5/54)
+|                |            +--ACL69380.1_Halothermothrix_SpoIIIAG
+|             +--| (61.7/4)
+|             |  +--BAD64804.1_Alkalihalobacillus_FliF
+|          +--| (82.2/8)
+|          |  |              +--WP_014824491.1_Solibacillus_FliF
+|          |  |           +--| (62.1/71)
+|          |  |           |  +--WP_066170015.1_Metasolibacillus_FliF
+|          |  |        +--| (91.8/73)
+|          |  |        |  |     +--WP_053417471.1_Viridibacillus_FliF
+|          |  |        |  |  +--| (28.3/55)
+|          |  |        |  |  |  |  +--WP_041074053.1_Bacillus_FliF
+|          |  |        |  |  |  +--| (89.5/84)
+|          |  |        |  |  |     |  +--WP_105928922.1_Lysinibacillus_FliF
+|          |  |        |  |  |     +--| (98.4/99)
+|          |  |        |  |  |        +--WP_036123974.1_Lysinibacillus_FliF
+|          |  |        |  +--| (90.6/66)
+|          |  |        |     +--WP_151699469.1_Psychrobacillus_FliF
+|          |  |     +--| (83.6/76)
+|          |  |     |  +--WP_096550656.1_Ureibacillus_FliF
+|          |  |  +--| (97.4/96)
+|          |  |  |  +--AAU40736.1_Bacillus_FliF
+|          |  +--| (86.7/32)
+|          |     |  +--KGA98254.1_Alkalihalobacillus_FliF
+|          |     +--| (87.6/36)
+|          |        |  +--BAB06177.1_Halalkalibacterium_FliF
+|          |        +--| (74.1/79)
+|          |           +--ADC48108.1_Alkalihalophilus_FliF
++----------| (100/100)
+|          +--BAC13511.1_Oceanobacillus_FliF
+|
++--AVM87899.1_Chlamydia_T3SS
+
+Tree in newick format:
+
+(AAC68314.1_Chlamydia_FliF:0.0000028752,((((((((((((((((((((((ACL65896.1_Anaeromyxobacter_FliF:0.1692975286,SHK75940.1_Desulfatibacillum_FliF:0.0881050979)89.5/72:0.0417290795,ACN16787.1_Desulforapulum_FliF:0.1122784981)71.2/58:0.0278315260,((AGC50281.1_Lawsonia_FliF:0.0857014365,BAH77996.1_Solidesulfovibrio_FliF:0.0949152132)25.7/54:0.0229072547,(AAS94796.1_Desulfovibrio_FliF:0.0869897513,WP_011366492.1_Oleidesulfovibrio_FliF:0.0580145724)93.5/81:0.0380714337)98.7/96:0.0585130339)55.8/47:0.0152841149,(CAG37385.1_Desulfotalea_FliF:0.1665253951,ALA58335.1_Nitrospira_FliF:0.0446958297)92.8/82:0.0250949254)88.9/63:0.0229291339,(BCB96474.1_Dissulfurispira_FliF:0.1090454705,ACI21849.1_Thermodesulfovibrio_FliF:0.0469023933)99.1/98:0.0499112543)95.8/79:0.0371984833,(AGH96362.1_Pseudobdellovibrio_FliF:0.0903105606,AHZ83763.1_Bdellovibrio_FliF:0.0486509155)100/100:0.0788050562)24.4/26:0.0113681207,((ATX78584.1_Mariprofundus_FliF:0.0439903370,ATX82919.1_Mariprofundus_FliF:0.0794546269)99.8/100:0.1001332607,ABI78744.1_Hyphomonas_FliF:0.2369708880)96.9/88:0.0501978072)92.7/61:0.0248632533,((((ABS63798.1_Parvibaculum_FliF:0.0438575680,AEP09101.1_Micavibrio_FliF:0.1670326384)97.8/87:0.0627340856,(CDL00846.1_Magnetospirillum_FliF:0.0950474823,AEI88715.1_Candidatus_FliF:0.1567520545)70.5/62:0.0235470326)79.3/63:0.0200322886,((AEO47029.1_Rhodospirillum_FliF:0.0806454203,ABC45369.1_Salinibacter_FliF:0.1706647570)85.5/85:0.0378237005,(ABK42796.1_Magnetococcus_FliF:0.1335042451,(BAM05992.1_Leptospirillum_FliF:0.0795867683,CCW35059.1_Chthonomonas_FliF:0.3062552524)94.5/93:0.0629608377)85.3/81:0.0356622663)69/47:0.0075549310)98.3/97:0.0518184851,((AHK70359.1_Gluconobacter_FliF:0.2190129150,BAE49307.1_Magnetospirillum_T3SS:0.0381479036)83.2/73:0.0168775934,(ACL94415.1_Caulobacter_FliF:0.0894636168,ADL02120.1_Brevundimonas_FliF:0.0779810778)99/99:0.0553250312)93.3/80:0.0250917073)94.3/77:0.0358365870)84.4/56:0.0136077395,(ACB73714.1_Opitutus_FliF:0.0819065179,ATC63675.1_Nibricoccus_FliF:0.1595736377)99.9/99:0.1113710691)95.9/86:0.0324925374,((((ACV67866.1_Desulfohalobium_FliF:0.1294447225,ABA88441.1_Syntrophotalea_FliF:0.0714936440)97.8/100:0.0540022149,EEG76529.1_Dethiobacter_FliF:0.2453787482)81.2/70:0.0289612637,RJP61224.1_Candidatus_FliF:0.1123568406)97.3/87:0.0355753600,((ACL70438.1_Halothermothrix_FliF:0.0768314062,ACL22158.1_Desulfitobacterium_FliF:0.2371772892)83.6/75:0.0377879854,(EGO63145.1_Acetonema_FliF:0.1312588325,ACZ19568.1_Thermanaerovibrio_FliF:0.1225270791)83/81:0.0511794161)80.4/51:0.0191954085)91/62:0.0161607859)87.7/50:0.0141892480,(((ABC76851.1_Syntrophus_FliF:0.0829563757,(OSS41621.1_Desulfurella_FliF:0.1290860623,(((ALF48087.1_Campylobacter_FliF:0.0733204877,(AOO64056.1_Sulfurospirillum_FliF:0.0675751368,ACM93021.1_Nautilia_FliF:0.0654140662)53.2/69:0.0247073446)25.9/57:0.0227726466,CAE11001.1_Wolinella_FliF:0.0478819703)77/81:0.0402213299,ADN09694.1_Sulfurimonas_FliF:0.1077852422)49.6/66:0.0171238604)96.1/95:0.0433352612)89.9/77:0.0192996692,((AAR33742.1_Geobacter_FliF:0.0638760769,ACH40830.1_Citrifermentans_FliF:0.0872758314)98.5/100:0.0575241890,(BAH37373.1_Gemmatimonas_FliF:0.1068975270,QJR36449.1_Gemmatimonas_FliF:0.0939126142)99.9/100:0.0989562602)92.3/74:0.0218300814)85.4/74:0.0208811981,(ATU63999.1_Rhizobacter_FliF:0.2524018045,ADC89287.1_Thermocrinis_FliF:0.1064922247)96.3/89:0.0812366063)71.5/52:0.0315242378)90.8/66:0.0203486132,((((((((AIQ89829.1_Methylobacterium_FliF:0.1912062861,BAL07813.1_Bradyrhizobium_FliF:0.0356465468)88.7/89:0.0473418137,ABQ62358.1_Brucella_FliF:0.0688340168)100/100:0.1457682926,AFL88119.1_Terriglobus_FliF:0.1225602053)92.9/91:0.0528242444,BAD41986.1_Symbiobacterium_FliF:0.2778066362)93.2/90:0.0493494596,ACO32668.1_Acidobacterium_FliF:0.1461129426)92.2/86:0.0260909821,(QOY89262.1_Paludibaculum_FliF:0.1300956216,QOY88876.1_Paludibaculum_FliF:0.1063272896)99/99:0.0646119507)24.9/48:0.0084731522,USF24605.1_Mucispirillum_FliF:0.1499369177)96.9/88:0.0389948431,(QAR34056.1_Geovibrio_FliF:0.1187519675,ADD69076.1_Denitrovibrio_FliF:0.0659727127)94/89:0.0425695708)92.3/79:0.0245476812)0.3/49:0.0236296892,(ADG94151.1_Arcobacter_FliF:0.2854151540,(AAO36212.1_Clostridium_FliF:0.0919598523,WP_010965461.1_Clostridium_FliF:0.1401460556)92.9/89:0.0455320400)74.8/69:0.0456862095)76.6/45:0.0222887569,((((((((((ACT13606.1_Pectobacterium_FliF:0.0517044641,(CFQ36607.1_Yersinia_FliF:0.0166360084,AJJ56339.1_Yersinia_FliF:0.0231209491)55/72:0.0178292907)59.8/62:0.0150032605,(((RPH26529.1_Buttiauxella_FliF:0.0439438240,CBJ47254.1_Erwinia_FliF:0.0609235585)84.7/82:0.0184849945,(((POT54770.1_Citrobacter_FliF:0.0472001702,CFQ36177.1_Yersinia_FliF:0.0456237812)2.1/54:0.0140483182,(ORN02599.1_Pantoea_FliF:0.0000025038,KGT93339.1_Erwinia_FliF:0.0000024829)99.8/100:0.0872546557)76.9/79:0.0233902488,(TCV95562.1_Biostraticola_FliF:0.0363016404,(AHF75271.1_Sodalis_FliF:0.0472759570,AFA40924.1_Wigglesworthia_FliF:0.0791969730)71.4/76:0.0274420296)87.1/79:0.0142789001)94.1/88:0.0193360240)96.3/95:0.0332382767,(QXB11719.1_Klebsiella_FliF:0.0418425481,KFD13219.1_Serratia_FliF:0.0531595484)89.5/83:0.0160009651)93.2/73:0.0301265511)31.8/32:0.0132428432,AHF75751.1_Sodalis_FliF:0.0621767835)86.3/77:0.0229803988,ARU98306.1_Tatumella_FliF:0.0735079536)54.9/36:0.0105964437,WP_015871707.1_Edwardsiella_FliF:0.0524551417)91.4/56:0.0159391009,((((((((KLP57552.1_Enterobacter_FliF:0.0221332917,KLR25735.1_Enterobacter_FliF:0.0225562354)99.4/97:0.0355501642,((AAO68586.1_Salmonella_FliF:0.0148760628,AAL20881.1_Salmonella_FliF:0.0219294902)35.2/57:0.0171296642,POT59441.1_Citrobacter_FliF:0.0259806373)73.3/83:0.0186432928)71.9/68:0.0085941910,QKY95803.1_Shigella_FliF:0.0181194467)96.9/89:0.0259121801,RPH21571.1_Buttiauxella_FliF:0.0211909769)46.2/34:0.0155731750,CCJ72125.1_Cronobacter_FliF:0.0294691047)73.9/73:0.0171781952,(KGT96016.1_Erwinia_FliF:0.0326048373,CBJ46171.1_Erwinia_FliF:0.0343047872)91.1/78:0.0194915151)64.1/80:0.0207376571,(AOM39532.1_Xenorhabdus_FliF:0.0793852818,EHM41863.1_Hafnia_FliF:0.0491189665)94.6/81:0.0346404092)20.7/33:0.0081984470,(BAB12793.1_Buchnera_FliF:0.0911543650,AAM67637.1_Buchnera_FliF:0.0647263640)97.6/99:0.0462176706)92.1/65:0.0153873118)94/75:0.0240680302,((CAJ49324.1_Bordetella_FliF:0.0687563274,AAZ97553.1_Thiobacillus_FliF:0.0738108214)91.5/86:0.0213729942,((CAH34218.1_Burkholderia_FliF:0.0385296161,ABC37528.1_Burkholderia_FliF:0.0496926889)98.4/99:0.0354284305,AAU48881.1_Burkholderia_FliF:0.0189823614)99.1/99:0.0445928232)89.8/80:0.0213873903)90.4/65:0.0192331533,((AGG30848.1_Morganella_FliF:0.0730184132,(ADE10838.1_Sideroxydans_FliF:0.0925795541,AAQ60803.1_Chromobacterium_FliF:0.1265151673)96.4/89:0.0519262597)64.4/45:0.0262376579,((CAQ72721.1_Cupriavidus_FliF:0.1107610149,ABE50245.1_Methylobacillus_FliF:0.0933086204)38.8/58:0.0198852130,ACT47836.1_Methylotenera_FliF:0.0779928438)85.9/72:0.0262128176)94.6/50:0.0285645414)96.5/79:0.0351981469,((((((((((((((AAW86347.1_Aliivibrio_FliF:0.0954526539,EAS77894.1_Vibrio_FliF:0.0544146207)93/73:0.0263515774,(QEO40727.1_Vibrio_FliF:0.0000010471,AAF95278.1_Vibrio_FliF:0.0000010471)96.7/100:0.0245025356)47.9/48:0.0100244607,(EEW06433.1_Vibrio_FliF:0.0309559855,BAC95245.1_Vibrio_FliF:0.0845690373)93.4/78:0.0307864652)90.3/79:0.0227413005,(GAA03515.1_Photobacterium_FliF:0.0806036267,CAG19334.1_Photobacterium_FliF:0.0618862082)98.1/96:0.0401825094)90.8/78:0.0229674648,(EPE37900.1_Candidatus_FliF:0.0736982420,(AVQ87012.1_Plesiomonas_FliF:0.0000010471,WP_084977171.1_Plesiomonas_FliF:0.0000010471)99.9/100:0.0931335403)22/53:0.0252756126)95.3/92:0.0405156938,EAR29538.1_Pseudoalteromonas_FliF:0.0479819714)86.1/87:0.0326442844,((AAZ28086.1_Colwellia_FliF:0.1024325075,GAC24878.1_Paraglaciecola_FliF:0.0986218980)45.2/56:0.0254973717,AEP30462.1_Glaciecola_FliF:0.0436362312)85.3/68:0.0281080015)88.9/55:0.0138604505,((ABK38602.1_Aeromonas_FliF:0.0348988779,(ATP10457.1_Aeromonas_FliF:0.0451407105,EKB19994.1_Aeromonas_FliF:0.0398852616)97.8/98:0.0457945555)29/50:0.0117859451,QCG47664.1_Aeromonas_FliF:0.0244597827)96.1/95:0.0223897693)73.1/55:0.0141905394,((((UXK10552.1_Shewanella_FliF:0.0384035164,AAN56227.2_Shewanella_FliF:0.0595337002)92.9/66:0.0166447026,ABV37670.1_Shewanella_FliF:0.0449036891)72.5/57:0.0214689919,BAJ01403.1_Shewanella_FliF:0.0232166260)93.9/94:0.0274391213,(EHR42289.1_Alishewanella_FliF:0.0694833345,((((QDU26973.1_Anatilimnocola_FliF:0.0700862101,ADB18987.1_Pirellula_T3SS:0.0862495334)90.9/82:0.0439678161,QDU93976.1_Lignipirellula_FliF:0.1472470929)87.7/80:0.0699614925,ADY60058.1_Rubinisphaera_T3SS_YscJ:0.2658058376)56/72:0.0815020329,CAD75367.1_Rhodopirellula_FliF:0.2656626010)100/100:0.3334849768)36.7/45:0.0132365799)80.7/59:0.0273449943)92/91:0.0547659796,(EGW20512.1_Methylobacter_FliF:0.0480343356,(AAS40694.1_Bacillus_FliF:0.3254816513,(((((((((QEO41070.1_Vibrio_T3SS:0.5501504324,((WP_066786653.1_Rummeliibacillus_SpoIIIAH:0.0000019950,WP_102691387.1_Rummeliibacillus_SpoIIIAH:0.0000010471)94.5/100:0.1190543521,WP_053416284.1_Viridibacillus_SpoIIIAH:0.0643577251)52.6/68:0.0538375254)0/59:0.0000020839,WP_024361187.1_Lysinibacillus_SpoIIIAH:0.0000020221)79.3/50:0.0154652367,(((((((((WP_006059104.1_Holdemania_SpoIIIAH:0.5751176652,(WP_002609025.1_Bacillota_SpoIIIAH:0.1012016071,WP_008688524.1_Longicatena_SpoIIIAH:0.1448761860)88.8/95:0.2358857733)60.3/31:0.0907534229,WP_008789692.1_Coprobacillus_SpoIIIAH:0.1922522299)78.3/29:0.0790293534,(WP_004609799.1_Thomasclavelia_SpoIIIAH:0.0805420613,WP_003538299.1_Thomasclavelia_SpoIIIAH:0.0984110640)90.4/61:0.1448366197)89.6/81:0.1360805420,APC08738.1_Moorella_SpoIIIAH:0.2775857030)70.7/38:0.0413986575,AJH78695.1_Weizmannia_SpoIIIAH:0.1080636784)82.2/38:0.0485946442,BAC13843.1_Oceanobacillus_SpoIIIAH:0.2202909083)90.7/59:0.0959856420,WP_134209598.1_Paenisporosarcina_SpoIIIAH:0.1222201946)0/18:0.0000023373,WP_092051140.1_Bhargavaea_SpoIIIAH:0.0454462625)78.8/30:0.0225455469,(((WP_008404261.1_Solibacillus_SpoIIIAH:0.1635922921,WP_096550966.1_Ureibacillus_SpoIIIAH:0.1565071803)81.6/61:0.0506571808,BAD65006.1_Alkalihalobacillus_SpoIIIAH:0.2999072398)48.4/29:0.0095959443,(WP_076757704.1_Edaphobacillus_SpoIIIAH:0.1265323624,WP_041075074.1_Bacillus_SpoIIIAH:0.0995869526)90.9/83:0.0698752013)86.4/53:0.0444908350)87.2/48:0.0459064691)78.9/37:0.0208347019,((WP_061948745.1_Alkalihalobacillus_SpoIIIAH:0.1559900817,AAS43160.1_Bacillus_SpoIIIAH:0.2033048594)92.1/96:0.1565511868,BAD76686.1_Geobacillus_SpoIIIAH:0.0655095529)90.6/70:0.0967236417)64.7/14:0.0122243557,((WP_066163660.1_Metasolibacillus_SpoIIIAH:0.0000022866,AAU41481.1_Bacillus_SpoIIIAH:0.4313076843)60.4/66:0.0691334411,WP_008179871.1_Bacteria_SpoIIIAH:0.0962393886)0/34:0.0000029042)45/49:0.0168828640,WP_151700324.1_Psychrobacillus_SpoIIIAH:0.0456936276)98.6/85:0.1485109587,((((AUO18622.1_Monoglobus_SpoIIIAF:0.7470709229,AUO18620.1_Monoglobus_SpoIIIAH:0.3141790013)76.3/56:0.1052941654,(WP_010965386.1_Clostridium_SpoIIIAH:0.1833348682,(SHJ67084.1_Anaerobranca_SpoIIIAH:0.0240226781,QNO16151.1_Alkalicella_SpoIIIAH:0.1293753123)93.7/92:0.1005017394)75.9/48:0.0227255756)92.6/86:0.1227678457,BAD40840.1_Symbiobacterium_SpoIIIAH:0.0253768279)71.5/50:0.0486142156,UMZ73956.1_Natranaerofaba_SpoIIIAH:0.3552839872)75.3/52:0.0318866378)87.4/78:0.0776052925,((BAD40842.1_Symbiobacterium_SpoIIIAF:0.5741553035,(APC08740.1_Moorella_SpoIIIAF:0.3106454748,((((WP_061948747.1_Alkalihalobacillus_SpoIIIAF:0.4306818238,AJH79882.1_Weizmannia_SpoIIIAF:0.4389926867)94.7/96:0.4254058029,(((BAC13845.1_Oceanobacillus_SpoIIIAF:1.0293456599,ATO50947.1_Brevibacillus_SpoIIIAF:0.8770070707)65.3/72:0.3127991219,(ACB85282.1_Natranaerobius_SpoIIIAF:0.1136206820,QAT61770.1_Tissierella_SpoIIIAF:0.4968725047)44.2/68:0.1021274840)56.1/55:0.0375862332,OWZ84026.1_Natranaerobius_SpoIIIAF:0.3087299008)94.1/86:0.2310980956)22.4/42:0.0551367945,ALU37542.1_Clostridium_SpoIIIAF:0.2979683243)76.3/55:0.0603320768,(ACL69379.1_Halothermothrix_SpoIIIAF:0.7335542410,(SHJ67143.1_Anaerobranca_SpoIIIAF:0.2878547624,QNO16149.1_Alkalicella_SpoIIIAF:0.2247508491)85.8/90:0.2160896524)83.4/76:0.2201280147)59.7/50:0.1255402462)82/60:0.1168553791)36.6/55:0.0511289667,EGO63622.1_Acetonema_SpoIIIAF:0.3683338481)94.9/90:0.1869387142)98.3/100:0.2104726734,(((((CCB86648.1_Parachlamydia_T3SS:0.0796685668,CCB85093.1_Parachlamydia_T3SS:0.0991387231)96.2/98:0.1219446527,(AAC68161.1_Chlamydia_T3SS_YscJ:0.0221182313,AVM88570.1_Chlamydia_T3SS_YscJ_HrcJ:0.0772123924)98.1/100:0.1348586252)98.5/99:0.1437208281,(((((EDR30632.1_Yersinia_T3SS:0.0000026106,AJJ53162.1_Yersinia_T3SS_YscJ_HrcJ:0.0000027223)98.6/100:0.0969785803,AAG05112.1_Pseudomonas_T3SS:0.1319602412)97.6/98:0.1028764066,(((((CBJ47559.1_Erwinia_T3SS:0.0985319292,KGT90338.1_Erwinia_T3SS:0.0340396964)77/77:0.0421637809,AAY36249.1_Pseudomonas_T3SS_YscJ_HrcJ:0.1511854378)91.3/95:0.0609428519,ADZ90362.1_Marinomonas_T3SS_YscJ_HrcJ:0.0941410051)95.6/99:0.1035130133,(WP_015870333.1_Edwardsiella_T3SS_SctJ:0.0836853327,AAQ60258.1_Chromobacterium_T3SS:0.1366111950)85.7/83:0.0437765715)84.6/78:0.0462482126,AHF76786.1_Sodalis_T3SS:0.0913123848)73.7/63:0.0615651094)76.1/60:0.0211651209,(((((ABF88125.1_Myxococcus_T3SS_YscJ_HrcJ:0.0760520787,ADO70830.1_Stigmatella_T3SS_YscJ_HrcJ:0.0900680471)100/100:0.2727535525,CAQ71857.1_Cupriavidus_T3SS_SctJ:0.1626507739)86.9/79:0.0523659577,((AGC49958.1_Lawsonia_T3SS:0.1054558933,AAS94345.1_Desulfovibrio_T3SS:0.0845396013)76.7/77:0.0714405035,AGC50595.1_Lawsonia_T3SS_YscJ_HrcJ:0.0822896116)97.7/100:0.1071605022)96.8/94:0.0968060036,BAJ02212.1_Shewanella_T3SS:0.1613422002)93.2/69:0.0557798407,(((CFQ38428.1_Yersinia_T3SS:0.1753675760,EDR34178.1_Yersinia_T3SS_YscJ_HrcJ:0.0116522562)36/44:0.0191746927,AJJ56869.1_Yersinia_T3SS_YscJ_HrcJ:0.0347839747)97.6/90:0.0970111795,BAC59953.1_Vibrio_T3SS:0.1333561648)93.8/88:0.0644660380)96.3/75:0.0783839379)68.5/22:0.0303762082,((ACL64098.1_Anaeromyxobacter_T3SS_YscJ:0.2658260190,QTD51128.1_Sulfidibacter_T3SS_SctJ:0.1139463212)88.3/87:0.0550973251,(CAH39099.1_Burkholderia_T3SS:0.1173865386,(CAH38872.1_Burkholderia_T3SS:0.0986681748,ATU65453.1_Rhizobacter_T3SS_YscJ_HrcJ:0.1203429325)58.6/64:0.0453052592)88.9/79:0.0664100849)91.4/77:0.0404180303)89.8/80:0.0464359302)91.6/77:0.0693774407,(((CAH39023.1_Burkholderia_T3SS:0.0431895210,ABC34345.1_Burkholderia_T3SS:0.0481662563)93.7/100:0.0580072061,((CBJ47346.1_Erwinia_T3SS:0.1356236867,CBJ46227.1_Erwinia_T3SS:0.0708695768)86.2/35:0.0556055748,AHF78198.1_Sodalis_T3SS:0.1234550848)98.6/96:0.1251116542)92.2/21:0.0506282635,(((AHF75698.1_Sodalis_T3SS:0.0647071572,TCV96683.1_Biostraticola_T3SS:0.1094751243)96.1/91:0.0861448214,CBG35883.1_Escherichia_T3SS:0.1080366017)92.2/49:0.0555447275,(AGG29087.1_Morganella_T3SS_HrcJ:0.2306332208,POT59516.1_Citrobacter_T3SS_YscJ_HrcJ:0.0996329431)92.2/84:0.0511248697)74.8/16:0.0328710119)98/99:0.1328362462)67.6/30:0.0802597879,((AFE09625.1_Corallococcus_T3SS:0.1371483191,ABF88690.1_Myxococcus_T3SS:0.0454174627)92.3/97:0.0551743465,ADO74089.1_Stigmatella_T3SS:0.0456520065)98/99:0.1284148167)82.5/75:0.0689005079)95.1/98:0.1581317836)80.3/63:0.0968153043)91.3/62:0.0436204859)79.7/26:0.0129587022,AAZ97041.1_Thiobacillus_T3SS:0.1669170043)67.5/17:0.0361622430,(((AGI74751.1_Octadecabacter_FliF:0.1340547274,QNQ09320.1_Sphingomonas_FliF:0.0754845159)25.8/60:0.0441040244,ACV75177.1_Zymomonas_FliF:0.1795896657)52.3/77:0.0412616844,(ADE39075.1_Candidatus_FliF:0.1463043853,AOU49298.1_Legionella_FliF:0.1166548879)97/92:0.0640754779)58.7/18:0.0273220598)93.4/71:0.0336219672,((((ABD81448.1_Saccharophagus_FliF:0.0794926781,((EHJ04466.1_Marinobacter_FliF:0.0509593291,CCG94784.1_Marinobacter_FliF:0.0819325210)97.2/97:0.0411833026,ADZ92454.1_Marinomonas_FliF:0.0464210948)95.8/87:0.0418370929)38/58:0.0250932124,((AAY38489.1_Pseudomonas_FliF:0.0407442233,ABY99820.1_Pseudomonas_FliF:0.0450922187)39.4/50:0.0167859549,AAG04490.1_Pseudomonas_FliF:0.0799676226)98.5/96:0.0463674748)97.9/96:0.0547312487,QEI19385.1_Cellvibrio_FliF:0.1051681308)75.4/73:0.0311057523,(((EAS78287.1_Vibrio_FliF:0.0246031867,(EEW07867.1_Vibrio_FliF:0.0766904782,BAC62879.1_Vibrio_FliF:0.0350990902)99.8/100:0.0793710375)97/97:0.0656158377,(ABV34690.1_Shewanella_FliF:0.1438498759,CAG18477.1_Photobacterium_FliF:0.1434736150)29.5/53:0.0248422174)96.7/82:0.0486167806,(WP_084977082.1_Plesiomonas_FliF:0.1208421665,((((((EHM37691.1_Hafnia_FliF:0.1068121495,(CBG33087.1_Escherichia_FliF:0.0872697656,POT58671.1_Citrobacter_FliF:0.1317755253)98.8/99:0.0808959810)78.7/73:0.0424376069,KLP54135.1_Enterobacter_FliF:0.0628351727)98.2/81:0.0484192589,CFQ44276.1_Yersinia_FliF:0.0299142766)81.5/67:0.0280143488,AJJ55407.1_Yersinia_FliF:0.0736881632)83.4/63:0.0313984097,RPH29466.1_Buttiauxella_FliF:0.0640855919)98.2/98:0.0671425359,(ATU65965.1_Rhizobacter_FliF:0.0894600947,AAQ60668.1_Chromobacterium_FliF:0.0691779069)99.8/100:0.1035775810)66/74:0.0280861072)86.6/62:0.0272140532)99.8/100:0.1013383197)93.1/91:0.0304297749)0/47:0.0138720121,(QBZ83471.1_Hydrogenovibrio_FliF:0.1676382542,(ABA58817.1_Nitrosococcus_FliF:0.0860577426,ACL73050.1_Thioalkalivibrio_FliF:0.0876046405)42.1/72:0.0428086212)77.9/75:0.0401367304)95.1/83:0.0230152806)90.3/67:0.0235039942,((ATU66744.1_Rhizobacter_FliF:0.0818906407,(APW41625.1_Rhodoferax_FliF:0.0802617421,EGI75820.1_Hylemonella_FliF:0.0482163114)76.5/70:0.0296359127)89.2/88:0.0313406324,UBQ04382.1_Tepidimonas_FliF:0.1122349043)66.7/62:0.0369036359)96.4/95:0.0454493973)79.8/76:0.0418678779,BAS27497.1_Limnochorda_FliF:0.1436638150)80.9/63:0.0322504701,(((SHJ59096.1_Anaerobranca_FliF:0.0746794028,QNO16415.1_Alkalicella_FliF:0.0888567768)99.9/100:0.1051031250,(OWZ84225.1_Natranaerobius_FliF:0.1005848978,(UMZ73356.1_Natranaerofaba_FliF:0.0000024126,ACB84974.1_Natranaerobius_FliF:0.0000026306)100/100:0.1728054465)98.3/99:0.0912617629)90.2/77:0.0322888819,(((ADL43221.1_Caldicellulosiruptor_FliF:0.2529162857,ABY94911.1_Thermoanaerobacter_FliF:0.1535062525)92.5/79:0.0476906866,QAT61603.1_Tissierella_FliF:0.2235891902)82.8/76:0.0501842345,ACM22640.1_Thermotoga_FliF:0.2980126145)83.1/18:0.0187337499)59/23:0.0282785460)78.8/29:0.0380636970,AAC07196.1_Aquifex_FliF:0.1282688279)95.5/78:0.0601645228,(((ACK75069.1_Borreliella_FliF:0.1184739677,(AAS11733.1_Treponema_FliF:0.0890866381,AAC65387.1_Treponema_FliF:0.2020327822)39.1/68:0.0267970387)97.8/95:0.0741862399,AEM21723.1_Brachyspira_FliF:0.1609219714)99.2/99:0.1010905514,(EKT86534.2_Leptospira_FliF:0.0911537573,ABZ96871.1_Leptospira_FliF:0.0980231883)99.8/100:0.1241831142)92.8/95:0.0931126320)93/95:0.0988436921,(((BAC13844.1_Oceanobacillus_SpoIIIAG:0.0390487165,((((BAD40841.1_Symbiobacterium_SpoIIIAG:0.1163454103,(ACB85281.1_Natranaerobius_SpoIIIAG:0.1106216998,((BAS28431.1_Limnochorda_SpoIIIAG:0.2198747681,QAT61769.1_Tissierella_SpoIIIAG:0.0705509608)0/39:0.0701253955,AUO18621.1_Monoglobus_SpoIIIAG:0.4549566722)17.3/62:0.0202732612)83.7/81:0.0354823204)85.5/76:0.0354585278,((AAS43161.1_Bacillus_SpoIIIAG:0.0489981338,(((BAD65007.1_Alkalihalobacillus_SpoIIIAG:0.0596313185,(WP_061948746.1_Alkalihalobacillus_SpoIIIAG:0.0758771328,EEG78331.1_Dethiobacter_SpoIIIAG:0.0541074641)86.2/78:0.0383695488)45/50:0.0196998913,AAU41482.1_Bacillus_SpoIIIAG:0.0795307298)49.2/53:0.0202315079,KGA97906.1_Alkalihalobacillus_SpoIIIAG:0.0306147392)97.2/89:0.0643091180)87.8/73:0.0306382795,(AJH78041.1_Weizmannia_SpoIIIAG:0.0828209595,WP_010965387.1_Clostridium_SpoIIIAG:0.0844049005)54.8/60:0.0291365420)94.3/88:0.0411369031)75.6/50:0.0102727145,ACL21528.1_Desulfitobacterium_SpoIIIAG:0.1051475036)83.2/56:0.0190379278,((SHJ67115.1_Anaerobranca_SpoIIIAG:0.0813086404,QNO16150.1_Alkalicella_SpoIIIAG:0.0873738831)88.9/92:0.0577022431,WP_008404262.1_Solibacillus_SpoIIIAG:0.8729002218)0/24:0.0000021511)75.4/52:0.0097252358)93.5/77:0.0376076297,BAD76687.1_Geobacillus_SpoIIIAG:0.0612261947)60.2/75:0.0083236783,(AAO36130.1_Clostridium_SpoIIIAG:0.1333219365,ACL69380.1_Halothermothrix_SpoIIIAG:0.0880385446)64.5/54:0.0152909591)99.9/100:0.5170217630)91.9/58:0.0642811005,BAD64804.1_Alkalihalobacillus_FliF:0.1338638137)61.7/4:0.0365406814,(((((WP_014824491.1_Solibacillus_FliF:0.0871902959,WP_066170015.1_Metasolibacillus_FliF:0.0801408409)62.1/71:0.0291935581,((WP_053417471.1_Viridibacillus_FliF:0.2205783429,(WP_041074053.1_Bacillus_FliF:0.1333088053,(WP_105928922.1_Lysinibacillus_FliF:0.0162578466,WP_036123974.1_Lysinibacillus_FliF:0.1189166011)98.4/99:0.0455363734)89.5/84:0.0288197896)28.3/55:0.0179194481,WP_151699469.1_Psychrobacillus_FliF:0.1154810655)90.6/66:0.0237545208)91.8/73:0.0288582625,WP_096550656.1_Ureibacillus_FliF:0.1265911960)83.6/76:0.0473424294,AAU40736.1_Bacillus_FliF:0.0828863857)97.4/96:0.0532074106,(KGA98254.1_Alkalihalobacillus_FliF:0.0961032070,(BAB06177.1_Halalkalibacterium_FliF:0.0594166794,ADC48108.1_Alkalihalophilus_FliF:0.0776806326)74.1/79:0.0446788364)87.6/36:0.0396071849)86.7/32:0.0337555017)82.2/8:0.0699395425,BAC13511.1_Oceanobacillus_FliF:0.0812508952)100/100:0.7971675029,AVM87899.1_Chlamydia_T3SS:0.0338249816);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -53505.276149
+Robinson-Foulds distance between ML tree and consensus tree: 34
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--AAC68314.1_Chlamydia_FliF
+|
+|                                                                     +--ACL65896.1_Anaeromyxobacter_FliF
+|                                                                  +--| (72)
+|                                                                  |  +--SHK75940.1_Desulfatibacillum_FliF
+|                                                               +--| (58)
+|                                                               |  +--ACN16787.1_Desulforapulum_FliF
+|                                                            +--| (47)
+|                                                            |  |     +--AGC50281.1_Lawsonia_FliF
+|                                                            |  |  +--| (54)
+|                                                            |  |  |  +--BAH77996.1_Solidesulfovibrio_FliF
+|                                                            |  +--| (96)
+|                                                            |     |  +--AAS94796.1_Desulfovibrio_FliF
+|                                                            |     +--| (81)
+|                                                            |        +--WP_011366492.1_Oleidesulfovibrio_FliF
+|                                                         +--| (63)
+|                                                         |  |  +--CAG37385.1_Desulfotalea_FliF
+|                                                         |  +--| (82)
+|                                                         |     +--ALA58335.1_Nitrospira_FliF
+|                                                      +--| (79)
+|                                                      |  |  +--BCB96474.1_Dissulfurispira_FliF
+|                                                      |  +--| (98)
+|                                                      |     +--ACI21849.1_Thermodesulfovibrio_FliF
+|                                                   +--| (61)
+|                                                   |  |     +--AGH96362.1_Pseudobdellovibrio_FliF
+|                                                   |  |  +--| (100)
+|                                                   |  |  |  +--AHZ83763.1_Bdellovibrio_FliF
+|                                                   |  +--| (34)
+|                                                   |     |     +--ATX78584.1_Mariprofundus_FliF
+|                                                   |     |  +--| (100)
+|                                                   |     |  |  +--ATX82919.1_Mariprofundus_FliF
+|                                                   |     +--| (88)
+|                                                   |        +--ABI78744.1_Hyphomonas_FliF
+|                                                +--| (56)
+|                                                |  |           +--ABS63798.1_Parvibaculum_FliF
+|                                                |  |        +--| (87)
+|                                                |  |        |  +--AEP09101.1_Micavibrio_FliF
+|                                                |  |     +--| (63)
+|                                                |  |     |  |  +--CDL00846.1_Magnetospirillum_FliF
+|                                                |  |     |  +--| (62)
+|                                                |  |     |     +--AEI88715.1_Candidatus_FliF
+|                                                |  |  +--| (97)
+|                                                |  |  |  |     +--AEO47029.1_Rhodospirillum_FliF
+|                                                |  |  |  |  +--| (85)
+|                                                |  |  |  |  |  +--ABC45369.1_Salinibacter_FliF
+|                                                |  |  |  +--| (47)
+|                                                |  |  |     |  +--ABK42796.1_Magnetococcus_FliF
+|                                                |  |  |     +--| (81)
+|                                                |  |  |        |  +--BAM05992.1_Leptospirillum_FliF
+|                                                |  |  |        +--| (93)
+|                                                |  |  |           +---CCW35059.1_Chthonomonas_FliF
+|                                                |  +--| (77)
+|                                                |     |     +--AHK70359.1_Gluconobacter_FliF
+|                                                |     |  +--| (73)
+|                                                |     |  |  +--BAE49307.1_Magnetospirillum_T3SS
+|                                                |     +--| (80)
+|                                                |        |  +--ACL94415.1_Caulobacter_FliF
+|                                                |        +--| (99)
+|                                                |           +--ADL02120.1_Brevundimonas_FliF
+|                                             +--| (86)
+|                                             |  |  +--ACB73714.1_Opitutus_FliF
+|                                             |  +--| (99)
+|                                             |     +--ATC63675.1_Nibricoccus_FliF
+|                                          +--| (50)
+|                                          |  |           +--ACV67866.1_Desulfohalobium_FliF
+|                                          |  |        +--| (100)
+|                                          |  |        |  +--ABA88441.1_Syntrophotalea_FliF
+|                                          |  |     +--| (70)
+|                                          |  |     |  +--EEG76529.1_Dethiobacter_FliF
+|                                          |  |  +--| (87)
+|                                          |  |  |  +--RJP61224.1_Candidatus_FliF
+|                                          |  +--| (62)
+|                                          |     |     +--ACL70438.1_Halothermothrix_FliF
+|                                          |     |  +--| (75)
+|                                          |     |  |  +--ACL22158.1_Desulfitobacterium_FliF
+|                                          |     +--| (51)
+|                                          |        |  +--EGO63145.1_Acetonema_FliF
+|                                          |        +--| (81)
+|                                          |           +--ACZ19568.1_Thermanaerovibrio_FliF
+|                                       +--| (66)
+|                                       |  |        +--ABC76851.1_Syntrophus_FliF
+|                                       |  |     +--| (77)
+|                                       |  |     |  |  +--OSS41621.1_Desulfurella_FliF
+|                                       |  |     |  +--| (95)
+|                                       |  |     |     |        +--ALF48087.1_Campylobacter_FliF
+|                                       |  |     |     |     +--| (57)
+|                                       |  |     |     |     |  |  +--AOO64056.1_Sulfurospirillum_FliF
+|                                       |  |     |     |     |  +--| (69)
+|                                       |  |     |     |     |     +--ACM93021.1_Nautilia_FliF
+|                                       |  |     |     |  +--| (81)
+|                                       |  |     |     |  |  +--CAE11001.1_Wolinella_FliF
+|                                       |  |     |     +--| (66)
+|                                       |  |     |        +--ADN09694.1_Sulfurimonas_FliF
+|                                       |  |  +--| (74)
+|                                       |  |  |  |     +--AAR33742.1_Geobacter_FliF
+|                                       |  |  |  |  +--| (100)
+|                                       |  |  |  |  |  +--ACH40830.1_Citrifermentans_FliF
+|                                       |  |  |  +--| (74)
+|                                       |  |  |     |  +--BAH37373.1_Gemmatimonas_FliF
+|                                       |  |  |     +--| (100)
+|                                       |  |  |        +--QJR36449.1_Gemmatimonas_FliF
+|                                       |  +--| (52)
+|                                       |     |  +--ATU63999.1_Rhizobacter_FliF
+|                                       |     +--| (89)
+|                                       |        +--ADC89287.1_Thermocrinis_FliF
+|                                    +--| (49)
+|                                    |  |                       +--AIQ89829.1_Methylobacterium_FliF
+|                                    |  |                    +--| (89)
+|                                    |  |                    |  +--BAL07813.1_Bradyrhizobium_FliF
+|                                    |  |                 +--| (100)
+|                                    |  |                 |  +--ABQ62358.1_Brucella_FliF
+|                                    |  |              +--| (91)
+|                                    |  |              |  +--AFL88119.1_Terriglobus_FliF
+|                                    |  |           +--| (90)
+|                                    |  |           |  +---BAD41986.1_Symbiobacterium_FliF
+|                                    |  |        +--| (86)
+|                                    |  |        |  +--ACO32668.1_Acidobacterium_FliF
+|                                    |  |     +--| (48)
+|                                    |  |     |  |  +--QOY89262.1_Paludibaculum_FliF
+|                                    |  |     |  +--| (99)
+|                                    |  |     |     +--QOY88876.1_Paludibaculum_FliF
+|                                    |  |  +--| (88)
+|                                    |  |  |  +--USF24605.1_Mucispirillum_FliF
+|                                    |  +--| (79)
+|                                    |     |  +--QAR34056.1_Geovibrio_FliF
+|                                    |     +--| (89)
+|                                    |        +--ADD69076.1_Denitrovibrio_FliF
+|                                 +--| (45)
+|                                 |  |  +---ADG94151.1_Arcobacter_FliF
+|                                 |  +--| (69)
+|                                 |     |  +--AAO36212.1_Clostridium_FliF
+|                                 |     +--| (89)
+|                                 |        +--WP_010965461.1_Clostridium_FliF
+|                              +--| (76)
+|                              |  |                             +--ACT13606.1_Pectobacterium_FliF
+|                              |  |                          +--| (62)
+|                              |  |                          |  |  +--CFQ36607.1_Yersinia_FliF
+|                              |  |                          |  +--| (72)
+|                              |  |                          |     +--AJJ56339.1_Yersinia_FliF
+|                              |  |                       +--| (32)
+|                              |  |                       |  |        +--RPH26529.1_Buttiauxella_FliF
+|                              |  |                       |  |     +--| (82)
+|                              |  |                       |  |     |  +--CBJ47254.1_Erwinia_FliF
+|                              |  |                       |  |  +--| (95)
+|                              |  |                       |  |  |  |        +--POT54770.1_Citrobacter_FliF
+|                              |  |                       |  |  |  |     +--| (54)
+|                              |  |                       |  |  |  |     |  +--CFQ36177.1_Yersinia_FliF
+|                              |  |                       |  |  |  |  +--| (79)
+|                              |  |                       |  |  |  |  |  |  +--ORN02599.1_Pantoea_FliF
+|                              |  |                       |  |  |  |  |  +--| (100)
+|                              |  |                       |  |  |  |  |     +--KGT93339.1_Erwinia_FliF
+|                              |  |                       |  |  |  +--| (88)
+|                              |  |                       |  |  |     |  +--TCV95562.1_Biostraticola_FliF
+|                              |  |                       |  |  |     +--| (79)
+|                              |  |                       |  |  |        |  +--AHF75271.1_Sodalis_FliF
+|                              |  |                       |  |  |        +--| (76)
+|                              |  |                       |  |  |           +--AFA40924.1_Wigglesworthia_FliF
+|                              |  |                       |  +--| (73)
+|                              |  |                       |     |  +--QXB11719.1_Klebsiella_FliF
+|                              |  |                       |     +--| (83)
+|                              |  |                       |        +--KFD13219.1_Serratia_FliF
+|                              |  |                    +--| (77)
+|                              |  |                    |  +--AHF75751.1_Sodalis_FliF
+|                              |  |                 +--| (36)
+|                              |  |                 |  +--ARU98306.1_Tatumella_FliF
+|                              |  |              +--| (56)
+|                              |  |              |  +--WP_015871707.1_Edwardsiella_FliF
+|                              |  |           +--| (75)
+|                              |  |           |  |                    +--KLP57552.1_Enterobacter_FliF
+|                              |  |           |  |                 +--| (97)
+|                              |  |           |  |                 |  +--KLR25735.1_Enterobacter_FliF
+|                              |  |           |  |              +--| (68)
+|                              |  |           |  |              |  |     +--AAO68586.1_Salmonella_FliF
+|                              |  |           |  |              |  |  +--| (57)
+|                              |  |           |  |              |  |  |  +--AAL20881.1_Salmonella_FliF
+|                              |  |           |  |              |  +--| (83)
+|                              |  |           |  |              |     +--POT59441.1_Citrobacter_FliF
+|                              |  |           |  |           +--| (89)
+|                              |  |           |  |           |  +--QKY95803.1_Shigella_FliF
+|                              |  |           |  |        +--| (73)
+|                              |  |           |  |        |  |  +--RPH21571.1_Buttiauxella_FliF
+|                              |  |           |  |        |  +--| (49)
+|                              |  |           |  |        |     +--CCJ72125.1_Cronobacter_FliF
+|                              |  |           |  |     +--| (80)
+|                              |  |           |  |     |  |  +--KGT96016.1_Erwinia_FliF
+|                              |  |           |  |     |  +--| (78)
+|                              |  |           |  |     |     +--CBJ46171.1_Erwinia_FliF
+|                              |  |           |  |  +--| (40)
+|                              |  |           |  |  |  |  +--BAB12793.1_Buchnera_FliF
+|                              |  |           |  |  |  +--| (99)
+|                              |  |           |  |  |     +--AAM67637.1_Buchnera_FliF
+|                              |  |           |  +--| (65)
+|                              |  |           |     |  +--AOM39532.1_Xenorhabdus_FliF
+|                              |  |           |     +--| (81)
+|                              |  |           |        +--EHM41863.1_Hafnia_FliF
+|                              |  |        +--| (65)
+|                              |  |        |  |     +--CAJ49324.1_Bordetella_FliF
+|                              |  |        |  |  +--| (86)
+|                              |  |        |  |  |  +--AAZ97553.1_Thiobacillus_FliF
+|                              |  |        |  +--| (80)
+|                              |  |        |     |     +--CAH34218.1_Burkholderia_FliF
+|                              |  |        |     |  +--| (99)
+|                              |  |        |     |  |  +--ABC37528.1_Burkholderia_FliF
+|                              |  |        |     +--| (99)
+|                              |  |        |        +--AAU48881.1_Burkholderia_FliF
+|                              |  |     +--| (79)
+|                              |  |     |  |     +--AGG30848.1_Morganella_FliF
+|                              |  |     |  |  +--| (45)
+|                              |  |     |  |  |  |  +--ADE10838.1_Sideroxydans_FliF
+|                              |  |     |  |  |  +--| (89)
+|                              |  |     |  |  |     +--AAQ60803.1_Chromobacterium_FliF
+|                              |  |     |  +--| (50)
+|                              |  |     |     |     +--CAQ72721.1_Cupriavidus_FliF
+|                              |  |     |     |  +--| (58)
+|                              |  |     |     |  |  +--ABE50245.1_Methylobacillus_FliF
+|                              |  |     |     +--| (72)
+|                              |  |     |        +--ACT47836.1_Methylotenera_FliF
+|                              |  |  +--| (67)
+|                              |  |  |  |                                            +--AAW86347.1_Aliivibrio_FliF
+|                              |  |  |  |                                         +--| (73)
+|                              |  |  |  |                                         |  +--EAS77894.1_Vibrio_FliF
+|                              |  |  |  |                                      +--| (48)
+|                              |  |  |  |                                      |  |  +--QEO40727.1_Vibrio_FliF
+|                              |  |  |  |                                      |  +--| (100)
+|                              |  |  |  |                                      |     +--AAF95278.1_Vibrio_FliF
+|                              |  |  |  |                                   +--| (79)
+|                              |  |  |  |                                   |  |  +--EEW06433.1_Vibrio_FliF
+|                              |  |  |  |                                   |  +--| (78)
+|                              |  |  |  |                                   |     +--BAC95245.1_Vibrio_FliF
+|                              |  |  |  |                                +--| (78)
+|                              |  |  |  |                                |  |  +--GAA03515.1_Photobacterium_FliF
+|                              |  |  |  |                                |  +--| (96)
+|                              |  |  |  |                                |     +--CAG19334.1_Photobacterium_FliF
+|                              |  |  |  |                             +--| (92)
+|                              |  |  |  |                             |  |  +--EPE37900.1_Candidatus_FliF
+|                              |  |  |  |                             |  +--| (53)
+|                              |  |  |  |                             |     |  +--AVQ87012.1_Plesiomonas_FliF
+|                              |  |  |  |                             |     +--| (100)
+|                              |  |  |  |                             |        +--WP_084977171.1_Plesiomonas_FliF
+|                              |  |  |  |                          +--| (87)
+|                              |  |  |  |                          |  +--EAR29538.1_Pseudoalteromonas_FliF
+|                              |  |  |  |                       +--| (55)
+|                              |  |  |  |                       |  |     +--AAZ28086.1_Colwellia_FliF
+|                              |  |  |  |                       |  |  +--| (56)
+|                              |  |  |  |                       |  |  |  +--GAC24878.1_Paraglaciecola_FliF
+|                              |  |  |  |                       |  +--| (68)
+|                              |  |  |  |                       |     +--AEP30462.1_Glaciecola_FliF
+|                              |  |  |  |                    +--| (55)
+|                              |  |  |  |                    |  |     +--ABK38602.1_Aeromonas_FliF
+|                              |  |  |  |                    |  |  +--| (50)
+|                              |  |  |  |                    |  |  |  |  +--ATP10457.1_Aeromonas_FliF
+|                              |  |  |  |                    |  |  |  +--| (98)
+|                              |  |  |  |                    |  |  |     +--EKB19994.1_Aeromonas_FliF
+|                              |  |  |  |                    |  +--| (95)
+|                              |  |  |  |                    |     +--QCG47664.1_Aeromonas_FliF
+|                              |  |  |  |                 +--| (91)
+|                              |  |  |  |                 |  |           +--UXK10552.1_Shewanella_FliF
+|                              |  |  |  |                 |  |        +--| (66)
+|                              |  |  |  |                 |  |        |  +--AAN56227.2_Shewanella_FliF
+|                              |  |  |  |                 |  |     +--| (57)
+|                              |  |  |  |                 |  |     |  +--ABV37670.1_Shewanella_FliF
+|                              |  |  |  |                 |  |  +--| (94)
+|                              |  |  |  |                 |  |  |  +--BAJ01403.1_Shewanella_FliF
+|                              |  |  |  |                 |  +--| (59)
+|                              |  |  |  |                 |     |  +--EHR42289.1_Alishewanella_FliF
+|                              |  |  |  |                 |     +--| (45)
+|                              |  |  |  |                 |        |            +--QDU26973.1_Anatilimnocola_FliF
+|                              |  |  |  |                 |        |         +--| (82)
+|                              |  |  |  |                 |        |         |  +--ADB18987.1_Pirellula_T3SS
+|                              |  |  |  |                 |        |      +--| (80)
+|                              |  |  |  |                 |        |      |  +--QDU93976.1_Lignipirellula_FliF
+|                              |  |  |  |                 |        |   +--| (72)
+|                              |  |  |  |                 |        |   |  +--ADY60058.1_Rubinisphaera_T3SS_YscJ
+|                              |  |  |  |                 |        +---| (100)
+|                              |  |  |  |                 |            +--CAD75367.1_Rhodopirellula_FliF
+|                              |  |  |  |              +--| (26)
+|                              |  |  |  |              |  |  +--EGW20512.1_Methylobacter_FliF
+|                              |  |  |  |              |  +--| (62)
+|                              |  |  |  |              |     |  +---AAS40694.1_Bacillus_FliF
+|                              |  |  |  |              |     +--| (63)
+|                              |  |  |  |              |        |                       +-------QEO41070.1_Vibrio_T3SS
+|                              |  |  |  |              |        |                    +--| (59)
+|                              |  |  |  |              |        |                    |  |     +--WP_066786653.1_Rummeliibacillus_SpoIIIAH
+|                              |  |  |  |              |        |                    |  |  +--| (100)
+|                              |  |  |  |              |        |                    |  |  |  +--WP_102691387.1_Rummeliibacillus_SpoIIIAH
+|                              |  |  |  |              |        |                    |  +--| (68)
+|                              |  |  |  |              |        |                    |     +--WP_053416284.1_Viridibacillus_SpoIIIAH
+|                              |  |  |  |              |        |                 +--| (50)
+|                              |  |  |  |              |        |                 |  +--WP_024361187.1_Lysinibacillus_SpoIIIAH
+|                              |  |  |  |              |        |              +--| (37)
+|                              |  |  |  |              |        |              |  |                          +-------WP_006059104.1_Holdemania_SpoIIIAH
+|                              |  |  |  |              |        |              |  |                       +--| (31)
+|                              |  |  |  |              |        |              |  |                       |  |  +--WP_002609025.1_Bacillota_SpoIIIAH
+|                              |  |  |  |              |        |              |  |                       |  +--| (95)
+|                              |  |  |  |              |        |              |  |                       |     +--WP_008688524.1_Longicatena_SpoIIIAH
+|                              |  |  |  |              |        |              |  |                    +--| (29)
+|                              |  |  |  |              |        |              |  |                    |  +--WP_008789692.1_Coprobacillus_SpoIIIAH
+|                              |  |  |  |              |        |              |  |                 +--| (81)
+|                              |  |  |  |              |        |              |  |                 |  |  +--WP_004609799.1_Thomasclavelia_SpoIIIAH
+|                              |  |  |  |              |        |              |  |                 |  +--| (61)
+|                              |  |  |  |              |        |              |  |                 |     +--WP_003538299.1_Thomasclavelia_SpoIIIAH
+|                              |  |  |  |              |        |              |  |              +--| (38)
+|                              |  |  |  |              |        |              |  |              |  +---APC08738.1_Moorella_SpoIIIAH
+|                              |  |  |  |              |        |              |  |           +--| (38)
+|                              |  |  |  |              |        |              |  |           |  +--AJH78695.1_Weizmannia_SpoIIIAH
+|                              |  |  |  |              |        |              |  |        +--| (59)
+|                              |  |  |  |              |        |              |  |        |  +--BAC13843.1_Oceanobacillus_SpoIIIAH
+|                              |  |  |  |              |        |              |  |     +--| (18)
+|                              |  |  |  |              |        |              |  |     |  +--WP_134209598.1_Paenisporosarcina_SpoIIIAH
+|                              |  |  |  |              |        |              |  |  +--| (30)
+|                              |  |  |  |              |        |              |  |  |  +--WP_092051140.1_Bhargavaea_SpoIIIAH
+|                              |  |  |  |              |        |              |  +--| (48)
+|                              |  |  |  |              |        |              |     |        +--WP_008404261.1_Solibacillus_SpoIIIAH
+|                              |  |  |  |              |        |              |     |     +--| (61)
+|                              |  |  |  |              |        |              |     |     |  +--WP_096550966.1_Ureibacillus_SpoIIIAH
+|                              |  |  |  |              |        |              |     |  +--| (29)
+|                              |  |  |  |              |        |              |     |  |  +---BAD65006.1_Alkalihalobacillus_SpoIIIAH
+|                              |  |  |  |              |        |              |     +--| (53)
+|                              |  |  |  |              |        |              |        |  +--WP_076757704.1_Edaphobacillus_SpoIIIAH
+|                              |  |  |  |              |        |              |        +--| (83)
+|                              |  |  |  |              |        |              |           +--WP_041075074.1_Bacillus_SpoIIIAH
+|                              |  |  |  |              |        |           +--| (49)
+|                              |  |  |  |              |        |           |  |        +--WP_061948745.1_Alkalihalobacillus_SpoIIIAH
+|                              |  |  |  |              |        |           |  |     +--| (96)
+|                              |  |  |  |              |        |           |  |     |  +--AAS43160.1_Bacillus_SpoIIIAH
+|                              |  |  |  |              |        |           |  |  +--| (70)
+|                              |  |  |  |              |        |           |  |  |  +--BAD76686.1_Geobacillus_SpoIIIAH
+|                              |  |  |  |              |        |           |  +--| (16)
+|                              |  |  |  |              |        |           |     |     +--WP_066163660.1_Metasolibacillus_SpoIIIAH
+|                              |  |  |  |              |        |           |     |  +--| (66)
+|                              |  |  |  |              |        |           |     |  |  +-----AAU41481.1_Bacillus_SpoIIIAH
+|                              |  |  |  |              |        |           |     +--| (34)
+|                              |  |  |  |              |        |           |        +--WP_008179871.1_Bacteria_SpoIIIAH
+|                              |  |  |  |              |        |        +--| (85)
+|                              |  |  |  |              |        |        |  +--WP_151700324.1_Psychrobacillus_SpoIIIAH
+|                              |  |  |  |              |        |     +--| (78)
+|                              |  |  |  |              |        |     |  |           +---------AUO18622.1_Monoglobus_SpoIIIAF
+|                              |  |  |  |              |        |     |  |        +--| (56)
+|                              |  |  |  |              |        |     |  |        |  +---AUO18620.1_Monoglobus_SpoIIIAH
+|                              |  |  |  |              |        |     |  |     +--| (86)
+|                              |  |  |  |              |        |     |  |     |  |  +--WP_010965386.1_Clostridium_SpoIIIAH
+|                              |  |  |  |              |        |     |  |     |  +--| (48)
+|                              |  |  |  |              |        |     |  |     |     |  +--SHJ67084.1_Anaerobranca_SpoIIIAH
+|                              |  |  |  |              |        |     |  |     |     +--| (92)
+|                              |  |  |  |              |        |     |  |     |        +--QNO16151.1_Alkalicella_SpoIIIAH
+|                              |  |  |  |              |        |     |  |  +--| (50)
+|                              |  |  |  |              |        |     |  |  |  +--BAD40840.1_Symbiobacterium_SpoIIIAH
+|                              |  |  |  |              |        |     |  +--| (52)
+|                              |  |  |  |              |        |     |     +----UMZ73956.1_Natranaerofaba_SpoIIIAH
+|                              |  |  |  |              |        |  +--| (100)
+|                              |  |  |  |              |        |  |  |     +-------BAD40842.1_Symbiobacterium_SpoIIIAF
+|                              |  |  |  |              |        |  |  |  +--| (55)
+|                              |  |  |  |              |        |  |  |  |  |  +---APC08740.1_Moorella_SpoIIIAF
+|                              |  |  |  |              |        |  |  |  |  +--| (60)
+|                              |  |  |  |              |        |  |  |  |     |              +-----WP_061948747.1_Alkalihalobacillus_SpoIIIAF
+|                              |  |  |  |              |        |  |  |  |     |        +-----| (96)
+|                              |  |  |  |              |        |  |  |  |     |        |     +-----AJH79882.1_Weizmannia_SpoIIIAF
+|                              |  |  |  |              |        |  |  |  |     |     +--| (42)
+|                              |  |  |  |              |        |  |  |  |     |     |  |         +--------------BAC13845.1_Oceanobacillus_SpoIIIAF
+|                              |  |  |  |              |        |  |  |  |     |     |  |     +---| (72)
+|                              |  |  |  |              |        |  |  |  |     |     |  |     |   +-----------ATO50947.1_Brevibacillus_SpoIIIAF
+|                              |  |  |  |              |        |  |  |  |     |     |  |  +--| (55)
+|                              |  |  |  |              |        |  |  |  |     |     |  |  |  |  +--ACB85282.1_Natranaerobius_SpoIIIAF
+|                              |  |  |  |              |        |  |  |  |     |     |  |  |  +--| (68)
+|                              |  |  |  |              |        |  |  |  |     |     |  |  |     +------QAT61770.1_Tissierella_SpoIIIAF
+|                              |  |  |  |              |        |  |  |  |     |     |  +--| (86)
+|                              |  |  |  |              |        |  |  |  |     |     |     +---OWZ84026.1_Natranaerobius_SpoIIIAF
+|                              |  |  |  |              |        |  |  |  |     |  +--| (55)
+|                              |  |  |  |              |        |  |  |  |     |  |  +---ALU37542.1_Clostridium_SpoIIIAF
+|                              |  |  |  |              |        |  |  |  |     +--| (50)
+|                              |  |  |  |              |        |  |  |  |        |  +---------ACL69379.1_Halothermothrix_SpoIIIAF
+|                              |  |  |  |              |        |  |  |  |        +--| (76)
+|                              |  |  |  |              |        |  |  |  |           |  +---SHJ67143.1_Anaerobranca_SpoIIIAF
+|                              |  |  |  |              |        |  |  |  |           +--| (90)
+|                              |  |  |  |              |        |  |  |  |              +--QNO16149.1_Alkalicella_SpoIIIAF
+|                              |  |  |  |              |        |  |  +--| (90)
+|                              |  |  |  |              |        |  |     +----EGO63622.1_Acetonema_SpoIIIAF
+|                              |  |  |  |              |        +--| (98)
+|                              |  |  |  |              |           |              +--CCB86648.1_Parachlamydia_T3SS
+|                              |  |  |  |              |           |           +--| (98)
+|                              |  |  |  |              |           |           |  +--CCB85093.1_Parachlamydia_T3SS
+|                              |  |  |  |              |           |        +--| (99)
+|                              |  |  |  |              |           |        |  |  +--AAC68161.1_Chlamydia_T3SS_YscJ
+|                              |  |  |  |              |           |        |  +--| (100)
+|                              |  |  |  |              |           |        |     +--AVM88570.1_Chlamydia_T3SS_YscJ_HrcJ
+|                              |  |  |  |              |           |     +--| (77)
+|                              |  |  |  |              |           |     |  |              +--EDR30632.1_Yersinia_T3SS
+|                              |  |  |  |              |           |     |  |           +--| (100)
+|                              |  |  |  |              |           |     |  |           |  +--AJJ53162.1_Yersinia_T3SS_YscJ_HrcJ
+|                              |  |  |  |              |           |     |  |        +--| (98)
+|                              |  |  |  |              |           |     |  |        |  +--AAG05112.1_Pseudomonas_T3SS
+|                              |  |  |  |              |           |     |  |     +--| (60)
+|                              |  |  |  |              |           |     |  |     |  |              +--CBJ47559.1_Erwinia_T3SS
+|                              |  |  |  |              |           |     |  |     |  |           +--| (77)
+|                              |  |  |  |              |           |     |  |     |  |           |  +--KGT90338.1_Erwinia_T3SS
+|                              |  |  |  |              |           |     |  |     |  |        +--| (95)
+|                              |  |  |  |              |           |     |  |     |  |        |  +--AAY36249.1_Pseudomonas_T3SS_YscJ_HrcJ
+|                              |  |  |  |              |           |     |  |     |  |     +--| (99)
+|                              |  |  |  |              |           |     |  |     |  |     |  +--ADZ90362.1_Marinomonas_T3SS_YscJ_HrcJ
+|                              |  |  |  |              |           |     |  |     |  |  +--| (78)
+|                              |  |  |  |              |           |     |  |     |  |  |  |  +--WP_015870333.1_Edwardsiella_T3SS_SctJ
+|                              |  |  |  |              |           |     |  |     |  |  |  +--| (83)
+|                              |  |  |  |              |           |     |  |     |  |  |     +--AAQ60258.1_Chromobacterium_T3SS
+|                              |  |  |  |              |           |     |  |     |  +--| (63)
+|                              |  |  |  |              |           |     |  |     |     +--AHF76786.1_Sodalis_T3SS
+|                              |  |  |  |              |           |     |  |  +--| (32)
+|                              |  |  |  |              |           |     |  |  |  |     +--ACL64098.1_Anaeromyxobacter_T3SS_YscJ
+|                              |  |  |  |              |           |     |  |  |  |  +--| (87)
+|                              |  |  |  |              |           |     |  |  |  |  |  +--QTD51128.1_Sulfidibacter_T3SS_SctJ
+|                              |  |  |  |              |           |     |  |  |  +--| (77)
+|                              |  |  |  |              |           |     |  |  |     |  +--CAH39099.1_Burkholderia_T3SS
+|                              |  |  |  |              |           |     |  |  |     +--| (79)
+|                              |  |  |  |              |           |     |  |  |        |  +--CAH38872.1_Burkholderia_T3SS
+|                              |  |  |  |              |           |     |  |  |        +--| (64)
+|                              |  |  |  |              |           |     |  |  |           +--ATU65453.1_Rhizobacter_T3SS_YscJ_HrcJ
+|                              |  |  |  |              |           |     |  +--| (80)
+|                              |  |  |  |              |           |     |     |              +--ABF88125.1_Myxococcus_T3SS_YscJ_HrcJ
+|                              |  |  |  |              |           |     |     |           +--| (100)
+|                              |  |  |  |              |           |     |     |           |  +--ADO70830.1_Stigmatella_T3SS_YscJ_HrcJ
+|                              |  |  |  |              |           |     |     |        +--| (79)
+|                              |  |  |  |              |           |     |     |        |  +--CAQ71857.1_Cupriavidus_T3SS_SctJ
+|                              |  |  |  |              |           |     |     |     +--| (94)
+|                              |  |  |  |              |           |     |     |     |  |     +--AGC49958.1_Lawsonia_T3SS
+|                              |  |  |  |              |           |     |     |     |  |  +--| (77)
+|                              |  |  |  |              |           |     |     |     |  |  |  +--AAS94345.1_Desulfovibrio_T3SS
+|                              |  |  |  |              |           |     |     |     |  +--| (100)
+|                              |  |  |  |              |           |     |     |     |     +--AGC50595.1_Lawsonia_T3SS_YscJ_HrcJ
+|                              |  |  |  |              |           |     |     |  +--| (69)
+|                              |  |  |  |              |           |     |     |  |  +--BAJ02212.1_Shewanella_T3SS
+|                              |  |  |  |              |           |     |     +--| (75)
+|                              |  |  |  |              |           |     |        |        +--CFQ38428.1_Yersinia_T3SS
+|                              |  |  |  |              |           |     |        |     +--| (44)
+|                              |  |  |  |              |           |     |        |     |  +--EDR34178.1_Yersinia_T3SS_YscJ_HrcJ
+|                              |  |  |  |              |           |     |        |  +--| (90)
+|                              |  |  |  |              |           |     |        |  |  +--AJJ56869.1_Yersinia_T3SS_YscJ_HrcJ
+|                              |  |  |  |              |           |     |        +--| (88)
+|                              |  |  |  |              |           |     |           +--BAC59953.1_Vibrio_T3SS
+|                              |  |  |  |              |           |  +--| (67)
+|                              |  |  |  |              |           |  |  |     +--AFE09625.1_Corallococcus_T3SS
+|                              |  |  |  |              |           |  |  |  +--| (97)
+|                              |  |  |  |              |           |  |  |  |  +--ABF88690.1_Myxococcus_T3SS
+|                              |  |  |  |              |           |  |  +--| (99)
+|                              |  |  |  |              |           |  |     +--ADO74089.1_Stigmatella_T3SS
+|                              |  |  |  |              |           +--| (75)
+|                              |  |  |  |              |              |     +--CAH39023.1_Burkholderia_T3SS
+|                              |  |  |  |              |              |  +--| (100)
+|                              |  |  |  |              |              |  |  +--ABC34345.1_Burkholderia_T3SS
+|                              |  |  |  |              |              +--| (99)
+|                              |  |  |  |              |                 |        +--CBJ47346.1_Erwinia_T3SS
+|                              |  |  |  |              |                 |     +--| (96)
+|                              |  |  |  |              |                 |     |  |  +--CBJ46227.1_Erwinia_T3SS
+|                              |  |  |  |              |                 |     |  +--| (64)
+|                              |  |  |  |              |                 |     |     +--AHF78198.1_Sodalis_T3SS
+|                              |  |  |  |              |                 |  +--| (67)
+|                              |  |  |  |              |                 |  |  |     +--AHF75698.1_Sodalis_T3SS
+|                              |  |  |  |              |                 |  |  |  +--| (91)
+|                              |  |  |  |              |                 |  |  |  |  +--TCV96683.1_Biostraticola_T3SS
+|                              |  |  |  |              |                 |  |  +--| (49)
+|                              |  |  |  |              |                 |  |     +--CBG35883.1_Escherichia_T3SS
+|                              |  |  |  |              |                 +--| (53)
+|                              |  |  |  |              |                    |  +--AGG29087.1_Morganella_T3SS_HrcJ
+|                              |  |  |  |              |                    +--| (84)
+|                              |  |  |  |              |                       +--POT59516.1_Citrobacter_T3SS_YscJ_HrcJ
+|                              |  |  |  |           +--| (50)
+|                              |  |  |  |           |  |  +--ADE39075.1_Candidatus_FliF
+|                              |  |  |  |           |  +--| (92)
+|                              |  |  |  |           |     +--AOU49298.1_Legionella_FliF
+|                              |  |  |  |        +--| (57)
+|                              |  |  |  |        |  +--AAZ97041.1_Thiobacillus_T3SS
+|                              |  |  |  |     +--| (71)
+|                              |  |  |  |     |  |     +--AGI74751.1_Octadecabacter_FliF
+|                              |  |  |  |     |  |  +--| (60)
+|                              |  |  |  |     |  |  |  +--QNQ09320.1_Sphingomonas_FliF
+|                              |  |  |  |     |  +--| (77)
+|                              |  |  |  |     |     +--ACV75177.1_Zymomonas_FliF
+|                              |  |  |  |  +--| (47)
+|                              |  |  |  |  |  |           +--ABD81448.1_Saccharophagus_FliF
+|                              |  |  |  |  |  |        +--| (58)
+|                              |  |  |  |  |  |        |  |     +--EHJ04466.1_Marinobacter_FliF
+|                              |  |  |  |  |  |        |  |  +--| (97)
+|                              |  |  |  |  |  |        |  |  |  +--CCG94784.1_Marinobacter_FliF
+|                              |  |  |  |  |  |        |  +--| (87)
+|                              |  |  |  |  |  |        |     +--ADZ92454.1_Marinomonas_FliF
+|                              |  |  |  |  |  |     +--| (96)
+|                              |  |  |  |  |  |     |  |     +--AAY38489.1_Pseudomonas_FliF
+|                              |  |  |  |  |  |     |  |  +--| (50)
+|                              |  |  |  |  |  |     |  |  |  +--ABY99820.1_Pseudomonas_FliF
+|                              |  |  |  |  |  |     |  +--| (96)
+|                              |  |  |  |  |  |     |     +--AAG04490.1_Pseudomonas_FliF
+|                              |  |  |  |  |  |  +--| (73)
+|                              |  |  |  |  |  |  |  +--QEI19385.1_Cellvibrio_FliF
+|                              |  |  |  |  |  +--| (91)
+|                              |  |  |  |  |     |        +--EAS78287.1_Vibrio_FliF
+|                              |  |  |  |  |     |     +--| (97)
+|                              |  |  |  |  |     |     |  |  +--EEW07867.1_Vibrio_FliF
+|                              |  |  |  |  |     |     |  +--| (100)
+|                              |  |  |  |  |     |     |     +--BAC62879.1_Vibrio_FliF
+|                              |  |  |  |  |     |  +--| (82)
+|                              |  |  |  |  |     |  |  |  +--ABV34690.1_Shewanella_FliF
+|                              |  |  |  |  |     |  |  +--| (53)
+|                              |  |  |  |  |     |  |     +--CAG18477.1_Photobacterium_FliF
+|                              |  |  |  |  |     +--| (100)
+|                              |  |  |  |  |        |  +--WP_084977082.1_Plesiomonas_FliF
+|                              |  |  |  |  |        +--| (62)
+|                              |  |  |  |  |           |                 +--EHM37691.1_Hafnia_FliF
+|                              |  |  |  |  |           |              +--| (73)
+|                              |  |  |  |  |           |              |  |  +--CBG33087.1_Escherichia_FliF
+|                              |  |  |  |  |           |              |  +--| (99)
+|                              |  |  |  |  |           |              |     +--POT58671.1_Citrobacter_FliF
+|                              |  |  |  |  |           |           +--| (81)
+|                              |  |  |  |  |           |           |  +--KLP54135.1_Enterobacter_FliF
+|                              |  |  |  |  |           |        +--| (67)
+|                              |  |  |  |  |           |        |  +--CFQ44276.1_Yersinia_FliF
+|                              |  |  |  |  |           |     +--| (63)
+|                              |  |  |  |  |           |     |  +--AJJ55407.1_Yersinia_FliF
+|                              |  |  |  |  |           |  +--| (98)
+|                              |  |  |  |  |           |  |  +--RPH29466.1_Buttiauxella_FliF
+|                              |  |  |  |  |           +--| (74)
+|                              |  |  |  |  |              |  +--ATU65965.1_Rhizobacter_FliF
+|                              |  |  |  |  |              +--| (100)
+|                              |  |  |  |  |                 +--AAQ60668.1_Chromobacterium_FliF
+|                              |  |  |  +--| (83)
+|                              |  |  |     |  +--QBZ83471.1_Hydrogenovibrio_FliF
+|                              |  |  |     +--| (75)
+|                              |  |  |        |  +--ABA58817.1_Nitrosococcus_FliF
+|                              |  |  |        +--| (72)
+|                              |  |  |           +--ACL73050.1_Thioalkalivibrio_FliF
+|                              |  +--| (95)
+|                              |     |     +--ATU66744.1_Rhizobacter_FliF
+|                              |     |  +--| (88)
+|                              |     |  |  |  +--APW41625.1_Rhodoferax_FliF
+|                              |     |  |  +--| (70)
+|                              |     |  |     +--EGI75820.1_Hylemonella_FliF
+|                              |     +--| (62)
+|                              |        +--UBQ04382.1_Tepidimonas_FliF
+|                           +--| (63)
+|                           |  +--BAS27497.1_Limnochorda_FliF
+|                        +--| (27)
+|                        |  |     +--SHJ59096.1_Anaerobranca_FliF
+|                        |  |  +--| (100)
+|                        |  |  |  +--QNO16415.1_Alkalicella_FliF
+|                        |  +--| (77)
+|                        |     |  +--OWZ84225.1_Natranaerobius_FliF
+|                        |     +--| (99)
+|                        |        |  +--UMZ73356.1_Natranaerofaba_FliF
+|                        |        +--| (100)
+|                        |           +--ACB84974.1_Natranaerobius_FliF
+|                     +--| (50)
+|                     |  |     +--ADL43221.1_Caldicellulosiruptor_FliF
+|                     |  |  +--| (79)
+|                     |  |  |  +--ABY94911.1_Thermoanaerobacter_FliF
+|                     |  +--| (76)
+|                     |     +--QAT61603.1_Tissierella_FliF
+|                  +--| (78)
+|                  |  |  +--AAC07196.1_Aquifex_FliF
+|                  |  +--| (34)
+|                  |     +---ACM22640.1_Thermotoga_FliF
+|               +--| (95)
+|               |  |        +--ACK75069.1_Borreliella_FliF
+|               |  |     +--| (95)
+|               |  |     |  |  +--AAS11733.1_Treponema_FliF
+|               |  |     |  +--| (68)
+|               |  |     |     +--AAC65387.1_Treponema_FliF
+|               |  |  +--| (99)
+|               |  |  |  +--AEM21723.1_Brachyspira_FliF
+|               |  +--| (95)
+|               |     |  +--EKT86534.2_Leptospira_FliF
+|               |     +--| (100)
+|               |        +--ABZ96871.1_Leptospira_FliF
+|            +--| (58)
+|            |  |            +--BAC13844.1_Oceanobacillus_SpoIIIAG
+|            |  |         +--| (77)
+|            |  |         |  |           +--BAD40841.1_Symbiobacterium_SpoIIIAG
+|            |  |         |  |        +--| (76)
+|            |  |         |  |        |  |  +--ACB85281.1_Natranaerobius_SpoIIIAG
+|            |  |         |  |        |  +--| (81)
+|            |  |         |  |        |     |     +--BAS28431.1_Limnochorda_SpoIIIAG
+|            |  |         |  |        |     |  +--| (59)
+|            |  |         |  |        |     |  |  +-----AUO18621.1_Monoglobus_SpoIIIAG
+|            |  |         |  |        |     +--| (62)
+|            |  |         |  |        |        +--QAT61769.1_Tissierella_SpoIIIAG
+|            |  |         |  |     +--| (50)
+|            |  |         |  |     |  |     +--AAS43161.1_Bacillus_SpoIIIAG
+|            |  |         |  |     |  |  +--| (73)
+|            |  |         |  |     |  |  |  |        +--BAD65007.1_Alkalihalobacillus_SpoIIIAG
+|            |  |         |  |     |  |  |  |     +--| (50)
+|            |  |         |  |     |  |  |  |     |  |  +--WP_061948746.1_Alkalihalobacillus_SpoIIIAG
+|            |  |         |  |     |  |  |  |     |  +--| (78)
+|            |  |         |  |     |  |  |  |     |     +--EEG78331.1_Dethiobacter_SpoIIIAG
+|            |  |         |  |     |  |  |  |  +--| (53)
+|            |  |         |  |     |  |  |  |  |  +--AAU41482.1_Bacillus_SpoIIIAG
+|            |  |         |  |     |  |  |  +--| (89)
+|            |  |         |  |     |  |  |     +--KGA97906.1_Alkalihalobacillus_SpoIIIAG
+|            |  |         |  |     |  +--| (88)
+|            |  |         |  |     |     |  +--AJH78041.1_Weizmannia_SpoIIIAG
+|            |  |         |  |     |     +--| (60)
+|            |  |         |  |     |        +--WP_010965387.1_Clostridium_SpoIIIAG
+|            |  |         |  |  +--| (56)
+|            |  |         |  |  |  +--ACL21528.1_Desulfitobacterium_SpoIIIAG
+|            |  |         |  +--| (52)
+|            |  |         |     |     +--SHJ67115.1_Anaerobranca_SpoIIIAG
+|            |  |         |     |  +--| (92)
+|            |  |         |     |  |  +--QNO16150.1_Alkalicella_SpoIIIAG
+|            |  |         |     +--| (24)
+|            |  |         |        +-----------WP_008404262.1_Solibacillus_SpoIIIAG
+|            |  |      +--| (75)
+|            |  |      |  +--BAD76687.1_Geobacillus_SpoIIIAG
+|            |  +------| (100)
+|            |         |  +--AAO36130.1_Clostridium_SpoIIIAG
+|            |         +--| (54)
+|            |            +--ACL69380.1_Halothermothrix_SpoIIIAG
+|         +--| (42)
+|         |  |                 +--WP_014824491.1_Solibacillus_FliF
+|         |  |              +--| (71)
+|         |  |              |  +--WP_066170015.1_Metasolibacillus_FliF
+|         |  |           +--| (73)
+|         |  |           |  |     +--WP_053417471.1_Viridibacillus_FliF
+|         |  |           |  |  +--| (55)
+|         |  |           |  |  |  |  +--WP_041074053.1_Bacillus_FliF
+|         |  |           |  |  |  +--| (84)
+|         |  |           |  |  |     |  +--WP_105928922.1_Lysinibacillus_FliF
+|         |  |           |  |  |     +--| (99)
+|         |  |           |  |  |        +--WP_036123974.1_Lysinibacillus_FliF
+|         |  |           |  +--| (66)
+|         |  |           |     +--WP_151699469.1_Psychrobacillus_FliF
+|         |  |        +--| (76)
+|         |  |        |  +--WP_096550656.1_Ureibacillus_FliF
+|         |  |     +--| (96)
+|         |  |     |  +--AAU40736.1_Bacillus_FliF
+|         |  |  +--| (32)
+|         |  |  |  |  +--KGA98254.1_Alkalihalobacillus_FliF
+|         |  |  |  +--| (36)
+|         |  |  |     |  +--BAB06177.1_Halalkalibacterium_FliF
+|         |  |  |     +--| (79)
+|         |  |  |        +--ADC48108.1_Alkalihalophilus_FliF
+|         |  +--| (39)
+|         |     +--BAC13511.1_Oceanobacillus_FliF
++---------| (100)
+|         +--BAD64804.1_Alkalihalobacillus_FliF
+|
++--AVM87899.1_Chlamydia_T3SS
+
+
+Consensus tree in newick format: 
+
+(AAC68314.1_Chlamydia_FliF:0.0000024788,(((((((((((((((((((((ACL65896.1_Anaeromyxobacter_FliF:0.1686460194,SHK75940.1_Desulfatibacillum_FliF:0.0880373356)72:0.0414569895,ACN16787.1_Desulforapulum_FliF:0.1124805238)58:0.0281357357,((AGC50281.1_Lawsonia_FliF:0.0854985370,BAH77996.1_Solidesulfovibrio_FliF:0.0945706140)54:0.0229361549,(AAS94796.1_Desulfovibrio_FliF:0.0867220724,WP_011366492.1_Oleidesulfovibrio_FliF:0.0578832262)81:0.0378871142)96:0.0590587327)47:0.0119749958,(CAG37385.1_Desulfotalea_FliF:0.1695188392,ALA58335.1_Nitrospira_FliF:0.0427484135)82:0.0273297150)63:0.0226905068,(BCB96474.1_Dissulfurispira_FliF:0.1046567989,ACI21849.1_Thermodesulfovibrio_FliF:0.0505068440)98:0.0497437827)79:0.0420300558,((AGH96362.1_Pseudobdellovibrio_FliF:0.0911400914,AHZ83763.1_Bdellovibrio_FliF:0.0479642822)100:0.0804050276,((ATX78584.1_Mariprofundus_FliF:0.0441714667,ATX82919.1_Mariprofundus_FliF:0.0789055356)100:0.0960938808,ABI78744.1_Hyphomonas_FliF:0.2408941806)88:0.0508008822)34:0.0110561579)61:0.0240574885,((((ABS63798.1_Parvibaculum_FliF:0.0434833948,AEP09101.1_Micavibrio_FliF:0.1665301538)87:0.0630675768,(CDL00846.1_Magnetospirillum_FliF:0.0940013310,AEI88715.1_Candidatus_FliF:0.1571790244)62:0.0233552437)63:0.0208082213,((AEO47029.1_Rhodospirillum_FliF:0.0803922872,ABC45369.1_Salinibacter_FliF:0.1697367442)85:0.0374409067,(ABK42796.1_Magnetococcus_FliF:0.1329784182,(BAM05992.1_Leptospirillum_FliF:0.0792708536,CCW35059.1_Chthonomonas_FliF:0.3048834438)93:0.0624523159)81:0.0356863099)47:0.0066287746)97:0.0486549921,((AHK70359.1_Gluconobacter_FliF:0.2199115260,BAE49307.1_Magnetospirillum_T3SS:0.0381438992)73:0.0168313261,(ACL94415.1_Caulobacter_FliF:0.0873505473,ADL02120.1_Brevundimonas_FliF:0.0794469961)99:0.0560227004)80:0.0270498881)77:0.0368467338)56:0.0118602851,(ACB73714.1_Opitutus_FliF:0.0800263839,ATC63675.1_Nibricoccus_FliF:0.1603139444)99:0.1073724290)86:0.0349766847,((((ACV67866.1_Desulfohalobium_FliF:0.1290316875,ABA88441.1_Syntrophotalea_FliF:0.0710110733)100:0.0533963580,EEG76529.1_Dethiobacter_FliF:0.2448252763)70:0.0289386401,RJP61224.1_Candidatus_FliF:0.1121673982)87:0.0357561793,((ACL70438.1_Halothermothrix_FliF:0.0761555415,ACL22158.1_Desulfitobacterium_FliF:0.2370654803)75:0.0373249133,(EGO63145.1_Acetonema_FliF:0.1309452647,ACZ19568.1_Thermanaerovibrio_FliF:0.1217010971)81:0.0508653195)51:0.0195324526)62:0.0165863980)50:0.0139294042,(((ABC76851.1_Syntrophus_FliF:0.0825226144,(OSS41621.1_Desulfurella_FliF:0.1285898798,(((ALF48087.1_Campylobacter_FliF:0.0730223069,(AOO64056.1_Sulfurospirillum_FliF:0.0672949154,ACM93021.1_Nautilia_FliF:0.0651674119)69:0.0246132650)57:0.0227088508,CAE11001.1_Wolinella_FliF:0.0476691117)81:0.0401335199,ADN09694.1_Sulfurimonas_FliF:0.1073217080)66:0.0171627325)95:0.0431887783)77:0.0195614310,((AAR33742.1_Geobacter_FliF:0.0638315422,ACH40830.1_Citrifermentans_FliF:0.0867862445)100:0.0569708321,(BAH37373.1_Gemmatimonas_FliF:0.1068169189,QJR36449.1_Gemmatimonas_FliF:0.0934273231)100:0.0987455794)74:0.0217239625)74:0.0201033060,(ATU63999.1_Rhizobacter_FliF:0.2520766636,ADC89287.1_Thermocrinis_FliF:0.1064139679)89:0.0813317771)52:0.0313932540)66:0.0205536223,((((((((AIQ89829.1_Methylobacterium_FliF:0.1903931380,BAL07813.1_Bradyrhizobium_FliF:0.0354703983)89:0.0470933150,ABQ62358.1_Brucella_FliF:0.0687083045)100:0.1452789286,AFL88119.1_Terriglobus_FliF:0.1219341029)91:0.0530765346,BAD41986.1_Symbiobacterium_FliF:0.2758032010)90:0.0489200831,ACO32668.1_Acidobacterium_FliF:0.1458860769)86:0.0258946198,(QOY89262.1_Paludibaculum_FliF:0.1296650873,QOY88876.1_Paludibaculum_FliF:0.1060053423)99:0.0646866892)48:0.0084913251,USF24605.1_Mucispirillum_FliF:0.1495015331)88:0.0394584770,(QAR34056.1_Geovibrio_FliF:0.1174815957,ADD69076.1_Denitrovibrio_FliF:0.0659610867)89:0.0414004697)79:0.0235393156)49:0.0219734326,(ADG94151.1_Arcobacter_FliF:0.2864110536,(AAO36212.1_Clostridium_FliF:0.0901098189,WP_010965461.1_Clostridium_FliF:0.1416262510)89:0.0454266763)69:0.0446322664)45:0.0230832034,((((((((((ACT13606.1_Pectobacterium_FliF:0.0515126613,(CFQ36607.1_Yersinia_FliF:0.0165691217,AJJ56339.1_Yersinia_FliF:0.0230189741)72:0.0177554766)62:0.0149254342,(((RPH26529.1_Buttiauxella_FliF:0.0437777229,CBJ47254.1_Erwinia_FliF:0.0606519246)82:0.0184132596,(((POT54770.1_Citrobacter_FliF:0.0470010453,CFQ36177.1_Yersinia_FliF:0.0454307183)54:0.0140062796,(ORN02599.1_Pantoea_FliF:0.0000023992,KGT93339.1_Erwinia_FliF:0.0000023992)100:0.0869356244)79:0.0233108530,(TCV95562.1_Biostraticola_FliF:0.0361564290,(AHF75271.1_Sodalis_FliF:0.0471141952,AFA40924.1_Wigglesworthia_FliF:0.0789459832)76:0.0273369675)79:0.0142281948)88:0.0192756924)95:0.0331513392,(QXB11719.1_Klebsiella_FliF:0.0416727144,KFD13219.1_Serratia_FliF:0.0529484187)83:0.0159253431)73:0.0300264300)32:0.0131656128,AHF75751.1_Sodalis_FliF:0.0619298867)77:0.0229695767,ARU98306.1_Tatumella_FliF:0.0732392010)36:0.0101046819,WP_015871707.1_Edwardsiella_FliF:0.0532218880)56:0.0121934124,(((((((KLP57552.1_Enterobacter_FliF:0.0220965042,KLR25735.1_Enterobacter_FliF:0.0224269097)97:0.0351707778,((AAO68586.1_Salmonella_FliF:0.0147354626,AAL20881.1_Salmonella_FliF:0.0219375991)57:0.0171914777,POT59441.1_Citrobacter_FliF:0.0256666511)83:0.0191187795)68:0.0085827328,QKY95803.1_Shigella_FliF:0.0183083453)89:0.0196537190,(RPH21571.1_Buttiauxella_FliF:0.0193236486,CCJ72125.1_Cronobacter_FliF:0.0396315545)49:0.0098819760)73:0.0213972544,(KGT96016.1_Erwinia_FliF:0.0323504449,CBJ46171.1_Erwinia_FliF:0.0331446202)78:0.0180891604)80:0.0248897202,(BAB12793.1_Buchnera_FliF:0.0962425202,AAM67637.1_Buchnera_FliF:0.0602137585)99:0.0424262235)40:0.0069178771,(AOM39532.1_Xenorhabdus_FliF:0.0768092438,EHM41863.1_Hafnia_FliF:0.0516514404)81:0.0384148882)65:0.0132401339)75:0.0245160734,((CAJ49324.1_Bordetella_FliF:0.0646029086,AAZ97553.1_Thiobacillus_FliF:0.0777466123)86:0.0213883633,((CAH34218.1_Burkholderia_FliF:0.0384917473,ABC37528.1_Burkholderia_FliF:0.0492362504)99:0.0388335243,AAU48881.1_Burkholderia_FliF:0.0155941688)99:0.0447754925)80:0.0217251226)65:0.0199960880,((AGG30848.1_Morganella_FliF:0.0741194209,(ADE10838.1_Sideroxydans_FliF:0.0919788413,AAQ60803.1_Chromobacterium_FliF:0.1264479451)89:0.0516436059)45:0.0221785431,((CAQ72721.1_Cupriavidus_FliF:0.1106238772,ABE50245.1_Methylobacillus_FliF:0.0926926163)58:0.0197650908,ACT47836.1_Methylotenera_FliF:0.0771499646)72:0.0304672596)50:0.0274570283)79:0.0344499708,(((((((((((((((AAW86347.1_Aliivibrio_FliF:0.0950559686,EAS77894.1_Vibrio_FliF:0.0541880408)73:0.0262498711,(QEO40727.1_Vibrio_FliF:0.0000023992,AAF95278.1_Vibrio_FliF:0.0000023992)100:0.0243992500)48:0.0100063944,(EEW06433.1_Vibrio_FliF:0.0308226679,BAC95245.1_Vibrio_FliF:0.0841638758)78:0.0306489626)79:0.0224927353,(GAA03515.1_Photobacterium_FliF:0.0802399681,CAG19334.1_Photobacterium_FliF:0.0617805007)96:0.0400619705)78:0.0225944249,(EPE37900.1_Candidatus_FliF:0.0732790401,(AVQ87012.1_Plesiomonas_FliF:0.0000023992,WP_084977171.1_Plesiomonas_FliF:0.0000023992)100:0.0929654566)53:0.0252286294)92:0.0429079026,EAR29538.1_Pseudoalteromonas_FliF:0.0456270020)87:0.0326202054,((AAZ28086.1_Colwellia_FliF:0.1017768888,GAC24878.1_Paraglaciecola_FliF:0.0985040789)56:0.0253439377,AEP30462.1_Glaciecola_FliF:0.0438376552)68:0.0255742428)55:0.0140199029,((ABK38602.1_Aeromonas_FliF:0.0349489762,(ATP10457.1_Aeromonas_FliF:0.0449870791,EKB19994.1_Aeromonas_FliF:0.0396980155)98:0.0454294805)50:0.0117106917,QCG47664.1_Aeromonas_FliF:0.0241230761)95:0.0243632894)55:0.0174730444,((((UXK10552.1_Shewanella_FliF:0.0379329652,AAN56227.2_Shewanella_FliF:0.0596122418)66:0.0165443451,ABV37670.1_Shewanella_FliF:0.0445154323)57:0.0208044498,BAJ01403.1_Shewanella_FliF:0.0240518053)94:0.0274888342,(EHR42289.1_Alishewanella_FliF:0.0733127989,((((QDU26973.1_Anatilimnocola_FliF:0.0694153173,ADB18987.1_Pirellula_T3SS:0.0871824245)82:0.0452919223,QDU93976.1_Lignipirellula_FliF:0.1452624869)80:0.0699502079,ADY60058.1_Rubinisphaera_T3SS_YscJ:0.2698439765)72:0.0803472367,CAD75367.1_Rhodopirellula_FliF:0.2637060011)100:0.3314690028)45:0.0099228853)59:0.0240322803)91:0.0523629083,(EGW20512.1_Methylobacter_FliF:0.0534163115,(AAS40694.1_Bacillus_FliF:0.3208501717,((((((((QEO41070.1_Vibrio_T3SS:0.5554425212,((WP_066786653.1_Rummeliibacillus_SpoIIIAH:0.0000023992,WP_102691387.1_Rummeliibacillus_SpoIIIAH:0.0000023992)100:0.1199979451,WP_053416284.1_Viridibacillus_SpoIIIAH:0.0648636477)68:0.0542393405)59:0.0000020990,WP_024361187.1_Lysinibacillus_SpoIIIAH:0.0000023992)50:0.0155931497,(((((((((WP_006059104.1_Holdemania_SpoIIIAH:0.5781720364,(WP_002609025.1_Bacillota_SpoIIIAH:0.1016695601,WP_008688524.1_Longicatena_SpoIIIAH:0.1453875893)95:0.2359895734)31:0.0910918175,WP_008789692.1_Coprobacillus_SpoIIIAH:0.1942175984)29:0.0794936909,(WP_004609799.1_Thomasclavelia_SpoIIIAH:0.0813781902,WP_003538299.1_Thomasclavelia_SpoIIIAH:0.0985344675)61:0.1457368702)81:0.1367585047,APC08738.1_Moorella_SpoIIIAH:0.2799955880)38:0.0416467419,AJH78695.1_Weizmannia_SpoIIIAH:0.1087437758)38:0.0489545750,BAC13843.1_Oceanobacillus_SpoIIIAH:0.2222470968)59:0.0966393920,WP_134209598.1_Paenisporosarcina_SpoIIIAH:0.1230865631)18:0.0000023284,WP_092051140.1_Bhargavaea_SpoIIIAH:0.0458038906)30:0.0227254530,(((WP_008404261.1_Solibacillus_SpoIIIAH:0.1651215870,WP_096550966.1_Ureibacillus_SpoIIIAH:0.1578776708)61:0.0510658889,BAD65006.1_Alkalihalobacillus_SpoIIIAH:0.3026839147)29:0.0095258183,(WP_076757704.1_Edaphobacillus_SpoIIIAH:0.1275081587,WP_041075074.1_Bacillus_SpoIIIAH:0.1003738847)83:0.0704053938)53:0.0448276925)48:0.0462793040)37:0.0338578964,(((WP_061948745.1_Alkalihalobacillus_SpoIIIAH:0.1565862891,AAS43160.1_Bacillus_SpoIIIAH:0.2035462167)96:0.1899895615,BAD76686.1_Geobacillus_SpoIIIAH:0.0470446882)70:0.0998057747,((WP_066163660.1_Metasolibacillus_SpoIIIAH:0.0000023615,AAU41481.1_Bacillus_SpoIIIAH:0.4349848272)66:0.0698445520,WP_008179871.1_Bacteria_SpoIIIAH:0.0972465555)34:0.0000020469)16:0.0000023992)49:0.0170260813,WP_151700324.1_Psychrobacillus_SpoIIIAH:0.0462172774)85:0.1499944397,((((AUO18622.1_Monoglobus_SpoIIIAF:0.7532422013,AUO18620.1_Monoglobus_SpoIIIAH:0.3175944621)56:0.1050412594,(WP_010965386.1_Clostridium_SpoIIIAH:0.1847878571,(SHJ67084.1_Anaerobranca_SpoIIIAH:0.0241984554,QNO16151.1_Alkalicella_SpoIIIAH:0.1303707647)92:0.1012662152)48:0.0228599438)86:0.1235255666,BAD40840.1_Symbiobacterium_SpoIIIAH:0.0255839234)50:0.0488617044,UMZ73956.1_Natranaerofaba_SpoIIIAH:0.3585734986)52:0.0324353637)78:0.0793675303,((BAD40842.1_Symbiobacterium_SpoIIIAF:0.5792353338,(APC08740.1_Moorella_SpoIIIAF:0.3113937233,((((WP_061948747.1_Alkalihalobacillus_SpoIIIAF:0.4323896639,AJH79882.1_Weizmannia_SpoIIIAF:0.4410187904)96:0.4267056848,(((BAC13845.1_Oceanobacillus_SpoIIIAF:1.0422880306,ATO50947.1_Brevibacillus_SpoIIIAF:0.8842505240)72:0.3117448950,(ACB85282.1_Natranaerobius_SpoIIIAF:0.1144731453,QAT61770.1_Tissierella_SpoIIIAF:0.5013667636)68:0.1040686657)55:0.0375199025,OWZ84026.1_Natranaerobius_SpoIIIAF:0.3102504545)86:0.2328225785)42:0.0548825055,ALU37542.1_Clostridium_SpoIIIAF:0.2988620374)55:0.0610239841,(ACL69379.1_Halothermothrix_SpoIIIAF:0.7356683315,(SHJ67143.1_Anaerobranca_SpoIIIAF:0.2894455997,QNO16149.1_Alkalicella_SpoIIIAF:0.2260502023)90:0.2158975668)76:0.2226845091)50:0.1277713622)60:0.1182798694)55:0.0508890439,EGO63622.1_Acetonema_SpoIIIAF:0.3683957970)90:0.1871286202)100:0.2252734517,(((((CCB86648.1_Parachlamydia_T3SS:0.0768966898,CCB85093.1_Parachlamydia_T3SS:0.1015442371)98:0.1058464802,(AAC68161.1_Chlamydia_T3SS_YscJ:0.0195823900,AVM88570.1_Chlamydia_T3SS_YscJ_HrcJ:0.0801975420)100:0.1494244765)99:0.1349366133,(((((EDR30632.1_Yersinia_T3SS:0.0000023992,AJJ53162.1_Yersinia_T3SS_YscJ_HrcJ:0.0000023992)100:0.1025923319,AAG05112.1_Pseudomonas_T3SS:0.1263414967)98:0.1082127159,(((((CBJ47559.1_Erwinia_T3SS:0.0985874425,KGT90338.1_Erwinia_T3SS:0.0339719528)77:0.0420140220,AAY36249.1_Pseudomonas_T3SS_YscJ_HrcJ:0.1514759379)95:0.0608115228,ADZ90362.1_Marinomonas_T3SS_YscJ_HrcJ:0.0938951663)99:0.1091090331,(WP_015870333.1_Edwardsiella_T3SS_SctJ:0.0853969727,AAQ60258.1_Chromobacterium_T3SS:0.1334000477)83:0.0405748840)78:0.0477378798,AHF76786.1_Sodalis_T3SS:0.0866266472)63:0.0567757151)60:0.0274585717,((ACL64098.1_Anaeromyxobacter_T3SS_YscJ:0.2741153002,QTD51128.1_Sulfidibacter_T3SS_SctJ:0.1084333928)87:0.0508928066,(CAH39099.1_Burkholderia_T3SS:0.1086340037,(CAH38872.1_Burkholderia_T3SS:0.0976696606,ATU65453.1_Rhizobacter_T3SS_YscJ_HrcJ:0.1216944631)64:0.0531246213)79:0.0694321245)77:0.0516306859)32:0.0256603968,(((((ABF88125.1_Myxococcus_T3SS_YscJ_HrcJ:0.0704504927,ADO70830.1_Stigmatella_T3SS_YscJ_HrcJ:0.0957344766)100:0.2553088019,CAQ71857.1_Cupriavidus_T3SS_SctJ:0.1663466706)79:0.0463024663,((AGC49958.1_Lawsonia_T3SS:0.1055996119,AAS94345.1_Desulfovibrio_T3SS:0.0845218421)77:0.0766266636,AGC50595.1_Lawsonia_T3SS_YscJ_HrcJ:0.0762999679)100:0.1127390624)94:0.0909864483,BAJ02212.1_Shewanella_T3SS:0.1779342294)69:0.0470074530,(((CFQ38428.1_Yersinia_T3SS:0.1757070251,EDR34178.1_Yersinia_T3SS_YscJ_HrcJ:0.0115060957)44:0.0171974465,AJJ56869.1_Yersinia_T3SS_YscJ_HrcJ:0.0370243894)90:0.0912230782,BAC59953.1_Vibrio_T3SS:0.1394558198)88:0.0774786073)75:0.0769531395)80:0.0458105808)77:0.0873062420,((AFE09625.1_Corallococcus_T3SS:0.1378018508,ABF88690.1_Myxococcus_T3SS:0.0451833631)97:0.0599810855,ADO74089.1_Stigmatella_T3SS:0.0392569072)99:0.1295918153)67:0.0497559826,((CAH39023.1_Burkholderia_T3SS:0.0423417716,ABC34345.1_Burkholderia_T3SS:0.0492974612)100:0.1355538559,(((CBJ47346.1_Erwinia_T3SS:0.0807575287,(CBJ46227.1_Erwinia_T3SS:0.0705216520,AHF78198.1_Sodalis_T3SS:0.1647210360)64:0.0660024569)96:0.1413605319,((AHF75698.1_Sodalis_T3SS:0.0691797395,TCV96683.1_Biostraticola_T3SS:0.1064361812)91:0.0635211047,CBG35883.1_Escherichia_T3SS:0.1243797939)49:0.0355777762)67:0.0369877565,(AGG29087.1_Morganella_T3SS_HrcJ:0.2007435707,POT59516.1_Citrobacter_T3SS_YscJ_HrcJ:0.1288743579)84:0.0502432340)53:0.0184638559)99:0.1299061600)75:0.0534962391)98:0.1808668446)63:0.0985321323)62:0.0489114891)26:0.0157625038,(ADE39075.1_Candidatus_FliF:0.1624429286,AOU49298.1_Legionella_FliF:0.0971990104)92:0.0629108395)50:0.0237625496,AAZ97041.1_Thiobacillus_T3SS:0.1586532381)57:0.0249195265,((AGI74751.1_Octadecabacter_FliF:0.1312166711,QNQ09320.1_Sphingomonas_FliF:0.0775312967)60:0.0429339075,ACV75177.1_Zymomonas_FliF:0.1692879270)77:0.0651069887)71:0.0202349778,((((ABD81448.1_Saccharophagus_FliF:0.0755460300,((EHJ04466.1_Marinobacter_FliF:0.0508705539,CCG94784.1_Marinobacter_FliF:0.0817164658)97:0.0409312000,ADZ92454.1_Marinomonas_FliF:0.0463072716)87:0.0451393213)58:0.0252257013,((AAY38489.1_Pseudomonas_FliF:0.0415179189,ABY99820.1_Pseudomonas_FliF:0.0440928115)50:0.0147283434,AAG04490.1_Pseudomonas_FliF:0.0818936067)96:0.0469728240)96:0.0542327790,QEI19385.1_Cellvibrio_FliF:0.1020914840)73:0.0307458121,(((EAS78287.1_Vibrio_FliF:0.0245113930,(EEW07867.1_Vibrio_FliF:0.0763783370,BAC62879.1_Vibrio_FliF:0.0348849501)100:0.0790393854)97:0.0642871126,(ABV34690.1_Shewanella_FliF:0.1447251110,CAG18477.1_Photobacterium_FliF:0.1414037251)53:0.0246690964)82:0.0488075504,(WP_084977082.1_Plesiomonas_FliF:0.1188388515,((((((EHM37691.1_Hafnia_FliF:0.1065329555,(CBG33087.1_Escherichia_FliF:0.0867390750,POT58671.1_Citrobacter_FliF:0.1313185146)99:0.0805489794)73:0.0422714529,KLP54135.1_Enterobacter_FliF:0.0627067603)81:0.0480638547,CFQ44276.1_Yersinia_FliF:0.0297726193)67:0.0279266024,AJJ55407.1_Yersinia_FliF:0.0734239529)63:0.0312330798,RPH29466.1_Buttiauxella_FliF:0.0638917544)98:0.0653127763,(ATU65965.1_Rhizobacter_FliF:0.0890172323,AAQ60668.1_Chromobacterium_FliF:0.0687974052)100:0.1047712468)74:0.0279216957)62:0.0270978558)100:0.0995191885)91:0.0304154416)47:0.0153641807,(QBZ83471.1_Hydrogenovibrio_FliF:0.1737821540,(ABA58817.1_Nitrosococcus_FliF:0.0849119067,ACL73050.1_Thioalkalivibrio_FliF:0.0885183390)72:0.0370381363)75:0.0399964840)83:0.0246918204)67:0.0220947691,((ATU66744.1_Rhizobacter_FliF:0.0823211082,(APW41625.1_Rhodoferax_FliF:0.0802095240,EGI75820.1_Hylemonella_FliF:0.0477606636)70:0.0294666856)88:0.0320619612,UBQ04382.1_Tepidimonas_FliF:0.1119413302)62:0.0310219650)95:0.0537360755)76:0.0414983585,BAS27497.1_Limnochorda_FliF:0.1425878425)63:0.0402119898,((SHJ59096.1_Anaerobranca_FliF:0.0744119076,QNO16415.1_Alkalicella_FliF:0.0881730750)100:0.1015246029,(OWZ84225.1_Natranaerobius_FliF:0.0989000903,(UMZ73356.1_Natranaerofaba_FliF:0.0000023992,ACB84974.1_Natranaerobius_FliF:0.0000023992)100:0.1731740528)99:0.0956405106)77:0.0298730993)27:0.0190051994,((ADL43221.1_Caldicellulosiruptor_FliF:0.2580248011,ABY94911.1_Thermoanaerobacter_FliF:0.1491603722)79:0.0440819900,QAT61603.1_Tissierella_FliF:0.2271301481)76:0.0612833070)50:0.0269487014,(AAC07196.1_Aquifex_FliF:0.1298354069,ACM22640.1_Thermotoga_FliF:0.2829408083)34:0.0237535553)78:0.0639294307,(((ACK75069.1_Borreliella_FliF:0.1174625890,(AAS11733.1_Treponema_FliF:0.0884492331,AAC65387.1_Treponema_FliF:0.2019909450)68:0.0268804160)95:0.0740853774,AEM21723.1_Brachyspira_FliF:0.1603528167)99:0.0980490976,(EKT86534.2_Leptospira_FliF:0.0895627696,ABZ96871.1_Leptospira_FliF:0.0986665813)100:0.1231647898)95:0.1024191727)95:0.0974540503,(((BAC13844.1_Oceanobacillus_SpoIIIAG:0.0386413488,((((BAD40841.1_Symbiobacterium_SpoIIIAG:0.1112076233,(ACB85281.1_Natranaerobius_SpoIIIAG:0.1017619514,((BAS28431.1_Limnochorda_SpoIIIAG:0.1855324869,AUO18621.1_Monoglobus_SpoIIIAG:0.4270895894)59:0.0532638040,QAT61769.1_Tissierella_SpoIIIAG:0.0901342768)62:0.0500892482)81:0.0404754300)76:0.0383428069,((AAS43161.1_Bacillus_SpoIIIAG:0.0485139790,(((BAD65007.1_Alkalihalobacillus_SpoIIIAG:0.0590188165,(WP_061948746.1_Alkalihalobacillus_SpoIIIAG:0.0750610912,EEG78331.1_Dethiobacter_SpoIIIAG:0.0535722499)78:0.0379559514)50:0.0195042461,AAU41482.1_Bacillus_SpoIIIAG:0.0787007904)53:0.0199954390,KGA97906.1_Alkalihalobacillus_SpoIIIAG:0.0302792023)89:0.0636317627)73:0.0303747047,(AJH78041.1_Weizmannia_SpoIIIAG:0.0819048990,WP_010965387.1_Clostridium_SpoIIIAG:0.0835967443)60:0.0288537498)88:0.0407439823)50:0.0100910643,ACL21528.1_Desulfitobacterium_SpoIIIAG:0.1041625658)56:0.0187433965,((SHJ67115.1_Anaerobranca_SpoIIIAG:0.0804597402,QNO16150.1_Alkalicella_SpoIIIAG:0.0864294882)92:0.0570478379,WP_008404262.1_Solibacillus_SpoIIIAG:0.8634571174)24:0.0000026944)52:0.0096228949)77:0.0371539010,BAD76687.1_Geobacillus_SpoIIIAG:0.0605728086)75:0.0078495102,(AAO36130.1_Clostridium_SpoIIIAG:0.1317283744,ACL69380.1_Halothermothrix_SpoIIIAG:0.0871636816)54:0.0155529115)100:0.5273458244)58:0.0512339736,((((((WP_014824491.1_Solibacillus_FliF:0.0867427379,WP_066170015.1_Metasolibacillus_FliF:0.0798227861)71:0.0290723157,((WP_053417471.1_Viridibacillus_FliF:0.2195155808,(WP_041074053.1_Bacillus_FliF:0.1327732500,(WP_105928922.1_Lysinibacillus_FliF:0.0161650456,WP_036123974.1_Lysinibacillus_FliF:0.1184764528)99:0.0452367157)84:0.0286173558)55:0.0177427485,WP_151699469.1_Psychrobacillus_FliF:0.1151727604)66:0.0236723073)73:0.0274999762,WP_096550656.1_Ureibacillus_FliF:0.1277709245)76:0.0448399398,AAU40736.1_Bacillus_FliF:0.0839797806)96:0.0485360841,(KGA98254.1_Alkalihalobacillus_FliF:0.0993249903,(BAB06177.1_Halalkalibacterium_FliF:0.0608732068,ADC48108.1_Alkalihalophilus_FliF:0.0747083410)79:0.0420022042)36:0.0412273479)32:0.0346343107,BAC13511.1_Oceanobacillus_FliF:0.1467393848)39:0.0391355982)42:0.0601879441,BAD64804.1_Alkalihalobacillus_FliF:0.0792472038)100:0.7328565998,AVM87899.1_Chlamydia_T3SS:0.0340409596);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t seqs.fasta.treefile -m "PMB+F+I{0.0228286}+R6{0.18672,0.0746049,0.190397,0.321147,0.154091,0.667951,0.177778,1.14419,0.192939,1.94568,0.0752456,3.23193}" --length 350
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s seqs.fasta --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s seqs.fasta --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Thu Nov 13 15:36:14 2025
+Total CPU time used: 29991.3905 seconds (8h:19m:51s)
+Total wall-clock time used: 23305.2505 seconds (6h:28m:25s)
+

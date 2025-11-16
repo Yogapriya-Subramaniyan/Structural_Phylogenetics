@@ -1,0 +1,8 @@
+#!/usr/bin/env chimerax --script
+open "./Data/12_OutgroupSearch//Usalign_Sring_YEBC.pdb" name structure1
+open "./Data/Structures/Alphafold/Experimental_FliF_Sring.pdb" name structure2
+show solvent atoms,bonds
+color #1 blue
+color #2 red
+set bgColor white
+

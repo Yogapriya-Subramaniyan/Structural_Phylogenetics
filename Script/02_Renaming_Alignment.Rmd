@@ -1,0 +1,86 @@
+---
+title: "Reducing_Sequences_Renaming_Alignment"
+output: html_document
+---
+##Libraries
+```{r}
+library(seqinr)
+library(rentrez)
+
+entrez_email <- "s.yogapriya@outlook.com"
+```
+
+
+```{bash}
+seqkit rmdup -s < ./Data/02_Distant_Homolog_Extraction/homologs.fasta > ./Data/02_Distant_Homolog_Extraction/homologs_duplicate_removed.fasta
+```
+
+## Renaming homolog files
+```{r}
+xlsfn = "Data/RenamingSequences.xlsx" ## excel file with accession Number and desirable name
+xls = openxlsx::read.xlsx(xlsxFile=xlsfn, sheet=1, startRow=1, colNames=TRUE)
+fasta_file <- read.fasta (file = "Data/02_Distant_Homolog_Extraction/homologs_duplicate_removed.fasta") ## Fasta file to be renamed
+newnames = as.array(xls$protein)
+names(fasta_file) <- sapply(names(fasta_file), function(name) {
+  fasta_ids <- strsplit(name, split = "\\.")[[1]][1]
+   for (j in 1:length(newnames)){
+    newnames_accession <- strsplit(newnames[j], split = "\\.")[[1]][1]
+    if (fasta_ids == newnames_accession) {
+      return(newnames[j])
+   }
+   }
+})
+write.fasta(sequences = fasta_file, names=names(fasta_file), file.out = "Data/02_Distant_Homolog_Extraction/homologs_duplicate_removed_renamed.fasta") 
+```
+
+## Download Full sequences based on IDs 
+```{r}
+# If you already have sequence IDs:# More sequences:
+
+xlsfn = "Data/RenamingSequences.xlsx"
+xls = openxlsx::read.xlsx(xlsxFile=xlsfn, sheet=1, startRow=1, colNames=TRUE)
+
+seqids = as.list(xls$AccessionNumber)
+tmpfn = "Data/02_Distant_Homolog_Extraction/homologs_downloaded.fasta"
+
+chunk_size <- 100
+chunks <- split(seqids, ceiling(seq_along(seqids)/chunk_size))
+
+all_seqs <- ""
+
+for (chunk in chunks) {
+  query <- paste0(chunk, "[Accession]", collapse=" OR ")
+  search_res <- entrez_search(db="protein", term=query, use_history=TRUE)
+  seqs <- entrez_fetch(db="protein",
+                       web_history=search_res$web_history,
+                       rettype="fasta",
+                       retmode="text")
+  all_seqs <- paste0(all_seqs, seqs)
+  Sys.sleep(0.3) # be polite to NCBI servers
+}
+
+write(all_seqs, file=tmpfn)
+
+```
+
+## Renaming Downloaded files
+```{r}
+xlsfn = "Data/RenamingSequences.xlsx" ## excel file with accession Number and desirable name
+xls = openxlsx::read.xlsx(xlsxFile=xlsfn, sheet=1, startRow=1, colNames=TRUE)
+fasta_file <- read.fasta (file = "Data/02_Distant_Homolog_Extraction/homologs_downloaded.fasta") ## Fasta file to be renamed
+newnames = as.array(xls$protein)
+names(fasta_file) <- sapply(names(fasta_file), function(name) {
+  fasta_ids <- strsplit(name, split = "\\.")[[1]][1]
+   for (j in 1:length(newnames)){
+    newnames_accession <- strsplit(newnames[j], split = "\\.")[[1]][1]
+    if (fasta_ids == newnames_accession) {
+      return(newnames[j])
+   }
+   }
+})
+write.fasta(sequences = fasta_file, names=names(fasta_file), file.out = "Data/02_Distant_Homolog_Extraction/homologs_downloaded_renamed.fasta") 
+```
+
+```{bash}
+seqkit rmdup -s < ./Data/02_Distant_Homolog_Extraction/homologs.fasta > ./Data/02_Distant_Homolog_Extraction/homologs_duplicate_removed.fasta
+```

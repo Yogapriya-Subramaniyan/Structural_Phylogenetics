@@ -1,0 +1,3130 @@
+IQ-TREE multicore version 2.3.6 for MacOS ARM 64-bit built Jul 30 2024
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    Sasidharans-MacBook-Pro.local (SSE4.2, 24 GB RAM)
+Command: iqtree2 -s seqs.fasta -mset 3DI,Blosum62,Dayhoff,DCMut,JTT,JTTDCMut,LG,Poisson,Poisson+FQ,Poisson,PMB,WAG,EX2,EX3,EHO,EX_EHO -mfreq FU,F -mrate E,G,R -nt 4 --ufboot 1000 -alrt 1000 -bnni
+Seed:    788248 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sun Nov 16 00:34:55 2025
+Kernel:  SSE2 - 4 threads (12 CPU cores detected)
+
+Reading alignment file seqs.fasta ... Fasta format detected
+Reading fasta file: done in 0.00107503 secs using 62.42% CPU
+Alignment most likely contains protein sequences
+Alignment has 268 sequences with 353 columns, 350 distinct patterns
+316 parsimony-informative, 20 singleton sites, 17 constant sites
+                                                              Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 4.00543e-05 secs using 227.2% CPU
+   1  AAC68314.1_Chlamydia_FliF                                      50.71%    passed     18.04%
+   2  ACL65896.1_Anaeromyxobacter_FliF                                4.82%    passed     65.53%
+   3  AGH96362.1_Pseudobdellovibrio_FliF                              1.70%    passed     98.48%
+   4  AHZ83763.1_Bdellovibrio_FliF                                    1.98%    passed     99.47%
+   5  AGC50281.1_Lawsonia_FliF                                        3.12%    passed     99.90%
+   6  AAS94796.1_Desulfovibrio_FliF                                   3.12%    passed     99.90%
+   7  WP_011366492.1_Oleidesulfovibrio_FliF                           2.83%    passed     99.73%
+   8  BAH77996.1_Solidesulfovibrio_FliF                               0.28%    passed     78.45%
+   9  ABS63798.1_Parvibaculum_FliF                                    1.70%    passed     99.57%
+  10  AEP09101.1_Micavibrio_FliF                                      1.42%    passed     45.50%
+  11  AEO47029.1_Rhodospirillum_FliF                                  1.98%    passed     99.99%
+  12  CDL00846.1_Magnetospirillum_FliF                                1.70%    passed     99.98%
+  13  AHK70359.1_Gluconobacter_FliF                                  13.31%    passed     67.35%
+  14  ACL94415.1_Caulobacter_FliF                                     1.98%    passed     96.53%
+  15  ADL02120.1_Brevundimonas_FliF                                   2.27%    passed     99.98%
+  16  ATX78584.1_Mariprofundus_FliF                                   1.98%    passed     97.77%
+  17  ATX82919.1_Mariprofundus_FliF                                   2.27%    passed     94.92%
+  18  ABC45369.1_Salinibacter_FliF                                    9.92%    passed     99.92%
+  19  ABI78744.1_Hyphomonas_FliF                                      5.67%    passed     90.40%
+  20  AIQ89829.1_Methylobacterium_FliF                                8.22%    passed     36.44%
+  21  BAL07813.1_Bradyrhizobium_FliF                                  3.68%    passed     81.98%
+  22  ABQ62358.1_Brucella_FliF                                        3.68%    passed     87.59%
+  23  ABK42796.1_Magnetococcus_FliF                                   2.55%    passed     99.74%
+  24  CAG37385.1_Desulfotalea_FliF                                    3.12%    passed     99.94%
+  25  ACV67866.1_Desulfohalobium_FliF                                 7.65%    passed     93.12%
+  26  ABA88441.1_Syntrophotalea_FliF                                  3.40%    passed     99.98%
+  27  ALA58335.1_Nitrospira_FliF                                      1.70%    passed     99.94%
+  28  BCB96474.1_Dissulfurispira_FliF                                 3.40%    passed     99.92%
+  29  ACI21849.1_Thermodesulfovibrio_FliF                             3.40%    passed     94.52%
+  30  ABC76851.1_Syntrophus_FliF                                      7.65%    passed     99.80%
+  31  ACN16787.1_Desulforapulum_FliF                                  2.83%    passed     99.08%
+  32  BAM05992.1_Leptospirillum_FliF                                  1.13%    passed     99.36%
+  33  AFL88119.1_Terriglobus_FliF                                     1.98%    passed     99.60%
+  34  AEI88715.1_Candidatus_FliF                                      2.83%    passed     99.73%
+  35  SHK75940.1_Desulfatibacillum_FliF                               3.12%    passed     91.81%
+  36  RJP61224.1_Candidatus_FliF                                      4.53%    passed     99.46%
+  37  ACT13606.1_Pectobacterium_FliF                                  1.42%    passed     99.59%
+  38  CFQ36607.1_Yersinia_FliF                                        1.42%    passed     99.99%
+  39  AJJ56339.1_Yersinia_FliF                                        1.42%    passed     99.92%
+  40  KLP57552.1_Enterobacter_FliF                                    1.70%    passed     98.09%
+  41  KLR25735.1_Enterobacter_FliF                                    1.70%    passed     99.90%
+  42  AAO68586.1_Salmonella_FliF                                      1.70%    passed     99.84%
+  43  POT59441.1_Citrobacter_FliF                                     1.70%    passed     99.99%
+  44  AAL20881.1_Salmonella_FliF                                      1.70%    passed     99.96%
+  45  QKY95803.1_Shigella_FliF                                        2.55%    passed     99.94%
+  46  RPH21571.1_Buttiauxella_FliF                                    1.98%    passed     99.96%
+  47  CCJ72125.1_Cronobacter_FliF                                     1.42%    passed     99.34%
+  48  KGT96016.1_Erwinia_FliF                                         1.42%    passed     99.97%
+  49  CBJ46171.1_Erwinia_FliF                                         1.42%    passed     99.44%
+  50  AGG30848.1_Morganella_FliF                                      1.70%    passed     99.84%
+  51  RPH26529.1_Buttiauxella_FliF                                    1.42%    passed     99.78%
+  52  CBJ47254.1_Erwinia_FliF                                         1.42%    passed    100.00%
+  53  POT54770.1_Citrobacter_FliF                                     1.42%    passed     87.52%
+  54  CFQ36177.1_Yersinia_FliF                                        1.42%    passed     96.67%
+  55  ORN02599.1_Pantoea_FliF                                         0.57%    passed     71.76%
+  56  KGT93339.1_Erwinia_FliF                                         0.57%    passed     71.76%
+  57  TCV95562.1_Biostraticola_FliF                                   3.40%    passed     98.68%
+  58  AHF75271.1_Sodalis_FliF                                         1.42%    passed     93.16%
+  59  ARU98306.1_Tatumella_FliF                                       1.42%    passed     99.99%
+  60  CAJ49324.1_Bordetella_FliF                                      1.42%    passed     98.85%
+  61  WP_015871707.1_Edwardsiella_FliF                                1.42%    passed     99.68%
+  62  QXB11719.1_Klebsiella_FliF                                      1.70%    passed     99.68%
+  63  KFD13219.1_Serratia_FliF                                        1.13%    passed     99.91%
+  64  AOM39532.1_Xenorhabdus_FliF                                     0.57%    passed     95.79%
+  65  AFA40924.1_Wigglesworthia_FliF                                  2.27%    passed     99.26%
+  66  EHM41863.1_Hafnia_FliF                                          1.42%    passed     99.42%
+  67  CAQ72721.1_Cupriavidus_FliF                                     0.57%    passed     95.76%
+  68  AHF75751.1_Sodalis_FliF                                         1.13%    passed     99.90%
+  69  AAZ97553.1_Thiobacillus_FliF                                    0.28%    passed    100.00%
+  70  ABE50245.1_Methylobacillus_FliF                                 0.28%    passed     81.64%
+  71  ACT47836.1_Methylotenera_FliF                                   0.28%    passed     97.09%
+  72  CAH34218.1_Burkholderia_FliF                                    0.28%    passed     99.84%
+  73  ABC37528.1_Burkholderia_FliF                                    0.28%    passed     99.91%
+  74  AAU48881.1_Burkholderia_FliF                                    0.28%    passed     99.97%
+  75  ADE10838.1_Sideroxydans_FliF                                    1.13%    passed    100.00%
+  76  ATU66744.1_Rhizobacter_FliF                                     0.28%    passed     98.29%
+  77  UBQ04382.1_Tepidimonas_FliF                                     0.57%    passed     99.71%
+  78  APW41625.1_Rhodoferax_FliF                                      0.57%    passed     99.98%
+  79  EGI75820.1_Hylemonella_FliF                                     0.57%    passed     99.79%
+  80  BAB12793.1_Buchnera_FliF                                        2.83%    passed     99.49%
+  81  AAM67637.1_Buchnera_FliF                                        1.70%    passed     99.20%
+  82  AAQ60803.1_Chromobacterium_FliF                                 0.57%    passed    100.00%
+  83  AAW86347.1_Aliivibrio_FliF                                      0.85%    passed     97.67%
+  84  EAS77894.1_Vibrio_FliF                                          0.85%    passed     99.96%
+  85  GAA03515.1_Photobacterium_FliF                                  0.85%    passed     99.96%
+  86  CAG19334.1_Photobacterium_FliF                                  0.85%    passed     99.95%
+  87  QEO40727.1_Vibrio_FliF                                          0.85%    passed     99.39%
+  88  AAF95278.1_Vibrio_FliF                                          0.85%    passed     99.39%
+  89  EEW06433.1_Vibrio_FliF                                          0.85%    passed     96.11%
+  90  BAC95245.1_Vibrio_FliF                                          0.85%    passed     98.93%
+  91  EPE37900.1_Candidatus_FliF                                      0.85%    passed     96.71%
+  92  AVQ87012.1_Plesiomonas_FliF                                     0.85%    passed     99.48%
+  93  WP_084977171.1_Plesiomonas_FliF                                 0.85%    passed     99.48%
+  94  AAZ28086.1_Colwellia_FliF                                       1.42%    passed     97.22%
+  95  EAR29538.1_Pseudoalteromonas_FliF                               1.42%    passed     99.65%
+  96  GAC24878.1_Paraglaciecola_FliF                                  1.42%    passed     95.87%
+  97  AEP30462.1_Glaciecola_FliF                                      1.42%    passed     99.96%
+  98  UXK10552.1_Shewanella_FliF                                      1.98%    passed     98.69%
+  99  ABV37670.1_Shewanella_FliF                                      1.42%    passed     89.89%
+ 100  AAN56227.2_Shewanella_FliF                                      1.42%    passed     99.30%
+ 101  BAJ01403.1_Shewanella_FliF                                      1.42%    passed     97.45%
+ 102  EHR42289.1_Alishewanella_FliF                                   1.42%    passed     99.61%
+ 103  ABK38602.1_Aeromonas_FliF                                       1.42%    passed     95.12%
+ 104  ATP10457.1_Aeromonas_FliF                                       1.42%    passed     97.50%
+ 105  EKB19994.1_Aeromonas_FliF                                       1.42%    passed     72.41%
+ 106  QCG47664.1_Aeromonas_FliF                                       1.70%    passed     99.01%
+ 107  ABD81448.1_Saccharophagus_FliF                                  0.00%    passed     99.61%
+ 108  QEI19385.1_Cellvibrio_FliF                                      0.00%    passed     98.08%
+ 109  EGW20512.1_Methylobacter_FliF                                   0.28%    passed     95.69%
+ 110  QBZ83471.1_Hydrogenovibrio_FliF                                 1.13%    passed     99.87%
+ 111  AAY38489.1_Pseudomonas_FliF                                     0.00%    passed     99.43%
+ 112  AAG04490.1_Pseudomonas_FliF                                     0.00%    passed     99.95%
+ 113  ABY99820.1_Pseudomonas_FliF                                     0.00%    passed     96.78%
+ 114  EHJ04466.1_Marinobacter_FliF                                    0.00%    passed     99.97%
+ 115  CCG94784.1_Marinobacter_FliF                                    0.00%    passed     99.87%
+ 116  ADZ92454.1_Marinomonas_FliF                                     0.00%    passed     98.99%
+ 117  EAS78287.1_Vibrio_FliF                                          3.68%    passed     99.96%
+ 118  EEW07867.1_Vibrio_FliF                                          3.68%    passed     98.96%
+ 119  BAC62879.1_Vibrio_FliF                                          3.97%    passed     98.73%
+ 120  ABV34690.1_Shewanella_FliF                                      4.53%    passed     86.08%
+ 121  WP_084977082.1_Plesiomonas_FliF                                 4.53%    passed     99.98%
+ 122  CAG18477.1_Photobacterium_FliF                                  5.67%    passed     99.94%
+ 123  EHM37691.1_Hafnia_FliF                                          4.25%    passed     90.25%
+ 124  CFQ44276.1_Yersinia_FliF                                        5.95%    passed     99.44%
+ 125  RPH29466.1_Buttiauxella_FliF                                    3.40%    passed     99.83%
+ 126  AJJ55407.1_Yersinia_FliF                                        5.95%    passed     99.95%
+ 127  KLP54135.1_Enterobacter_FliF                                    3.12%    passed     98.88%
+ 128  CBG33087.1_Escherichia_FliF                                     3.97%    passed     99.67%
+ 129  POT58671.1_Citrobacter_FliF                                     3.97%    passed     78.56%
+ 130  ATU65965.1_Rhizobacter_FliF                                     4.25%    passed     98.31%
+ 131  AAQ60668.1_Chromobacterium_FliF                                 4.82%    passed     96.08%
+ 132  AGI74751.1_Octadecabacter_FliF                                  0.28%    passed     77.81%
+ 133  ADE39075.1_Candidatus_FliF                                      0.57%    passed     91.96%
+ 134  AOU49298.1_Legionella_FliF                                      0.00%    passed     98.19%
+ 135  ACV75177.1_Zymomonas_FliF                                       2.83%    passed     90.10%
+ 136  QNQ09320.1_Sphingomonas_FliF                                    2.83%    passed     94.52%
+ 137  ABA58817.1_Nitrosococcus_FliF                                   0.28%    passed     99.93%
+ 138  ACL73050.1_Thioalkalivibrio_FliF                                0.28%    passed     99.22%
+ 139  AAR33742.1_Geobacter_FliF                                       2.83%    passed     99.81%
+ 140  ACH40830.1_Citrifermentans_FliF                                 2.55%    passed     99.25%
+ 141  OSS41621.1_Desulfurella_FliF                                    1.42%    passed     99.30%
+ 142  ALF48087.1_Campylobacter_FliF                                   2.55%    passed     98.43%
+ 143  AOO64056.1_Sulfurospirillum_FliF                                2.27%    passed    100.00%
+ 144  ACM93021.1_Nautilia_FliF                                        2.27%    passed     98.37%
+ 145  CAE11001.1_Wolinella_FliF                                       2.27%    passed     99.97%
+ 146  ADN09694.1_Sulfurimonas_FliF                                    2.27%    passed     99.79%
+ 147  QAR34056.1_Geovibrio_FliF                                       2.83%    passed     99.90%
+ 148  ADD69076.1_Denitrovibrio_FliF                                   2.83%    passed     97.87%
+ 149  USF24605.1_Mucispirillum_FliF                                   3.40%    passed     97.85%
+ 150  QOY89262.1_Paludibaculum_FliF                                   3.12%    passed     99.99%
+ 151  QOY88876.1_Paludibaculum_FliF                                   2.83%    passed     94.27%
+ 152  ACO32668.1_Acidobacterium_FliF                                  3.12%    passed     84.42%
+ 153  BAH37373.1_Gemmatimonas_FliF                                    9.07%    passed     60.96%
+ 154  QJR36449.1_Gemmatimonas_FliF                                    9.07%    passed     99.11%
+ 155  ATU63999.1_Rhizobacter_FliF                                    11.90%    passed     99.44%
+ 156  ADG94151.1_Arcobacter_FliF                                      4.25%    passed     98.93%
+ 157  QDU26973.1_Anatilimnocola_FliF                                  5.38%    passed     97.20%
+ 158  QDU93976.1_Lignipirellula_FliF                                  4.25%    passed     96.37%
+ 159  CAD75367.1_Rhodopirellula_FliF                                  4.53%    passed     75.05%
+ 160  BAD41986.1_Symbiobacterium_FliF                                 4.25%    passed     69.05%
+ 161  SHJ59096.1_Anaerobranca_FliF                                    7.93%    passed     92.32%
+ 162  QNO16415.1_Alkalicella_FliF                                     7.93%    passed     98.94%
+ 163  AAS40694.1_Bacillus_FliF                                        5.95%    passed     99.54%
+ 164  AAC07196.1_Aquifex_FliF                                         6.80%    passed     82.70%
+ 165  ADC89287.1_Thermocrinis_FliF                                    6.52%    passed     97.79%
+ 166  BAS27497.1_Limnochorda_FliF                                     6.52%    passed     99.92%
+ 167  ACB73714.1_Opitutus_FliF                                        1.98%    passed     99.99%
+ 168  ATC63675.1_Nibricoccus_FliF                                     2.55%    passed     92.74%
+ 169  AAO36212.1_Clostridium_FliF                                     7.08%    passed     99.99%
+ 170  WP_010965461.1_Clostridium_FliF                                 6.80%    passed     99.14%
+ 171  ACL70438.1_Halothermothrix_FliF                                 6.52%    passed     99.86%
+ 172  EGO63145.1_Acetonema_FliF                                       5.67%    passed     99.99%
+ 173  ACZ19568.1_Thermanaerovibrio_FliF                               5.67%    passed     99.95%
+ 174  EEG76529.1_Dethiobacter_FliF                                    5.67%    passed     97.74%
+ 175  ACL22158.1_Desulfitobacterium_FliF                              5.67%    passed     99.88%
+ 176  CCW35059.1_Chthonomonas_FliF                                    2.83%    passed     88.39%
+ 177  ADL43221.1_Caldicellulosiruptor_FliF                            3.68%    passed     98.62%
+ 178  ABY94911.1_Thermoanaerobacter_FliF                              7.37%    passed     98.35%
+ 179  QAT61603.1_Tissierella_FliF                                     6.80%    passed     99.74%
+ 180  WP_014824491.1_Solibacillus_FliF                                3.97%    passed     89.87%
+ 181  WP_096550656.1_Ureibacillus_FliF                                4.25%    passed     77.78%
+ 182  WP_066170015.1_Metasolibacillus_FliF                            3.68%    passed     97.98%
+ 183  WP_053417471.1_Viridibacillus_FliF                              3.97%    passed     34.55%
+ 184  WP_041074053.1_Bacillus_FliF                                    4.82%    passed     97.59%
+ 185  WP_105928922.1_Lysinibacillus_FliF                              3.97%    passed     98.18%
+ 186  WP_036123974.1_Lysinibacillus_FliF                              3.97%    passed     89.93%
+ 187  WP_151699469.1_Psychrobacillus_FliF                             3.68%    passed     93.25%
+ 188  KGA98254.1_Alkalihalobacillus_FliF                              4.53%    passed     86.78%
+ 189  BAD64804.1_Alkalihalobacillus_FliF                              4.82%    passed     85.34%
+ 190  BAC13511.1_Oceanobacillus_FliF                                  3.68%    passed     93.22%
+ 191  AAU40736.1_Bacillus_FliF                                        3.97%    passed     75.17%
+ 192  BAB06177.1_Halalkalibacterium_FliF                              4.53%    passed     88.59%
+ 193  ADC48108.1_Alkalihalophilus_FliF                                4.53%    passed     97.23%
+ 194  OWZ84225.1_Natranaerobius_FliF                                  5.10%    passed     40.53%
+ 195  UMZ73356.1_Natranaerofaba_FliF                                  5.10%    passed     96.13%
+ 196  ACB84974.1_Natranaerobius_FliF                                  5.10%    passed     96.13%
+ 197  ACM22640.1_Thermotoga_FliF                                      4.53%    passed     98.63%
+ 198  ACK75069.1_Borreliella_FliF                                     2.27%    passed     86.00%
+ 199  AAS11733.1_Treponema_FliF                                       2.55%    passed     93.50%
+ 200  AAC65387.1_Treponema_FliF                                       2.83%    passed     99.62%
+ 201  AEM21723.1_Brachyspira_FliF                                     2.83%    passed     99.21%
+ 202  EKT86534.2_Leptospira_FliF                                      2.55%    passed     67.28%
+ 203  ABZ96871.1_Leptospira_FliF                                      2.55%    passed     61.09%
+ 204  AVM87899.1_Chlamydia_T3SS                                      71.95%    passed     70.79%
+ 205  QEO41070.1_Vibrio_T3SS                                         59.21%    failed      0.60%
+ 206  BAE49307.1_Magnetospirillum_T3SS                               54.39%    passed     14.00%
+ 207  AAZ97041.1_Thiobacillus_T3SS                                   54.96%    passed     38.78%
+ 208  ADY60058.1_Rubinisphaera_T3SS_YscJ                             55.81%    passed      7.01%
+ 209  ADB18987.1_Pirellula_T3SS                                      56.09%    passed     42.80%
+ 210  CCB86648.1_Parachlamydia_T3SS                                  54.39%    passed     27.20%
+ 211  EDR30632.1_Yersinia_T3SS                                       54.67%    passed     20.50%
+ 212  AJJ53162.1_Yersinia_T3SS_YscJ_HrcJ                             54.67%    passed     20.50%
+ 213  AAG05112.1_Pseudomonas_T3SS                                    54.67%    passed     71.07%
+ 214  CBJ47559.1_Erwinia_T3SS                                        54.67%    passed     28.53%
+ 215  KGT90338.1_Erwinia_T3SS                                        54.67%    passed     19.97%
+ 216  AAY36249.1_Pseudomonas_T3SS_YscJ_HrcJ                          54.67%    passed     46.99%
+ 217  ADZ90362.1_Marinomonas_T3SS_YscJ_HrcJ                          54.67%    passed     23.65%
+ 218  ACL64098.1_Anaeromyxobacter_T3SS_YscJ                          54.39%    passed     32.35%
+ 219  WP_015870333.1_Edwardsiella_T3SS_SctJ                          54.96%    passed     41.33%
+ 220  ABF88125.1_Myxococcus_T3SS_YscJ_HrcJ                           54.67%    failed      2.21%
+ 221  ADO70830.1_Stigmatella_T3SS_YscJ_HrcJ                          54.67%    passed     27.96%
+ 222  BAJ02212.1_Shewanella_T3SS                                     54.67%    passed     47.13%
+ 223  CFQ38428.1_Yersinia_T3SS                                       54.96%    passed     73.68%
+ 224  EDR34178.1_Yersinia_T3SS_YscJ_HrcJ                             54.96%    passed     92.34%
+ 225  AJJ56869.1_Yersinia_T3SS_YscJ_HrcJ                             54.96%    passed     80.53%
+ 226  BAC59953.1_Vibrio_T3SS                                         54.67%    passed     29.76%
+ 227  AAQ60258.1_Chromobacterium_T3SS                                54.96%    passed     59.52%
+ 228  AHF76786.1_Sodalis_T3SS                                        54.96%    passed     39.49%
+ 229  CAH39099.1_Burkholderia_T3SS                                   54.67%    passed     87.18%
+ 230  CAH38872.1_Burkholderia_T3SS                                   54.67%    passed     21.79%
+ 231  ATU65453.1_Rhizobacter_T3SS_YscJ_HrcJ                          54.67%    passed     81.86%
+ 232  CAH39023.1_Burkholderia_T3SS                                   54.67%    passed     91.14%
+ 233  ABC34345.1_Burkholderia_T3SS                                   54.67%    passed     83.47%
+ 234  CBJ47346.1_Erwinia_T3SS                                        54.67%    passed     90.30%
+ 235  CBJ46227.1_Erwinia_T3SS                                        54.67%    passed     93.65%
+ 236  AHF78198.1_Sodalis_T3SS                                        54.67%    passed     91.70%
+ 237  AHF75698.1_Sodalis_T3SS                                        54.67%    passed     52.54%
+ 238  CBG35883.1_Escherichia_T3SS                                    54.67%    passed     74.36%
+ 239  TCV96683.1_Biostraticola_T3SS                                  54.67%    passed     65.72%
+ 240  AGG29087.1_Morganella_T3SS_HrcJ                                54.67%    passed     45.12%
+ 241  POT59516.1_Citrobacter_T3SS_YscJ_HrcJ                          54.67%    passed     79.82%
+ 242  CAQ71857.1_Cupriavidus_T3SS_SctJ                               54.67%    passed     37.03%
+ 243  AGC49958.1_Lawsonia_T3SS                                       54.67%    failed      0.78%
+ 244  AAS94345.1_Desulfovibrio_T3SS                                  54.67%    failed      1.62%
+ 245  AGC50595.1_Lawsonia_T3SS_YscJ_HrcJ                             54.67%    passed      9.15%
+ 246  AAC68161.1_Chlamydia_T3SS_YscJ                                 55.52%    passed     67.04%
+ 247  AVM88570.1_Chlamydia_T3SS_YscJ_HrcJ                            55.81%    passed     64.55%
+ 248  CCB85093.1_Parachlamydia_T3SS                                  54.39%    passed     41.43%
+ 249  AFE09625.1_Corallococcus_T3SS                                  54.39%    passed     51.95%
+ 250  ABF88690.1_Myxococcus_T3SS                                     54.39%    passed     84.39%
+ 251  ADO74089.1_Stigmatella_T3SS                                    54.39%    passed     84.68%
+ 252  QTD51128.1_Sulfidibacter_T3SS_SctJ                             54.96%    passed     30.76%
+ 253  YEBC_TranscriptionalRegulator                                  53.54%    failed      0.00%
+ 254  BAD65007.1_WP_061948745.1_Alkalihalobacillus_Sporulation       41.93%    passed     65.10%
+ 255  AAS43161.1_AAS43160.1_Bacillus_Sporulation                     41.93%    passed     84.05%
+ 256  AJH78041.1_AJH78695.1_Weizmannia_Sporulation                   41.36%    passed     55.90%
+ 257  BAD76687.1_BAD76686.1_Geobacillus_Sporulation                  41.64%    passed     40.95%
+ 258  BAC13844.1_BAC13843.1_Oceanobacillus_Sporulation               41.93%    passed     74.97%
+ 259  WP_008404262.1_WP_008404261.1_Solibacillus_Sporulation         49.29%    failed      0.06%
+ 260  AUO18621.1_AUO18620.1_Monoglobus_Sporulation                   45.04%    passed     42.95%
+ 261  WP_010965387.1_WP_010965386.1_Clostridium_Sporulation          42.21%    passed     65.42%
+ 262  BAD40841.1_BAD40840.1_Symbiobacterium_Sporulation              41.64%    passed     69.56%
+ 263  SHJ67115.1_SHJ67084.1_Anaerobranca_Sporulation                 41.36%    passed     65.25%
+ 264  QNO16150.1_QNO16151.1_Alkalicella_Sporulation                  41.36%    passed     26.86%
+ 265  WP_061948746.1_WP_061948745.1_Alkalihalobacillus_Sporulation   61.76%    passed     27.64%
+ 266  KGA97906.1_WP_061948745.1_Alkalihalobacillus_Sporulation       61.76%    passed     60.89%
+ 267  AAU41482.1_AAS43160.1_Bacillus_Sporulation                     61.76%    passed     50.70%
+ 268  AAO36130.1_WP_010965386.1_Clostridium_Sporulation              62.89%    passed     22.37%
+WARNING: 55 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                          15.33%  6 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: KGT93339.1_Erwinia_FliF is identical to ORN02599.1_Pantoea_FliF but kept for subsequent analysis
+NOTE: AAF95278.1_Vibrio_FliF is identical to QEO40727.1_Vibrio_FliF but kept for subsequent analysis
+NOTE: WP_084977171.1_Plesiomonas_FliF is identical to AVQ87012.1_Plesiomonas_FliF but kept for subsequent analysis
+NOTE: ACB84974.1_Natranaerobius_FliF is identical to UMZ73356.1_Natranaerofaba_FliF but kept for subsequent analysis
+NOTE: AJJ53162.1_Yersinia_T3SS_YscJ_HrcJ is identical to EDR30632.1_Yersinia_T3SS but kept for subsequent analysis
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.045 seconds
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -58664.609
+Optimal log-likelihood: -58664.538
+Proportion of invariable sites: 0.043
+Gamma shape alpha: 0.829
+Parameters optimization took 1 rounds (0.369 sec)
+Time for fast ML tree search: 3.973 seconds
+
+NOTE: ModelFinder requires 154 MB RAM!
+ModelFinder will test up to 352 protein models (sample size: 353 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+  1  3DI           46756.964    533 94579.929    663823.929   96640.756
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+  2  3DI+G4        43966.059    534 89000.119    660380.119   91064.813
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+  3  3DI+R2        44507.027    535 90084.053    663604.053   92152.614
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+  4  3DI+R3        44087.592    537 89249.184    667061.184   91325.477
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+  5  3DI+R4        43934.900    539 88947.799    671067.799   91031.825
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+  6  3DI+R5        43879.851    541 88841.702    675285.702   90933.462
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+  7  3DI+R6        43851.766    543 88789.532    679573.532   90889.024
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+  8  3DI+R7        43845.874    545 88781.749    683921.749   90888.974
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+  9  3DI+R8        43845.406    547 88784.813    688296.813   90899.771
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+ 12  3DI+F         47199.901    552 95503.802    706015.802   97638.092
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+ 13  3DI+F+G4      44661.120    553 90428.239    703152.239   92566.396
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+ 14  3DI+F+R2      45203.190    554 91514.380    706454.380   93656.403
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+ 15  3DI+F+R3      44775.696    556 90663.393    710047.393   92813.149
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+ 16  3DI+F+R4      44635.876    558 90387.752    714231.752   92545.242
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+ 17  3DI+F+R5      44591.767    560 90303.533    718623.533   92468.755
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+ 18  3DI+F+R6      44562.477    562 90248.955    723060.955   92421.910
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+ 19  3DI+F+R7      44555.307    564 90238.614    727558.614   92419.302
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+ 20  3DI+F+R8      44555.259    566 90242.518    732086.518   92430.939
+ 23  Blosum62      59058.744    533 119183.488   688427.488   121244.316
+ 24  Blosum62+G4   55545.641    534 112159.283   683539.283   114223.977
+ 25  Blosum62+R2   56234.294    535 113538.588   687058.588   115607.148
+ 26  Blosum62+R3   55658.681    537 112391.363   690203.363   114467.656
+ 27  Blosum62+R4   55511.739    539 112101.477   694221.477   114185.504
+ 28  Blosum62+R5   55461.583    541 112005.165   698449.165   114096.924
+ 29  Blosum62+R6   55437.782    543 111961.564   702745.564   114061.056
+ 30  Blosum62+R7   55424.111    545 111938.221   707078.221   114045.446
+ 31  Blosum62+R8   55424.034    547 111942.068   711454.068   114057.026
+ 34  Blosum62+F    55413.494    552 111930.988   722442.988   114065.278
+ 35  Blosum62+F+G4 51864.853    553 104835.706   717559.706   106973.863
+ 36  Blosum62+F+R2 52542.859    554 106193.719   721133.719   108335.742
+ 37  Blosum62+F+R3 51987.784    556 105087.568   724471.568   107237.325
+ 38  Blosum62+F+R4 51822.404    558 104760.808   728604.808   106918.297
+ 39  Blosum62+F+R5 51736.788    560 104593.576   732913.576   106758.798
+ 40  Blosum62+F+R6 51710.893    562 104545.786   737357.786   106718.741
+ 41  Blosum62+F+R7 51702.531    564 104533.062   741853.062   106713.750
+ 42  Blosum62+F+R8 51700.673    566 104533.345   746377.345   106721.766
+ 45  Dayhoff       64416.278    533 129898.556   699142.556   131959.384
+ 46  Dayhoff+G4    60061.224    534 121190.448   692570.448   123255.142
+ 47  Dayhoff+R2    61088.413    535 123246.826   696766.826   125315.386
+ 48  Dayhoff+R3    60315.718    537 121705.435   699517.435   123781.729
+ 49  Dayhoff+R4    60029.574    539 121137.148   703257.148   123221.175
+ 50  Dayhoff+R5    59882.003    541 120846.006   707290.006   122937.766
+ 51  Dayhoff+R6    59824.847    543 120735.694   711519.694   122835.186
+ 52  Dayhoff+R7    59806.676    545 120703.352   715843.352   122810.577
+ 53  Dayhoff+R8    59787.995    547 120669.990   720181.990   122784.948
+ 54  Dayhoff+R9    59787.883    549 120673.766   724573.766   122796.456
+ 56  Dayhoff+F     60882.992    552 122869.985   733381.985   125004.275
+ 57  Dayhoff+F+G4  55632.445    553 112370.889   725094.889   114509.046
+ 58  Dayhoff+F+R2  56787.878    554 114683.757   729623.757   116825.780
+ 59  Dayhoff+F+R3  56010.297    556 113132.595   732516.595   115282.351
+ 60  Dayhoff+F+R4  55616.837    558 112349.674   736193.674   114507.163
+ 61  Dayhoff+F+R5  55483.178    560 112086.356   740406.356   114251.578
+ 62  Dayhoff+F+R6  55408.318    562 111940.637   744752.637   114113.592
+ 63  Dayhoff+F+R7  55392.870    564 111913.739   749233.739   114094.427
+ 64  Dayhoff+F+R8  55381.348    566 111894.697   753738.697   114083.118
+ 65  Dayhoff+F+R9  55378.164    568 111892.327   758276.327   114088.481
+ 67  DCMut         64335.541    533 129737.082   698981.082   131797.910
+ 68  DCMut+G4      59994.514    534 121057.029   692437.029   123121.723
+ 69  DCMut+R2      61019.924    535 123109.848   696629.848   125178.409
+ 70  DCMut+R3      60249.443    537 121572.885   699384.885   123649.179
+ 71  DCMut+R4      59962.549    539 121003.097   703123.097   123087.124
+ 72  DCMut+R5      59814.700    541 120711.401   707155.401   122803.160
+ 73  DCMut+R6      59757.285    543 120600.569   711384.569   122700.061
+ 74  DCMut+R7      59739.981    545 120569.962   715709.962   122677.188
+ 75  DCMut+R8      59719.968    547 120533.936   720045.936   122648.894
+ 76  DCMut+R9      59719.849    549 120537.697   724437.697   122660.388
+ 78  DCMut+F       60805.834    552 122715.669   733227.669   124849.959
+ 79  DCMut+F+G4    55584.025    553 112274.051   724998.051   114412.208
+ 80  DCMut+F+R2    56735.279    554 114578.557   729518.557   116720.581
+ 81  DCMut+F+R3    55960.388    556 113032.775   732416.775   115182.532
+ 82  DCMut+F+R4    55565.723    558 112247.445   736091.445   114404.934
+ 83  DCMut+F+R5    55432.681    560 111985.362   740305.362   114150.584
+ 84  DCMut+F+R6    55357.644    562 111839.288   744651.288   114012.243
+ 85  DCMut+F+R7    55345.033    564 111818.066   749138.066   113998.754
+ 86  DCMut+F+R8    55334.590    566 111801.181   753645.181   113989.602
+ 87  DCMut+F+R9    55331.391    568 111798.783   758182.783   113994.937
+ 89  JTT           62503.905    533 126073.811   695317.811   128134.638
+ 90  JTT+G4        58865.042    534 118798.084   690178.084   120862.778
+ 91  JTT+R2        59636.827    535 120343.654   693863.654   122412.214
+ 92  JTT+R3        59016.929    537 119107.858   696919.858   121184.151
+ 93  JTT+R4        58825.405    539 118728.810   700848.810   120812.836
+ 94  JTT+R5        58752.278    541 118586.557   705030.557   120678.316
+ 95  JTT+R6        58721.694    543 118529.387   709313.387   120628.879
+ 96  JTT+R7        58695.338    545 118480.676   713620.676   120587.901
+ 97  JTT+R8        58689.901    547 118473.802   717985.802   120588.760
+100  JTT+F         58611.945    552 118327.891   728839.891   120462.181
+101  JTT+F+G4      54363.307    553 109832.614   722556.614   111970.771
+102  JTT+F+R2      55280.024    554 111668.048   726608.048   113810.071
+103  JTT+F+R3      54639.322    556 110390.644   729774.644   112540.400
+104  JTT+F+R4      54329.983    558 109775.965   733619.965   111933.454
+105  JTT+F+R5      54236.862    560 109593.725   737913.725   111758.947
+106  JTT+F+R6      54198.349    562 109520.697   742332.697   111693.652
+107  JTT+F+R7      54173.374    564 109474.747   746794.747   111655.435
+108  JTT+F+R8      54163.863    566 109459.725   751303.725   111648.146
+109  JTT+F+R9      54159.697    568 109455.394   755839.394   111651.548
+111  JTTDCMut      62753.587    533 126573.174   695817.174   128634.001
+112  JTTDCMut+G4   59077.844    534 119223.687   690603.687   121288.381
+113  JTTDCMut+R2   59860.227    535 120790.453   694310.453   122859.014
+114  JTTDCMut+R3   59234.732    537 119543.464   697355.464   121619.757
+115  JTTDCMut+R4   59044.148    539 119166.297   701286.297   121250.323
+116  JTTDCMut+R5   58971.714    541 119025.428   705469.428   121117.187
+117  JTTDCMut+R6   58939.850    543 118965.700   709749.700   121065.192
+118  JTTDCMut+R7   58912.112    545 118914.224   714054.224   121021.449
+119  JTTDCMut+R8   58907.195    547 118908.390   718420.390   121023.348
+122  JTTDCMut+F    58877.876    552 118859.752   729371.752   120994.043
+123  JTTDCMut+F+G4 54564.961    553 110235.922   722959.922   112374.079
+124  JTTDCMut+F+R2 55496.463    554 112100.925   727040.925   114242.949
+125  JTTDCMut+F+R3 54844.585    556 110801.169   730185.169   112950.926
+126  JTTDCMut+F+R4 54532.803    558 110181.606   734025.606   112339.095
+127  JTTDCMut+F+R5 54438.463    560 109996.926   738316.926   112162.148
+128  JTTDCMut+F+R6 54398.380    562 109920.760   742732.760   112093.715
+129  JTTDCMut+F+R7 54372.639    564 109873.278   747193.278   112053.966
+130  JTTDCMut+F+R8 54361.499    566 109854.999   751698.999   112043.419
+131  JTTDCMut+F+R9 54357.904    568 109851.808   756235.808   112047.962
+133  LG            62676.543    533 126419.087   695663.087   128479.914
+134  LG+G4         58688.639    534 118445.278   689825.278   120509.972
+135  LG+R2         59555.085    535 120180.170   693700.170   122248.730
+136  LG+R3         58841.361    537 118756.722   696568.722   120833.015
+137  LG+R4         58664.082    539 118406.164   700526.164   120490.190
+138  LG+R5         58598.420    541 118278.840   704722.840   120370.599
+139  LG+R6         58558.862    543 118203.724   708987.724   120303.216
+140  LG+R7         58541.202    545 118172.404   713312.404   120279.629
+141  LG+R8         58536.277    547 118166.555   717678.555   120281.513
+144  LG+F          58224.265    552 117552.531   728064.531   119686.821
+145  LG+F+G4       53928.725    553 108963.449   721687.449   111101.606
+146  LG+F+R2       54701.868    554 110511.735   725451.735   112653.759
+147  LG+F+R3       54091.579    556 109295.158   728679.158   111444.914
+148  LG+F+R4       53804.727    558 108725.455   732569.455   110882.944
+149  LG+F+R5       53713.978    560 108547.957   736867.957   110713.179
+150  LG+F+R6       53672.681    562 108469.363   741281.363   110642.318
+151  LG+F+R7       53651.533    564 108431.066   745751.066   110611.754
+152  LG+F+R8       53645.577    566 108423.154   750267.154   110611.575
+153  LG+F+R9       53641.629    568 108419.258   754803.258   110615.412
+155  Poisson       55151.290    533 111368.579   680612.579   113429.407
+156  Poisson+G4    52482.824    534 106033.648   677413.648   108098.342
+157  Poisson+R2    52915.135    535 106900.270   680420.270   108968.830
+158  Poisson+R3    52549.239    537 106172.478   683984.478   108248.772
+159  Poisson+R4    52426.874    539 105931.747   688051.747   108015.773
+160  Poisson+R5    52387.688    541 105857.377   692301.377   107949.136
+161  Poisson+R6    52370.597    543 105827.194   696611.194   107926.686
+162  Poisson+R7    52367.305    545 105824.610   700964.610   107931.836
+166  Poisson+F     53161.185    552 107426.370   717938.370   109560.661
+167  Poisson+F+G4  50467.267    553 102040.533   714764.533   104178.690
+168  Poisson+F+R2  50902.963    554 102913.925   717853.925   105055.948
+169  Poisson+F+R3  50540.602    556 102193.205   721577.205   104342.961
+170  Poisson+F+R4  50412.309    558 101940.618   725784.618   104098.107
+171  Poisson+F+R5  50379.125    560 101878.250   730198.250   104043.472
+172  Poisson+F+R6  50353.350    562 101830.699   734642.699   104003.654
+173  Poisson+F+R7  50351.632    564 101831.263   739151.263   104011.951
+177  Poisson+FQ    55151.287    533 111368.574   680612.574   113429.402
+178  Poisson+FQ+G4 52482.763    534 106033.526   677413.526   108098.220
+179  Poisson+FQ+R2 52915.134    535 106900.268   680420.268   108968.829
+180  Poisson+FQ+R3 52549.537    537 106173.074   683985.074   108249.367
+181  Poisson+FQ+R4 52426.867    539 105931.733   688051.733   108015.760
+182  Poisson+FQ+R5 52387.677    541 105857.354   692301.354   107949.113
+183  Poisson+FQ+R6 52370.592    543 105827.185   696611.185   107926.677
+184  Poisson+FQ+R7 52367.452    545 105824.904   700964.904   107932.129
+188  Poisson+FQ    55151.287    533 111368.574   680612.574   113429.402
+189  Poisson+FQ+G4 52482.763    534 106033.526   677413.526   108098.220
+190  Poisson+FQ+R2 52915.134    535 106900.268   680420.268   108968.829
+191  Poisson+FQ+R3 52549.537    537 106173.074   683985.074   108249.367
+192  Poisson+FQ+R4 52426.867    539 105931.733   688051.733   108015.760
+193  Poisson+FQ+R5 52387.677    541 105857.354   692301.354   107949.113
+194  Poisson+FQ+R6 52370.592    543 105827.185   696611.185   107926.677
+195  Poisson+FQ+R7 52367.452    545 105824.904   700964.904   107932.129
+199  Poisson       55151.290    533 111368.579   680612.579   113429.407
+200  Poisson+G4    52482.824    534 106033.648   677413.648   108098.342
+201  Poisson+R2    52915.135    535 106900.270   680420.270   108968.830
+202  Poisson+R3    52549.239    537 106172.478   683984.478   108248.772
+203  Poisson+R4    52426.874    539 105931.747   688051.747   108015.773
+204  Poisson+R5    52387.688    541 105857.377   692301.377   107949.136
+205  Poisson+R6    52370.597    543 105827.194   696611.194   107926.686
+206  Poisson+R7    52367.305    545 105824.610   700964.610   107931.836
+210  Poisson+F     53161.185    552 107426.370   717938.370   109560.661
+211  Poisson+F+G4  50467.267    553 102040.533   714764.533   104178.690
+212  Poisson+F+R2  50902.963    554 102913.925   717853.925   105055.948
+213  Poisson+F+R3  50540.602    556 102193.205   721577.205   104342.961
+214  Poisson+F+R4  50412.309    558 101940.618   725784.618   104098.107
+215  Poisson+F+R5  50379.125    560 101878.250   730198.250   104043.472
+216  Poisson+F+R6  50353.350    562 101830.699   734642.699   104003.654
+217  Poisson+F+R7  50351.632    564 101831.263   739151.263   104011.951
+221  PMB           58143.054    533 117352.109   686596.109   119412.936
+222  PMB+G4        54892.079    534 110852.158   682232.158   112916.852
+223  PMB+R2        55517.652    535 112105.305   685625.305   114173.865
+224  PMB+R3        54990.681    537 111055.362   688867.362   113131.655
+225  PMB+R4        54849.151    539 110776.301   692896.301   112860.328
+226  PMB+R5        54807.661    541 110697.322   697141.322   112789.081
+227  PMB+R6        54786.376    543 110658.752   701442.752   112758.244
+228  PMB+R7        54775.784    545 110641.569   705781.569   112748.794
+229  PMB+R8        54774.218    547 110642.435   710154.435   112757.393
+232  PMB+F         54792.695    552 110689.391   721201.391   112823.681
+233  PMB+F+G4      51477.628    553 104061.255   716785.255   106199.412
+234  PMB+F+R2      52109.785    554 105327.570   720267.570   107469.593
+235  PMB+F+R3      51593.579    556 104299.157   723683.157   106448.914
+236  PMB+F+R4      51437.383    558 103990.765   727834.765   106148.255
+237  PMB+F+R5      51370.043    560 103860.085   732180.085   106025.307
+238  PMB+F+R6      51342.540    562 103809.079   736621.079   105982.034
+239  PMB+F+R7      51333.954    564 103795.908   741115.908   105976.596
+240  PMB+F+R8      51332.173    566 103796.346   745640.346   105984.767
+243  WAG           60280.881    533 121627.761   690871.761   123688.589
+244  WAG+G4        56791.626    534 114651.253   686031.253   116715.947
+245  WAG+R2        57487.425    535 116044.849   689564.849   118113.410
+246  WAG+R3        56928.166    537 114930.332   692742.332   117006.625
+247  WAG+R4        56761.852    539 114601.705   696721.705   116685.731
+248  WAG+R5        56716.647    541 114515.294   700959.294   116607.053
+249  WAG+R6        56690.811    543 114467.622   705251.622   116567.114
+250  WAG+R7        56672.711    545 114435.421   709575.421   116542.646
+251  WAG+R8        56668.564    547 114431.127   713943.127   116546.085
+254  WAG+F         56555.607    552 114215.215   724727.215   116349.505
+255  WAG+F+G4      52705.704    553 106517.408   719241.408   108655.565
+256  WAG+F+R2      53448.261    554 108004.521   722944.521   110146.545
+257  WAG+F+R3      52846.562    556 106805.124   726189.124   108954.881
+258  WAG+F+R4      52646.877    558 106409.755   730253.755   108567.244
+259  WAG+F+R5      52550.869    560 106221.737   734541.737   108386.960
+260  WAG+F+R6      52520.127    562 106164.254   738976.254   108337.209
+261  WAG+F+R7      52505.389    564 106138.778   743458.778   108319.466
+262  WAG+F+R8      52500.849    566 106133.697   747977.697   108322.118
+Model EX2+FU is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+FU
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+265  EX2+FU        59953.755    534 120975.511   692355.511   123040.205
+Model EX2+FU+G is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+FU+G
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+266  EX2+FU+G      57751.906    535 116573.813   690093.813   118642.373
+Model EX2+FU+R2 is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+FU+R2
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+267  EX2+FU+R2     58301.376    536 117674.753   693338.753   119747.179
+Model EX2+FU+R3 is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+FU+R3
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+268  EX2+FU+R3     57885.857    538 116847.714   696811.714   118927.874
+Model EX2+FU+R4 is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+FU+R4
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+269  EX2+FU+R4     57712.840    540 116505.679   700785.679   118593.572
+Model EX2+FU+R5 is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+FU+R5
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+270  EX2+FU+R5     57641.179    542 116366.358   704978.358   118461.983
+Model EX2+FU+R6 is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+FU+R6
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+271  EX2+FU+R6     57612.064    544 116312.128   709272.128   118415.487
+Model EX2+FU+R7 is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+FU+R7
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+272  EX2+FU+R7     57571.567    546 116235.134   713559.134   118346.225
+Model EX2+FU+R8 is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+FU+R8
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+273  EX2+FU+R8     57571.205    548 116238.411   717942.411   118357.235
+Model EX2+F is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+F
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+276  EX2+F         56329.197    553 113764.395   726488.395   115902.552
+Model EX2+F+G is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+F+G
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+277  EX2+F+G       53315.168    554 107738.336   722678.336   109880.359
+Model EX2+F+R2 is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+F+R2
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+278  EX2+F+R2      54063.853    555 109237.706   726397.706   111383.596
+Model EX2+F+R3 is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+F+R3
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+279  EX2+F+R3      53466.873    557 108047.746   729659.746   110201.368
+Model EX2+F+R4 is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+F+R4
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+280  EX2+F+R4      53327.060    559 107772.121   733852.121   109933.476
+Model EX2+F+R5 is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+F+R5
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+281  EX2+F+R5      53233.463    561 107588.926   738152.926   109758.015
+Model EX2+F+R6 is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+F+R6
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+282  EX2+F+R6      53168.133    563 107462.266   742526.266   109639.087
+Model EX2+F+R7 is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+F+R7
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+283  EX2+F+R7      53154.041    565 107438.082   747018.082   109622.636
+Model EX2+F+R8 is alias for MIX{BurEX2:0.672020808818762,ExpEX2:1.6413466609931}+F+R8
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+284  EX2+F+R8      53151.347    567 107436.694   751548.694   109628.981
+Model EX3+FU is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+FU
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+287  EX3+FU        59079.746    535 119229.492   692749.492   121298.052
+Model EX3+FU+G is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+FU+G
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+288  EX3+FU+G      57337.353    536 115746.706   691410.706   117819.133
+Model EX3+FU+R2 is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+FU+R2
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+289  EX3+FU+R2     57753.178    537 116580.357   694392.357   118656.650
+Model EX3+FU+R3 is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+FU+R3
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+290  EX3+FU+R3     57470.136    539 116018.272   698138.272   118102.298
+Model EX3+FU+R4 is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+FU+R4
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+291  EX3+FU+R4     57342.372    541 115766.744   702210.744   117858.503
+Model EX3+FU+R5 is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+FU+R5
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+292  EX3+FU+R5     57257.443    543 115600.886   706384.886   117700.378
+Model EX3+FU+R6 is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+FU+R6
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+293  EX3+FU+R6     57223.565    545 115537.130   710677.130   117644.355
+Model EX3+FU+R7 is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+FU+R7
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+294  EX3+FU+R7     57199.417    547 115492.834   715004.834   117607.792
+Model EX3+FU+R8 is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+FU+R8
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+295  EX3+FU+R8     57192.197    549 115482.394   719382.394   117605.085
+Model EX3+FU+R9 is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+FU+R9
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+296  EX3+FU+R9     57187.350    551 115476.699   723780.699   117607.123
+Model EX3+F is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+F
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+298  EX3+F         55982.306    554 113072.612   728012.612   115214.636
+Model EX3+F+G is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+F+G
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+299  EX3+F+G       53124.157    555 107358.314   724518.314   109504.203
+Model EX3+F+R2 is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+F+R2
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+300  EX3+F+R2      53741.167    556 108594.334   727978.334   110744.090
+Model EX3+F+R3 is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+F+R3
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+301  EX3+F+R3      53283.466    558 107682.932   731526.932   109840.421
+Model EX3+F+R4 is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+F+R4
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+302  EX3+F+R4      53118.066    560 107356.133   735676.133   109521.355
+Model EX3+F+R5 is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+F+R5
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+303  EX3+F+R5      53046.362    562 107216.724   740028.724   109389.679
+Model EX3+F+R6 is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+F+R6
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+304  EX3+F+R6      53006.253    564 107140.506   744460.506   109321.194
+Model EX3+F+R7 is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+F+R7
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+305  EX3+F+R7      52992.093    566 107116.185   748960.185   109304.606
+Model EX3+F+R8 is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+F+R8
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+306  EX3+F+R8      52967.826    568 107071.652   753455.652   109267.806
+Model EX3+F+R9 is alias for MIX{BurEX3:0.427672756793791,IntEX3:0.837595938019774,HExEX3:1.51863631431518}+F+R9
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
++R9 reinitialized from +R8 with factor 0.500
+307  EX3+F+R9      52967.777    570 107075.554   758015.554   109279.440
+Model EHO+FU is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+FU
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+309  EHO+FU        61382.775    535 123835.550   697355.550   125904.110
+Model EHO+FU+G is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+FU+G
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+310  EHO+FU+G      57886.278    536 116844.556   692508.556   118916.982
+Model EHO+FU+R2 is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+FU+R2
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+311  EHO+FU+R2     58674.552    537 118423.103   696235.103   120499.397
+Model EHO+FU+R3 is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+FU+R3
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+312  EHO+FU+R3     58075.777    539 117229.555   699349.555   119313.581
+Model EHO+FU+R4 is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+FU+R4
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+313  EHO+FU+R4     57850.723    541 116783.446   703227.446   118875.205
+Model EHO+FU+R5 is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+FU+R5
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+314  EHO+FU+R5     57796.125    543 116678.251   707462.251   118777.743
+Model EHO+FU+R6 is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+FU+R6
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+315  EHO+FU+R6     57764.317    545 116618.635   711758.635   118725.860
+Model EHO+FU+R7 is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+FU+R7
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+316  EHO+FU+R7     57748.790    547 116591.581   716103.581   118706.539
+Model EHO+FU+R8 is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+FU+R8
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+317  EHO+FU+R8     57743.214    549 116584.428   720484.428   118707.119
+Model EHO+F is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+F
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+320  EHO+F         56189.374    554 113486.749   728426.749   115628.772
+Model EHO+F+G is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+F+G
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+321  EHO+F+G       52815.581    555 106741.162   723901.162   108887.052
+Model EHO+F+R2 is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+F+R2
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+322  EHO+F+R2      53499.389    556 108110.778   727494.778   110260.534
+Model EHO+F+R3 is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+F+R3
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+323  EHO+F+R3      53039.177    558 107194.355   731038.355   109351.844
+Model EHO+F+R4 is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+F+R4
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+324  EHO+F+R4      52791.267    560 106702.534   735022.534   108867.756
+Model EHO+F+R5 is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+F+R5
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+325  EHO+F+R5      52707.382    562 106538.765   739350.765   108711.720
+Model EHO+F+R6 is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+F+R6
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+326  EHO+F+R6      52677.086    564 106482.172   743802.172   108662.860
+Model EHO+F+R7 is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+F+R7
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+327  EHO+F+R7      52666.190    566 106464.381   748308.381   108652.801
+Model EHO+F+R8 is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+F+R8
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+328  EHO+F+R8      52653.064    568 106442.128   752826.128   108638.282
+Model EHO+F+R9 is alias for MIX{ExtEHO:0.720274356,HelEHO:0.976798797,OthEHO:0.783109376}+F+R9
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+329  EHO+F+R9      52652.979    570 106445.958   757385.958   108649.844
+Model EX_EHO+FU is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+FU
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+331  EX_EHO+FU     58809.805    538 118695.609   698659.609   120775.769
+Model EX_EHO+FU+G is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+FU+G
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+332  EX_EHO+FU+G   56884.015    539 114846.031   696966.031   116930.057
+Model EX_EHO+FU+R2 is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+FU+R2
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+333  EX_EHO+FU+R2  57434.044    540 115948.087   700228.087   118035.980
+Model EX_EHO+FU+R3 is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+FU+R3
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+334  EX_EHO+FU+R3  57028.320    542 115140.639   703752.639   117236.265
+Model EX_EHO+FU+R4 is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+FU+R4
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+335  EX_EHO+FU+R4  56876.766    544 114841.532   707801.532   116944.891
+Model EX_EHO+FU+R5 is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+FU+R5
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+336  EX_EHO+FU+R5  56792.906    546 114677.811   712001.811   116788.903
+Model EX_EHO+FU+R6 is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+FU+R6
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+337  EX_EHO+FU+R6  56750.653    548 114597.305   716301.305   116716.130
+Model EX_EHO+FU+R7 is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+FU+R7
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+338  EX_EHO+FU+R7  56740.391    550 114580.782   720680.782   116707.339
+Model EX_EHO+FU+R8 is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+FU+R8
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+339  EX_EHO+FU+R8  56732.791    552 114569.582   725081.582   116703.872
+Model EX_EHO+FU+R9 is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+FU+R9
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+340  EX_EHO+FU+R9  56731.854    554 114571.709   729511.709   116713.732
+Model EX_EHO+F is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+F
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+342  EX_EHO+F      54458.206    557 110030.412   731642.412   112184.035
+Model EX_EHO+F+G is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+F+G
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+343  EX_EHO+F+G    52239.046    558 105594.093   729438.093   107751.582
+Model EX_EHO+F+R2 is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+F+R2
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+344  EX_EHO+F+R2   52807.374    559 106732.748   732812.748   108894.104
+Model EX_EHO+F+R3 is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+F+R3
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+345  EX_EHO+F+R3   52341.808    561 105805.615   736369.615   107974.704
+Model EX_EHO+F+R4 is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+F+R4
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+346  EX_EHO+F+R4   52224.885    563 105575.770   740639.770   107752.592
+Model EX_EHO+F+R5 is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+F+R5
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+347  EX_EHO+F+R5   52127.386    565 105384.773   744964.773   107569.327
+Model EX_EHO+F+R6 is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+F+R6
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+348  EX_EHO+F+R6   52087.133    567 105308.266   749420.266   107500.554
+Model EX_EHO+F+R7 is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+F+R7
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+349  EX_EHO+F+R7   52078.480    569 105294.960   753954.960   107494.980
+Model EX_EHO+F+R8 is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+F+R8
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+350  EX_EHO+F+R8   52070.231    571 105282.462   758506.462   107490.215
+Model EX_EHO+F+R9 is alias for MIX{BUR_EXT:0.761816796788931,BUR_HEL:0.744425646802117,BUR_OTH:0.532457759429489,EXP_EXT:1.5639387472863,EXP_HEL:2.06403411829438,EXP_OTH:1.43336795177594}+F+R9
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+351  EX_EHO+F+R9   52067.291    573 105280.581   763084.581   107496.068
+Akaike Information Criterion:           3DI+R7
+Corrected Akaike Information Criterion: 3DI+G4
+Bayesian Information Criterion:         3DI+R7
+Best-fit model: 3DI+R7 chosen according to BIC
+
+All model information printed to seqs.fasta.model.gz
+CPU time for ModelFinder: 13657.461 seconds (3h:47m:37s)
+Wall-clock time for ModelFinder: 8691.267 seconds (2h:24m:51s)
+Generating 1000 samples for ultrafast bootstrap (seed: 788248)...
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+
+NOTE: 108 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -44065.827
+2. Current log-likelihood: -43948.773
+3. Current log-likelihood: -43918.029
+4. Current log-likelihood: -43857.607
+5. Current log-likelihood: -43849.997
+6. Current log-likelihood: -43846.807
+7. Current log-likelihood: -43846.006
+8. Current log-likelihood: -43845.685
+9. Current log-likelihood: -43845.430
+10. Current log-likelihood: -43845.309
+11. Current log-likelihood: -43845.194
+12. Current log-likelihood: -43845.088
+Optimal log-likelihood: -43844.921
+Site proportion and rates:  (0.151,0.061) (0.219,0.289) (0.198,0.619) (0.178,1.146) (0.133,1.842) (0.094,2.660) (0.027,3.922)
+Parameters optimization took 12 rounds (25.871 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 2.22458 secs using 395.1% CPU
+Computing ML distances took 2.224727 sec (of wall-clock time) 8.789576 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000329018 secs using 320% CPU
+Computing RapidNJ tree took 0.014829 sec (of wall-clock time) 0.017668 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -44355.350
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 5.012 second
+Computing log-likelihood of 98 initial trees ... 20.305 seconds
+Current best score: -43761.053
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -43676.438
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -43651.958
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 3: -43647.389
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 9: -43644.147
+Iteration 10 / LogL: -43675.122 / Time: 2h:26m:48s
+Iteration 20 / LogL: -43703.112 / Time: 2h:27m:27s
+Finish initializing candidate tree set (20)
+Current best tree score: -43644.147 / CPU time: 124.395
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 26: -43627.158
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 29: -43618.295
+Iteration 30 / LogL: -43622.572 / Time: 2h:28m:28s (0h:12m:20s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 31: -43614.075
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 34: -43600.112
+Iteration 40 / LogL: -43651.130 / Time: 2h:29m:24s (0h:10m:57s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 46: -43596.288
+Iteration 50 / LogL: -43620.412 / Time: 2h:30m:16s (0h:10m:36s left)
+Iteration 60 / LogL: -43632.733 / Time: 2h:31m:5s (0h:9m:5s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 69: -43595.853
+Iteration 70 / LogL: -43611.295 / Time: 2h:31m:56s (0h:10m:9s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 74: -43591.047
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 78: -43587.956
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 80: -43578.679
+Iteration 80 / LogL: -43578.679 / Time: 2h:32m:57s (0h:10m:16s left)
+Iteration 90 / LogL: -43623.383 / Time: 2h:33m:46s (0h:9m:1s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 95: -43575.446
+Iteration 100 / LogL: -43601.953 / Time: 2h:34m:36s (0h:9m:21s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 109: -43573.154
+Iteration 110 / LogL: -43630.608 / Time: 2h:35m:27s (0h:9m:37s left)
+Iteration 120 / LogL: -43642.370 / Time: 2h:36m:15s (0h:8m:31s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 130: -43569.649
+Iteration 130 / LogL: -43569.649 / Time: 2h:37m:6s (0h:9m:29s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 134: -43568.900
+Iteration 140 / LogL: -43589.334 / Time: 2h:37m:55s (0h:8m:50s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 147: -43568.236
+Iteration 150 / LogL: -43582.619 / Time: 2h:38m:47s (0h:9m:4s left)
+Iteration 160 / LogL: -43578.656 / Time: 2h:39m:33s (0h:8m:2s left)
+Iteration 170 / LogL: -43624.885 / Time: 2h:40m:21s (0h:7m:3s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 172: -43561.990
+Iteration 180 / LogL: -43605.728 / Time: 2h:41m:11s (0h:8m:23s left)
+Iteration 190 / LogL: -43581.543 / Time: 2h:42m:0s (0h:7m:26s left)
+Iteration 200 / LogL: -43601.179 / Time: 2h:42m:51s (0h:6m:30s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 202: -43560.172
+Iteration 210 / LogL: -43571.243 / Time: 2h:43m:42s (0h:8m:17s left)
+Iteration 220 / LogL: -43570.839 / Time: 2h:44m:30s (0h:7m:21s left)
+Iteration 230 / LogL: -43598.969 / Time: 2h:45m:16s (0h:6m:25s left)
+Iteration 240 / LogL: -43575.454 / Time: 2h:46m:2s (0h:5m:29s left)
+Iteration 250 / LogL: -43597.716 / Time: 2h:46m:50s (0h:4m:35s left)
+Iteration 260 / LogL: -43578.737 / Time: 2h:47m:36s (0h:3m:41s left)
+Iteration 270 / LogL: -43579.274 / Time: 2h:48m:22s (0h:2m:47s left)
+Iteration 280 / LogL: -43574.762 / Time: 2h:49m:8s (0h:1m:54s left)
+Iteration 290 / LogL: -43615.057 / Time: 2h:49m:55s (0h:1m:2s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 297: -43558.081
+Iteration 300 / LogL: -43580.149 / Time: 2h:50m:44s (0h:8m:24s left)
+Iteration 310 / LogL: -43567.722 / Time: 2h:51m:32s (0h:7m:30s left)
+Iteration 320 / LogL: -43586.924 / Time: 2h:52m:17s (0h:6m:37s left)
+Iteration 330 / LogL: -43564.192 / Time: 2h:53m:4s (0h:5m:44s left)
+Iteration 340 / LogL: -43568.731 / Time: 2h:53m:52s (0h:4m:52s left)
+Iteration 350 / LogL: -43568.862 / Time: 2h:54m:40s (0h:4m:0s left)
+Iteration 360 / LogL: -43583.042 / Time: 2h:55m:25s (0h:3m:9s left)
+Iteration 370 / LogL: -43600.300 / Time: 2h:56m:12s (0h:2m:17s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 380: -43555.503
+Iteration 380 / LogL: -43555.503 / Time: 2h:57m:3s (0h:8m:29s left)
+Iteration 390 / LogL: -43586.516 / Time: 2h:57m:49s (0h:7m:37s left)
+Iteration 400 / LogL: -43606.562 / Time: 2h:58m:34s (0h:6m:45s left)
+Iteration 410 / LogL: -43564.386 / Time: 2h:59m:22s (0h:5m:54s left)
+Iteration 420 / LogL: -43588.790 / Time: 3h:0m:8s (0h:5m:3s left)
+Iteration 430 / LogL: -43633.699 / Time: 3h:0m:52s (0h:4m:11s left)
+Iteration 440 / LogL: -43567.115 / Time: 3h:1m:40s (0h:3m:21s left)
+Iteration 450 / LogL: -43572.256 / Time: 3h:2m:26s (0h:2m:30s left)
+Iteration 460 / LogL: -43572.307 / Time: 3h:3m:16s (0h:1m:40s left)
+Iteration 470 / LogL: -43595.605 / Time: 3h:4m:2s (0h:0m:50s left)
+Iteration 480 / LogL: -43565.291 / Time: 3h:4m:51s (0h:0m:0s left)
+Refining ufboot trees with NNI 1 branch...
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+100 samples done
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+200 samples done
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+300 samples done
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+400 samples done
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+500 samples done
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+600 samples done
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+700 samples done
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+800 samples done
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+900 samples done
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Reading model parameters from file 3DI
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+1000 samples done
+Total 1000 ufboot trees refined
+TREE SEARCH COMPLETED AFTER 481 ITERATIONS / Time: 3h:29m:30s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -43555.503
+2. Current log-likelihood: -43555.463
+3. Current log-likelihood: -43555.405
+4. Current log-likelihood: -43555.342
+5. Current log-likelihood: -43555.267
+6. Current log-likelihood: -43555.172
+7. Current log-likelihood: -43555.032
+8. Current log-likelihood: -43554.802
+9. Current log-likelihood: -43554.413
+10. Current log-likelihood: -43553.863
+11. Current log-likelihood: -43553.332
+12. Current log-likelihood: -43552.989
+13. Current log-likelihood: -43552.810
+14. Current log-likelihood: -43552.710
+15. Current log-likelihood: -43552.639
+16. Current log-likelihood: -43552.581
+17. Current log-likelihood: -43552.539
+18. Current log-likelihood: -43552.498
+19. Current log-likelihood: -43552.461
+20. Current log-likelihood: -43552.424
+21. Current log-likelihood: -43552.391
+22. Current log-likelihood: -43552.358
+23. Current log-likelihood: -43552.328
+24. Current log-likelihood: -43552.311
+25. Current log-likelihood: -43552.281
+26. Current log-likelihood: -43552.264
+27. Current log-likelihood: -43552.248
+28. Current log-likelihood: -43552.221
+29. Current log-likelihood: -43552.208
+30. Current log-likelihood: -43552.193
+31. Current log-likelihood: -43552.180
+32. Current log-likelihood: -43552.164
+33. Current log-likelihood: -43552.152
+34. Current log-likelihood: -43552.139
+35. Current log-likelihood: -43552.126
+36. Current log-likelihood: -43552.115
+37. Current log-likelihood: -43552.104
+38. Current log-likelihood: -43552.094
+Optimal log-likelihood: -43552.079
+Site proportion and rates:  (0.124,0.041) (0.156,0.222) (0.166,0.429) (0.155,0.737) (0.171,1.258) (0.166,2.074) (0.062,3.471)
+Parameters optimization took 38 rounds (84.464 sec)
+BEST SCORE FOUND : -43552.079
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+Alternative NNI shows better log-likelihood -43551.911 > -43552.079
+Alternative NNI shows better log-likelihood -43551.779 > -43552.079
+1.023 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file seqs.fasta.splits.nex
+Total tree length: 33.170
+
+Total number of iterations: 481
+CPU time used for tree search: 10442.878 sec (2h:54m:2s)
+Wall-clock time used for tree search: 3847.971 sec (1h:4m:7s)
+Total CPU time used: 24465.043 sec (6h:47m:45s)
+Total wall-clock time used: 12656.685 sec (3h:30m:56s)
+UFBoot trees printed to seqs.fasta.ufboot
+
+Computing bootstrap consensus tree...
+Reading input file seqs.fasta.splits.nex...
+268 taxa and 7254 splits.
+Consensus tree written to seqs.fasta.contree
+Reading input trees file seqs.fasta.contree
+Log-likelihood of consensus tree: -43562.986
+
+Analysis results written to: 
+  IQ-TREE report:                seqs.fasta.iqtree
+  Maximum-likelihood tree:       seqs.fasta.treefile
+  Likelihood distances:          seqs.fasta.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          seqs.fasta.splits.nex
+  Consensus tree:                seqs.fasta.contree
+  UFBoot trees:                  seqs.fasta.ufboot
+  Screen log file:               seqs.fasta.log
+
+Date and Time: Sun Nov 16 04:05:54 2025
