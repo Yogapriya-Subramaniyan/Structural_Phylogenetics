@@ -8,6 +8,55 @@ library(seqinr) # read.fasta
 library(phytools) # for midpoint.root
 ```
 
+# US align
+
+```{bash}
+pwd
+```
+
+
+```{bash}
+mkdir .Data/03_3di_Character_Extraction/chains
+
+cp .Data/03_3di_Character_Extraction/*.cif .Data/03_3di_Character_Extraction/chains
+# Put all the matching 'cif' file names into a text file
+ls .Data/03_3di_Character_Extraction/chains/*.cif > .Data/03_3di_Character_Extraction/list_of_chains.txt
+
+# Add :A to each line, as these are all A chains
+# sed -i '' 's/$/:A/'  list_of_chains.txt
+# Remove chains/chains/ to chains/
+sed -i '' 's/chains\///'  .Data/03_3di_Character_Extraction/list_of_chains.txt
+cp .Data/03_3di_Character_Extraction/list_of_chains.txt .Data/03_3di_Character_Extraction/list_of_chains_orig.txt
+wc -l .Data/03_3di_Character_Extraction/list_of_chains_orig.txt # counts the number of line in the file
+# alignment of AA based on the structure
+USalign -dir .Data/03_3di_Character_Extraction/chains/ .Data/03_3di_Character_Extraction/list_of_chains.txt -mol prot -mm 4 | tee .Data/03_3di_Character_Extraction/usalign_test1.txt & #chains - folder with PDB files , list_of_chains - contains the list of all PDB files to be aligned -
+wc -l .Data/03_3di_Character_Extraction/usalign_test1.txt 
+```
+
+
+```{bash}
+# find the length of usalignment
+
+tail -1970 .Data/03_3di_Character_Extraction/usalign_test1.txt > .Data/03_3di_Character_Extraction/usalign_test2.txt # 96 = total lines in the file(from previous command)-14
+head -1968 .Data/03_3di_Character_Extraction/usalign_test2.txt > .Data/03_3di_Character_Extraction/usalign_test3.fasta # 94 = 2*47(number of PDB structures)
+cp .Data/03_3di_Character_Extraction/usalign_test3.fasta ./Data/04_Alignment/fasta aa_USaligned.fasta
+
+```
+
+# Alignment of 3di - against aligned AA(using US align)
+```{r}
+
+# unaligned aa sequence
+fasta_fn = "./Data/04_Alignment/aa_unaligned.fasta" ### AA_fromStructs_unaligned.fasta
+# us aligned sequence
+usaln_fn = "./Data/04_Alignment/fasta aa_USaligned.fasta"
+di3s_dir = ".Data/03_3di_Character_Extraction/" # folders with 3di sequences
+di3_outfn = "./Data/04_Alignment/3di_USaligned.fasta" # file to store the 3di aligned fasta
+
+di3_alignment = align_3dis(usaln_fn, di3s_dir, di3_outfn, pattern_3di_fn="*_3di.fasta") 
+di3_alignment
+```
+
 # Align the 3di sequences, using famsa3di
 ```{bash}
 
