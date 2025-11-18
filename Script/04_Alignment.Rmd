@@ -4,8 +4,16 @@ output: html_document
 ---
 ## Libraries
 ```{r}
+library(BioGeoBEARS)
 library(seqinr) # read.fasta
 library(phytools) # for midpoint.root
+```
+# Sourcing
+```{r}
+sourceall("~/GitHub/str2phy/Rsrc/")
+source("~/GitHub/str2phy/Rsrc/protein_bioinf_v1.R")
+source("~/GitHub/str2phy/Rsrc/str2phy_v1.R")
+sourceall("~/GitHub/str2phy/Rsrc/")
 ```
 
 # US align
@@ -16,30 +24,56 @@ pwd
 
 
 ```{bash}
-mkdir .Data/03_3di_Character_Extraction/chains
+mkdir ./Data/03_3di_Character_Extraction/chains
+```
 
-cp .Data/03_3di_Character_Extraction/*.cif .Data/03_3di_Character_Extraction/chains
+
+```{bash}
+cp ./Data/03_3di_Character_Extraction/*.cif ./Data/03_3di_Character_Extraction/chains
 # Put all the matching 'cif' file names into a text file
-ls .Data/03_3di_Character_Extraction/chains/*.cif > .Data/03_3di_Character_Extraction/list_of_chains.txt
+```
 
+
+```{bash}
+ls ./Data/03_3di_Character_Extraction/chains/*.cif > ./Data/03_3di_Character_Extraction/list_of_chains.txt
+```
+
+
+```{bash}
 # Add :A to each line, as these are all A chains
 # sed -i '' 's/$/:A/'  list_of_chains.txt
 # Remove chains/chains/ to chains/
-sed -i '' 's/chains\///'  .Data/03_3di_Character_Extraction/list_of_chains.txt
-cp .Data/03_3di_Character_Extraction/list_of_chains.txt .Data/03_3di_Character_Extraction/list_of_chains_orig.txt
-wc -l .Data/03_3di_Character_Extraction/list_of_chains_orig.txt # counts the number of line in the file
+sed -i '' 's!.*/!!' ./Data/03_3di_Character_Extraction/list_of_chains.txt
+
+```
+
+```{bash}
+cp ./Data/03_3di_Character_Extraction/list_of_chains.txt ./Data/03_3di_Character_Extraction/list_of_chains_orig.txt
+wc -l ./Data/03_3di_Character_Extraction/list_of_chains_orig.txt # counts the number of line in the file
 # alignment of AA based on the structure
-USalign -dir .Data/03_3di_Character_Extraction/chains/ .Data/03_3di_Character_Extraction/list_of_chains.txt -mol prot -mm 4 | tee .Data/03_3di_Character_Extraction/usalign_test1.txt & #chains - folder with PDB files , list_of_chains - contains the list of all PDB files to be aligned -
-wc -l .Data/03_3di_Character_Extraction/usalign_test1.txt 
+```
+
+
+```{bash}
+#USalign -dir ./Data/03_3di_Character_Extraction/chains/ \
+         ./Data/03_3di_Character_Extraction/list_of_chains.txt \
+         -mol prot -mm 4 \
+| tee ./Data/03_3di_Character_Extraction/usalign_test1.txt 
+
+```
+
+
+```{bash}
+wc -l ./Data/03_3di_Character_Extraction/usalign_test1.txt 
 ```
 
 
 ```{bash}
 # find the length of usalignment
 
-tail -1970 .Data/03_3di_Character_Extraction/usalign_test1.txt > .Data/03_3di_Character_Extraction/usalign_test2.txt # 96 = total lines in the file(from previous command)-14
-head -1968 .Data/03_3di_Character_Extraction/usalign_test2.txt > .Data/03_3di_Character_Extraction/usalign_test3.fasta # 94 = 2*47(number of PDB structures)
-cp .Data/03_3di_Character_Extraction/usalign_test3.fasta ./Data/04_Alignment/fasta aa_USaligned.fasta
+tail -754 ./Data/03_3di_Character_Extraction/usalign_test1.txt > ./Data/03_3di_Character_Extraction/usalign_test2.txt # 96 = total lines in the file(from previous command)-14
+head -752 ./Data/03_3di_Character_Extraction/usalign_test2.txt > ./Data/03_3di_Character_Extraction/usalign_test3.fasta # 94 = 2*47(number of PDB structures)
+cp ./Data/03_3di_Character_Extraction/usalign_test3.fasta ./Data/04_Alignment/aa_USaligned.fasta
 
 ```
 
@@ -49,8 +83,8 @@ cp .Data/03_3di_Character_Extraction/usalign_test3.fasta ./Data/04_Alignment/fas
 # unaligned aa sequence
 fasta_fn = "./Data/04_Alignment/aa_unaligned.fasta" ### AA_fromStructs_unaligned.fasta
 # us aligned sequence
-usaln_fn = "./Data/04_Alignment/fasta aa_USaligned.fasta"
-di3s_dir = ".Data/03_3di_Character_Extraction/" # folders with 3di sequences
+usaln_fn = "./Data/04_Alignment/aa_USaligned.fasta"
+di3s_dir = "./Data/03_3di_Character_Extraction/" # folders with 3di sequences
 di3_outfn = "./Data/04_Alignment/3di_USaligned.fasta" # file to store the 3di aligned fasta
 
 di3_alignment = align_3dis(usaln_fn, di3s_dir, di3_outfn, pattern_3di_fn="*_3di.fasta") 
@@ -98,18 +132,19 @@ merged_df
 ## Reordering_ALignment
 ```{r}
 tr_renamed <- ape::read.tree("Data/04_Alignment/3di_nj/outTree_unrooted.nwk") ## renamed tree file
-plotTree(tr_renamed)
+phytools::plotTree(tr_renamed)
 desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
 fasta_file <- read.fasta (file = "Data/04_Alignment/3di_nj/input.fa.final_tree.used_alg.fa") ## renamed fasta file
 fasta_ids <-names(fasta_file)
 tip_ids <- desired_order
 reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
 write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/04_Alignment/3di_nj/input.fa.final_tree.used_alg_reordered.fa") ## out file  - renamed, reordered fasta file
+
 ```
 
 ```{r}
 tr_renamed <- ape::read.tree("Data/04_Alignment/3di_nj/outTree_unrooted.nwk") ## renamed tree file
-plotTree(tr_renamed)
+plot(tr_renamed)
 desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
 fasta_file <- read.fasta (file = "Data/04_Alignment/3di_nj/3di_famsa3dialigned.fasta") ## renamed fasta file
 fasta_ids <-names(fasta_file)
@@ -121,7 +156,7 @@ write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/0
 ```{r}
 tr_renamed <- ape::read.tree("Data/04_Alignment/aa_nj/outTree_unrooted.nwk") ## renamed tree file
 plotTree(tr_renamed)
-desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
+desired_order <- (tr_renamed$tip.label)
 fasta_file <- read.fasta (file = "Data/04_Alignment/aa_nj/input.fa.final_tree.used_alg.fa") ## renamed fasta file
 fasta_ids <-names(fasta_file)
 tip_ids <- desired_order
