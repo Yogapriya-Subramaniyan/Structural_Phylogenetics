@@ -15,13 +15,13 @@ source("~/GitHub/str2phy/Rsrc/protein_bioinf_v1.R")
 source("~/GitHub/str2phy/Rsrc/str2phy_v1.R")
 sourceall("~/GitHub/str2phy/Rsrc/")
 ```
-
-# US align
+# MAFFT
 
 ```{bash}
-pwd
+mafft --genafpair --maxiterate 1000 ./Data/04_Alignment/aa_unaligned.fasta > ./Data/04_Alignment/aa_MAFFTaligned.fasta
 ```
 
+# US align
 
 ```{bash}
 mkdir ./Data/03_3di_Character_Extraction/chains

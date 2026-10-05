@@ -1,0 +1,415 @@
+---
+title: "Conference"
+output: html_document
+---
+
+```{r}
+# Input files
+ref_fasta  <- "Data/07_Split_Align_Merge/3di_RBM1_2_3_famsa3dialigned.fasta"   # FASTA with desired order
+target_fasta <- "Data/05_LongBranch_removal/3di_famsa3dialigned_trim35.fasta"    # FASTA to be reordered
+output_fasta <- "Data/05_LongBranch_removal/3di_famsa3dialigned_trim35_reordered_con.fasta"
+
+# Read FASTA files
+ref_seqs <- readAAStringSet(ref_fasta)
+target_seqs <- readAAStringSet(target_fasta)
+
+# Extract sequence names in desired order
+ref_order <- names(ref_seqs)
+
+# Check which sequences are shared
+common_seqs <- ref_order[ref_order %in% names(target_seqs)]
+
+# Warn if sequences are missing
+missing_in_target <- setdiff(ref_order, names(target_seqs))
+if (length(missing_in_target) > 0) {
+  warning("These sequences are missing in target FASTA:\n",
+          paste(missing_in_target, collapse = ", "))
+}
+
+# Reorder target FASTA
+target_reordered <- target_seqs[common_seqs]
+
+# Write output
+writeXStringSet(target_reordered, output_fasta)
+
+cat("Reordered FASTA written to:", output_fasta, "\n")
+
+```
+
+```{r}
+# Input files
+ref_fasta  <- "Data/07_Split_Align_Merge/3di_RBM1_2_3_famsa3dialigned.fasta"   # FASTA with desired order
+target_fasta <- "Data/05_LongBranch_removal/3di_famsa3dialigned.fasta"    # FASTA to be reordered
+output_fasta <- "Data/05_LongBranch_removal/3di_famsa3dialigned_reordered_con.fasta"
+
+# Read FASTA files
+ref_seqs <- readAAStringSet(ref_fasta)
+target_seqs <- readAAStringSet(target_fasta)
+
+# Extract sequence names in desired order
+ref_order <- names(ref_seqs)
+
+# Check which sequences are shared
+common_seqs <- ref_order[ref_order %in% names(target_seqs)]
+
+# Warn if sequences are missing
+missing_in_target <- setdiff(ref_order, names(target_seqs))
+if (length(missing_in_target) > 0) {
+  warning("These sequences are missing in target FASTA:\n",
+          paste(missing_in_target, collapse = ", "))
+}
+
+# Reorder target FASTA
+target_reordered <- target_seqs[common_seqs]
+
+# Write output
+writeXStringSet(target_reordered, output_fasta)
+
+cat("Reordered FASTA written to:", output_fasta, "\n")
+
+```
+
+```{r}
+# Input files
+ref_fasta  <- "Data/07_Split_Align_Merge/3di_RBM1_2_3_famsa3dialigned.fasta"   # FASTA with desired order
+target_fasta <- "Data/05_LongBranch_removal/aa_famsa3dialigned_trim35.fasta"    # FASTA to be reordered
+output_fasta <- "Data/05_LongBranch_removal/aa_famsa3dialigned_trim35_reordered_con.fasta"
+
+# Read FASTA files
+ref_seqs <- readAAStringSet(ref_fasta)
+target_seqs <- readAAStringSet(target_fasta)
+
+# Extract sequence names in desired order
+ref_order <- names(ref_seqs)
+
+# Check which sequences are shared
+common_seqs <- ref_order[ref_order %in% names(target_seqs)]
+
+# Warn if sequences are missing
+missing_in_target <- setdiff(ref_order, names(target_seqs))
+if (length(missing_in_target) > 0) {
+  warning("These sequences are missing in target FASTA:\n",
+          paste(missing_in_target, collapse = ", "))
+}
+
+# Reorder target FASTA
+target_reordered <- target_seqs[common_seqs]
+
+# Write output
+writeXStringSet(target_reordered, output_fasta)
+
+cat("Reordered FASTA written to:", output_fasta, "\n")
+
+```
+
+```{r}
+# Input files
+ref_fasta  <- "Data/07_Split_Align_Merge/3di_RBM1_2_3_famsa3dialigned.fasta"   # FASTA with desired order
+target_fasta <- "Data/05_LongBranch_removal/3di_famsa3dialigned.fasta"    # FASTA to be reordered
+output_fasta <- "Data/05_LongBranch_removal/3di_famsa3dialigned_reordered_con.fasta"
+
+# Read FASTA files
+ref_seqs <- readAAStringSet(ref_fasta)
+target_seqs <- readAAStringSet(target_fasta)
+
+# Extract sequence names in desired order
+ref_order <- names(ref_seqs)
+
+# Check which sequences are shared
+common_seqs <- ref_order[ref_order %in% names(target_seqs)]
+
+# Warn if sequences are missing
+missing_in_target <- setdiff(ref_order, names(target_seqs))
+if (length(missing_in_target) > 0) {
+  warning("These sequences are missing in target FASTA:\n",
+          paste(missing_in_target, collapse = ", "))
+}
+
+# Reorder target FASTA
+target_reordered <- target_seqs[common_seqs]
+
+# Write output
+writeXStringSet(target_reordered, output_fasta)
+
+cat("Reordered FASTA written to:", output_fasta, "\n")
+
+```
+
+```{r}
+# Input files
+ref_fasta  <- "Data/07_Split_Align_Merge/3di_RBM1_2_3_famsa3dialigned.fasta"   # FASTA with desired order
+target_fasta <- "Data/04_Alignment/aa_MAFFTaligned.fasta"    # FASTA to be reordered
+output_fasta <- "Data/04_Alignment/aa_MAFFTaligned_reordered_con.fasta"
+
+# Read FASTA files
+ref_seqs <- readAAStringSet(ref_fasta)
+target_seqs <- readAAStringSet(target_fasta)
+
+# Extract sequence names in desired order
+ref_order <- names(ref_seqs)
+
+# Check which sequences are shared
+common_seqs <- ref_order[ref_order %in% names(target_seqs)]
+
+# Warn if sequences are missing
+missing_in_target <- setdiff(ref_order, names(target_seqs))
+if (length(missing_in_target) > 0) {
+  warning("These sequences are missing in target FASTA:\n",
+          paste(missing_in_target, collapse = ", "))
+}
+
+# Reorder target FASTA
+target_reordered <- target_seqs[common_seqs]
+
+# Write output
+writeXStringSet(target_reordered, output_fasta)
+
+cat("Reordered FASTA written to:", output_fasta, "\n")
+
+```
+## Renaminng Spo AG And AH sequences
+```{r}
+xlsfn = "Data/17_AF_removed_AHAG_Merged_noOutgroup/SporulationMatchingGenus_SpoIIIAH.xlsx" ## excel file with accession Number and desirable name
+xls = openxlsx::read.xlsx(xlsxFile=xlsfn, sheet=1, startRow=1, colNames=TRUE)
+fasta_file <- seqinr::read.fasta (file = "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa_SpoIIIAH_RBM2_Unmatched.fasta") ## Fasta file to be renamed
+newnames = as.array(xls$protein)
+accession_number = as.array(xls$AccessionNumber)
+print(accession_number)
+names(fasta_file) <- sapply(names(fasta_file), function(name) {
+  fasta_ids <- strsplit(name, split = "\\.")[[1]][1]
+  matched_name <- NULL
+   for (j in 1:length(newnames)){
+    newnames_accession <- strsplit(accession_number[j], split = "\\.")[[1]][1]
+    if (fasta_ids == newnames_accession) {
+      matched_name <- newnames[j]
+      break
+   }
+   }
+  if (!is.null(matched_name)) {
+    return(matched_name)
+  } else {
+    return(name)
+  }
+})
+seqinr::write.fasta(sequences = fasta_file, names=names(fasta_file), file.out = "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa_SpoIIIAH_RBM2.fasta") 
+```
+
+```{r}
+xlsfn = "Data/17_AF_removed_AHAG_Merged_noOutgroup/SporulationMatchingGenus_SpoIIIAG.xlsx" ## excel file with accession Number and desirable name
+xls = openxlsx::read.xlsx(xlsxFile=xlsfn, sheet=1, startRow=1, colNames=TRUE)
+fasta_file <- seqinr::read.fasta (file = "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa_SpoIIIAG_RBM3_Unmatched.fasta") ## Fasta file to be renamed
+newnames = as.array(xls$protein)
+names(fasta_file) <- sapply(names(fasta_file), function(name) {
+  fasta_ids <- strsplit(name, split = "\\.")[[1]][1]
+  matched_name <- NULL
+   for (j in 1:length(newnames)){
+    newnames_accession <- strsplit(newnames[j], split = "\\.")[[1]][1]
+    if (fasta_ids == newnames_accession) {
+      matched_name <- newnames[j]
+      break
+   }
+   }
+  if (!is.null(matched_name)) {
+    return(matched_name)
+  } else {
+    return(name)
+  }
+})
+seqinr::write.fasta(sequences = fasta_file, names=names(fasta_file), file.out = "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa_SpoIIIAG_RBM3.fasta") 
+```
+
+
+
+
+
+## Concat RBM1, RBM2, RBM3
+```{r}
+library(Biostrings)
+
+# === Directory containing your FASTA files ===
+input_dir <- "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa"
+
+# === Find all FASTA files by suffix ===
+rbm1_files <- list.files(input_dir, pattern = "RBM1\\.fasta$", full.names = TRUE)
+rbm2_files <- list.files(input_dir, pattern = "RBM2\\.fasta$", full.names = TRUE)
+rbm3_files <- list.files(input_dir, pattern = "RBM3\\.fasta$", full.names = TRUE)
+
+# === Helper function to read and combine FASTAs ===
+combine_fastas <- function(file_list) {
+  all_seqs <- AAStringSet()
+  for (f in file_list) {
+    seqs <- readAAStringSet(f)
+    all_seqs <- c(all_seqs, seqs)
+  }
+  return(all_seqs)
+}
+
+# === Combine and save ===
+if (length(rbm1_files) > 0) {
+  combined_rbm1 <- combine_fastas(rbm1_files)
+  writeXStringSet(combined_rbm1, file.path(input_dir, "aa_RBM1.fasta"))
+}
+
+if (length(rbm2_files) > 0) {
+  combined_rbm2 <- combine_fastas(rbm2_files)
+  writeXStringSet(combined_rbm2, file.path(input_dir, "aa_RBM2.fasta"))
+}
+
+if (length(rbm3_files) > 0) {
+  combined_rbm3 <- combine_fastas(rbm3_files)
+  writeXStringSet(combined_rbm3, file.path(input_dir, "aa_RBM3.fasta"))
+}
+
+```
+
+# Align the AAs to the famsa3di alignment
+```{r}
+source("~/GitHub/str2phy/Rsrc/str2phy_v1.R")
+
+aligned_fn = "Data/17_AF_removed_AHAG_Merged_noOutgroup/3di_RBM1_famsa3diAligned.fasta"
+unaligned_fn = "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM1.fasta"
+outfn = "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM1_famsa3dialigned.fasta"
+aligned_AAs = align_3dis_to_AAs(aligned_fn, unaligned_fn, outfn)
+moref(outfn)
+```
+
+```{r}
+source("~/GitHub/str2phy/Rsrc/str2phy_v1.R")
+
+aligned_fn = "Data/17_AF_removed_AHAG_Merged_noOutgroup/3di_RBM2_famsa3diAligned.fasta"
+unaligned_fn = "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM2.fasta"
+outfn = "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM2_famsa3dialigned.fasta"
+aligned_AAs = align_3dis_to_AAs(aligned_fn, unaligned_fn, outfn)
+moref(outfn)
+```
+
+```{r}
+source("~/GitHub/str2phy/Rsrc/str2phy_v1.R")
+
+aligned_fn = "Data/17_AF_removed_AHAG_Merged_noOutgroup/3di_RBM3_famsa3diAligned.fasta"
+unaligned_fn = "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM3.fasta"
+outfn = "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM3_famsa3dialigned.fasta"
+aligned_AAs = align_3dis_to_AAs(aligned_fn, unaligned_fn, outfn)
+moref(outfn)
+```
+
+
+```{r}
+library(Biostrings)
+
+# === Input files (edit paths) ===
+file1 <- "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM1_famsa3dialigned.fasta"
+file2 <- "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM2_famsa3dialigned.fasta"
+
+# === Read sequences ===
+seqs1 <- readAAStringSet(file1)
+seqs2 <- readAAStringSet(file2)
+
+# === Convert to named character vectors ===
+seqs1_vec <- setNames(as.character(seqs1), names(seqs1))
+seqs2_vec <- setNames(as.character(seqs2), names(seqs2))
+
+# === Combine all sequence names ===
+all_names <- unique(c(names(seqs1_vec), names(seqs2_vec)))
+
+# === Determine max lengths for padding ===
+maxlen1 <- max(nchar(seqs1_vec))
+maxlen2 <- max(nchar(seqs2_vec))
+
+# === Initialize result ===
+combined_vec <- character(length(all_names))
+names(combined_vec) <- all_names
+
+# === Merge horizontally (with gap-fill if missing) ===
+for (n in all_names) {
+  seq1 <- if (n %in% names(seqs1_vec)) seqs1_vec[[n]] else paste0(rep("-", maxlen1), collapse = "")
+  seq2 <- if (n %in% names(seqs2_vec)) seqs2_vec[[n]] else paste0(rep("-", maxlen2), collapse = "")
+  
+  combined_vec[[n]] <- paste0(seq1, seq2)
+}
+
+# === Convert back to AAStringSet ===
+combined_set <- AAStringSet(combined_vec)
+
+# === Write output ===
+output_file <- "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM1_2_famsa3dialigned.fasta"
+writeXStringSet(combined_set, output_file)
+
+
+
+```
+
+```{r}
+library(Biostrings)
+
+# === Input files (edit paths) ===
+file1 <- "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM1_2_famsa3dialigned.fasta"
+file2 <- "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM3_famsa3dialigned.fasta"
+
+# === Read sequences ===
+seqs1 <- readAAStringSet(file1)
+seqs2 <- readAAStringSet(file2)
+
+# === Convert to named character vectors ===
+seqs1_vec <- setNames(as.character(seqs1), names(seqs1))
+seqs2_vec <- setNames(as.character(seqs2), names(seqs2))
+
+# === Combine all sequence names ===
+all_names <- unique(c(names(seqs1_vec), names(seqs2_vec)))
+
+# === Determine max lengths for padding ===
+maxlen1 <- max(nchar(seqs1_vec))
+maxlen2 <- max(nchar(seqs2_vec))
+
+# === Initialize result ===
+combined_vec <- character(length(all_names))
+names(combined_vec) <- all_names
+
+# === Merge horizontally (with gap-fill if missing) ===
+for (n in all_names) {
+  seq1 <- if (n %in% names(seqs1_vec)) seqs1_vec[[n]] else paste0(rep("-", maxlen1), collapse = "")
+  seq2 <- if (n %in% names(seqs2_vec)) seqs2_vec[[n]] else paste0(rep("-", maxlen2), collapse = "")
+  
+  combined_vec[[n]] <- paste0(seq1, seq2)
+}
+
+# === Convert back to AAStringSet ===
+combined_set <- AAStringSet(combined_vec)
+
+# === Write output ===
+output_file <- "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM1_2_3_famsa3dialigned.fasta"
+writeXStringSet(combined_set, output_file)
+```
+## Removing AH, AG and AF files from the final file trying a separate analysis
+```{r}
+library(Biostrings)
+
+# === Input and output files ===
+input_file <- "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM1_2_3_famsa3dialigned.fasta"    # replace with your fasta file path
+output_file <- "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM1_2_3_famsa3dialigned_Spo_removed.fasta"
+
+# === Read sequences ===
+seqs <- readAAStringSet(input_file)
+
+# === Filter sequences ===
+# Keep sequences whose names do NOT end with the given patterns
+keep_seqs <- seqs[!grepl("(SpoIIIAG|SpoIIIAF|SpoIIIAH)$", names(seqs))]
+
+# === Save filtered sequences ===
+writeXStringSet(keep_seqs, output_file)
+```
+
+```{bash}
+trimal -in ./Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM1_2_3_famsa3dialigned_Spo_removed.fasta -out ./Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM1_2_3_famsa3dialigned_Spo_removed_trim35.fasta -gt 0.35 -colnumbering | tee ./Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM1_2_3_famsa3dialigned_Spo_removed_trim35_cols.txt
+```
+
+# Horizontally concatenate 2 alignment files
+```{r}
+
+fn1 = "Data/17_AF_removed_AHAG_Merged_noOutgroup/3di_RBM1_2_3_famsa3dialigned_Spo_removed_trim35.fasta"
+fn2 = "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa/aa_RBM1_2_3_famsa3dialigned_Spo_removed_trim35.fasta"
+fn3 = "Data/17_AF_removed_AHAG_Merged_noOutgroup/aa_3di/aa_3di_RBM1_2_3_famsa3dialigned_Spo_removed_trim35.fasta"
+fn3
+merged_df = hcat_align_fns(fn1, fn2, fn3)
+merged_df
+```

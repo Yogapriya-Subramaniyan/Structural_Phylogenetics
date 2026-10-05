@@ -1,0 +1,969 @@
+---
+title: "Comparing_MotA"
+output: html_document
+---
+
+## libraries
+```{r}
+library(seqinr)
+library(ape)
+library(openxlsx) # for read.xlsx
+```
+
+
+```{r}
+fliF_fasta <- read.fasta("Data/07_Split_Align_Merge/3di_FliF_RBM2.fasta")
+fasta_names <- names(fliF_fasta)
+accession_ids <- c()
+matching_names <- c()
+for (i in fasta_names) {
+  name <- i
+  accession_id <- strsplit(name, split = "\\.")[[1]][1]
+  accession_ids <- c(accession_ids, accession_id)
+}
+
+mot_tree <- read.tree("Data/Comparing_MotA/MotAB_mBio_noSlashes.fasta.treefile")
+mot_names <- mot_tree$tip.label
+mot_names
+mot_ids <- c()
+for (i in mot_names) {
+  mot_name <- i
+ mot_id <- strsplit(mot_name, split = "\\_")[[1]][1]
+ mot_ids <- c(mot_ids, mot_id)
+}
+
+mot_ids
+
+for (i in accession_ids) {
+  pattern <- i
+
+# directory
+dir_path <- "~/Library/CloudStorage/Dropbox/flag/Full_genomes/genomes"
+
+# get all .faa files inside GCA* and GCF* directories
+files <- list.files(
+  dir_path,
+  pattern = "protein.faa$",
+  recursive = TRUE,
+  full.names = TRUE
+)
+
+# keep only GCA* or GCF* folders
+files <- files[grepl("/(GCA|GCF)", files)]
+
+# find files containing the pattern
+files_with_pattern <- files[
+  sapply(files, function(f) {
+    any(grepl(pattern, readLines(f, warn = FALSE)))
+  })
+]
+
+files_with_pattern 
+
+for(j in seq_along(files_with_pattern)){
+
+  fasta <- read.fasta(files_with_pattern[j], seqtype="AA", as.string=TRUE)
+  for (k in mot_ids) {
+  idx <- grep(k, names(fasta), ignore.case=TRUE)
+  if (length(idx) > 0) {
+    matching_name <- paste0(i,"_",k)
+    matching_names <- c(matching_names, matching_name)
+      }
+    
+  }
+}
+}
+write.csv(matching_names, "Data/Comparing_MotA/matching_names.csv")
+```
+
+
+```{bash}
+grep -l "ADC48070.1" ~/Library/CloudStorage/Dropbox/flag/Full_genomes/genomes/{GCA,GCF}*/*.faa
+
+## /Users/Yoga/Library/CloudStorage/Dropbox/flag/Full_genomes/genomes/GCA_000005825.2_ASM582v2/GCA_000005825.2_ASM582v2_protein.faa
+```
+
+```{r}
+## Renaming_Tree
+mot_tree <- read.tree("Data/Comparing_MotA/MotAB_mBio_noSlashes.fasta.treefile")
+xlsfn = "Data/Comparing_MotA/matching_names.xlsx"
+mapping  = openxlsx::read.xlsx(xlsxFile=xlsfn, sheet=1, startRow=1, colNames=TRUE)
+
+accession <- mapping$Mot_Name
+common_name <- mapping$Name
+
+
+# get tree tip names
+tips <- mot_tree$tip.label
+
+# extract accession from tree tip (before underscore or dot if needed)
+tip_accession <- sapply(strsplit(tips, "_"), `[`, 1)
+
+# match accession with excel
+match_index <- match(tip_accession, accession)
+
+# create new names
+new_names <- paste0(common_name[match_index])
+
+# replace tree labels
+mot_tree$tip.label <- new_names
+
+# save new tree
+write.tree(mot_tree, file = "Data/Comparing_MotA/MotAB_renamed.tree")
+```
+
+```{r}
+library(ape)
+library(readxl)
+
+tree <- read.tree("Data/Comparing_MotA/MotAB_mBio_noSlashes.fasta.treefile")
+mapping <- read_excel("Data/Comparing_MotA/matching_names.xlsx")
+
+tips <- tree$tip.label
+
+tip_accession <- sapply(strsplit(tips, "_"), `[`, 1)
+
+match_index <- match(tip_accession, mapping$Mot_Name)
+
+species <- mapping$Name[match_index]
+
+tips_to_remove <- tips[is.na(species)]
+
+tree <- drop.tip(tree, tips_to_remove)
+
+tips <- tree$tip.label
+tip_accession <- sapply(strsplit(tips, "_"), `[`, 1)
+
+match_index <- match(tip_accession, mapping$Mot_Name)
+species <- mapping$Name[match_index]
+
+tree$tip.label <- paste0(species)
+
+write.tree(tree, "Data/Comparing_MotA/MotAB_cleaned_renamed.tree")
+```
+
+```{r}
+library(ape)
+library(readxl)
+
+flif_tree <- read.nexus("Data/Comparing_MotA/FliF.treefile")
+
+
+mapping <- read_excel("Data/Comparing_MotA/matching_names.xlsx")
+
+tips <- flif_tree$tip.label
+tips <- gsub("'", "", tips)
+
+tip_accession <- sapply(strsplit(tips, "\\."), `[`, 1)
+
+match_index <- match(tip_accession, mapping$FliF_Name)
+
+species <- mapping$Name[match_index]
+
+tips_to_remove <- tips[is.na(species)]
+
+flif_tree <- drop.tip(flif_tree, tips_to_remove)
+# recalculate after dropping tips
+tips <- flif_tree$tip.label
+tips <- gsub("'", "", tips)
+tips
+tip_accession <- sapply(strsplit(tips, "\\."), `[`, 1)
+match_index <- match(tip_accession, mapping$FliF_Name)
+species <- mapping$Name[match_index]
+species
+flif_tree$tip.label <- species
+
+write.tree(flif_tree, "Data/Comparing_MotA/FliF_renamed.tree")
+```
+
+##########################################
+```{r}
+# ============================================================
+# TANGLEGRAM WORKFLOW IN R
+# ============================================================
+#
+# Handles:
+# - Two protein accession columns
+# - Comma-separated multiple accessions per row
+# - Corresponding rows are linked in tanglegram
+#
+# Example:
+#
+# Protein1                Protein2
+# XP_001,XP_002           YP_900
+# XP_003                  YP_901,YP_902
+#
+# XP_001 and XP_002 both connect to YP_900
+# XP_003 connects to YP_901 and YP_902
+#
+# ============================================================
+# REQUIRED PACKAGES
+# ============================================================
+
+## install.packages(c("ape", "phytools"))
+
+#library(ape)
+#library(phytools)
+
+# ============================================================
+# INPUT FILES
+# ============================================================
+
+mapping_file <- "Data/Comparing_MotA/motA_FliF_grand_table.txt"
+
+tree1_file <- "Data/Comparing_MotA/FliF_spoRoot.newick"
+tree2_file <- "Data/Comparing_MotA/MotAB_mBio_noSlashes.fasta.treefile"
+
+# Column names
+protein1_column <- "FliF_IDs_matching_motA_genomes_list_txt"
+protein2_column <- "mota_ids"
+
+# Output files
+trimmed_tree1_file <- "Data/Comparing_MotA/trimmed_FliF.nwk"
+trimmed_tree2_file <- "Data/Comparing_MotA/trimmed_MotAB.nwk"
+
+tanglegram_output <- "Data/Comparing_MotA/tanglegram.pdf"
+
+# ============================================================
+# STEP 1: READ MAPPING FILE
+# ============================================================
+
+df <- read.table(
+  mapping_file,
+  header = TRUE,
+  sep = "",
+  stringsAsFactors = FALSE
+)
+
+# Remove NA rows
+df <- df[
+  !is.na(df[[protein1_column]]) &
+  !is.na(df[[protein2_column]]),
+]
+
+cat("Rows loaded:", nrow(df), "\n")
+
+# ============================================================
+# STEP 2: EXPAND ACCESSION PAIRS
+# ============================================================
+
+protein1_all <- c()
+protein2_all <- c()
+
+pair_ids_1 <- c()
+pair_ids_2 <- c()
+
+for(i in seq_len(nrow(df))) {
+
+  # Split comma-separated accessions
+  p1 <- unlist(strsplit(df[[protein1_column]][i], ","))
+  p2 <- unlist(strsplit(df[[protein2_column]][i], ","))
+
+  # Clean whitespace
+  p1 <- trimws(p1)
+  p2 <- trimws(p2)
+
+  # Store all accessions
+  protein1_all <- c(protein1_all, p1)
+  protein2_all <- c(protein2_all, p2)
+
+  # Create shared pair IDs
+  #
+  # All accessions in same row share same ID
+  #
+  pair_id <- paste0("pair_", i)
+
+  pair_ids_1 <- c(pair_ids_1, rep(pair_id, length(p1)))
+  pair_ids_2 <- c(pair_ids_2, rep(pair_id, length(p2)))
+}
+
+# ============================================================
+# STEP 3: LOAD TREES
+# ============================================================
+
+tree1 <- read.tree(tree1_file)
+tree2 <- read.tree(tree2_file)
+
+if(class(tree1) == "multiPhylo") {
+  tree1 <- tree1[[1]]
+}
+
+if(class(tree2) == "multiPhylo") {
+  tree2 <- tree2[[1]]
+}
+
+tree1$tip.label <- sub("_.*", "", tree1$tip.label)
+tree2$tip.label <- sub("_.*", "", tree2$tip.label)
+
+
+# ============================================================
+# STEP 4: TRIM TREES
+# ============================================================
+
+tree1_trimmed <- keep.tip(
+  tree1,
+  tree1$tip.label[
+    tree1$tip.label %in% protein1_all
+  ]
+)
+
+tree2_trimmed <- keep.tip(
+  tree2,
+  tree2$tip.label[
+    tree2$tip.label %in% protein2_all
+  ]
+)
+
+# ============================================================
+# STEP 5: RENAME TIPS USING PAIR IDS
+# ============================================================
+#
+# cophylo requires identical names to connect.
+#
+# Since multiple accessions may belong to same pair,
+# make unique labels:
+#
+# pair_1_1
+# pair_1_2
+#
+# ============================================================
+
+# Rename Tree 1 tips
+counter <- list()
+
+for(i in seq_along(protein1_all)) {
+
+  old_name <- protein1_all[i]
+  pair_id <- pair_ids_1[i]
+
+  if(is.null(counter[[pair_id]])) {
+    counter[[pair_id]] <- 1
+  } else {
+    counter[[pair_id]] <- counter[[pair_id]] + 1
+  }
+
+  new_name <- paste0(pair_id, "_", counter[[pair_id]])
+
+  tree1_trimmed$tip.label[
+    tree1_trimmed$tip.label == old_name
+  ] <- new_name
+}
+
+# Rename Tree 2 tips
+counter <- list()
+
+for(i in seq_along(protein2_all)) {
+
+  old_name <- protein2_all[i]
+  pair_id <- pair_ids_2[i]
+
+  if(is.null(counter[[pair_id]])) {
+    counter[[pair_id]] <- 1
+  } else {
+    counter[[pair_id]] <- counter[[pair_id]] + 1
+  }
+
+  new_name <- paste0(pair_id, "_", counter[[pair_id]])
+
+  tree2_trimmed$tip.label[
+    tree2_trimmed$tip.label == old_name
+  ] <- new_name
+}
+
+# ============================================================
+# STEP 6: KEEP ONLY MATCHING LABELS
+# ============================================================
+
+common_labels <- intersect(
+  tree1_trimmed$tip.label,
+  tree2_trimmed$tip.label
+)
+
+#tree1_trimmed <- keep.tip(tree1_trimmed, common_labels)
+#tree2_trimmed <- keep.tip(tree2_trimmed, common_labels)
+
+cat("Matching labels:", length(common_labels), "\n")
+
+# ============================================================
+# STEP 7: SAVE TRIMMED TREES
+# ============================================================
+
+write.tree(tree1_trimmed, file = trimmed_tree1_file)
+write.tree(tree2_trimmed, file = trimmed_tree2_file)
+
+# ============================================================
+# STEP 8: CREATE TANGLEGRAM
+# ============================================================
+
+pdf(tanglegram_output, width = 14, height = 18)
+
+cophylo_obj <- cophylo(
+  tree1_trimmed,
+  tree2_trimmed,
+  rotate = TRUE
+)
+
+plot(
+  cophylo_obj,
+  link.type = "curved",
+  link.lwd = 1,
+  fsize = 0.6
+)
+
+title("Tanglegram with Multiple Corresponding Accessions")
+
+dev.off()
+
+cat("Tanglegram saved as:", tanglegram_output, "\n")
+```
+
+
+
+##########################
+```{r}
+# ============================================================
+# TANGLEGRAM WORKFLOW IN R
+# ============================================================
+#
+# Features:
+# - Two accession columns
+# - Comma-separated multiple accessions
+# - Corresponding rows linked together
+# - Tree labels trimmed after first underscore
+# - INTERNAL matching names used for cophylo
+# - ORIGINAL accession names restored before plotting
+#
+# ============================================================
+# REQUIRED PACKAGES
+# ============================================================
+
+# install.packages(c("ape", "phytools"))
+
+library(ape)
+library(phytools)
+
+# ============================================================
+# INPUT FILES
+# ============================================================
+
+mapping_file <- "accession_pairs.txt"
+
+mapping_file <- "Data/Comparing_MotA/motA_FliF_grand_table.txt"
+
+tree1_file <- "Data/Comparing_MotA/FliF_spoRoot.newick"
+tree2_file <- "Data/Comparing_MotA/MotAB_mBio_noSlashes.fasta.treefile"
+
+# Column names
+protein1_column <- "FliF_IDs_matching_motA_genomes_list_txt"
+protein2_column <- "mota_ids"
+
+# Output files
+trimmed_tree1_file <- "Data/Comparing_MotA/trimmed_FliF.nwk"
+trimmed_tree2_file <- "Data/Comparing_MotA/trimmed_MotAB.nwk"
+
+tanglegram_output <- "Data/Comparing_MotA/tanglegram2.pdf"
+
+# ============================================================
+# STEP 1: READ MAPPING FILE
+# ============================================================
+
+df <- read.table(
+  mapping_file,
+  header = TRUE,
+  sep = "",
+  stringsAsFactors = FALSE
+)
+
+df <- df[
+  !is.na(df[[protein1_column]]) &
+  !is.na(df[[protein2_column]]),
+]
+
+cat("Rows loaded:", nrow(df), "\n")
+
+# ============================================================
+# STEP 2: EXPAND ACCESSION PAIRS
+# ============================================================
+
+protein1_all <- c()
+protein2_all <- c()
+
+pair_ids_1 <- c()
+pair_ids_2 <- c()
+
+for(i in seq_len(nrow(df))) {
+
+  p1 <- unlist(strsplit(df[[protein1_column]][i], ","))
+  p2 <- unlist(strsplit(df[[protein2_column]][i], ","))
+
+  p1 <- trimws(p1)
+  p2 <- trimws(p2)
+
+  protein1_all <- c(protein1_all, p1)
+  protein2_all <- c(protein2_all, p2)
+
+  pair_id <- paste0("pair_", i)
+
+  pair_ids_1 <- c(pair_ids_1, rep(pair_id, length(p1)))
+  pair_ids_2 <- c(pair_ids_2, rep(pair_id, length(p2)))
+}
+
+# ============================================================
+# STEP 3: LOAD TREES
+# ============================================================
+
+tree1 <- read.tree(tree1_file)
+tree2 <- read.tree(tree2_file)
+
+# Handle multiple trees
+if(inherits(tree1, "multiPhylo")) {
+  tree1 <- tree1[[1]]
+}
+
+if(inherits(tree2, "multiPhylo")) {
+  tree2 <- tree2[[1]]
+}
+
+# ============================================================
+# STEP 4: TRIM TREE LABELS AFTER FIRST UNDERSCORE
+# ============================================================
+#
+# Example:
+# ABC_XP001_extra -> ABC
+#
+# If you instead want:
+# XP001_extra
+#
+# use:
+# sub("^[^_]*_", "", x)
+#
+# ============================================================
+
+tree1$tip.label <- sub("_.*", "", tree1$tip.label)
+tree2$tip.label <- sub("_.*", "", tree2$tip.label)
+
+# ============================================================
+# STEP 5: TRIM TREES
+# ============================================================
+
+tree1_trimmed <- keep.tip(
+  tree1,
+  tree1$tip.label %in% protein1_all
+)
+
+tree2_trimmed <- keep.tip(
+  tree2,
+  tree2$tip.label %in% protein2_all
+)
+
+# ============================================================
+# STEP 6: CREATE SAFE RENAME MAPS
+# ============================================================
+
+rename_map_tree1 <- c()
+rename_map_tree2 <- c()
+
+counter <- list()
+
+# Tree1 rename map
+for(i in seq_along(protein1_all)) {
+
+  old_name <- protein1_all[i]
+  pair_id <- pair_ids_1[i]
+
+  if(is.null(counter[[pair_id]])) {
+    counter[[pair_id]] <- 1
+  } else {
+    counter[[pair_id]] <- counter[[pair_id]] + 1
+  }
+
+  temp_name <- paste0(pair_id, "_", counter[[pair_id]])
+
+  rename_map_tree1[old_name] <- temp_name
+}
+
+# Tree2 rename map
+counter <- list()
+
+for(i in seq_along(protein2_all)) {
+
+  old_name <- protein2_all[i]
+  pair_id <- pair_ids_2[i]
+
+  if(is.null(counter[[pair_id]])) {
+    counter[[pair_id]] <- 1
+  } else {
+    counter[[pair_id]] <- counter[[pair_id]] + 1
+  }
+
+  temp_name <- paste0(pair_id, "_", counter[[pair_id]])
+
+  rename_map_tree2[old_name] <- temp_name
+}
+
+# ============================================================
+# STEP 7: APPLY RENAMING SAFELY
+# ============================================================
+
+# Store original labels
+original_labels_tree1 <- rename_map_tree1
+original_labels_tree2 <- rename_map_tree2
+
+# Rename tips
+tree1_trimmed$tip.label <-
+  rename_map_tree1[tree1_trimmed$tip.label]
+
+tree2_trimmed$tip.label <-
+  rename_map_tree2[tree2_trimmed$tip.label]
+
+# Remove NA tips if present
+valid1 <- !is.na(tree1_trimmed$tip.label)
+valid2 <- !is.na(tree2_trimmed$tip.label)
+
+tree1_trimmed <- keep.tip(
+  tree1_trimmed,
+  tree1_trimmed$tip.label[valid1]
+)
+
+tree2_trimmed <- keep.tip(
+  tree2_trimmed,
+  tree2_trimmed$tip.label[valid2]
+)
+
+# Keep common labels only
+common_labels <- intersect(
+  tree1_trimmed$tip.label,
+  tree2_trimmed$tip.label
+)
+
+# tree1_trimmed <- keep.tip(tree1_trimmed, common_labels)
+# tree2_trimmed <- keep.tip(tree2_trimmed, common_labels)
+
+cat("Matching labels:", length(common_labels), "\n")
+
+# ============================================================
+# STEP 8: SAVE TRIMMED TREES
+# ============================================================
+
+write.tree(tree1_trimmed, file = trimmed_tree1_file)
+write.tree(tree2_trimmed, file = trimmed_tree2_file)
+
+# ============================================================
+# STEP 9: CREATE COPHYLO OBJECT
+# ============================================================
+
+cophylo_obj <- cophylo(
+  tree1_trimmed,
+  tree2_trimmed,
+  rotate = TRUE
+)
+
+# ============================================================
+# STEP 10: RESTORE ORIGINAL LABELS
+# ============================================================
+
+cophylo_obj$trees[[1]]$tip.label <-
+  original_labels_tree1[
+    cophylo_obj$trees[[1]]$tip.label
+  ]
+
+cophylo_obj$trees[[2]]$tip.label <-
+  original_labels_tree2[
+    cophylo_obj$trees[[2]]$tip.label
+  ]
+
+# ============================================================
+# STEP 11: PLOT TANGLEGRAM
+# ============================================================
+
+pdf(tanglegram_output, width = 14, height = 18)
+
+plot(
+  cophylo_obj,
+  link.type = "curved",
+  link.lwd = 1,
+  fsize = 0.6
+)
+
+title("Tanglegram with Original Accession Labels")
+
+dev.off()
+
+cat("Tanglegram saved as:", tanglegram_output, "\n")
+```
+
+####################
+```{r}
+# ============================================================
+# COPHYLO / TANGLEGRAM USING ASSOCIATION MATRIX ONLY
+# (NO RENAMING, NO TREE TRIMMING)
+# ============================================================
+
+# install.packages(c("ape", "phytools"))
+
+library(ape)
+library(phytools)
+
+# ============================================================
+# INPUT FILES
+# ============================================================
+
+mapping_file <- "Data/Comparing_MotA/motA_FliF_grand_table.txt"
+
+tree1_file <- "Data/Comparing_MotA/FliF_spoRoot.newick"
+tree2_file <- "Data/Comparing_MotA/MotAB_mBio_noSlashes.fasta.treefile"
+
+# Column names
+protein1_column <- "FliF_IDs_matching_motA_genomes_list_txt"
+protein2_column <- "mota_ids"
+
+# Output files
+trimmed_tree1_file <- "Data/Comparing_MotA/trimmed_FliF.nwk"
+trimmed_tree2_file <- "Data/Comparing_MotA/trimmed_MotAB.nwk"
+
+tanglegram_output <- "Data/Comparing_MotA/tanglegram2.pdf"
+
+# ============================================================
+# STEP 1: READ MAPPING FILE
+# ============================================================
+
+df <- read.table(
+  mapping_file,
+  header = TRUE,
+  sep = "",
+  stringsAsFactors = FALSE
+)
+
+df <- df[
+  !is.na(df[[protein1_column]]) &
+  !is.na(df[[protein2_column]]),
+]
+
+cat("Rows loaded:", nrow(df), "\n")
+
+# ============================================================
+# STEP 2: EXPAND COMMA-SEPARATED ENTRIES
+# ============================================================
+
+pairs <- data.frame(
+  tree1 = character(),
+  tree2 = character(),
+  stringsAsFactors = FALSE
+)
+
+for(i in seq_len(nrow(df))) {
+
+  p1 <- trimws(unlist(strsplit(df[[protein1_column]][i], ",")))
+  p2 <- trimws(unlist(strsplit(df[[protein2_column]][i], ",")))
+
+  for(a in p1) {
+    for(b in p2) {
+
+      pairs <- rbind(
+        pairs,
+        data.frame(tree1 = a, tree2 = b)
+      )
+    }
+  }
+}
+
+cat("Total association pairs:", nrow(pairs), "\n")
+
+# ============================================================
+# STEP 3: LOAD TREES (DO NOT MODIFY)
+# ============================================================
+
+tree1 <- read.tree(tree1_file)
+tree2 <- read.tree(tree2_file)
+
+if(inherits(tree1, "multiPhylo")) tree1 <- tree1[[1]]
+if(inherits(tree2, "multiPhylo")) tree2 <- tree2[[1]]
+
+# ============================================================
+# STEP 4: EXTRACT ACCESSION FROM TREE LABELS
+# (before first underscore)
+# ============================================================
+
+extract_id <- function(x) sub("_.*", "", x)
+
+tree1_ids <- extract_id(tree1$tip.label)
+tree2_ids <- extract_id(tree2$tip.label)
+
+names(tree1_ids) <- tree1$tip.label
+names(tree2_ids) <- tree2$tip.label
+
+# ============================================================
+# STEP 5: BUILD EDGE LIST (NOT MATRIX)
+# ============================================================
+
+assoc_list <- data.frame(
+  t1 = character(),
+  t2 = character(),
+  stringsAsFactors = FALSE
+)
+
+for(i in seq_len(nrow(pairs))) {
+
+  p1 <- pairs$tree1[i]
+  p2 <- pairs$tree2[i]
+
+  t1_hits <- names(tree1_ids)[tree1_ids == p1]
+  t2_hits <- names(tree2_ids)[tree2_ids == p2]
+
+  if(length(t1_hits) == 0 || length(t2_hits) == 0) next
+
+  # create all combinations
+  for(a in t1_hits) {
+    for(b in t2_hits) {
+
+      assoc_list <- rbind(
+        assoc_list,
+        data.frame(t1 = a, t2 = b)
+      )
+    }
+  }
+}
+
+cat("Valid associations:", nrow(assoc_list), "\n")
+
+# remove duplicates (IMPORTANT)
+assoc_list <- unique(assoc_list)
+
+# ============================================================
+# STEP 6: CREATE COPHYLO OBJECT (SAFE VERSION)
+# ============================================================
+
+cophylo_obj <- cophylo(
+  tree1,
+  tree2,
+  assoc = assoc_list,
+  rotate = TRUE
+)
+# ============================================================
+# STEP 7: PLOT TANGLEGRAM
+# ============================================================
+
+pdf(tanglegram_output, width = 14, height = 18)
+
+plot(
+  cophylo_obj,
+  link.type = "curved",
+  link.lwd = 0.4,
+  fsize = 0.1
+)
+
+
+title("Tanglegram Using Association Matrix (No Tree Modification)")
+
+dev.off()
+
+cat("Saved:", tanglegram_output, "\n")
+
+plot(tree2)
+
+write.csv(assoc_list, "Data/Comparing_MotA/AssociationList.csv")
+```
+
+
+```{r}
+library(ape)
+
+# Read tree
+tree <- read.tree("Data/Comparing_MotA/FliF_spoRoot.newick")
+
+# Read CSV
+tips_df <- read.csv("Data/Comparing_MotA/AssociationList.csv", stringsAsFactors = FALSE)
+
+# Extract tips to keep
+tips_to_keep <- tips_df$t1
+
+# Check which requested tips are missing from the tree
+missing_tips <- setdiff(tips_to_keep, tree$tip.label)
+
+if (length(missing_tips) > 0) {
+cat("Tips not found in tree:\n")
+print(missing_tips)
+}
+
+# Prune tree to retain only tips in the CSV
+tree_pruned <- keep.tip(tree, intersect(tips_to_keep, tree$tip.label))
+
+# Save pruned tree
+write.tree(tree_pruned, file = "Data/Comparing_MotA/trimmed_FliF.nwk")
+
+# Summary
+cat("Original tips:", Ntip(tree), "\n")
+cat("Pruned tips:", Ntip(tree_pruned), "\n")
+```
+
+```{r}
+library(ape)
+
+# Read tree
+tree <- read.tree("Data/Comparing_MotA/MotAB_mBio_noSlashes.fasta.treefile")
+
+# Read CSV
+tips_df <- read.csv("Data/Comparing_MotA/AssociationList.csv", stringsAsFactors = FALSE)
+
+# Extract tips to keep
+tips_to_keep <- tips_df$t2
+
+# Check which requested tips are missing from the tree
+missing_tips <- setdiff(tips_to_keep, tree$tip.label)
+
+if (length(missing_tips) > 0) {
+cat("Tips not found in tree:\n")
+print(missing_tips)
+}
+
+# Prune tree to retain only tips in the CSV
+tree_pruned <- keep.tip(tree, intersect(tips_to_keep, tree$tip.label))
+
+# Save pruned tree
+write.tree(tree_pruned, file = "Data/Comparing_MotA/trimmed_MotAB.nwk")
+
+# Summary
+cat("Original tips:", Ntip(tree), "\n")
+cat("Pruned tips:", Ntip(tree_pruned), "\n")
+```
+
+```{r}
+tree1_file <- "Data/Comparing_MotA/trimmed_FliF.nwk"
+tree2_file <- "Data/Comparing_MotA/trimmed_MotAB.nwk"
+
+tree1 <- read.tree(tree1_file)
+tree2 <- read.tree(tree2_file)
+
+cophylo_obj <- cophylo(
+  tree1,
+  tree2,
+  assoc = assoc_list,
+ rotate = TRUE
+)
+
+plot(
+  cophylo_obj,
+  link.type = "curved",
+  link.lwd = 0.4,
+  fsize = 0.1
+)
+```
+
+```{r}
+Q <- matrix(c(
+     -1.218, 0.504, 0.336, 0.378,
+     0.126,-0.882, 0.252, 0.504,
+     0.168, 0.504,-1.050, 0.378,
+     0.126, 0.672, 0.252,-1.050
+ ), nrow = 4, byrow = TRUE)
+
+P <- matrix(c(
+0.976, 0.010, 0.007, 0.007,
+0.002, 0.983, 0.005, 0.010,
+0.003, 0.010, 0.979, 0.007,
+0.002, 0.013, 0.005, 0.979
+), nrow = 4, byrow = TRUE)
+
+
+```
+

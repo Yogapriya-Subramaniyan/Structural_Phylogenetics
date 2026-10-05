@@ -419,7 +419,7 @@ aa_to_alphafold_cif_modified <- function(chars, gid, timeout=10, chimeraX_instal
       
     }
     if (!is.na(uniprot_id)) {
-      cmd_txt = paste0('ChimeraX --cmd "alphafold match ', uniprot_id, '; log save ', html_fn, ' executableLinks true; save ', cif_fn, ' relModel #1; close #1; quit;"')
+      cmd_txt = paste0('ChimeraX --cmd "alphafold fetch ', uniprot_id, '; log save ', html_fn, ' executableLinks true; save ', cif_fn, ' relModel #1; close #1; quit;"')
       cmd_txt
       #result = try(system(cmd_txt))
       first_time = FALSE

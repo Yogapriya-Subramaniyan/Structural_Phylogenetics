@@ -1,0 +1,114 @@
+---
+title: "Creating_Publishing_Image"
+output: html_document
+---
+
+
+```{r run_pymol, eval=TRUE}
+# Create a PyMOL script
+pml_script <- "
+load Data/Structures/Alphafold/Alphafold_FliF.pdb
+
+# show cartoon
+show cartoon
+color white
+
+
+# Colour RBM1,2,3
+select region, resi 48-100
+color pink, region
+
+select region, resi 125-215
+color lime, region
+
+select region, resi 236–427
+color aquamarine, region
+
+pseudoatom label_H1, selection=(resi 48-52 and name CA)
+label label_R1B1, \"α1\"
+set(\"label_color\", \"red\", \"label_R1B1\")
+translate [2,2,2], label_R1B1
+
+pseudoatom label_H1, selection=(resi 59-71 and name CA)
+label label_R1A1, \"α1\"
+set(\"label_color\", \"red\", \"label_R1A1\")
+translate [2,2,2], label_R1A1
+
+pseudoatom label_H1, selection=(resi 77-79 and name CA)
+label label_R1B2, \"α1\"
+set(\"label_color\", \"red\", \"label_R1B2\")
+translate [2,2,2], label_R1B2
+
+pseudoatom label_H1, selection=(resi 84-88 and name CA)
+label label_R1B3, \"α1\"
+set(\"label_color\", \"red\", \"label_R1B3\")
+translate [2,2,2], label_R1B3
+
+pseudoatom label_H1, selection=(resi 89-100 and name CA)
+label label_R1A2, \"α1\"
+set(\"label_color\", \"red\", \"label_R1A2\")
+translate [2,2,2], label_R1A2
+
+pseudoatom label_H1, selection=(resi 125-144 and name CA)
+label label_R2A1, \"α1\"
+set(\"label_color\", \"red\", \"label_R2A1\")
+translate [2,2,2], label_R2A1
+
+pseudoatom label_H1, selection=(resi 150-157 and name CA)
+label label_R2B1, \"α1\"
+set(\"label_color\", \"red\", \"label_R2B1\")
+translate [2,2,2], label_R2B1
+
+pseudoatom label_H1, selection=(resi 125-146 and name CA)
+label label_R2B2, \"α1\"
+set(\"label_color\", \"red\", \"label_R2B2\")
+translate [2,2,2], label_R2B2
+
+pseudoatom label_H1, selection=(resi 125-146 and name CA)
+label label_R2A2, \"α1\"
+set(\"label_color\", \"red\", \"label_R2A2\")
+translate [2,2,2], label_R2A2
+
+pseudoatom label_H1, selection=(resi 125-146 and name CA)
+label label_R2B3, \"α1\"
+set(\"label_color\", \"red\", \"label_R2B3\")
+translate [2,2,2], label_R2B3
+
+pseudoatom label_H1, selection=(resi 125-146 and name CA)
+label label_R3A1, \"α1\"
+set(\"label_color\", \"red\", \"label_R3A1\")
+translate [2,2,2], label_R3A1
+
+pseudoatom label_H1, selection=(resi 125-146 and name CA)
+label label_R3B1, \"α1\"
+set(\"label_color\", \"red\", \"label_R3B1\")
+translate [2,2,2], label_R3B1
+
+pseudoatom label_H1, selection=(resi 125-146 and name CA)
+label label_R3B2, \"α1\"
+set(\"label_color\", \"red\", \"label_R3B2\")
+translate [2,2,2], label_R3B2
+
+pseudoatom label_H1, selection=(resi 125-146 and name CA)
+label label_R3A2, \"α1\"
+set(\"label_color\", \"red\", \"label_R3A2\")
+translate [2,2,2], label_R3A2
+
+pseudoatom label_H1, selection=(resi 125-146 and name CA)
+label label_R3B3, \"α1\"
+set(\"label_color\", \"red\", \"label_R3B3\")
+translate [2,2,2], label_R3B3
+"
+```
+
+```{r run_pymol, eval=TRUE}
+# Write script to file
+writeLines(pml_script, "script.pml")
+
+# Run PyMOL with the script
+system("pymol script.pml")
+
+```
+
+
+

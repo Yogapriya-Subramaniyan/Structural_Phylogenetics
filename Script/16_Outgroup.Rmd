@@ -1,0 +1,254 @@
+---
+title: "16_Outgroup"
+output: html_document
+---
+
+# Libraries
+```{r}
+library(ape)
+library(msa)
+library(seqinr) # read.fasta
+library(BioGeoBEARS) # sourceall
+library(rvest) # for html_table()
+library(phytools) # for midpoint.root
+library(openxlsx) # for read.xlsx
+```
+
+# Sourcing
+```{r}
+sourceall("~/GitHub/str2phy/Rsrc/")
+source("~/GitHub/str2phy/Rsrc/protein_bioinf_v1.R")
+source("~/GitHub/str2phy/Rsrc/str2phy_v1.R")
+sourceall("~/GitHub/str2phy/Rsrc/")
+source("Script/Source.R")
+```
+
+## HAVE only the yebc sequence
+```{r}
+outgroup_names <- c("UPH47978.1", "AAO82557.1", "SQE55453.1", "QJS18567.1")
+fasta <- readAAStringSet("Data/16_Outgroup/aa_unaligned.fasta")
+xlsfn = "Data/RenamingSequences.xlsx"
+xls = openxlsx::read.xlsx(xlsxFile=xlsfn, sheet=1, startRow=1, colNames=TRUE)
+accession_number = xls$AccessionNumber
+protein_name = fixnames(xls$protein)
+for (i in 1:length(outgroup_names))
+		{
+		TF = grepl(pattern=outgroup_names[i], x=accession_number)
+		tipnum = ((1:length(TF))[TF])
+		outgroup_names[i] = protein_name[tipnum]
+
+		} # END for (i in 1:length(remove_names))
+	
+
+outgroup_names
+# Filter out unwanted sequences
+filtered_fasta <- fasta[(names(fasta) %in% outgroup_names)]
+length(filtered_fasta)
+writeXStringSet(filtered_fasta, "Data/16_Outgroup/outgroup.fasta")
+```
+
+## the bash scripts to get the distant homologs - gives only yebc in the result
+## ~/Library/CloudStorage/OneDrive-Personal/PG\ Materials/Semester3/
+```{bash}
+cd ./Data/16_Outgroup
+     mafft --maxiterate 1000 --localpair outgroup.fasta | esl-reformat stockholm -> outgroup.sto
+     hmmbuild outgroup.hmm outgroup.sto
+     hmmsearch --cpu 4 -E 0.01 \
+      -o outgroup.txt \
+      --tblout outgroup_hits_table.txt \
+      --domtblout outgroup_domains_table.txt \
+      outgroup.hmm /Users/Yoga/Library/CloudStorage/OneDrive-Personal/PG\ Materials/Semester3/protein_20250805.fasta
+      
+      grep -v '^#' outgroup_hits_table.txt | awk '{print $1}' | sort -u > outgroup_hit_ids.txt
+
+     seqkit grep -f outgroup_hit_ids.txt /Users/Yoga/Library/CloudStorage/OneDrive-Personal/PG\ Materials/Semester3/protein_20250805.fasta>outgroup_matched_hits.fasta
+     
+```
+
+## Split the RBM 1 in the outgroups and add them to the other RBM1, RBM2 and RBM3
+## RBM1, RBM2 and RBM3 are copied from 16_Outgroup
+
+```{r}
+library(Biostrings)
+
+# Load aligned FASTA
+fasta_file <- "Data/16_Outgroup/3di_famsa3diAligned.fasta"
+seqs <- readAAStringSet(fasta_file)
+
+# Identify sequences ending with "_FliF"
+outgroup_idx <- grep("_Transcriptional_Regulator$", names(seqs))
+
+# Prepare containers
+split_rbm1 <- AAStringSet()
+split_rbm2 <- AAStringSet()
+
+# Loop through each FliF sequence
+for (i in outgroup_idx) {
+  seq <- seqs[[i]]
+  name_base <- names(seqs)[i]
+  
+  # Extract RBM1, RBM2, RBM3
+  rbm1 <- subseq(seq, start = 945, end = 1210)
+  rbm2 <- subseq(seq, start = 945, end = 1210)
+  
+  # Add each RBM to its respective container (same names)
+  rbm1_entry <- AAStringSet(rbm1)
+  names(rbm1_entry) <- name_base
+  split_rbm1 <- c(split_rbm1, rbm1_entry)
+   
+  rbm2_entry <- AAStringSet(rbm2)
+  names(rbm2_entry) <- name_base
+  split_rbm2 <- c(split_rbm2, rbm2_entry)
+ 
+}
+
+# Remove gaps from sequences
+split_rbm1 <- AAStringSet(gsub("-", "", as.character(split_rbm1)))
+split_rbm2 <- AAStringSet(gsub("-", "", as.character(split_rbm2)))
+
+
+# Write to separate FASTA files
+writeXStringSet(split_rbm1, "Data/16_Outgroup/3di_outgroup_RBM1.fasta")
+writeXStringSet(split_rbm2, "Data/16_Outgroup/3di_outgroup_RBM2.fasta")
+```
+
+## Concat RBM1, RBM2, RBM3
+```{r}
+library(Biostrings)
+
+# === Directory containing your FASTA files ===
+input_dir <- "Data/16_Outgroup"
+
+# === Find all FASTA files by suffix ===
+rbm1_files <- list.files(input_dir, pattern = "RBM1.*\\.fasta$", full.names = TRUE)
+rbm2_files <- list.files(input_dir, pattern = "RBM2.*\\.fasta$", full.names = TRUE)
+rbm3_files <- list.files(input_dir, pattern = "RBM3.*\\.fasta$", full.names = TRUE)
+
+# === Helper function to read and combine FASTAs ===
+combine_fastas <- function(file_list) {
+  all_seqs <- AAStringSet()
+  for (f in file_list) {
+    seqs <- readAAStringSet(f)
+    all_seqs <- c(all_seqs, seqs)
+  }
+  return(all_seqs)
+}
+
+# === Combine and save ===
+if (length(rbm1_files) > 0) {
+  combined_rbm1 <- combine_fastas(rbm1_files)
+  writeXStringSet(combined_rbm1, file.path(input_dir, "3di_RBM1.fasta"))
+}
+
+if (length(rbm2_files) > 0) {
+  combined_rbm2 <- combine_fastas(rbm2_files)
+  writeXStringSet(combined_rbm2, file.path(input_dir, "3di_RBM2.fasta"))
+}
+
+if (length(rbm3_files) > 0) {
+  combined_rbm3 <- combine_fastas(rbm3_files)
+  writeXStringSet(combined_rbm3, file.path(input_dir, "3di_RBM3.fasta"))
+}
+
+```
+
+# Align the 3di sequences, using famsa3di
+```{bash}
+
+famsa3di ./Data/16_Outgroup/3di_RBM1.fasta ./Data/16_Outgroup/3di_RBM1_famsa3dialigned.fasta
+famsa3di ./Data/16_Outgroup/3di_RBM2.fasta ./Data/16_Outgroup/3di_RBM2_famsa3dialigned.fasta
+famsa3di ./Data/16_Outgroup/3di_RBM3.fasta ./Data/16_Outgroup/3di_RBM3_famsa3dialigned.fasta
+
+```
+
+```{r}
+library(Biostrings)
+
+# === Input files (edit paths) ===
+file1 <- "Data/16_Outgroup/3di_RBM1_famsa3dialigned.fasta"
+file2 <- "Data/16_Outgroup/3di_RBM2_famsa3dialigned.fasta"
+
+# === Read sequences ===
+seqs1 <- readAAStringSet(file1)
+seqs2 <- readAAStringSet(file2)
+
+# === Convert to named character vectors ===
+seqs1_vec <- setNames(as.character(seqs1), names(seqs1))
+seqs2_vec <- setNames(as.character(seqs2), names(seqs2))
+
+# === Combine all sequence names ===
+all_names <- unique(c(names(seqs1_vec), names(seqs2_vec)))
+
+# === Determine max lengths for padding ===
+maxlen1 <- max(nchar(seqs1_vec))
+maxlen2 <- max(nchar(seqs2_vec))
+
+# === Initialize result ===
+combined_vec <- character(length(all_names))
+names(combined_vec) <- all_names
+
+# === Merge horizontally (with gap-fill if missing) ===
+for (n in all_names) {
+  seq1 <- if (n %in% names(seqs1_vec)) seqs1_vec[[n]] else paste0(rep("-", maxlen1), collapse = "")
+  seq2 <- if (n %in% names(seqs2_vec)) seqs2_vec[[n]] else paste0(rep("-", maxlen2), collapse = "")
+  
+  combined_vec[[n]] <- paste0(seq1, seq2)
+}
+
+# === Convert back to AAStringSet ===
+combined_set <- AAStringSet(combined_vec)
+
+# === Write output ===
+output_file <- "Data/16_Outgroup/3di_RBM1_2_famsa3dialigned.fasta"
+writeXStringSet(combined_set, output_file)
+
+
+
+```
+
+```{r}
+library(Biostrings)
+
+# === Input files (edit paths) ===
+file1 <- "Data/16_Outgroup/3di_RBM1_2_famsa3dialigned.fasta"
+file2 <- "Data/16_Outgroup/3di_RBM3_famsa3dialigned.fasta"
+
+# === Read sequences ===
+seqs1 <- readAAStringSet(file1)
+seqs2 <- readAAStringSet(file2)
+
+# === Convert to named character vectors ===
+seqs1_vec <- setNames(as.character(seqs1), names(seqs1))
+seqs2_vec <- setNames(as.character(seqs2), names(seqs2))
+
+# === Combine all sequence names ===
+all_names <- unique(c(names(seqs1_vec), names(seqs2_vec)))
+
+# === Determine max lengths for padding ===
+maxlen1 <- max(nchar(seqs1_vec))
+maxlen2 <- max(nchar(seqs2_vec))
+
+# === Initialize result ===
+combined_vec <- character(length(all_names))
+names(combined_vec) <- all_names
+
+# === Merge horizontally (with gap-fill if missing) ===
+for (n in all_names) {
+  seq1 <- if (n %in% names(seqs1_vec)) seqs1_vec[[n]] else paste0(rep("-", maxlen1), collapse = "")
+  seq2 <- if (n %in% names(seqs2_vec)) seqs2_vec[[n]] else paste0(rep("-", maxlen2), collapse = "")
+  
+  combined_vec[[n]] <- paste0(seq1, seq2)
+}
+
+# === Convert back to AAStringSet ===
+combined_set <- AAStringSet(combined_vec)
+
+# === Write output ===
+output_file <- "Data/16_Outgroup/3di_RBM1_2_3_famsa3dialigned.fasta"
+writeXStringSet(combined_set, output_file)
+```
+
+
+```{bash}
+trimal -in ./Data/16_Outgroup/3di_RBM1_2_3_famsa3dialigned.fasta -out ./Data/16_Outgroup/3di_RBM1_2_3_famsa3dialigned_trim35.fasta -gt 0.35 -colnumbering | tee ./Data/16_Outgroup/3di_RBM1_2_3_famsa3dialigned_trim35_cols.txt
+```

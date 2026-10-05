@@ -41,7 +41,30 @@ usalign ./Data/Structures/Alphafold/Experimental_FliF_Mring.pdb ./Data/Structure
 usalign ./Data/Structures/Alphafold/Experimental_FliF_Sring.pdb ./Data/Structures/Alphafold/Alphafold_FliF.pdb -chimerax ./Data/Structures/Alphafold/Usalign_FliF_Sring
 
 usalign ./Data/Structures/Alphafold/Experimental_FliF_Mring.pdb ./Data/Structures/Alphafold/Experimental_FliF_Sring.pdb -chimerax ./Data/Structures/Alphafold/Usalign_FliF_Mring_on_Sring
+
+
 ```
 
 `
+
+## Done on 29Sep 2026 as part of manuscrript preparation
+```{bash}
+usalign ./Data/Structures/Alphafold/Alphafold_T3SS.pdb ./Data/03_3di_Character_Extraction/ABQ62358.1_Brucella_FliF_alphafold.cif -chimerax ./Data/Structures/Alphafold/Usalign_BrucellaFliF_T3SS
+```
+
+
+## Checking the superposition between the sister groups in 3di tree vs 3di_aa tree
+```{bash}
+usalign  ./Data/03_3di_Character_Extraction/AIQ89829.1_Methylobacterium_FliF_alphafold.cif ./Data/Structures/Alphafold/Alphafold_T3SS.pdb -chimerax ./Data/Structures/Alphafold/Usalign_T3SS_MethylobacteriumFliF_aa_3di
+
+usalign  ./Data/03_3di_Character_Extraction/BAL07813.1_Bradyrhizobium_FliF_alphafold.cif ./Data/Structures/Alphafold/Alphafold_T3SS.pdb -chimerax ./Data/Structures/Alphafold/Usalign_T3SS_BradyrhizobiumFliF_aa_3di
+
+usalign  ./Data/03_3di_Character_Extraction/ABQ62358.1_Brucella_FliF_alphafold.cif ./Data/Structures/Alphafold/Alphafold_T3SS.pdb -chimerax ./Data/Structures/Alphafold/Usalign_T3SS_BrucellaFliF_aa_3di
+
+usalign  ./Data/03_3di_Character_Extraction/QDU26973.1_Anatilimnocola_FliF_alphafold.cif ./Data/Structures/Alphafold/Alphafold_T3SS.pdb -chimerax ./Data/Structures/Alphafold/Usalign_T3SS_AnatilimnocolaFliF_3di
+
+usalign  ./Data/03_3di_Character_Extraction/QDU93976.1_Lignipirellula_FliF_alphafold.cif ./Data/Structures/Alphafold/Alphafold_T3SS.pdb -chimerax ./Data/Structures/Alphafold/Usalign_T3SS_LignipirellulaFliF
+
+usalign  ./Data/03_3di_Character_Extraction/CAD75367.1_Rhodopirellula_FliF_alphafold.cif ./Data/Structures/Alphafold/Alphafold_T3SS.pdb -chimerax ./Data/Structures/Alphafold/Usalign_T3SS_RhodopirellulaFliF
+```
 

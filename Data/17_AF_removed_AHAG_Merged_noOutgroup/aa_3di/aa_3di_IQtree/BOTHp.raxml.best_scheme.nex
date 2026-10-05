@@ -1,0 +1,8 @@
+#nexus
+begin sets;
+  charset part1 = 1-353;
+  charset part2 = 354-706;
+  charpartition mymodels =
+    3DI+R7: part1,
+    EX_EHO+FU+R7: part2;
+end;

@@ -407,7 +407,7 @@ writeXStringSet(split_rbm2, "Data/07_Split_Align_Merge/aa_T3SS_RBM2.fasta")
 library(Biostrings)
 
 # === Directory containing your FASTA files ===
-input_dir <- "Data/07_Split_Align_Merge"
+input_dir <- "Data/07_Split_Align_Merge/"
 
 # === Find all FASTA files by suffix ===
 rbm1_files <- list.files(input_dir, pattern = "RBM1.*\\.fasta$", full.names = TRUE)
@@ -440,4 +440,181 @@ if (length(rbm3_files) > 0) {
   writeXStringSet(combined_rbm3, file.path(input_dir, "aa_RBM3.fasta"))
 }
 
+```
+
+# Reordering_ALignment
+```{r}
+tr_renamed <- ape::read.tree("Data/07_Split_Align_Merge/3di_nj/outTree_midpointRooted.nwk") ## renamed tree file
+plotTree(tr_renamed)
+desired_order <- tr_renamed$tip.label[order((get("last_plot.phylo", envir = .PlotPhyloEnv)$yy[1:Ntip(tr_renamed)]))]
+fasta_file <- read.fasta (file = "Data/07_Split_Align_Merge/3di_nj/input.fa.final_tree.used_alg.fa") ## renamed fasta file
+fasta_ids <-names(fasta_file)
+tip_ids <- desired_order
+reordered_fasta <- fasta_file[(match(tip_ids, fasta_ids))]
+write.fasta(sequences = reordered_fasta, names=desired_order, file.out = "Data/07_Split_Align_Merge/3di_nj/input.fa.final_tree.used_alg_midpoint_reordered.fa") ## out file  - renamed, reordered fasta file
+```
+
+
+## Concat RBM1, RBM2, RBM3
+```{r}
+library(Biostrings)
+
+# === Directory containing your FASTA files ===
+input_dir <- "Data/07_Split_Align_Merge/aa"
+
+# === Find all FASTA files by suffix ===
+rbm1_files <- list.files(input_dir, pattern = "RBM1\\.fasta$", full.names = TRUE)
+rbm2_files <- list.files(input_dir, pattern = "RBM2\\.fasta$", full.names = TRUE)
+rbm3_files <- list.files(input_dir, pattern = "RBM3\\.fasta$", full.names = TRUE)
+
+# === Helper function to read and combine FASTAs ===
+combine_fastas <- function(file_list) {
+  all_seqs <- AAStringSet()
+  for (f in file_list) {
+    seqs <- readAAStringSet(f)
+    all_seqs <- c(all_seqs, seqs)
+  }
+  return(all_seqs)
+}
+
+# === Combine and save ===
+if (length(rbm1_files) > 0) {
+  combined_rbm1 <- combine_fastas(rbm1_files)
+  writeXStringSet(combined_rbm1, file.path(input_dir, "aa_RBM1.fasta"))
+}
+
+if (length(rbm2_files) > 0) {
+  combined_rbm2 <- combine_fastas(rbm2_files)
+  writeXStringSet(combined_rbm2, file.path(input_dir, "aa_RBM2.fasta"))
+}
+
+if (length(rbm3_files) > 0) {
+  combined_rbm3 <- combine_fastas(rbm3_files)
+  writeXStringSet(combined_rbm3, file.path(input_dir, "aa_RBM3.fasta"))
+}
+
+```
+
+# Align the AAs to the famsa3di alignment
+```{r}
+source("~/GitHub/str2phy/Rsrc/str2phy_v1.R")
+
+aligned_fn = "Data/07_Split_Align_Merge/3di_RBM1_famsa3diAligned.fasta"
+unaligned_fn = "Data/07_Split_Align_Merge/aa/aa_RBM1.fasta"
+outfn = "Data/07_Split_Align_Merge/aa/aa_RBM1_famsa3dialigned.fasta"
+aligned_AAs = align_3dis_to_AAs(aligned_fn, unaligned_fn, outfn)
+## moref(outfn)
+```
+
+```{r}
+source("~/GitHub/str2phy/Rsrc/str2phy_v1.R")
+
+aligned_fn = "Data/07_Split_Align_Merge/3di_RBM2_famsa3diAligned.fasta"
+unaligned_fn = "Data/07_Split_Align_Merge/aa/aa_RBM2.fasta"
+outfn = "Data/07_Split_Align_Merge/aa/aa_RBM2_famsa3dialigned.fasta"
+aligned_AAs = align_3dis_to_AAs(aligned_fn, unaligned_fn, outfn)
+# moref(outfn)
+```
+
+```{r}
+source("~/GitHub/str2phy/Rsrc/str2phy_v1.R")
+
+aligned_fn = "Data/07_Split_Align_Merge/3di_RBM3_famsa3diAligned.fasta"
+unaligned_fn = "Data/07_Split_Align_Merge/aa/aa_RBM3.fasta"
+outfn = "Data/07_Split_Align_Merge/aa/aa_RBM3_famsa3dialigned.fasta"
+aligned_AAs = align_3dis_to_AAs(aligned_fn, unaligned_fn, outfn)
+# moref(outfn)
+```
+
+
+```{r}
+library(Biostrings)
+
+# === Input files (edit paths) ===
+file1 <- "Data/07_Split_Align_Merge/aa/aa_RBM1_famsa3dialigned.fasta"
+file2 <- "Data/07_Split_Align_Merge/aa/aa_RBM2_famsa3dialigned.fasta"
+
+# === Read sequences ===
+seqs1 <- readAAStringSet(file1)
+seqs2 <- readAAStringSet(file2)
+
+# === Convert to named character vectors ===
+seqs1_vec <- setNames(as.character(seqs1), names(seqs1))
+seqs2_vec <- setNames(as.character(seqs2), names(seqs2))
+
+# === Combine all sequence names ===
+all_names <- unique(c(names(seqs1_vec), names(seqs2_vec)))
+
+# === Determine max lengths for padding ===
+maxlen1 <- max(nchar(seqs1_vec))
+maxlen2 <- max(nchar(seqs2_vec))
+
+# === Initialize result ===
+combined_vec <- character(length(all_names))
+names(combined_vec) <- all_names
+
+# === Merge horizontally (with gap-fill if missing) ===
+for (n in all_names) {
+  seq1 <- if (n %in% names(seqs1_vec)) seqs1_vec[[n]] else paste0(rep("-", maxlen1), collapse = "")
+  seq2 <- if (n %in% names(seqs2_vec)) seqs2_vec[[n]] else paste0(rep("-", maxlen2), collapse = "")
+  
+  combined_vec[[n]] <- paste0(seq1, seq2)
+}
+
+# === Convert back to AAStringSet ===
+combined_set <- AAStringSet(combined_vec)
+
+# === Write output ===
+output_file <- "Data/07_Split_Align_Merge/aa/aa_RBM1_2_famsa3dialigned.fasta"
+writeXStringSet(combined_set, output_file)
+
+
+
+```
+
+```{r}
+library(Biostrings)
+
+# === Input files (edit paths) ===
+file1 <- "Data/07_Split_Align_Merge/aa/aa_RBM1_2_famsa3dialigned.fasta"
+file2 <- "Data/07_Split_Align_Merge/aa/aa_RBM3_famsa3dialigned.fasta"
+
+# === Read sequences ===
+seqs1 <- readAAStringSet(file1)
+seqs2 <- readAAStringSet(file2)
+
+# === Convert to named character vectors ===
+seqs1_vec <- setNames(as.character(seqs1), names(seqs1))
+seqs2_vec <- setNames(as.character(seqs2), names(seqs2))
+
+# === Combine all sequence names ===
+all_names <- unique(c(names(seqs1_vec), names(seqs2_vec)))
+
+# === Determine max lengths for padding ===
+maxlen1 <- max(nchar(seqs1_vec))
+maxlen2 <- max(nchar(seqs2_vec))
+
+# === Initialize result ===
+combined_vec <- character(length(all_names))
+names(combined_vec) <- all_names
+
+# === Merge horizontally (with gap-fill if missing) ===
+for (n in all_names) {
+  seq1 <- if (n %in% names(seqs1_vec)) seqs1_vec[[n]] else paste0(rep("-", maxlen1), collapse = "")
+  seq2 <- if (n %in% names(seqs2_vec)) seqs2_vec[[n]] else paste0(rep("-", maxlen2), collapse = "")
+  
+  combined_vec[[n]] <- paste0(seq1, seq2)
+}
+
+# === Convert back to AAStringSet ===
+combined_set <- AAStringSet(combined_vec)
+
+# === Write output ===
+output_file <- "Data/07_Split_Align_Merge/aa/aa_RBM1_2_3_famsa3dialigned.fasta"
+writeXStringSet(combined_set, output_file)
+```
+
+
+```{bash}
+trimal -in ./Data/07_Split_Align_Merge/aa/aa_RBM1_2_3_famsa3dialigned.fasta -out ./Data/07_Split_Align_Merge/aa/aa_RBM1_2_3_famsa3dialigned_trim35.fasta -gt 0.35 -colnumbering | tee ./Data/07_Split_Align_Merge/aa/aa_RBM1_2_3_famsa3dialigned_trim35_cols.txt
 ```
